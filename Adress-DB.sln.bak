@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Adress-DB", "Adress-DB.vbproj", "{4F64D4EC-7852-437B-A56B-FA6970D24E01}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_WSL-Adress-DB", "..\Setup_WSL-Adress-DB\Setup_WSL-Adress-DB.vdproj", "{EA4D1B4E-FBA6-4671-B08E-38163660BE9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F64D4EC-7852-437B-A56B-FA6970D24E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F64D4EC-7852-437B-A56B-FA6970D24E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F64D4EC-7852-437B-A56B-FA6970D24E01}.Debug|x64.ActiveCfg = Debug|x64
+		{4F64D4EC-7852-437B-A56B-FA6970D24E01}.Debug|x64.Build.0 = Debug|x64
+		{4F64D4EC-7852-437B-A56B-FA6970D24E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F64D4EC-7852-437B-A56B-FA6970D24E01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F64D4EC-7852-437B-A56B-FA6970D24E01}.Release|x64.ActiveCfg = Release|x64
+		{4F64D4EC-7852-437B-A56B-FA6970D24E01}.Release|x64.Build.0 = Release|x64
+		{EA4D1B4E-FBA6-4671-B08E-38163660BE9C}.Debug|Any CPU.ActiveCfg = Debug
+		{EA4D1B4E-FBA6-4671-B08E-38163660BE9C}.Debug|Any CPU.Build.0 = Debug
+		{EA4D1B4E-FBA6-4671-B08E-38163660BE9C}.Debug|x64.ActiveCfg = Debug
+		{EA4D1B4E-FBA6-4671-B08E-38163660BE9C}.Debug|x64.Build.0 = Debug
+		{EA4D1B4E-FBA6-4671-B08E-38163660BE9C}.Release|Any CPU.ActiveCfg = Release
+		{EA4D1B4E-FBA6-4671-B08E-38163660BE9C}.Release|Any CPU.Build.0 = Release
+		{EA4D1B4E-FBA6-4671-B08E-38163660BE9C}.Release|x64.ActiveCfg = Release
+		{EA4D1B4E-FBA6-4671-B08E-38163660BE9C}.Release|x64.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C174BCD-D723-422C-8678-34CAF2AB40E5}
+	EndGlobalSection
+EndGlobal
