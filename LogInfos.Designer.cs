@@ -131,7 +131,6 @@ namespace Adress_DB
             TableAdapterManager.Connection = null;
             TableAdapterManager.DE_PLZ_GeodatenTableAdapter = null;
             TableAdapterManager.FirmenNameTableAdapter = null;
-            TableAdapterManager.KonfigurationTableAdapter = null;
             TableAdapterManager.KontakteTableAdapter = null;
             TableAdapterManager.KontoTableAdapter = null;
             TableAdapterManager.LogTabelleTableAdapter = null;

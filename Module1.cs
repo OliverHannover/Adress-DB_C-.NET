@@ -27,11 +27,11 @@ namespace Adress_DB
 
             // Datensatz in Tabelle 'FirmenName' schreiben
             // MsgBox(IDFirmenName.ToString)
-            My.MyProject.Forms.Hauptform.FirmenNameTableAdapter.Insert(IDFirmenName, FirmenName, Environment.UserName, DateAndTime.Now, false);
+            My.MyProject.Forms.Hauptform.FirmenNameTableAdapter.Insert(IDFirmenName, FirmenName, Environment.UserName, System.DateTime.Now, false);
             Logging(1, IDFirmenName, IDFirmenName, FirmenName);
 
             // Datensatz Konto schreiben - zunächst mit der Leadnummer!
-            My.MyProject.Forms.Hauptform.KontoTableAdapter.Insert(Leadnummer, IDFirmenName, KontoName, DateAndTime.Now);
+            My.MyProject.Forms.Hauptform.KontoTableAdapter.Insert(Leadnummer, IDFirmenName, KontoName, System.DateTime.Now);
             Logging(2,Leadnummer,IDFirmenName, KontoName);
 
             // DatensatzSuche wiederholen
@@ -66,7 +66,8 @@ namespace Adress_DB
             }
 
             //Interaction.MsgBox("vom neu anlegen:");
-            AlleTableAdapterAktualisieren(IDFirmenName);
+            //AlleTableAdapterAktualisieren(IDFirmenName);
+
 
             // DocuWare-Datei schreiben:
             SaveToCSV();
@@ -143,7 +144,7 @@ namespace Adress_DB
         {
             // Das Label ist eine eine Datenquelle gebunden. Je nach selektiertem Satz ändert sich der Inhalt.
             // Wenn sich der Text das Labels ändert, muss auch der KontoTableAdapter immer mit den Werten des aktuellen Geschäftspartners gefüllt werden:
-            MessageBox.Show("Alle Adapter aktualisieren");
+            //MessageBox.Show("Alle Adapter aktualisieren");
 
             My.MyProject.Forms.Hauptform.KontakteDataGridView.DataSource = "";
             My.MyProject.Forms.Hauptform.KontakteDataGridView.Refresh();
@@ -151,12 +152,17 @@ namespace Adress_DB
             My.MyProject.Forms.Hauptform.AdressenDataGridView.Refresh();
             try
             {
-                My.MyProject.Forms.Hauptform.BelegeMitAdresseTableAdapter.SucheIDFirmenNameInBelegeMitAdresse(My.MyProject.Forms.Hauptform._WSL_AdressenDataSet.BelegeMitAdresse, IDFirmenName);
-                My.MyProject.Forms.Hauptform.KontakteMitAdresseTableAdapter.SucheIDFirmenNameInKontakteMitAdresse(My.MyProject.Forms.Hauptform._WSL_AdressenDataSet.KontakteMitAdresse, IDFirmenName);
                 My.MyProject.Forms.Hauptform.KontoTableAdapter.SucheIDFirmenNameInKonto(My.MyProject.Forms.Hauptform._WSL_AdressenDataSet.Konto, IDFirmenName);
                 My.MyProject.Forms.Hauptform.AdressenTableAdapter.SucheIDFirmenNameInAdressen(My.MyProject.Forms.Hauptform._WSL_AdressenDataSet.Adressen, IDFirmenName);
                 My.MyProject.Forms.Hauptform.KontakteTableAdapter.SucheIDFirmenNameInKontakte(My.MyProject.Forms.Hauptform._WSL_AdressenDataSet.Kontakte, IDFirmenName);
+
+                My.MyProject.Forms.Hauptform.BelegeMitAdresseTableAdapter.SucheIDFirmenNameInBelegeMitAdresse(My.MyProject.Forms.Hauptform._WSL_AdressenDataSet.BelegeMitAdresse, IDFirmenName);
+                My.MyProject.Forms.Hauptform.KontakteMitAdresseTableAdapter.SucheIDFirmenNameInKontakteMitAdresse(My.MyProject.Forms.Hauptform._WSL_AdressenDataSet.KontakteMitAdresse, IDFirmenName);
                 My.MyProject.Forms.Hauptform.DocuwareCSVTableAdapter.Fill(My.MyProject.Forms.Hauptform._WSL_AdressenDataSet.DocuwareCSV);
+
+                
+
+                
             }
             catch (Exception)
             {
@@ -176,7 +182,7 @@ namespace Adress_DB
 
             // öffnet den Word-Besuchsbericht und füllt den Kopf mit markierten Daten,
             string Pfad;
-            Pfad = My.MyProject.Forms.Hauptform.KonfigurationTableAdapter.ScalarVorlagenpfad().ToString();
+            Pfad = My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("Vorlagenpfad");
             if (Strings.Right(Pfad, 1) != @"\")
                 Pfad += @"\";
             Pfad += Belegtyp;
@@ -340,7 +346,7 @@ namespace Adress_DB
             // Exporting to Excel
             string folderPath;
             // Pfad und Dateiname aus der Datenbank auslesen:
-            folderPath = My.MyProject.Forms.Hauptform.KonfigurationTableAdapter.ScalarDWPfad().ToString() + My.MyProject.Forms.Hauptform.KonfigurationTableAdapter.ScalarDWDateiname().ToString();
+            folderPath = My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("DWPfad") + My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("DWDateiname");
             // MsgBox(folderPath)
             File.WriteAllText(folderPath, csv);
             // File.WriteAllText(folderPath & "DataGridViewExport.csv", csv)
@@ -357,7 +363,7 @@ namespace Adress_DB
         {
             string fname;
             string pfad;
-            pfad = My.MyProject.Forms.Hauptform.KonfigurationTableAdapter.ScalarVorlagenpfad().ToString(); // anpassen
+            pfad = My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("Vorlagenpfad"); // anpassen
             if (Strings.Right(pfad, 1) != @"\")
                 pfad += @"\";
 

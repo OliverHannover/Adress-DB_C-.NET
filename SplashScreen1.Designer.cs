@@ -137,7 +137,6 @@ namespace Adress_DB
             TableAdapterManager.CH_PLZ_GeodatenTableAdapter = null;
             TableAdapterManager.DE_PLZ_GeodatenTableAdapter = null;
             TableAdapterManager.FirmenNameTableAdapter = null;
-            TableAdapterManager.KonfigurationTableAdapter = null;
             TableAdapterManager.KontakteTableAdapter = null;
             TableAdapterManager.KontoTableAdapter = null;
             TableAdapterManager.LogTabelleTableAdapter = null;

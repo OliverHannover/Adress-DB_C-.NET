@@ -38,2549 +38,2544 @@ namespace Adress_DB
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            Label IDFirmenNameLabel;
-            Label LeadnummerLabel;
-            Label KundennummerLabel;
-            Label LieferantennummerLabel;
-            Label IDAdresseLabel;
-            Label IDKontaktLabel;
-            Label IDBesuchLabel;
-            Label VorlagenpfadLabel;
-            Label SachbearbeiterLabel;
-            Label AdminLabel;
-            Label IDFirmenNameLabel1;
-            Label FirmenNameLabel;
-            Label LoginLabel;
-            Label ChangedLabel;
-            Label IDKontoLabel;
-            Label IDFirmenNameLabel2;
-            Label KontoNameLabel;
-            Label AnlageDatumLabel;
-            Label IDAdresseLabel1;
-            Label IDFirmenNameLabel3;
-            Label IDKontoLabel1;
-            Label AdresstypLabel;
-            Label StraßeLabel;
-            Label PostfachLabel;
-            Label PLZLabel;
-            Label OrtLabel;
-            Label BundeslandLabel;
-            Label LandLabel;
-            Label UStIdNrLabel;
-            Label WebseiteLabel;
-            Label IDKontaktLabel1;
-            Label IDFirmenNameLabel4;
-            Label VornameLabel;
-            Label NachnameLabel;
-            Label AnredeLabel;
-            Label EmailAddresseLabel;
-            Label JobtitleLabel;
-            Label TelefonGeschaeftlichLabel;
-            Label TelefonPrivatLabel;
-            Label MobiltelefonLabel;
-            Label FaxnummerLabel;
-            Label IDAdresseLabel2;
-            Label DWpfadLabel;
-            Label DWDateinameLabel;
-            Label InaktivLabel;
-            Label HilfelinkLabel;
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(Administration));
-            FolderBrowserDialog1 = new FolderBrowserDialog();
-            VorlagenpfadTextBox = new TextBox();
-            KonfigurationBindingSource = new BindingSource(components);
-            _WSL_AdressenDataSet = new _WSL_AdressenDataSet();
-            IDBesuchTextBox = new TextBox();
-            IDKontaktTextBox = new TextBox();
-            IDAdresseTextBox = new TextBox();
-            LieferantennummerTextBox = new TextBox();
-            KundennummerTextBox = new TextBox();
-            LeadnummerTextBox = new TextBox();
-            IDFirmenNameTextBox = new TextBox();
-            Panel2 = new Panel();
-            AdminCheckBox = new CheckBox();
-            SachbearbeiterBindingSource = new BindingSource(components);
-            SachbearbeiterLabel1 = new Label();
-            _BTN_Alle = new Button();
-            _BTN_Alle.Click += new EventHandler(BTN_Alle_Click);
-            _BTN_Aktuell = new Button();
-            _BTN_Aktuell.Click += new EventHandler(BTN_Aktuell_Click);
-            Label1 = new Label();
-            Panel3 = new Panel();
-            _BTN_Schliessen = new Button();
-            _BTN_Schliessen.Click += new EventHandler(BTN_Schliessen_Click);
-            TableAdapterManager = new _WSL_AdressenDataSetTableAdapters.TableAdapterManager();
-            KonfigurationTableAdapter = new _WSL_AdressenDataSetTableAdapters.KonfigurationTableAdapter();
-            SachbearbeiterTableAdapter = new _WSL_AdressenDataSetTableAdapters.SachbearbeiterTableAdapter();
-            TC_Administration = new TabControl();
-            TabPage1 = new TabPage();
-            HilfelinkTextBox = new TextBox();
-            _BTN_DWPfad = new Button();
-            _BTN_DWPfad.Click += new EventHandler(BTN_DWPfad_Click);
-            DWDateinameTextBox = new TextBox();
-            DWpfadTextBox = new TextBox();
-            _BTN_Speichern = new Button();
-            _BTN_Speichern.Click += new EventHandler(BTN_Speichern_Click);
-            _BTN_Vorlagenpfad = new Button();
-            _BTN_Vorlagenpfad.Click += new EventHandler(BTN_Vorlagenpfad_Click);
-            TabPage2 = new TabPage();
-            InaktivCheckBox = new CheckBox();
-            FirmenNameBindingSource = new BindingSource(components);
-            BindingNavigator1 = new BindingNavigator(components);
-            ToolStripButton21 = new ToolStripButton();
-            ToolStripLabel4 = new ToolStripLabel();
-            ToolStripButton22 = new ToolStripButton();
-            ToolStripButton23 = new ToolStripButton();
-            ToolStripButton24 = new ToolStripButton();
-            ToolStripSeparator10 = new ToolStripSeparator();
-            ToolStripTextBox4 = new ToolStripTextBox();
-            ToolStripSeparator11 = new ToolStripSeparator();
-            ToolStripButton25 = new ToolStripButton();
-            ToolStripButton26 = new ToolStripButton();
-            ToolStripSeparator12 = new ToolStripSeparator();
-            _BNAV_FirmenNameSave = new ToolStripButton();
-            _BNAV_FirmenNameSave.Click += new EventHandler(BNAV_FirmenNameSave_Click);
-            ChangedDateTimePicker = new DateTimePicker();
-            LoginTextBox = new TextBox();
-            FirmenNameTextBox = new TextBox();
-            IDFirmenNameTextBox1 = new TextBox();
-            FirmenNameDataGridView = new DataGridView();
-            DataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            Login = new DataGridViewTextBoxColumn();
-            changed = new DataGridViewTextBoxColumn();
-            inaktiv = new DataGridViewCheckBoxColumn();
-            TabPage3 = new TabPage();
-            BindingNavigator2 = new BindingNavigator(components);
-            ToolStripButton14 = new ToolStripButton();
-            KontoBindingSource = new BindingSource(components);
-            ToolStripLabel3 = new ToolStripLabel();
-            ToolStripButton15 = new ToolStripButton();
-            ToolStripButton16 = new ToolStripButton();
-            ToolStripButton17 = new ToolStripButton();
-            ToolStripSeparator7 = new ToolStripSeparator();
-            ToolStripTextBox3 = new ToolStripTextBox();
-            ToolStripSeparator8 = new ToolStripSeparator();
-            ToolStripButton18 = new ToolStripButton();
-            ToolStripButton19 = new ToolStripButton();
-            ToolStripSeparator9 = new ToolStripSeparator();
-            _BNAV_KontoSave = new ToolStripButton();
-            _BNAV_KontoSave.Click += new EventHandler(BNAV_KontoSave_Click);
-            AnlageDatumDateTimePicker = new DateTimePicker();
-            KontoNameTextBox = new TextBox();
-            IDFirmenNameTextBox2 = new TextBox();
-            IDKontoTextBox = new TextBox();
-            KontoDataGridView = new DataGridView();
-            DataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            Datum = new DataGridViewTextBoxColumn();
-            TabPage4 = new TabPage();
-            BindingNavigator3 = new BindingNavigator(components);
-            ToolStripButton7 = new ToolStripButton();
-            AdressenBindingSource = new BindingSource(components);
-            ToolStripLabel2 = new ToolStripLabel();
-            ToolStripButton8 = new ToolStripButton();
-            ToolStripButton9 = new ToolStripButton();
-            ToolStripButton10 = new ToolStripButton();
-            ToolStripSeparator4 = new ToolStripSeparator();
-            ToolStripTextBox2 = new ToolStripTextBox();
-            ToolStripSeparator5 = new ToolStripSeparator();
-            ToolStripButton11 = new ToolStripButton();
-            ToolStripButton12 = new ToolStripButton();
-            ToolStripSeparator6 = new ToolStripSeparator();
-            _BNAV_AdressenSave = new ToolStripButton();
-            _BNAV_AdressenSave.Click += new EventHandler(BNAV_AdressenSave_Click);
-            WebseiteTextBox = new TextBox();
-            UStIdNrTextBox = new TextBox();
-            LandTextBox = new TextBox();
-            BundeslandTextBox = new TextBox();
-            OrtTextBox = new TextBox();
-            PLZTextBox = new TextBox();
-            PostfachTextBox = new TextBox();
-            StraßeTextBox = new TextBox();
-            AdresstypTextBox = new TextBox();
-            IDKontoTextBox1 = new TextBox();
-            IDFirmenNameTextBox3 = new TextBox();
-            IDAdresseTextBox1 = new TextBox();
-            DataGridView1 = new DataGridView();
-            IDAdresse = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
-            IDKonto = new DataGridViewTextBoxColumn();
-            Adresstyp = new DataGridViewTextBoxColumn();
-            Straße = new DataGridViewTextBoxColumn();
-            Postfach = new DataGridViewTextBoxColumn();
-            PLZ = new DataGridViewTextBoxColumn();
-            Ort = new DataGridViewTextBoxColumn();
-            Bundesland = new DataGridViewTextBoxColumn();
-            Land = new DataGridViewTextBoxColumn();
-            UStIdNr = new DataGridViewTextBoxColumn();
-            Webseite = new DataGridViewTextBoxColumn();
-            TabPage5 = new TabPage();
-            SachbearbeiterBindingNavigator = new BindingNavigator(components);
-            ToolStripButton1 = new ToolStripButton();
-            KontakteBindingSource = new BindingSource(components);
-            ToolStripLabel1 = new ToolStripLabel();
-            ToolStripButton2 = new ToolStripButton();
-            ToolStripButton3 = new ToolStripButton();
-            ToolStripButton4 = new ToolStripButton();
-            ToolStripSeparator1 = new ToolStripSeparator();
-            ToolStripTextBox1 = new ToolStripTextBox();
-            ToolStripSeparator2 = new ToolStripSeparator();
-            ToolStripButton5 = new ToolStripButton();
-            ToolStripButton6 = new ToolStripButton();
-            ToolStripSeparator3 = new ToolStripSeparator();
-            _BNAV_KontakteSave = new ToolStripButton();
-            _BNAV_KontakteSave.Click += new EventHandler(BNAV_KontakteSave_Click);
-            IDAdresseTextBox2 = new TextBox();
-            FaxnummerTextBox = new TextBox();
-            MobiltelefonTextBox = new TextBox();
-            TelefonPrivatTextBox = new TextBox();
-            TelefonGeschaeftlichTextBox = new TextBox();
-            JobtitleTextBox = new TextBox();
-            EmailAddresseTextBox = new TextBox();
-            AnredeTextBox = new TextBox();
-            NachnameTextBox = new TextBox();
-            VornameTextBox = new TextBox();
-            IDFirmenNameTextBox4 = new TextBox();
-            IDKontaktTextBox1 = new TextBox();
-            DataGridView2 = new DataGridView();
-            IDKontakt = new DataGridViewTextBoxColumn();
-            IDFirmenName = new DataGridViewTextBoxColumn();
-            Nachname = new DataGridViewTextBoxColumn();
-            Vorname = new DataGridViewTextBoxColumn();
-            EmailAddresseDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            JobtitleDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            TelefonGeschaeftlichDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            TelefonPrivatDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            MobiltelefonDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            FaxnummerDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            IDAdresseDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            AnredeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            Belege = new TabPage();
-            BNAV_Belege = new BindingNavigator(components);
-            ToolStripButton28 = new ToolStripButton();
-            BelegeBindingSource = new BindingSource(components);
-            ToolStripLabel5 = new ToolStripLabel();
-            ToolStripButton29 = new ToolStripButton();
-            ToolStripButton30 = new ToolStripButton();
-            ToolStripButton31 = new ToolStripButton();
-            ToolStripSeparator13 = new ToolStripSeparator();
-            ToolStripTextBox5 = new ToolStripTextBox();
-            ToolStripSeparator14 = new ToolStripSeparator();
-            ToolStripButton32 = new ToolStripButton();
-            ToolStripButton33 = new ToolStripButton();
-            ToolStripSeparator15 = new ToolStripSeparator();
-            _BNAV_BelegeSaveItem = new ToolStripButton();
-            _BNAV_BelegeSaveItem.Click += new EventHandler(BNAV_BelegeSaveItem_Click);
-            BelegeDataGridView = new DataGridView();
-            DataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn14 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn15 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn16 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn17 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn18 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn19 = new DataGridViewTextBoxColumn();
-            FirmenNameTableAdapter = new _WSL_AdressenDataSetTableAdapters.FirmenNameTableAdapter();
-            KontoTableAdapter = new _WSL_AdressenDataSetTableAdapters.KontoTableAdapter();
-            AdressenTableAdapter = new _WSL_AdressenDataSetTableAdapters.AdressenTableAdapter();
-            KontakteTableAdapter = new _WSL_AdressenDataSetTableAdapters.KontakteTableAdapter();
-            BelegeTableAdapter = new _WSL_AdressenDataSetTableAdapters.BelegeTableAdapter();
-            TableLayoutPanel1 = new TableLayoutPanel();
-            IDFirmenNameLabel = new Label();
-            LeadnummerLabel = new Label();
-            KundennummerLabel = new Label();
-            LieferantennummerLabel = new Label();
-            IDAdresseLabel = new Label();
-            IDKontaktLabel = new Label();
-            IDBesuchLabel = new Label();
-            VorlagenpfadLabel = new Label();
-            SachbearbeiterLabel = new Label();
-            AdminLabel = new Label();
-            IDFirmenNameLabel1 = new Label();
-            FirmenNameLabel = new Label();
-            LoginLabel = new Label();
-            ChangedLabel = new Label();
-            IDKontoLabel = new Label();
-            IDFirmenNameLabel2 = new Label();
-            KontoNameLabel = new Label();
-            AnlageDatumLabel = new Label();
-            IDAdresseLabel1 = new Label();
-            IDFirmenNameLabel3 = new Label();
-            IDKontoLabel1 = new Label();
-            AdresstypLabel = new Label();
-            StraßeLabel = new Label();
-            PostfachLabel = new Label();
-            PLZLabel = new Label();
-            OrtLabel = new Label();
-            BundeslandLabel = new Label();
-            LandLabel = new Label();
-            UStIdNrLabel = new Label();
-            WebseiteLabel = new Label();
-            IDKontaktLabel1 = new Label();
-            IDFirmenNameLabel4 = new Label();
-            VornameLabel = new Label();
-            NachnameLabel = new Label();
-            AnredeLabel = new Label();
-            EmailAddresseLabel = new Label();
-            JobtitleLabel = new Label();
-            TelefonGeschaeftlichLabel = new Label();
-            TelefonPrivatLabel = new Label();
-            MobiltelefonLabel = new Label();
-            FaxnummerLabel = new Label();
-            IDAdresseLabel2 = new Label();
-            DWpfadLabel = new Label();
-            DWDateinameLabel = new Label();
-            InaktivLabel = new Label();
-            HilfelinkLabel = new Label();
-            ((System.ComponentModel.ISupportInitialize)KonfigurationBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_WSL_AdressenDataSet).BeginInit();
-            Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)SachbearbeiterBindingSource).BeginInit();
-            Panel3.SuspendLayout();
-            TC_Administration.SuspendLayout();
-            TabPage1.SuspendLayout();
-            TabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)FirmenNameBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)BindingNavigator1).BeginInit();
-            BindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)FirmenNameDataGridView).BeginInit();
-            TabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)BindingNavigator2).BeginInit();
-            BindingNavigator2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)KontoBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)KontoDataGridView).BeginInit();
-            TabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)BindingNavigator3).BeginInit();
-            BindingNavigator3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)AdressenBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)DataGridView1).BeginInit();
-            TabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)SachbearbeiterBindingNavigator).BeginInit();
-            SachbearbeiterBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)KontakteBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)DataGridView2).BeginInit();
-            Belege.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)BNAV_Belege).BeginInit();
-            BNAV_Belege.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)BelegeBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)BelegeDataGridView).BeginInit();
-            TableLayoutPanel1.SuspendLayout();
-            SuspendLayout();
-            // 
-            // IDFirmenNameLabel
-            // 
-            IDFirmenNameLabel.AutoSize = true;
-            IDFirmenNameLabel.Location = new Point(24, 119);
-            IDFirmenNameLabel.Name = "IDFirmenNameLabel";
-            IDFirmenNameLabel.Size = new Size(83, 13);
-            IDFirmenNameLabel.TabIndex = 2;
-            IDFirmenNameLabel.Text = "IDFirmen Name:";
-            // 
-            // LeadnummerLabel
-            // 
-            LeadnummerLabel.AutoSize = true;
-            LeadnummerLabel.Location = new Point(36, 145);
-            LeadnummerLabel.Name = "LeadnummerLabel";
-            LeadnummerLabel.Size = new Size(71, 13);
-            LeadnummerLabel.TabIndex = 4;
-            LeadnummerLabel.Text = "Leadnummer:";
-            // 
-            // KundennummerLabel
-            // 
-            KundennummerLabel.AutoSize = true;
-            KundennummerLabel.Location = new Point(23, 171);
-            KundennummerLabel.Name = "KundennummerLabel";
-            KundennummerLabel.Size = new Size(84, 13);
-            KundennummerLabel.TabIndex = 6;
-            KundennummerLabel.Text = "Kundennummer:";
-            // 
-            // LieferantennummerLabel
-            // 
-            LieferantennummerLabel.AutoSize = true;
-            LieferantennummerLabel.Location = new Point(7, 197);
-            LieferantennummerLabel.Name = "LieferantennummerLabel";
-            LieferantennummerLabel.Size = new Size(100, 13);
-            LieferantennummerLabel.TabIndex = 8;
-            LieferantennummerLabel.Text = "Lieferantennummer:";
-            // 
-            // IDAdresseLabel
-            // 
-            IDAdresseLabel.AutoSize = true;
-            IDAdresseLabel.Location = new Point(48, 223);
-            IDAdresseLabel.Name = "IDAdresseLabel";
-            IDAdresseLabel.Size = new Size(59, 13);
-            IDAdresseLabel.TabIndex = 10;
-            IDAdresseLabel.Text = "IDAdresse:";
-            // 
-            // IDKontaktLabel
-            // 
-            IDKontaktLabel.AutoSize = true;
-            IDKontaktLabel.Location = new Point(49, 249);
-            IDKontaktLabel.Name = "IDKontaktLabel";
-            IDKontaktLabel.Size = new Size(58, 13);
-            IDKontaktLabel.TabIndex = 12;
-            IDKontaktLabel.Text = "IDKontakt:";
-            // 
-            // IDBesuchLabel
-            // 
-            IDBesuchLabel.AutoSize = true;
-            IDBesuchLabel.Location = new Point(50, 275);
-            IDBesuchLabel.Name = "IDBesuchLabel";
-            IDBesuchLabel.Size = new Size(48, 13);
-            IDBesuchLabel.TabIndex = 14;
-            IDBesuchLabel.Text = "IDBeleg:";
-            // 
-            // VorlagenpfadLabel
-            // 
-            VorlagenpfadLabel.AutoSize = true;
-            VorlagenpfadLabel.Location = new Point(34, 15);
-            VorlagenpfadLabel.Name = "VorlagenpfadLabel";
-            VorlagenpfadLabel.Size = new Size(73, 13);
-            VorlagenpfadLabel.TabIndex = 15;
-            VorlagenpfadLabel.Text = "Vorlagenpfad:";
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label SachbearbeiterLabel;
+            System.Windows.Forms.Label AdminLabel;
+            System.Windows.Forms.Label IDFirmenNameLabel1;
+            System.Windows.Forms.Label FirmenNameLabel;
+            System.Windows.Forms.Label LoginLabel;
+            System.Windows.Forms.Label ChangedLabel;
+            System.Windows.Forms.Label IDKontoLabel;
+            System.Windows.Forms.Label IDFirmenNameLabel2;
+            System.Windows.Forms.Label KontoNameLabel;
+            System.Windows.Forms.Label AnlageDatumLabel;
+            System.Windows.Forms.Label IDAdresseLabel1;
+            System.Windows.Forms.Label IDFirmenNameLabel3;
+            System.Windows.Forms.Label IDKontoLabel1;
+            System.Windows.Forms.Label AdresstypLabel;
+            System.Windows.Forms.Label StraßeLabel;
+            System.Windows.Forms.Label PostfachLabel;
+            System.Windows.Forms.Label PLZLabel;
+            System.Windows.Forms.Label OrtLabel;
+            System.Windows.Forms.Label BundeslandLabel;
+            System.Windows.Forms.Label LandLabel;
+            System.Windows.Forms.Label UStIdNrLabel;
+            System.Windows.Forms.Label WebseiteLabel;
+            System.Windows.Forms.Label IDKontaktLabel1;
+            System.Windows.Forms.Label IDFirmenNameLabel4;
+            System.Windows.Forms.Label VornameLabel;
+            System.Windows.Forms.Label NachnameLabel;
+            System.Windows.Forms.Label AnredeLabel;
+            System.Windows.Forms.Label EmailAddresseLabel;
+            System.Windows.Forms.Label JobtitleLabel;
+            System.Windows.Forms.Label TelefonGeschaeftlichLabel;
+            System.Windows.Forms.Label TelefonPrivatLabel;
+            System.Windows.Forms.Label MobiltelefonLabel;
+            System.Windows.Forms.Label FaxnummerLabel;
+            System.Windows.Forms.Label IDAdresseLabel2;
+            System.Windows.Forms.Label InaktivLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administration));
+            this._WSL_AdressenDataSet = new Adress_DB._WSL_AdressenDataSet();
+            this.Panel2 = new System.Windows.Forms.Panel();
+            this.AdminCheckBox = new System.Windows.Forms.CheckBox();
+            this.SachbearbeiterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SachbearbeiterLabel1 = new System.Windows.Forms.Label();
+            this._BTN_Alle = new System.Windows.Forms.Button();
+            this._BTN_Aktuell = new System.Windows.Forms.Button();
+            this.Label1 = new System.Windows.Forms.Label();
+            this.Panel3 = new System.Windows.Forms.Panel();
+            this._BTN_Schliessen = new System.Windows.Forms.Button();
+            this.TableAdapterManager = new Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager();
+            this.SachbearbeiterTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.SachbearbeiterTableAdapter();
+            this.TC_Administration = new System.Windows.Forms.TabControl();
+            this.TabPage1 = new System.Windows.Forms.TabPage();
+            this.TabPage2 = new System.Windows.Forms.TabPage();
+            this.InaktivCheckBox = new System.Windows.Forms.CheckBox();
+            this.FirmenNameBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.ToolStripButton21 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.ToolStripButton22 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButton23 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButton24 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolStripTextBox4 = new System.Windows.Forms.ToolStripTextBox();
+            this.ToolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolStripButton25 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButton26 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this._BNAV_FirmenNameSave = new System.Windows.Forms.ToolStripButton();
+            this.ChangedDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.LoginTextBox = new System.Windows.Forms.TextBox();
+            this.FirmenNameTextBox = new System.Windows.Forms.TextBox();
+            this.IDFirmenNameTextBox1 = new System.Windows.Forms.TextBox();
+            this.FirmenNameDataGridView = new System.Windows.Forms.DataGridView();
+            this.DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.changed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inaktiv = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.TabPage3 = new System.Windows.Forms.TabPage();
+            this.BindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.ToolStripButton14 = new System.Windows.Forms.ToolStripButton();
+            this.KontoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ToolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.ToolStripButton15 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButton16 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButton17 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
+            this.ToolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolStripButton18 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButton19 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this._BNAV_KontoSave = new System.Windows.Forms.ToolStripButton();
+            this.AnlageDatumDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.KontoNameTextBox = new System.Windows.Forms.TextBox();
+            this.IDFirmenNameTextBox2 = new System.Windows.Forms.TextBox();
+            this.IDKontoTextBox = new System.Windows.Forms.TextBox();
+            this.KontoDataGridView = new System.Windows.Forms.DataGridView();
+            this.DataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TabPage4 = new System.Windows.Forms.TabPage();
+            this.BindingNavigator3 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.ToolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.AdressenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ToolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.ToolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButton10 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
+            this.ToolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolStripButton11 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this._BNAV_AdressenSave = new System.Windows.Forms.ToolStripButton();
+            this.WebseiteTextBox = new System.Windows.Forms.TextBox();
+            this.UStIdNrTextBox = new System.Windows.Forms.TextBox();
+            this.LandTextBox = new System.Windows.Forms.TextBox();
+            this.BundeslandTextBox = new System.Windows.Forms.TextBox();
+            this.OrtTextBox = new System.Windows.Forms.TextBox();
+            this.PLZTextBox = new System.Windows.Forms.TextBox();
+            this.PostfachTextBox = new System.Windows.Forms.TextBox();
+            this.StraßeTextBox = new System.Windows.Forms.TextBox();
+            this.AdresstypTextBox = new System.Windows.Forms.TextBox();
+            this.IDKontoTextBox1 = new System.Windows.Forms.TextBox();
+            this.IDFirmenNameTextBox3 = new System.Windows.Forms.TextBox();
+            this.IDAdresseTextBox1 = new System.Windows.Forms.TextBox();
+            this.DataGridView1 = new System.Windows.Forms.DataGridView();
+            this.IDAdresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDKonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adresstyp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Straße = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Postfach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PLZ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ort = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bundesland = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Land = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UStIdNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Webseite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TabPage5 = new System.Windows.Forms.TabPage();
+            this.SachbearbeiterBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.ToolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.KontakteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ToolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.ToolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.ToolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this._BNAV_KontakteSave = new System.Windows.Forms.ToolStripButton();
+            this.IDAdresseTextBox2 = new System.Windows.Forms.TextBox();
+            this.FaxnummerTextBox = new System.Windows.Forms.TextBox();
+            this.MobiltelefonTextBox = new System.Windows.Forms.TextBox();
+            this.TelefonPrivatTextBox = new System.Windows.Forms.TextBox();
+            this.TelefonGeschaeftlichTextBox = new System.Windows.Forms.TextBox();
+            this.JobtitleTextBox = new System.Windows.Forms.TextBox();
+            this.EmailAddresseTextBox = new System.Windows.Forms.TextBox();
+            this.AnredeTextBox = new System.Windows.Forms.TextBox();
+            this.NachnameTextBox = new System.Windows.Forms.TextBox();
+            this.VornameTextBox = new System.Windows.Forms.TextBox();
+            this.IDFirmenNameTextBox4 = new System.Windows.Forms.TextBox();
+            this.IDKontaktTextBox1 = new System.Windows.Forms.TextBox();
+            this.DataGridView2 = new System.Windows.Forms.DataGridView();
+            this.IDKontakt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDFirmenName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nachname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vorname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailAddresseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JobtitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelefonGeschaeftlichDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelefonPrivatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MobiltelefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FaxnummerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDAdresseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnredeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Belege = new System.Windows.Forms.TabPage();
+            this.BNAV_Belege = new System.Windows.Forms.BindingNavigator(this.components);
+            this.ToolStripButton28 = new System.Windows.Forms.ToolStripButton();
+            this.BelegeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ToolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
+            this.ToolStripButton29 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButton30 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButton31 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolStripTextBox5 = new System.Windows.Forms.ToolStripTextBox();
+            this.ToolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolStripButton32 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripButton33 = new System.Windows.Forms.ToolStripButton();
+            this.ToolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
+            this._BNAV_BelegeSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.BelegeDataGridView = new System.Windows.Forms.DataGridView();
+            this.DataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirmenNameTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.FirmenNameTableAdapter();
+            this.KontoTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.KontoTableAdapter();
+            this.AdressenTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.AdressenTableAdapter();
+            this.KontakteTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.KontakteTableAdapter();
+            this.BelegeTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.BelegeTableAdapter();
+            this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.propertiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.propertiesTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.propertiesTableAdapter();
+            this.propertiesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingNavigator4 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton20 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton27 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton34 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox6 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton35 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton36 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
+            this._BNAV_PropertiesSave = new System.Windows.Forms.ToolStripButton();
+            SachbearbeiterLabel = new System.Windows.Forms.Label();
+            AdminLabel = new System.Windows.Forms.Label();
+            IDFirmenNameLabel1 = new System.Windows.Forms.Label();
+            FirmenNameLabel = new System.Windows.Forms.Label();
+            LoginLabel = new System.Windows.Forms.Label();
+            ChangedLabel = new System.Windows.Forms.Label();
+            IDKontoLabel = new System.Windows.Forms.Label();
+            IDFirmenNameLabel2 = new System.Windows.Forms.Label();
+            KontoNameLabel = new System.Windows.Forms.Label();
+            AnlageDatumLabel = new System.Windows.Forms.Label();
+            IDAdresseLabel1 = new System.Windows.Forms.Label();
+            IDFirmenNameLabel3 = new System.Windows.Forms.Label();
+            IDKontoLabel1 = new System.Windows.Forms.Label();
+            AdresstypLabel = new System.Windows.Forms.Label();
+            StraßeLabel = new System.Windows.Forms.Label();
+            PostfachLabel = new System.Windows.Forms.Label();
+            PLZLabel = new System.Windows.Forms.Label();
+            OrtLabel = new System.Windows.Forms.Label();
+            BundeslandLabel = new System.Windows.Forms.Label();
+            LandLabel = new System.Windows.Forms.Label();
+            UStIdNrLabel = new System.Windows.Forms.Label();
+            WebseiteLabel = new System.Windows.Forms.Label();
+            IDKontaktLabel1 = new System.Windows.Forms.Label();
+            IDFirmenNameLabel4 = new System.Windows.Forms.Label();
+            VornameLabel = new System.Windows.Forms.Label();
+            NachnameLabel = new System.Windows.Forms.Label();
+            AnredeLabel = new System.Windows.Forms.Label();
+            EmailAddresseLabel = new System.Windows.Forms.Label();
+            JobtitleLabel = new System.Windows.Forms.Label();
+            TelefonGeschaeftlichLabel = new System.Windows.Forms.Label();
+            TelefonPrivatLabel = new System.Windows.Forms.Label();
+            MobiltelefonLabel = new System.Windows.Forms.Label();
+            FaxnummerLabel = new System.Windows.Forms.Label();
+            IDAdresseLabel2 = new System.Windows.Forms.Label();
+            InaktivLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this._WSL_AdressenDataSet)).BeginInit();
+            this.Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SachbearbeiterBindingSource)).BeginInit();
+            this.Panel3.SuspendLayout();
+            this.TC_Administration.SuspendLayout();
+            this.TabPage1.SuspendLayout();
+            this.TabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FirmenNameBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingNavigator1)).BeginInit();
+            this.BindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FirmenNameDataGridView)).BeginInit();
+            this.TabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingNavigator2)).BeginInit();
+            this.BindingNavigator2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.KontoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KontoDataGridView)).BeginInit();
+            this.TabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingNavigator3)).BeginInit();
+            this.BindingNavigator3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AdressenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
+            this.TabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SachbearbeiterBindingNavigator)).BeginInit();
+            this.SachbearbeiterBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.KontakteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).BeginInit();
+            this.Belege.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BNAV_Belege)).BeginInit();
+            this.BNAV_Belege.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BelegeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BelegeDataGridView)).BeginInit();
+            this.TableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.propertiesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertiesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).BeginInit();
+            this.bindingNavigator4.SuspendLayout();
+            this.SuspendLayout();
             // 
             // SachbearbeiterLabel
             // 
             SachbearbeiterLabel.AutoSize = true;
-            SachbearbeiterLabel.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            SachbearbeiterLabel.Location = new Point(13, 33);
+            SachbearbeiterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            SachbearbeiterLabel.Location = new System.Drawing.Point(13, 33);
             SachbearbeiterLabel.Name = "SachbearbeiterLabel";
-            SachbearbeiterLabel.Size = new Size(82, 13);
+            SachbearbeiterLabel.Size = new System.Drawing.Size(82, 13);
             SachbearbeiterLabel.TabIndex = 25;
             SachbearbeiterLabel.Text = "Sachbearbeiter:";
             // 
             // AdminLabel
             // 
             AdminLabel.AutoSize = true;
-            AdminLabel.Location = new Point(492, 39);
+            AdminLabel.Location = new System.Drawing.Point(492, 39);
             AdminLabel.Name = "AdminLabel";
-            AdminLabel.Size = new Size(70, 13);
+            AdminLabel.Size = new System.Drawing.Size(70, 13);
             AdminLabel.TabIndex = 27;
             AdminLabel.Text = "Administrator:";
             // 
             // IDFirmenNameLabel1
             // 
             IDFirmenNameLabel1.AutoSize = true;
-            IDFirmenNameLabel1.Location = new Point(9, 11);
+            IDFirmenNameLabel1.Location = new System.Drawing.Point(9, 11);
             IDFirmenNameLabel1.Name = "IDFirmenNameLabel1";
-            IDFirmenNameLabel1.Size = new Size(83, 13);
+            IDFirmenNameLabel1.Size = new System.Drawing.Size(83, 13);
             IDFirmenNameLabel1.TabIndex = 1;
             IDFirmenNameLabel1.Text = "IDFirmen Name:";
             // 
             // FirmenNameLabel
             // 
             FirmenNameLabel.AutoSize = true;
-            FirmenNameLabel.Location = new Point(20, 37);
+            FirmenNameLabel.Location = new System.Drawing.Point(20, 37);
             FirmenNameLabel.Name = "FirmenNameLabel";
-            FirmenNameLabel.Size = new Size(72, 13);
+            FirmenNameLabel.Size = new System.Drawing.Size(72, 13);
             FirmenNameLabel.TabIndex = 3;
             FirmenNameLabel.Text = "Firmen Name:";
             // 
             // LoginLabel
             // 
             LoginLabel.AutoSize = true;
-            LoginLabel.Location = new Point(56, 63);
+            LoginLabel.Location = new System.Drawing.Point(56, 63);
             LoginLabel.Name = "LoginLabel";
-            LoginLabel.Size = new Size(36, 13);
+            LoginLabel.Size = new System.Drawing.Size(36, 13);
             LoginLabel.TabIndex = 5;
             LoginLabel.Text = "Login:";
             // 
             // ChangedLabel
             // 
             ChangedLabel.AutoSize = true;
-            ChangedLabel.Location = new Point(40, 90);
+            ChangedLabel.Location = new System.Drawing.Point(40, 90);
             ChangedLabel.Name = "ChangedLabel";
-            ChangedLabel.Size = new Size(52, 13);
+            ChangedLabel.Size = new System.Drawing.Size(52, 13);
             ChangedLabel.TabIndex = 7;
             ChangedLabel.Text = "changed:";
             // 
             // IDKontoLabel
             // 
             IDKontoLabel.AutoSize = true;
-            IDKontoLabel.Location = new Point(641, 10);
+            IDKontoLabel.Location = new System.Drawing.Point(641, 10);
             IDKontoLabel.Name = "IDKontoLabel";
-            IDKontoLabel.Size = new Size(49, 13);
+            IDKontoLabel.Size = new System.Drawing.Size(49, 13);
             IDKontoLabel.TabIndex = 1;
             IDKontoLabel.Text = "IDKonto:";
             // 
             // IDFirmenNameLabel2
             // 
             IDFirmenNameLabel2.AutoSize = true;
-            IDFirmenNameLabel2.Location = new Point(607, 36);
+            IDFirmenNameLabel2.Location = new System.Drawing.Point(607, 36);
             IDFirmenNameLabel2.Name = "IDFirmenNameLabel2";
-            IDFirmenNameLabel2.Size = new Size(83, 13);
+            IDFirmenNameLabel2.Size = new System.Drawing.Size(83, 13);
             IDFirmenNameLabel2.TabIndex = 3;
             IDFirmenNameLabel2.Text = "IDFirmen Name:";
             // 
             // KontoNameLabel
             // 
             KontoNameLabel.AutoSize = true;
-            KontoNameLabel.Location = new Point(621, 62);
+            KontoNameLabel.Location = new System.Drawing.Point(621, 62);
             KontoNameLabel.Name = "KontoNameLabel";
-            KontoNameLabel.Size = new Size(69, 13);
+            KontoNameLabel.Size = new System.Drawing.Size(69, 13);
             KontoNameLabel.TabIndex = 5;
             KontoNameLabel.Text = "Konto Name:";
             // 
             // AnlageDatumLabel
             // 
             AnlageDatumLabel.AutoSize = true;
-            AnlageDatumLabel.Location = new Point(613, 89);
+            AnlageDatumLabel.Location = new System.Drawing.Point(613, 89);
             AnlageDatumLabel.Name = "AnlageDatumLabel";
-            AnlageDatumLabel.Size = new Size(77, 13);
+            AnlageDatumLabel.Size = new System.Drawing.Size(77, 13);
             AnlageDatumLabel.TabIndex = 7;
             AnlageDatumLabel.Text = "Anlage Datum:";
             // 
             // IDAdresseLabel1
             // 
             IDAdresseLabel1.AutoSize = true;
-            IDAdresseLabel1.Location = new Point(27, 7);
+            IDAdresseLabel1.Location = new System.Drawing.Point(27, 7);
             IDAdresseLabel1.Name = "IDAdresseLabel1";
-            IDAdresseLabel1.Size = new Size(59, 13);
+            IDAdresseLabel1.Size = new System.Drawing.Size(59, 13);
             IDAdresseLabel1.TabIndex = 1;
             IDAdresseLabel1.Text = "IDAdresse:";
             // 
             // IDFirmenNameLabel3
             // 
             IDFirmenNameLabel3.AutoSize = true;
-            IDFirmenNameLabel3.Location = new Point(3, 59);
+            IDFirmenNameLabel3.Location = new System.Drawing.Point(3, 59);
             IDFirmenNameLabel3.Name = "IDFirmenNameLabel3";
-            IDFirmenNameLabel3.Size = new Size(83, 13);
+            IDFirmenNameLabel3.Size = new System.Drawing.Size(83, 13);
             IDFirmenNameLabel3.TabIndex = 3;
             IDFirmenNameLabel3.Text = "IDFirmen Name:";
             // 
             // IDKontoLabel1
             // 
             IDKontoLabel1.AutoSize = true;
-            IDKontoLabel1.Location = new Point(37, 33);
+            IDKontoLabel1.Location = new System.Drawing.Point(37, 33);
             IDKontoLabel1.Name = "IDKontoLabel1";
-            IDKontoLabel1.Size = new Size(49, 13);
+            IDKontoLabel1.Size = new System.Drawing.Size(49, 13);
             IDKontoLabel1.TabIndex = 5;
             IDKontoLabel1.Text = "IDKonto:";
             // 
             // AdresstypLabel
             // 
             AdresstypLabel.AutoSize = true;
-            AdresstypLabel.Location = new Point(206, 7);
+            AdresstypLabel.Location = new System.Drawing.Point(206, 7);
             AdresstypLabel.Name = "AdresstypLabel";
-            AdresstypLabel.Size = new Size(56, 13);
+            AdresstypLabel.Size = new System.Drawing.Size(56, 13);
             AdresstypLabel.TabIndex = 7;
             AdresstypLabel.Text = "Adresstyp:";
             // 
             // StraßeLabel
             // 
             StraßeLabel.AutoSize = true;
-            StraßeLabel.Location = new Point(407, 33);
+            StraßeLabel.Location = new System.Drawing.Point(407, 33);
             StraßeLabel.Name = "StraßeLabel";
-            StraßeLabel.Size = new Size(41, 13);
+            StraßeLabel.Size = new System.Drawing.Size(41, 13);
             StraßeLabel.TabIndex = 9;
             StraßeLabel.Text = "Straße:";
             // 
             // PostfachLabel
             // 
             PostfachLabel.AutoSize = true;
-            PostfachLabel.Location = new Point(396, 8);
+            PostfachLabel.Location = new System.Drawing.Point(396, 8);
             PostfachLabel.Name = "PostfachLabel";
-            PostfachLabel.Size = new Size(52, 13);
+            PostfachLabel.Size = new System.Drawing.Size(52, 13);
             PostfachLabel.TabIndex = 11;
             PostfachLabel.Text = "Postfach:";
             // 
             // PLZLabel
             // 
             PLZLabel.AutoSize = true;
-            PLZLabel.Location = new Point(418, 59);
+            PLZLabel.Location = new System.Drawing.Point(418, 59);
             PLZLabel.Name = "PLZLabel";
-            PLZLabel.Size = new Size(30, 13);
+            PLZLabel.Size = new System.Drawing.Size(30, 13);
             PLZLabel.TabIndex = 13;
             PLZLabel.Text = "PLZ:";
             // 
             // OrtLabel
             // 
             OrtLabel.AutoSize = true;
-            OrtLabel.Location = new Point(542, 59);
+            OrtLabel.Location = new System.Drawing.Point(542, 59);
             OrtLabel.Name = "OrtLabel";
-            OrtLabel.Size = new Size(24, 13);
+            OrtLabel.Size = new System.Drawing.Size(24, 13);
             OrtLabel.TabIndex = 15;
             OrtLabel.Text = "Ort:";
             // 
             // BundeslandLabel
             // 
             BundeslandLabel.AutoSize = true;
-            BundeslandLabel.Location = new Point(723, 9);
+            BundeslandLabel.Location = new System.Drawing.Point(723, 9);
             BundeslandLabel.Name = "BundeslandLabel";
-            BundeslandLabel.Size = new Size(66, 13);
+            BundeslandLabel.Size = new System.Drawing.Size(66, 13);
             BundeslandLabel.TabIndex = 17;
             BundeslandLabel.Text = "Bundesland:";
             // 
             // LandLabel
             // 
             LandLabel.AutoSize = true;
-            LandLabel.Location = new Point(911, 7);
+            LandLabel.Location = new System.Drawing.Point(911, 7);
             LandLabel.Name = "LandLabel";
-            LandLabel.Size = new Size(34, 13);
+            LandLabel.Size = new System.Drawing.Size(34, 13);
             LandLabel.TabIndex = 19;
             LandLabel.Text = "Land:";
             // 
             // UStIdNrLabel
             // 
             UStIdNrLabel.AutoSize = true;
-            UStIdNrLabel.Location = new Point(208, 33);
+            UStIdNrLabel.Location = new System.Drawing.Point(208, 33);
             UStIdNrLabel.Name = "UStIdNrLabel";
-            UStIdNrLabel.Size = new Size(54, 13);
+            UStIdNrLabel.Size = new System.Drawing.Size(54, 13);
             UStIdNrLabel.TabIndex = 21;
             UStIdNrLabel.Text = "USt Id Nr:";
             // 
             // WebseiteLabel
             // 
             WebseiteLabel.AutoSize = true;
-            WebseiteLabel.Location = new Point(734, 33);
+            WebseiteLabel.Location = new System.Drawing.Point(734, 33);
             WebseiteLabel.Name = "WebseiteLabel";
-            WebseiteLabel.Size = new Size(55, 13);
+            WebseiteLabel.Size = new System.Drawing.Size(55, 13);
             WebseiteLabel.TabIndex = 23;
             WebseiteLabel.Text = "Webseite:";
             // 
             // IDKontaktLabel1
             // 
             IDKontaktLabel1.AutoSize = true;
-            IDKontaktLabel1.Location = new Point(34, 9);
+            IDKontaktLabel1.Location = new System.Drawing.Point(34, 9);
             IDKontaktLabel1.Name = "IDKontaktLabel1";
-            IDKontaktLabel1.Size = new Size(58, 13);
+            IDKontaktLabel1.Size = new System.Drawing.Size(58, 13);
             IDKontaktLabel1.TabIndex = 2;
             IDKontaktLabel1.Text = "IDKontakt:";
             // 
             // IDFirmenNameLabel4
             // 
             IDFirmenNameLabel4.AutoSize = true;
-            IDFirmenNameLabel4.Location = new Point(5, 35);
+            IDFirmenNameLabel4.Location = new System.Drawing.Point(5, 35);
             IDFirmenNameLabel4.Name = "IDFirmenNameLabel4";
-            IDFirmenNameLabel4.Size = new Size(83, 13);
+            IDFirmenNameLabel4.Size = new System.Drawing.Size(83, 13);
             IDFirmenNameLabel4.TabIndex = 3;
             IDFirmenNameLabel4.Text = "IDFirmen-Name:";
             // 
             // VornameLabel
             // 
             VornameLabel.AutoSize = true;
-            VornameLabel.Location = new Point(231, 60);
+            VornameLabel.Location = new System.Drawing.Point(231, 60);
             VornameLabel.Name = "VornameLabel";
-            VornameLabel.Size = new Size(52, 13);
+            VornameLabel.Size = new System.Drawing.Size(52, 13);
             VornameLabel.TabIndex = 5;
             VornameLabel.Text = "Vorname:";
             // 
             // NachnameLabel
             // 
             NachnameLabel.AutoSize = true;
-            NachnameLabel.Location = new Point(217, 34);
+            NachnameLabel.Location = new System.Drawing.Point(217, 34);
             NachnameLabel.Name = "NachnameLabel";
-            NachnameLabel.Size = new Size(62, 13);
+            NachnameLabel.Size = new System.Drawing.Size(62, 13);
             NachnameLabel.TabIndex = 7;
             NachnameLabel.Text = "Nachname:";
             // 
             // AnredeLabel
             // 
             AnredeLabel.AutoSize = true;
-            AnredeLabel.Location = new Point(239, 9);
+            AnredeLabel.Location = new System.Drawing.Point(239, 9);
             AnredeLabel.Name = "AnredeLabel";
-            AnredeLabel.Size = new Size(44, 13);
+            AnredeLabel.Size = new System.Drawing.Size(44, 13);
             AnredeLabel.TabIndex = 9;
             AnredeLabel.Text = "Anrede:";
             // 
             // EmailAddresseLabel
             // 
             EmailAddresseLabel.AutoSize = true;
-            EmailAddresseLabel.Location = new Point(445, 35);
+            EmailAddresseLabel.Location = new System.Drawing.Point(445, 35);
             EmailAddresseLabel.Name = "EmailAddresseLabel";
-            EmailAddresseLabel.Size = new Size(35, 13);
+            EmailAddresseLabel.Size = new System.Drawing.Size(35, 13);
             EmailAddresseLabel.TabIndex = 11;
             EmailAddresseLabel.Text = "Email:";
             // 
             // JobtitleLabel
             // 
             JobtitleLabel.AutoSize = true;
-            JobtitleLabel.Location = new Point(439, 9);
+            JobtitleLabel.Location = new System.Drawing.Point(439, 9);
             JobtitleLabel.Name = "JobtitleLabel";
-            JobtitleLabel.Size = new Size(43, 13);
+            JobtitleLabel.Size = new System.Drawing.Size(43, 13);
             JobtitleLabel.TabIndex = 13;
             JobtitleLabel.Text = "Jobtitle:";
             // 
             // TelefonGeschaeftlichLabel
             // 
             TelefonGeschaeftlichLabel.AutoSize = true;
-            TelefonGeschaeftlichLabel.Location = new Point(629, 8);
+            TelefonGeschaeftlichLabel.Location = new System.Drawing.Point(629, 8);
             TelefonGeschaeftlichLabel.Name = "TelefonGeschaeftlichLabel";
-            TelefonGeschaeftlichLabel.Size = new Size(84, 13);
+            TelefonGeschaeftlichLabel.Size = new System.Drawing.Size(84, 13);
             TelefonGeschaeftlichLabel.TabIndex = 15;
             TelefonGeschaeftlichLabel.Text = "Telefon (gesch):";
             // 
             // TelefonPrivatLabel
             // 
             TelefonPrivatLabel.AutoSize = true;
-            TelefonPrivatLabel.Location = new Point(633, 34);
+            TelefonPrivatLabel.Location = new System.Drawing.Point(633, 34);
             TelefonPrivatLabel.Name = "TelefonPrivatLabel";
-            TelefonPrivatLabel.Size = new Size(76, 13);
+            TelefonPrivatLabel.Size = new System.Drawing.Size(76, 13);
             TelefonPrivatLabel.TabIndex = 17;
             TelefonPrivatLabel.Text = "Telefon Privat:";
             // 
             // MobiltelefonLabel
             // 
             MobiltelefonLabel.AutoSize = true;
-            MobiltelefonLabel.Location = new Point(645, 60);
+            MobiltelefonLabel.Location = new System.Drawing.Point(645, 60);
             MobiltelefonLabel.Name = "MobiltelefonLabel";
-            MobiltelefonLabel.Size = new Size(67, 13);
+            MobiltelefonLabel.Size = new System.Drawing.Size(67, 13);
             MobiltelefonLabel.TabIndex = 19;
             MobiltelefonLabel.Text = "Mobiltelefon:";
             // 
             // FaxnummerLabel
             // 
             FaxnummerLabel.AutoSize = true;
-            FaxnummerLabel.Location = new Point(645, 86);
+            FaxnummerLabel.Location = new System.Drawing.Point(645, 86);
             FaxnummerLabel.Name = "FaxnummerLabel";
-            FaxnummerLabel.Size = new Size(64, 13);
+            FaxnummerLabel.Size = new System.Drawing.Size(64, 13);
             FaxnummerLabel.TabIndex = 21;
             FaxnummerLabel.Text = "Faxnummer:";
             // 
             // IDAdresseLabel2
             // 
             IDAdresseLabel2.AutoSize = true;
-            IDAdresseLabel2.Location = new Point(29, 61);
+            IDAdresseLabel2.Location = new System.Drawing.Point(29, 61);
             IDAdresseLabel2.Name = "IDAdresseLabel2";
-            IDAdresseLabel2.Size = new Size(59, 13);
+            IDAdresseLabel2.Size = new System.Drawing.Size(59, 13);
             IDAdresseLabel2.TabIndex = 23;
             IDAdresseLabel2.Text = "IDAdresse:";
-            // 
-            // DWpfadLabel
-            // 
-            DWpfadLabel.AutoSize = true;
-            DWpfadLabel.Location = new Point(17, 41);
-            DWpfadLabel.Name = "DWpfadLabel";
-            DWpfadLabel.Size = new Size(86, 13);
-            DWpfadLabel.TabIndex = 18;
-            DWpfadLabel.Text = "DocuWare pfad:";
-            // 
-            // DWDateinameLabel
-            // 
-            DWDateinameLabel.AutoSize = true;
-            DWDateinameLabel.Location = new Point(23, 67);
-            DWDateinameLabel.Name = "DWDateinameLabel";
-            DWDateinameLabel.Size = new Size(83, 13);
-            DWDateinameLabel.TabIndex = 20;
-            DWDateinameLabel.Text = "DW-Dateiname:";
             // 
             // InaktivLabel
             // 
             InaktivLabel.AutoSize = true;
-            InaktivLabel.Location = new Point(51, 117);
+            InaktivLabel.Location = new System.Drawing.Point(51, 117);
             InaktivLabel.Name = "InaktivLabel";
-            InaktivLabel.Size = new Size(41, 13);
+            InaktivLabel.Size = new System.Drawing.Size(41, 13);
             InaktivLabel.TabIndex = 10;
             InaktivLabel.Text = "inaktiv:";
             // 
-            // HilfelinkLabel
-            // 
-            HilfelinkLabel.AutoSize = true;
-            HilfelinkLabel.Location = new Point(60, 93);
-            HilfelinkLabel.Name = "HilfelinkLabel";
-            HilfelinkLabel.Size = new Size(47, 13);
-            HilfelinkLabel.TabIndex = 23;
-            HilfelinkLabel.Text = "Hilfelink:";
-            // 
-            // VorlagenpfadTextBox
-            // 
-            VorlagenpfadTextBox.DataBindings.Add(new Binding("Text", KonfigurationBindingSource, "Vorlagenpfad", true));
-            VorlagenpfadTextBox.Location = new Point(113, 12);
-            VorlagenpfadTextBox.Name = "VorlagenpfadTextBox";
-            VorlagenpfadTextBox.Size = new Size(457, 20);
-            VorlagenpfadTextBox.TabIndex = 16;
-            // 
-            // KonfigurationBindingSource
-            // 
-            KonfigurationBindingSource.DataMember = "Konfiguration";
-            KonfigurationBindingSource.DataSource = _WSL_AdressenDataSet;
-            // 
             // _WSL_AdressenDataSet
             // 
-            _WSL_AdressenDataSet.DataSetName = "_WSL_AdressenDataSet";
-            _WSL_AdressenDataSet.SchemaSerializationMode = SchemaSerializationMode.IncludeSchema;
-            // 
-            // IDBesuchTextBox
-            // 
-            IDBesuchTextBox.DataBindings.Add(new Binding("Text", KonfigurationBindingSource, "IDBeleg", true));
-            IDBesuchTextBox.Location = new Point(113, 272);
-            IDBesuchTextBox.Name = "IDBesuchTextBox";
-            IDBesuchTextBox.Size = new Size(100, 20);
-            IDBesuchTextBox.TabIndex = 15;
-            // 
-            // IDKontaktTextBox
-            // 
-            IDKontaktTextBox.DataBindings.Add(new Binding("Text", KonfigurationBindingSource, "IDKontakt", true));
-            IDKontaktTextBox.Location = new Point(113, 246);
-            IDKontaktTextBox.Name = "IDKontaktTextBox";
-            IDKontaktTextBox.Size = new Size(100, 20);
-            IDKontaktTextBox.TabIndex = 13;
-            // 
-            // IDAdresseTextBox
-            // 
-            IDAdresseTextBox.DataBindings.Add(new Binding("Text", KonfigurationBindingSource, "IDAdresse", true));
-            IDAdresseTextBox.Location = new Point(113, 220);
-            IDAdresseTextBox.Name = "IDAdresseTextBox";
-            IDAdresseTextBox.Size = new Size(100, 20);
-            IDAdresseTextBox.TabIndex = 11;
-            // 
-            // LieferantennummerTextBox
-            // 
-            LieferantennummerTextBox.DataBindings.Add(new Binding("Text", KonfigurationBindingSource, "Lieferantennummer", true));
-            LieferantennummerTextBox.Location = new Point(113, 194);
-            LieferantennummerTextBox.Name = "LieferantennummerTextBox";
-            LieferantennummerTextBox.Size = new Size(100, 20);
-            LieferantennummerTextBox.TabIndex = 9;
-            // 
-            // KundennummerTextBox
-            // 
-            KundennummerTextBox.DataBindings.Add(new Binding("Text", KonfigurationBindingSource, "Kundennummer", true));
-            KundennummerTextBox.Location = new Point(113, 168);
-            KundennummerTextBox.Name = "KundennummerTextBox";
-            KundennummerTextBox.Size = new Size(100, 20);
-            KundennummerTextBox.TabIndex = 7;
-            // 
-            // LeadnummerTextBox
-            // 
-            LeadnummerTextBox.DataBindings.Add(new Binding("Text", KonfigurationBindingSource, "Leadnummer", true));
-            LeadnummerTextBox.Location = new Point(113, 142);
-            LeadnummerTextBox.Name = "LeadnummerTextBox";
-            LeadnummerTextBox.Size = new Size(100, 20);
-            LeadnummerTextBox.TabIndex = 5;
-            // 
-            // IDFirmenNameTextBox
-            // 
-            IDFirmenNameTextBox.DataBindings.Add(new Binding("Text", KonfigurationBindingSource, "IDFirmenName", true));
-            IDFirmenNameTextBox.Location = new Point(113, 116);
-            IDFirmenNameTextBox.Name = "IDFirmenNameTextBox";
-            IDFirmenNameTextBox.Size = new Size(100, 20);
-            IDFirmenNameTextBox.TabIndex = 3;
+            this._WSL_AdressenDataSet.DataSetName = "_WSL_AdressenDataSet";
+            this._WSL_AdressenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Panel2
             // 
-            Panel2.BackColor = Color.Silver;
-            Panel2.Controls.Add(AdminCheckBox);
-            Panel2.Controls.Add(AdminLabel);
-            Panel2.Controls.Add(SachbearbeiterLabel1);
-            Panel2.Controls.Add(_BTN_Alle);
-            Panel2.Controls.Add(SachbearbeiterLabel);
-            Panel2.Controls.Add(_BTN_Aktuell);
-            Panel2.Controls.Add(Label1);
-            Panel2.Dock = DockStyle.Fill;
-            Panel2.Location = new Point(3, 3);
-            Panel2.Name = "Panel2";
-            Panel2.Size = new Size(1179, 61);
-            Panel2.TabIndex = 25;
+            this.Panel2.BackColor = System.Drawing.Color.Silver;
+            this.Panel2.Controls.Add(this.AdminCheckBox);
+            this.Panel2.Controls.Add(AdminLabel);
+            this.Panel2.Controls.Add(this.SachbearbeiterLabel1);
+            this.Panel2.Controls.Add(this._BTN_Alle);
+            this.Panel2.Controls.Add(SachbearbeiterLabel);
+            this.Panel2.Controls.Add(this._BTN_Aktuell);
+            this.Panel2.Controls.Add(this.Label1);
+            this.Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel2.Location = new System.Drawing.Point(3, 3);
+            this.Panel2.Name = "Panel2";
+            this.Panel2.Size = new System.Drawing.Size(1179, 61);
+            this.Panel2.TabIndex = 25;
             // 
             // AdminCheckBox
             // 
-            AdminCheckBox.DataBindings.Add(new Binding("CheckState", SachbearbeiterBindingSource, "Admin", true));
-            AdminCheckBox.Enabled = false;
-            AdminCheckBox.Location = new Point(568, 33);
-            AdminCheckBox.Name = "AdminCheckBox";
-            AdminCheckBox.Size = new Size(16, 24);
-            AdminCheckBox.TabIndex = 28;
-            AdminCheckBox.UseVisualStyleBackColor = true;
+            this.AdminCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.SachbearbeiterBindingSource, "Admin", true));
+            this.AdminCheckBox.Enabled = false;
+            this.AdminCheckBox.Location = new System.Drawing.Point(568, 33);
+            this.AdminCheckBox.Name = "AdminCheckBox";
+            this.AdminCheckBox.Size = new System.Drawing.Size(16, 24);
+            this.AdminCheckBox.TabIndex = 28;
+            this.AdminCheckBox.UseVisualStyleBackColor = true;
             // 
             // SachbearbeiterBindingSource
             // 
-            SachbearbeiterBindingSource.DataMember = "Sachbearbeiter";
-            SachbearbeiterBindingSource.DataSource = _WSL_AdressenDataSet;
+            this.SachbearbeiterBindingSource.DataMember = "Sachbearbeiter";
+            this.SachbearbeiterBindingSource.DataSource = this._WSL_AdressenDataSet;
             // 
             // SachbearbeiterLabel1
             // 
-            SachbearbeiterLabel1.DataBindings.Add(new Binding("Text", SachbearbeiterBindingSource, "Sachbearbeiter", true));
-            SachbearbeiterLabel1.Location = new Point(101, 29);
-            SachbearbeiterLabel1.Name = "SachbearbeiterLabel1";
-            SachbearbeiterLabel1.Size = new Size(385, 22);
-            SachbearbeiterLabel1.TabIndex = 26;
-            SachbearbeiterLabel1.Text = "Vorname Name";
-            SachbearbeiterLabel1.TextAlign = ContentAlignment.MiddleLeft;
+            this.SachbearbeiterLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.SachbearbeiterBindingSource, "Sachbearbeiter", true));
+            this.SachbearbeiterLabel1.Location = new System.Drawing.Point(101, 29);
+            this.SachbearbeiterLabel1.Name = "SachbearbeiterLabel1";
+            this.SachbearbeiterLabel1.Size = new System.Drawing.Size(385, 22);
+            this.SachbearbeiterLabel1.TabIndex = 26;
+            this.SachbearbeiterLabel1.Text = "Vorname Name";
+            this.SachbearbeiterLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // BTN_Alle
+            // _BTN_Alle
             // 
-            _BTN_Alle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _BTN_Alle.Enabled = false;
-            _BTN_Alle.Location = new Point(938, 6);
-            _BTN_Alle.Name = "_BTN_Alle";
-            _BTN_Alle.Size = new Size(75, 23);
-            _BTN_Alle.TabIndex = 2;
-            _BTN_Alle.Text = "alle";
-            _BTN_Alle.UseVisualStyleBackColor = true;
+            this._BTN_Alle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._BTN_Alle.Enabled = false;
+            this._BTN_Alle.Location = new System.Drawing.Point(938, 6);
+            this._BTN_Alle.Name = "_BTN_Alle";
+            this._BTN_Alle.Size = new System.Drawing.Size(75, 23);
+            this._BTN_Alle.TabIndex = 2;
+            this._BTN_Alle.Text = "alle";
+            this._BTN_Alle.UseVisualStyleBackColor = true;
+            this._BTN_Alle.Click += new System.EventHandler(this.BTN_Alle_Click);
             // 
-            // BTN_Aktuell
+            // _BTN_Aktuell
             // 
-            _BTN_Aktuell.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _BTN_Aktuell.Enabled = false;
-            _BTN_Aktuell.Location = new Point(1019, 6);
-            _BTN_Aktuell.Name = "_BTN_Aktuell";
-            _BTN_Aktuell.Size = new Size(156, 23);
-            _BTN_Aktuell.TabIndex = 1;
-            _BTN_Aktuell.Text = "Aktuellen Geschäftspartner";
-            _BTN_Aktuell.UseVisualStyleBackColor = true;
+            this._BTN_Aktuell.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._BTN_Aktuell.Enabled = false;
+            this._BTN_Aktuell.Location = new System.Drawing.Point(1019, 6);
+            this._BTN_Aktuell.Name = "_BTN_Aktuell";
+            this._BTN_Aktuell.Size = new System.Drawing.Size(156, 23);
+            this._BTN_Aktuell.TabIndex = 1;
+            this._BTN_Aktuell.Text = "Aktuellen Geschäftspartner";
+            this._BTN_Aktuell.UseVisualStyleBackColor = true;
+            this._BTN_Aktuell.Click += new System.EventHandler(this.BTN_Aktuell_Click);
             // 
             // Label1
             // 
-            Label1.AutoSize = true;
-            Label1.Font = new Font("Microsoft Sans Serif", 12.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label1.ForeColor = Color.Black;
-            Label1.Location = new Point(12, 9);
-            Label1.Name = "Label1";
-            Label1.Size = new Size(110, 20);
-            Label1.TabIndex = 0;
-            Label1.Text = "Administration";
+            this.Label1.AutoSize = true;
+            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.ForeColor = System.Drawing.Color.Black;
+            this.Label1.Location = new System.Drawing.Point(12, 9);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(110, 20);
+            this.Label1.TabIndex = 0;
+            this.Label1.Text = "Administration";
             // 
             // Panel3
             // 
-            Panel3.BackColor = Color.Gray;
-            Panel3.Controls.Add(_BTN_Schliessen);
-            Panel3.Dock = DockStyle.Fill;
-            Panel3.Location = new Point(3, 476);
-            Panel3.Name = "Panel3";
-            Panel3.Size = new Size(1179, 43);
-            Panel3.TabIndex = 26;
+            this.Panel3.BackColor = System.Drawing.Color.Gray;
+            this.Panel3.Controls.Add(this._BTN_Schliessen);
+            this.Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel3.Location = new System.Drawing.Point(3, 476);
+            this.Panel3.Name = "Panel3";
+            this.Panel3.Size = new System.Drawing.Size(1179, 43);
+            this.Panel3.TabIndex = 26;
             // 
-            // BTN_Schliessen
+            // _BTN_Schliessen
             // 
-            _BTN_Schliessen.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _BTN_Schliessen.Image = (Image)resources.GetObject("BTN_Schliessen.Image");
-            _BTN_Schliessen.ImageAlign = ContentAlignment.MiddleRight;
-            _BTN_Schliessen.Location = new Point(1095, 10);
-            _BTN_Schliessen.Name = "_BTN_Schliessen";
-            _BTN_Schliessen.Size = new Size(80, 23);
-            _BTN_Schliessen.TabIndex = 16;
-            _BTN_Schliessen.Text = "Schließen";
-            _BTN_Schliessen.TextAlign = ContentAlignment.MiddleLeft;
-            _BTN_Schliessen.UseVisualStyleBackColor = true;
+            this._BTN_Schliessen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._BTN_Schliessen.Image = ((System.Drawing.Image)(resources.GetObject("_BTN_Schliessen.Image")));
+            this._BTN_Schliessen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._BTN_Schliessen.Location = new System.Drawing.Point(1095, 10);
+            this._BTN_Schliessen.Name = "_BTN_Schliessen";
+            this._BTN_Schliessen.Size = new System.Drawing.Size(80, 23);
+            this._BTN_Schliessen.TabIndex = 16;
+            this._BTN_Schliessen.Text = "Schließen";
+            this._BTN_Schliessen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._BTN_Schliessen.UseVisualStyleBackColor = true;
+            this._BTN_Schliessen.Click += new System.EventHandler(this.BTN_Schliessen_Click);
             // 
             // TableAdapterManager
             // 
-            TableAdapterManager.AdressenTableAdapter = null;
-            TableAdapterManager.AT_PLZ_GeodatenTableAdapter = null;
-            TableAdapterManager.BackupDataSetBeforeUpdate = false;
-            TableAdapterManager.BelegeTableAdapter = null;
-            TableAdapterManager.CH_PLZ_GeodatenTableAdapter = null;
-            TableAdapterManager.Connection = null;
-            TableAdapterManager.DE_PLZ_GeodatenTableAdapter = null;
-            TableAdapterManager.FirmenNameTableAdapter = null;
-            TableAdapterManager.KonfigurationTableAdapter = null;
-            TableAdapterManager.KontakteTableAdapter = null;
-            TableAdapterManager.KontoTableAdapter = null;
-            TableAdapterManager.LogTabelleTableAdapter = null;
-            TableAdapterManager.PLZ_GeodatenTableAdapter = null;
-            TableAdapterManager.SachbearbeiterTableAdapter = null;
-            TableAdapterManager.StaatenTableAdapter = null;
-            TableAdapterManager.UpdateOrder = _WSL_AdressenDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // KonfigurationTableAdapter
-            // 
-            KonfigurationTableAdapter.ClearBeforeFill = true;
+            this.TableAdapterManager.AdressenTableAdapter = null;
+            this.TableAdapterManager.AT_PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.TableAdapterManager.BelegeTableAdapter = null;
+            this.TableAdapterManager.CH_PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.Connection = null;
+            this.TableAdapterManager.DE_PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.FirmenNameTableAdapter = null;
+            this.TableAdapterManager.KontakteTableAdapter = null;
+            this.TableAdapterManager.KontoTableAdapter = null;
+            this.TableAdapterManager.LogTabelleTableAdapter = null;
+            this.TableAdapterManager.PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.propertiesTableAdapter = null;
+            this.TableAdapterManager.SachbearbeiterTableAdapter = null;
+            this.TableAdapterManager.StaatenTableAdapter = null;
+            this.TableAdapterManager.UpdateOrder = Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // SachbearbeiterTableAdapter
             // 
-            SachbearbeiterTableAdapter.ClearBeforeFill = true;
+            this.SachbearbeiterTableAdapter.ClearBeforeFill = true;
             // 
             // TC_Administration
             // 
-            TC_Administration.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            TC_Administration.Controls.Add(TabPage1);
-            TC_Administration.Controls.Add(TabPage2);
-            TC_Administration.Controls.Add(TabPage3);
-            TC_Administration.Controls.Add(TabPage4);
-            TC_Administration.Controls.Add(TabPage5);
-            TC_Administration.Controls.Add(Belege);
-            TC_Administration.Location = new Point(3, 70);
-            TC_Administration.Name = "TC_Administration";
-            TC_Administration.SelectedIndex = 0;
-            TC_Administration.Size = new Size(1179, 400);
-            TC_Administration.TabIndex = 30;
+            this.TC_Administration.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TC_Administration.Controls.Add(this.TabPage1);
+            this.TC_Administration.Controls.Add(this.TabPage2);
+            this.TC_Administration.Controls.Add(this.TabPage3);
+            this.TC_Administration.Controls.Add(this.TabPage4);
+            this.TC_Administration.Controls.Add(this.TabPage5);
+            this.TC_Administration.Controls.Add(this.Belege);
+            this.TC_Administration.Location = new System.Drawing.Point(3, 70);
+            this.TC_Administration.Name = "TC_Administration";
+            this.TC_Administration.SelectedIndex = 0;
+            this.TC_Administration.Size = new System.Drawing.Size(1179, 400);
+            this.TC_Administration.TabIndex = 30;
             // 
             // TabPage1
             // 
-            TabPage1.AutoScroll = true;
-            TabPage1.Controls.Add(HilfelinkLabel);
-            TabPage1.Controls.Add(HilfelinkTextBox);
-            TabPage1.Controls.Add(_BTN_DWPfad);
-            TabPage1.Controls.Add(DWDateinameLabel);
-            TabPage1.Controls.Add(DWDateinameTextBox);
-            TabPage1.Controls.Add(DWpfadLabel);
-            TabPage1.Controls.Add(DWpfadTextBox);
-            TabPage1.Controls.Add(_BTN_Speichern);
-            TabPage1.Controls.Add(VorlagenpfadLabel);
-            TabPage1.Controls.Add(LeadnummerTextBox);
-            TabPage1.Controls.Add(VorlagenpfadTextBox);
-            TabPage1.Controls.Add(_BTN_Vorlagenpfad);
-            TabPage1.Controls.Add(IDBesuchLabel);
-            TabPage1.Controls.Add(IDFirmenNameTextBox);
-            TabPage1.Controls.Add(IDBesuchTextBox);
-            TabPage1.Controls.Add(IDFirmenNameLabel);
-            TabPage1.Controls.Add(IDKontaktLabel);
-            TabPage1.Controls.Add(LeadnummerLabel);
-            TabPage1.Controls.Add(IDKontaktTextBox);
-            TabPage1.Controls.Add(KundennummerTextBox);
-            TabPage1.Controls.Add(IDAdresseLabel);
-            TabPage1.Controls.Add(KundennummerLabel);
-            TabPage1.Controls.Add(IDAdresseTextBox);
-            TabPage1.Controls.Add(LieferantennummerTextBox);
-            TabPage1.Controls.Add(LieferantennummerLabel);
-            TabPage1.Location = new Point(4, 22);
-            TabPage1.Name = "TabPage1";
-            TabPage1.Padding = new Padding(3);
-            TabPage1.Size = new Size(1171, 374);
-            TabPage1.TabIndex = 0;
-            TabPage1.Text = "Konfiguration";
-            TabPage1.UseVisualStyleBackColor = true;
-            // 
-            // HilfelinkTextBox
-            // 
-            HilfelinkTextBox.DataBindings.Add(new Binding("Text", KonfigurationBindingSource, "Hilfelink", true));
-            HilfelinkTextBox.Location = new Point(113, 90);
-            HilfelinkTextBox.Name = "HilfelinkTextBox";
-            HilfelinkTextBox.Size = new Size(457, 20);
-            HilfelinkTextBox.TabIndex = 24;
-            // 
-            // BTN_DWPfad
-            // 
-            _BTN_DWPfad.Image = My.Resources.Resources.DocumentsFolder_16x;
-            _BTN_DWPfad.ImageAlign = ContentAlignment.MiddleRight;
-            _BTN_DWPfad.Location = new Point(576, 38);
-            _BTN_DWPfad.Name = "_BTN_DWPfad";
-            _BTN_DWPfad.Size = new Size(138, 23);
-            _BTN_DWPfad.TabIndex = 22;
-            _BTN_DWPfad.Text = "DW-Pfad ändern";
-            _BTN_DWPfad.TextAlign = ContentAlignment.MiddleLeft;
-            _BTN_DWPfad.UseVisualStyleBackColor = true;
-            // 
-            // DWDateinameTextBox
-            // 
-            DWDateinameTextBox.DataBindings.Add(new Binding("Text", KonfigurationBindingSource, "DWDateiname", true));
-            DWDateinameTextBox.Location = new Point(113, 64);
-            DWDateinameTextBox.Name = "DWDateinameTextBox";
-            DWDateinameTextBox.Size = new Size(230, 20);
-            DWDateinameTextBox.TabIndex = 21;
-            // 
-            // DWpfadTextBox
-            // 
-            DWpfadTextBox.DataBindings.Add(new Binding("Text", KonfigurationBindingSource, "DWpfad", true));
-            DWpfadTextBox.Location = new Point(113, 38);
-            DWpfadTextBox.Name = "DWpfadTextBox";
-            DWpfadTextBox.Size = new Size(457, 20);
-            DWpfadTextBox.TabIndex = 19;
-            // 
-            // BTN_Speichern
-            // 
-            _BTN_Speichern.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            _BTN_Speichern.Image = (Image)resources.GetObject("BTN_Speichern.Image");
-            _BTN_Speichern.ImageAlign = ContentAlignment.MiddleRight;
-            _BTN_Speichern.Location = new Point(113, 298);
-            _BTN_Speichern.Name = "_BTN_Speichern";
-            _BTN_Speichern.Size = new Size(80, 23);
-            _BTN_Speichern.TabIndex = 17;
-            _BTN_Speichern.Text = "speichern";
-            _BTN_Speichern.TextAlign = ContentAlignment.MiddleLeft;
-            _BTN_Speichern.UseVisualStyleBackColor = true;
-            // 
-            // BTN_Vorlagenpfad
-            // 
-            _BTN_Vorlagenpfad.Image = My.Resources.Resources.DocumentsFolder_16x;
-            _BTN_Vorlagenpfad.ImageAlign = ContentAlignment.MiddleRight;
-            _BTN_Vorlagenpfad.Location = new Point(576, 10);
-            _BTN_Vorlagenpfad.Name = "_BTN_Vorlagenpfad";
-            _BTN_Vorlagenpfad.Size = new Size(138, 23);
-            _BTN_Vorlagenpfad.TabIndex = 2;
-            _BTN_Vorlagenpfad.Text = "Vorlagenpfad ändern";
-            _BTN_Vorlagenpfad.TextAlign = ContentAlignment.MiddleLeft;
-            _BTN_Vorlagenpfad.UseVisualStyleBackColor = true;
+            this.TabPage1.AutoScroll = true;
+            this.TabPage1.Controls.Add(this.bindingNavigator4);
+            this.TabPage1.Controls.Add(this.propertiesDataGridView);
+            this.TabPage1.Location = new System.Drawing.Point(4, 22);
+            this.TabPage1.Name = "TabPage1";
+            this.TabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.TabPage1.Size = new System.Drawing.Size(1171, 374);
+            this.TabPage1.TabIndex = 0;
+            this.TabPage1.Text = "Konfiguration";
+            this.TabPage1.UseVisualStyleBackColor = true;
             // 
             // TabPage2
             // 
-            TabPage2.AutoScroll = true;
-            TabPage2.Controls.Add(InaktivLabel);
-            TabPage2.Controls.Add(InaktivCheckBox);
-            TabPage2.Controls.Add(BindingNavigator1);
-            TabPage2.Controls.Add(ChangedLabel);
-            TabPage2.Controls.Add(ChangedDateTimePicker);
-            TabPage2.Controls.Add(LoginLabel);
-            TabPage2.Controls.Add(LoginTextBox);
-            TabPage2.Controls.Add(FirmenNameLabel);
-            TabPage2.Controls.Add(FirmenNameTextBox);
-            TabPage2.Controls.Add(IDFirmenNameLabel1);
-            TabPage2.Controls.Add(IDFirmenNameTextBox1);
-            TabPage2.Controls.Add(FirmenNameDataGridView);
-            TabPage2.Location = new Point(4, 22);
-            TabPage2.Name = "TabPage2";
-            TabPage2.Padding = new Padding(3);
-            TabPage2.Size = new Size(1171, 374);
-            TabPage2.TabIndex = 1;
-            TabPage2.Text = "FirmenName";
-            TabPage2.UseVisualStyleBackColor = true;
+            this.TabPage2.AutoScroll = true;
+            this.TabPage2.Controls.Add(InaktivLabel);
+            this.TabPage2.Controls.Add(this.InaktivCheckBox);
+            this.TabPage2.Controls.Add(this.BindingNavigator1);
+            this.TabPage2.Controls.Add(ChangedLabel);
+            this.TabPage2.Controls.Add(this.ChangedDateTimePicker);
+            this.TabPage2.Controls.Add(LoginLabel);
+            this.TabPage2.Controls.Add(this.LoginTextBox);
+            this.TabPage2.Controls.Add(FirmenNameLabel);
+            this.TabPage2.Controls.Add(this.FirmenNameTextBox);
+            this.TabPage2.Controls.Add(IDFirmenNameLabel1);
+            this.TabPage2.Controls.Add(this.IDFirmenNameTextBox1);
+            this.TabPage2.Controls.Add(this.FirmenNameDataGridView);
+            this.TabPage2.Location = new System.Drawing.Point(4, 22);
+            this.TabPage2.Name = "TabPage2";
+            this.TabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.TabPage2.Size = new System.Drawing.Size(1171, 374);
+            this.TabPage2.TabIndex = 1;
+            this.TabPage2.Text = "FirmenName";
+            this.TabPage2.UseVisualStyleBackColor = true;
             // 
             // InaktivCheckBox
             // 
-            InaktivCheckBox.DataBindings.Add(new Binding("CheckState", FirmenNameBindingSource, "inaktiv", true));
-            InaktivCheckBox.Location = new Point(98, 112);
-            InaktivCheckBox.Name = "InaktivCheckBox";
-            InaktivCheckBox.Size = new Size(200, 24);
-            InaktivCheckBox.TabIndex = 11;
-            InaktivCheckBox.Text = "Geschäftspartner deaktivieren";
-            InaktivCheckBox.UseVisualStyleBackColor = true;
+            this.InaktivCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.FirmenNameBindingSource, "inaktiv", true));
+            this.InaktivCheckBox.Location = new System.Drawing.Point(98, 112);
+            this.InaktivCheckBox.Name = "InaktivCheckBox";
+            this.InaktivCheckBox.Size = new System.Drawing.Size(200, 24);
+            this.InaktivCheckBox.TabIndex = 11;
+            this.InaktivCheckBox.Text = "Geschäftspartner deaktivieren";
+            this.InaktivCheckBox.UseVisualStyleBackColor = true;
             // 
             // FirmenNameBindingSource
             // 
-            FirmenNameBindingSource.DataMember = "FirmenName";
-            FirmenNameBindingSource.DataSource = _WSL_AdressenDataSet;
+            this.FirmenNameBindingSource.DataMember = "FirmenName";
+            this.FirmenNameBindingSource.DataSource = this._WSL_AdressenDataSet;
             // 
             // BindingNavigator1
             // 
-            BindingNavigator1.AddNewItem = ToolStripButton21;
-            BindingNavigator1.BindingSource = FirmenNameBindingSource;
-            BindingNavigator1.CountItem = ToolStripLabel4;
-            BindingNavigator1.DeleteItem = ToolStripButton22;
-            BindingNavigator1.Dock = DockStyle.Bottom;
-            BindingNavigator1.Items.AddRange(new ToolStripItem[] { ToolStripButton23, ToolStripButton24, ToolStripSeparator10, ToolStripTextBox4, ToolStripLabel4, ToolStripSeparator11, ToolStripButton25, ToolStripButton26, ToolStripSeparator12, ToolStripButton21, ToolStripButton22, _BNAV_FirmenNameSave });
-            BindingNavigator1.Location = new Point(3, 346);
-            BindingNavigator1.MoveFirstItem = ToolStripButton23;
-            BindingNavigator1.MoveLastItem = ToolStripButton26;
-            BindingNavigator1.MoveNextItem = ToolStripButton25;
-            BindingNavigator1.MovePreviousItem = ToolStripButton24;
-            BindingNavigator1.Name = "BindingNavigator1";
-            BindingNavigator1.PositionItem = ToolStripTextBox4;
-            BindingNavigator1.Size = new Size(1165, 25);
-            BindingNavigator1.TabIndex = 10;
-            BindingNavigator1.Text = "BindingNavigator1";
+            this.BindingNavigator1.AddNewItem = this.ToolStripButton21;
+            this.BindingNavigator1.BindingSource = this.FirmenNameBindingSource;
+            this.BindingNavigator1.CountItem = this.ToolStripLabel4;
+            this.BindingNavigator1.DeleteItem = this.ToolStripButton22;
+            this.BindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripButton23,
+            this.ToolStripButton24,
+            this.ToolStripSeparator10,
+            this.ToolStripTextBox4,
+            this.ToolStripLabel4,
+            this.ToolStripSeparator11,
+            this.ToolStripButton25,
+            this.ToolStripButton26,
+            this.ToolStripSeparator12,
+            this.ToolStripButton21,
+            this.ToolStripButton22,
+            this._BNAV_FirmenNameSave});
+            this.BindingNavigator1.Location = new System.Drawing.Point(3, 346);
+            this.BindingNavigator1.MoveFirstItem = this.ToolStripButton23;
+            this.BindingNavigator1.MoveLastItem = this.ToolStripButton26;
+            this.BindingNavigator1.MoveNextItem = this.ToolStripButton25;
+            this.BindingNavigator1.MovePreviousItem = this.ToolStripButton24;
+            this.BindingNavigator1.Name = "BindingNavigator1";
+            this.BindingNavigator1.PositionItem = this.ToolStripTextBox4;
+            this.BindingNavigator1.Size = new System.Drawing.Size(1165, 25);
+            this.BindingNavigator1.TabIndex = 10;
+            this.BindingNavigator1.Text = "BindingNavigator1";
             // 
             // ToolStripButton21
             // 
-            ToolStripButton21.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton21.Image = (Image)resources.GetObject("ToolStripButton21.Image");
-            ToolStripButton21.Name = "ToolStripButton21";
-            ToolStripButton21.RightToLeftAutoMirrorImage = true;
-            ToolStripButton21.Size = new Size(23, 22);
-            ToolStripButton21.Text = "Neu hinzufügen";
+            this.ToolStripButton21.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton21.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton21.Image")));
+            this.ToolStripButton21.Name = "ToolStripButton21";
+            this.ToolStripButton21.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton21.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton21.Text = "Neu hinzufügen";
             // 
             // ToolStripLabel4
             // 
-            ToolStripLabel4.Name = "ToolStripLabel4";
-            ToolStripLabel4.Size = new Size(44, 22);
-            ToolStripLabel4.Text = "von {0}";
-            ToolStripLabel4.ToolTipText = "Die Gesamtanzahl der Elemente.";
+            this.ToolStripLabel4.Name = "ToolStripLabel4";
+            this.ToolStripLabel4.Size = new System.Drawing.Size(48, 22);
+            this.ToolStripLabel4.Text = "von {0}";
+            this.ToolStripLabel4.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
             // ToolStripButton22
             // 
-            ToolStripButton22.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton22.Image = (Image)resources.GetObject("ToolStripButton22.Image");
-            ToolStripButton22.Name = "ToolStripButton22";
-            ToolStripButton22.RightToLeftAutoMirrorImage = true;
-            ToolStripButton22.Size = new Size(23, 22);
-            ToolStripButton22.Text = "Löschen";
+            this.ToolStripButton22.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton22.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton22.Image")));
+            this.ToolStripButton22.Name = "ToolStripButton22";
+            this.ToolStripButton22.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton22.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton22.Text = "Löschen";
             // 
             // ToolStripButton23
             // 
-            ToolStripButton23.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton23.Image = (Image)resources.GetObject("ToolStripButton23.Image");
-            ToolStripButton23.Name = "ToolStripButton23";
-            ToolStripButton23.RightToLeftAutoMirrorImage = true;
-            ToolStripButton23.Size = new Size(23, 22);
-            ToolStripButton23.Text = "Erste verschieben";
+            this.ToolStripButton23.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton23.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton23.Image")));
+            this.ToolStripButton23.Name = "ToolStripButton23";
+            this.ToolStripButton23.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton23.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton23.Text = "Erste verschieben";
             // 
             // ToolStripButton24
             // 
-            ToolStripButton24.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton24.Image = (Image)resources.GetObject("ToolStripButton24.Image");
-            ToolStripButton24.Name = "ToolStripButton24";
-            ToolStripButton24.RightToLeftAutoMirrorImage = true;
-            ToolStripButton24.Size = new Size(23, 22);
-            ToolStripButton24.Text = "Vorherige verschieben";
+            this.ToolStripButton24.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton24.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton24.Image")));
+            this.ToolStripButton24.Name = "ToolStripButton24";
+            this.ToolStripButton24.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton24.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton24.Text = "Vorherige verschieben";
             // 
             // ToolStripSeparator10
             // 
-            ToolStripSeparator10.Name = "ToolStripSeparator10";
-            ToolStripSeparator10.Size = new Size(6, 25);
+            this.ToolStripSeparator10.Name = "ToolStripSeparator10";
+            this.ToolStripSeparator10.Size = new System.Drawing.Size(6, 25);
             // 
             // ToolStripTextBox4
             // 
-            ToolStripTextBox4.AccessibleName = "Position";
-            ToolStripTextBox4.AutoSize = false;
-            ToolStripTextBox4.Font = new Font("Segoe UI", 9.75f);
-            ToolStripTextBox4.Name = "ToolStripTextBox4";
-            ToolStripTextBox4.Size = new Size(50, 25);
-            ToolStripTextBox4.Text = "0";
-            ToolStripTextBox4.ToolTipText = "Aktuelle Position";
+            this.ToolStripTextBox4.AccessibleName = "Position";
+            this.ToolStripTextBox4.AutoSize = false;
+            this.ToolStripTextBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ToolStripTextBox4.Name = "ToolStripTextBox4";
+            this.ToolStripTextBox4.Size = new System.Drawing.Size(50, 25);
+            this.ToolStripTextBox4.Text = "0";
+            this.ToolStripTextBox4.ToolTipText = "Aktuelle Position";
             // 
             // ToolStripSeparator11
             // 
-            ToolStripSeparator11.Name = "ToolStripSeparator11";
-            ToolStripSeparator11.Size = new Size(6, 25);
+            this.ToolStripSeparator11.Name = "ToolStripSeparator11";
+            this.ToolStripSeparator11.Size = new System.Drawing.Size(6, 25);
             // 
             // ToolStripButton25
             // 
-            ToolStripButton25.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton25.Image = (Image)resources.GetObject("ToolStripButton25.Image");
-            ToolStripButton25.Name = "ToolStripButton25";
-            ToolStripButton25.RightToLeftAutoMirrorImage = true;
-            ToolStripButton25.Size = new Size(23, 22);
-            ToolStripButton25.Text = "Nächste verschieben";
+            this.ToolStripButton25.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton25.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton25.Image")));
+            this.ToolStripButton25.Name = "ToolStripButton25";
+            this.ToolStripButton25.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton25.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton25.Text = "Nächste verschieben";
             // 
             // ToolStripButton26
             // 
-            ToolStripButton26.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton26.Image = (Image)resources.GetObject("ToolStripButton26.Image");
-            ToolStripButton26.Name = "ToolStripButton26";
-            ToolStripButton26.RightToLeftAutoMirrorImage = true;
-            ToolStripButton26.Size = new Size(23, 22);
-            ToolStripButton26.Text = "Letzte verschieben";
+            this.ToolStripButton26.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton26.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton26.Image")));
+            this.ToolStripButton26.Name = "ToolStripButton26";
+            this.ToolStripButton26.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton26.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton26.Text = "Letzte verschieben";
             // 
             // ToolStripSeparator12
             // 
-            ToolStripSeparator12.Name = "ToolStripSeparator12";
-            ToolStripSeparator12.Size = new Size(6, 25);
+            this.ToolStripSeparator12.Name = "ToolStripSeparator12";
+            this.ToolStripSeparator12.Size = new System.Drawing.Size(6, 25);
             // 
-            // BNAV_FirmenNameSave
+            // _BNAV_FirmenNameSave
             // 
-            _BNAV_FirmenNameSave.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            _BNAV_FirmenNameSave.Image = (Image)resources.GetObject("BNAV_FirmenNameSave.Image");
-            _BNAV_FirmenNameSave.Name = "_BNAV_FirmenNameSave";
-            _BNAV_FirmenNameSave.Size = new Size(23, 22);
-            _BNAV_FirmenNameSave.Text = "Daten speichern";
+            this._BNAV_FirmenNameSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._BNAV_FirmenNameSave.Image = ((System.Drawing.Image)(resources.GetObject("_BNAV_FirmenNameSave.Image")));
+            this._BNAV_FirmenNameSave.Name = "_BNAV_FirmenNameSave";
+            this._BNAV_FirmenNameSave.Size = new System.Drawing.Size(23, 22);
+            this._BNAV_FirmenNameSave.Text = "Daten speichern";
+            this._BNAV_FirmenNameSave.Click += new System.EventHandler(this.BNAV_FirmenNameSave_Click);
             // 
             // ChangedDateTimePicker
             // 
-            ChangedDateTimePicker.DataBindings.Add(new Binding("Value", FirmenNameBindingSource, "changed", true));
-            ChangedDateTimePicker.Location = new Point(98, 86);
-            ChangedDateTimePicker.Name = "ChangedDateTimePicker";
-            ChangedDateTimePicker.Size = new Size(200, 20);
-            ChangedDateTimePicker.TabIndex = 8;
+            this.ChangedDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.FirmenNameBindingSource, "changed", true));
+            this.ChangedDateTimePicker.Location = new System.Drawing.Point(98, 86);
+            this.ChangedDateTimePicker.Name = "ChangedDateTimePicker";
+            this.ChangedDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.ChangedDateTimePicker.TabIndex = 8;
             // 
             // LoginTextBox
             // 
-            LoginTextBox.DataBindings.Add(new Binding("Text", FirmenNameBindingSource, "Login", true));
-            LoginTextBox.Location = new Point(98, 60);
-            LoginTextBox.Name = "LoginTextBox";
-            LoginTextBox.Size = new Size(349, 20);
-            LoginTextBox.TabIndex = 6;
+            this.LoginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.FirmenNameBindingSource, "Login", true));
+            this.LoginTextBox.Location = new System.Drawing.Point(98, 60);
+            this.LoginTextBox.Name = "LoginTextBox";
+            this.LoginTextBox.Size = new System.Drawing.Size(349, 20);
+            this.LoginTextBox.TabIndex = 6;
             // 
             // FirmenNameTextBox
             // 
-            FirmenNameTextBox.DataBindings.Add(new Binding("Text", FirmenNameBindingSource, "FirmenName", true));
-            FirmenNameTextBox.Location = new Point(98, 34);
-            FirmenNameTextBox.Name = "FirmenNameTextBox";
-            FirmenNameTextBox.Size = new Size(349, 20);
-            FirmenNameTextBox.TabIndex = 4;
+            this.FirmenNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.FirmenNameBindingSource, "FirmenName", true));
+            this.FirmenNameTextBox.Location = new System.Drawing.Point(98, 34);
+            this.FirmenNameTextBox.Name = "FirmenNameTextBox";
+            this.FirmenNameTextBox.Size = new System.Drawing.Size(349, 20);
+            this.FirmenNameTextBox.TabIndex = 4;
             // 
             // IDFirmenNameTextBox1
             // 
-            IDFirmenNameTextBox1.DataBindings.Add(new Binding("Text", FirmenNameBindingSource, "IDFirmenName", true));
-            IDFirmenNameTextBox1.Location = new Point(98, 8);
-            IDFirmenNameTextBox1.Name = "IDFirmenNameTextBox1";
-            IDFirmenNameTextBox1.Size = new Size(349, 20);
-            IDFirmenNameTextBox1.TabIndex = 2;
+            this.IDFirmenNameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.FirmenNameBindingSource, "IDFirmenName", true));
+            this.IDFirmenNameTextBox1.Location = new System.Drawing.Point(98, 8);
+            this.IDFirmenNameTextBox1.Name = "IDFirmenNameTextBox1";
+            this.IDFirmenNameTextBox1.Size = new System.Drawing.Size(349, 20);
+            this.IDFirmenNameTextBox1.TabIndex = 2;
             // 
             // FirmenNameDataGridView
             // 
-            FirmenNameDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            FirmenNameDataGridView.AutoGenerateColumns = false;
-            FirmenNameDataGridView.BackgroundColor = Color.White;
-            FirmenNameDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            FirmenNameDataGridView.Columns.AddRange(new DataGridViewColumn[] { DataGridViewTextBoxColumn1, DataGridViewTextBoxColumn2, Login, changed, inaktiv });
-            FirmenNameDataGridView.DataSource = FirmenNameBindingSource;
-            FirmenNameDataGridView.Location = new Point(453, 6);
-            FirmenNameDataGridView.Name = "FirmenNameDataGridView";
-            FirmenNameDataGridView.RowHeadersVisible = false;
-            FirmenNameDataGridView.ScrollBars = ScrollBars.Vertical;
-            FirmenNameDataGridView.Size = new Size(653, 359);
-            FirmenNameDataGridView.TabIndex = 0;
+            this.FirmenNameDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FirmenNameDataGridView.AutoGenerateColumns = false;
+            this.FirmenNameDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.FirmenNameDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FirmenNameDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridViewTextBoxColumn1,
+            this.DataGridViewTextBoxColumn2,
+            this.Login,
+            this.changed,
+            this.inaktiv});
+            this.FirmenNameDataGridView.DataSource = this.FirmenNameBindingSource;
+            this.FirmenNameDataGridView.Location = new System.Drawing.Point(453, 6);
+            this.FirmenNameDataGridView.Name = "FirmenNameDataGridView";
+            this.FirmenNameDataGridView.RowHeadersVisible = false;
+            this.FirmenNameDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.FirmenNameDataGridView.Size = new System.Drawing.Size(653, 359);
+            this.FirmenNameDataGridView.TabIndex = 0;
             // 
             // DataGridViewTextBoxColumn1
             // 
-            DataGridViewTextBoxColumn1.DataPropertyName = "IDFirmenName";
-            DataGridViewTextBoxColumn1.HeaderText = "IDFirmenName";
-            DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1";
-            DataGridViewTextBoxColumn1.Width = 80;
+            this.DataGridViewTextBoxColumn1.DataPropertyName = "IDFirmenName";
+            this.DataGridViewTextBoxColumn1.HeaderText = "IDFirmenName";
+            this.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1";
+            this.DataGridViewTextBoxColumn1.Width = 80;
             // 
             // DataGridViewTextBoxColumn2
             // 
-            DataGridViewTextBoxColumn2.DataPropertyName = "FirmenName";
-            DataGridViewTextBoxColumn2.HeaderText = "Firmen-Name";
-            DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2";
-            DataGridViewTextBoxColumn2.Width = 220;
+            this.DataGridViewTextBoxColumn2.DataPropertyName = "FirmenName";
+            this.DataGridViewTextBoxColumn2.HeaderText = "Firmen-Name";
+            this.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2";
+            this.DataGridViewTextBoxColumn2.Width = 220;
             // 
             // Login
             // 
-            Login.DataPropertyName = "Login";
-            Login.HeaderText = "Login";
-            Login.Name = "Login";
-            Login.Width = 70;
+            this.Login.DataPropertyName = "Login";
+            this.Login.HeaderText = "Login";
+            this.Login.Name = "Login";
+            this.Login.Width = 70;
             // 
             // changed
             // 
-            changed.DataPropertyName = "changed";
-            changed.HeaderText = "changed";
-            changed.Name = "changed";
-            changed.Width = 180;
+            this.changed.DataPropertyName = "changed";
+            this.changed.HeaderText = "changed";
+            this.changed.Name = "changed";
+            this.changed.Width = 180;
             // 
             // inaktiv
             // 
-            inaktiv.DataPropertyName = "inaktiv";
-            inaktiv.HeaderText = "inaktiv";
-            inaktiv.Name = "inaktiv";
-            inaktiv.Width = 50;
+            this.inaktiv.DataPropertyName = "inaktiv";
+            this.inaktiv.HeaderText = "inaktiv";
+            this.inaktiv.Name = "inaktiv";
+            this.inaktiv.Width = 50;
             // 
             // TabPage3
             // 
-            TabPage3.AutoScroll = true;
-            TabPage3.Controls.Add(BindingNavigator2);
-            TabPage3.Controls.Add(AnlageDatumLabel);
-            TabPage3.Controls.Add(AnlageDatumDateTimePicker);
-            TabPage3.Controls.Add(KontoNameLabel);
-            TabPage3.Controls.Add(KontoNameTextBox);
-            TabPage3.Controls.Add(IDFirmenNameLabel2);
-            TabPage3.Controls.Add(IDFirmenNameTextBox2);
-            TabPage3.Controls.Add(IDKontoLabel);
-            TabPage3.Controls.Add(IDKontoTextBox);
-            TabPage3.Controls.Add(KontoDataGridView);
-            TabPage3.Location = new Point(4, 22);
-            TabPage3.Name = "TabPage3";
-            TabPage3.Padding = new Padding(3);
-            TabPage3.Size = new Size(1171, 374);
-            TabPage3.TabIndex = 2;
-            TabPage3.Text = "Konto";
-            TabPage3.UseVisualStyleBackColor = true;
+            this.TabPage3.AutoScroll = true;
+            this.TabPage3.Controls.Add(this.BindingNavigator2);
+            this.TabPage3.Controls.Add(AnlageDatumLabel);
+            this.TabPage3.Controls.Add(this.AnlageDatumDateTimePicker);
+            this.TabPage3.Controls.Add(KontoNameLabel);
+            this.TabPage3.Controls.Add(this.KontoNameTextBox);
+            this.TabPage3.Controls.Add(IDFirmenNameLabel2);
+            this.TabPage3.Controls.Add(this.IDFirmenNameTextBox2);
+            this.TabPage3.Controls.Add(IDKontoLabel);
+            this.TabPage3.Controls.Add(this.IDKontoTextBox);
+            this.TabPage3.Controls.Add(this.KontoDataGridView);
+            this.TabPage3.Location = new System.Drawing.Point(4, 22);
+            this.TabPage3.Name = "TabPage3";
+            this.TabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.TabPage3.Size = new System.Drawing.Size(1171, 374);
+            this.TabPage3.TabIndex = 2;
+            this.TabPage3.Text = "Konto";
+            this.TabPage3.UseVisualStyleBackColor = true;
             // 
             // BindingNavigator2
             // 
-            BindingNavigator2.AddNewItem = ToolStripButton14;
-            BindingNavigator2.BindingSource = KontoBindingSource;
-            BindingNavigator2.CountItem = ToolStripLabel3;
-            BindingNavigator2.DeleteItem = ToolStripButton15;
-            BindingNavigator2.Dock = DockStyle.Bottom;
-            BindingNavigator2.Items.AddRange(new ToolStripItem[] { ToolStripButton16, ToolStripButton17, ToolStripSeparator7, ToolStripTextBox3, ToolStripLabel3, ToolStripSeparator8, ToolStripButton18, ToolStripButton19, ToolStripSeparator9, ToolStripButton14, ToolStripButton15, _BNAV_KontoSave });
-            BindingNavigator2.Location = new Point(3, 346);
-            BindingNavigator2.MoveFirstItem = ToolStripButton16;
-            BindingNavigator2.MoveLastItem = ToolStripButton19;
-            BindingNavigator2.MoveNextItem = ToolStripButton18;
-            BindingNavigator2.MovePreviousItem = ToolStripButton17;
-            BindingNavigator2.Name = "BindingNavigator2";
-            BindingNavigator2.PositionItem = ToolStripTextBox3;
-            BindingNavigator2.Size = new Size(1165, 25);
-            BindingNavigator2.TabIndex = 9;
-            BindingNavigator2.Text = "BindingNavigator1";
+            this.BindingNavigator2.AddNewItem = this.ToolStripButton14;
+            this.BindingNavigator2.BindingSource = this.KontoBindingSource;
+            this.BindingNavigator2.CountItem = this.ToolStripLabel3;
+            this.BindingNavigator2.DeleteItem = this.ToolStripButton15;
+            this.BindingNavigator2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BindingNavigator2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripButton16,
+            this.ToolStripButton17,
+            this.ToolStripSeparator7,
+            this.ToolStripTextBox3,
+            this.ToolStripLabel3,
+            this.ToolStripSeparator8,
+            this.ToolStripButton18,
+            this.ToolStripButton19,
+            this.ToolStripSeparator9,
+            this.ToolStripButton14,
+            this.ToolStripButton15,
+            this._BNAV_KontoSave});
+            this.BindingNavigator2.Location = new System.Drawing.Point(3, 346);
+            this.BindingNavigator2.MoveFirstItem = this.ToolStripButton16;
+            this.BindingNavigator2.MoveLastItem = this.ToolStripButton19;
+            this.BindingNavigator2.MoveNextItem = this.ToolStripButton18;
+            this.BindingNavigator2.MovePreviousItem = this.ToolStripButton17;
+            this.BindingNavigator2.Name = "BindingNavigator2";
+            this.BindingNavigator2.PositionItem = this.ToolStripTextBox3;
+            this.BindingNavigator2.Size = new System.Drawing.Size(1165, 25);
+            this.BindingNavigator2.TabIndex = 9;
+            this.BindingNavigator2.Text = "BindingNavigator1";
             // 
             // ToolStripButton14
             // 
-            ToolStripButton14.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton14.Image = (Image)resources.GetObject("ToolStripButton14.Image");
-            ToolStripButton14.Name = "ToolStripButton14";
-            ToolStripButton14.RightToLeftAutoMirrorImage = true;
-            ToolStripButton14.Size = new Size(23, 22);
-            ToolStripButton14.Text = "Neu hinzufügen";
+            this.ToolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton14.Image")));
+            this.ToolStripButton14.Name = "ToolStripButton14";
+            this.ToolStripButton14.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton14.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton14.Text = "Neu hinzufügen";
             // 
             // KontoBindingSource
             // 
-            KontoBindingSource.DataMember = "Konto";
-            KontoBindingSource.DataSource = _WSL_AdressenDataSet;
+            this.KontoBindingSource.DataMember = "Konto";
+            this.KontoBindingSource.DataSource = this._WSL_AdressenDataSet;
             // 
             // ToolStripLabel3
             // 
-            ToolStripLabel3.Name = "ToolStripLabel3";
-            ToolStripLabel3.Size = new Size(44, 22);
-            ToolStripLabel3.Text = "von {0}";
-            ToolStripLabel3.ToolTipText = "Die Gesamtanzahl der Elemente.";
+            this.ToolStripLabel3.Name = "ToolStripLabel3";
+            this.ToolStripLabel3.Size = new System.Drawing.Size(48, 22);
+            this.ToolStripLabel3.Text = "von {0}";
+            this.ToolStripLabel3.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
             // ToolStripButton15
             // 
-            ToolStripButton15.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton15.Image = (Image)resources.GetObject("ToolStripButton15.Image");
-            ToolStripButton15.Name = "ToolStripButton15";
-            ToolStripButton15.RightToLeftAutoMirrorImage = true;
-            ToolStripButton15.Size = new Size(23, 22);
-            ToolStripButton15.Text = "Löschen";
+            this.ToolStripButton15.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton15.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton15.Image")));
+            this.ToolStripButton15.Name = "ToolStripButton15";
+            this.ToolStripButton15.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton15.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton15.Text = "Löschen";
             // 
             // ToolStripButton16
             // 
-            ToolStripButton16.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton16.Image = (Image)resources.GetObject("ToolStripButton16.Image");
-            ToolStripButton16.Name = "ToolStripButton16";
-            ToolStripButton16.RightToLeftAutoMirrorImage = true;
-            ToolStripButton16.Size = new Size(23, 22);
-            ToolStripButton16.Text = "Erste verschieben";
+            this.ToolStripButton16.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton16.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton16.Image")));
+            this.ToolStripButton16.Name = "ToolStripButton16";
+            this.ToolStripButton16.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton16.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton16.Text = "Erste verschieben";
             // 
             // ToolStripButton17
             // 
-            ToolStripButton17.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton17.Image = (Image)resources.GetObject("ToolStripButton17.Image");
-            ToolStripButton17.Name = "ToolStripButton17";
-            ToolStripButton17.RightToLeftAutoMirrorImage = true;
-            ToolStripButton17.Size = new Size(23, 22);
-            ToolStripButton17.Text = "Vorherige verschieben";
+            this.ToolStripButton17.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton17.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton17.Image")));
+            this.ToolStripButton17.Name = "ToolStripButton17";
+            this.ToolStripButton17.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton17.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton17.Text = "Vorherige verschieben";
             // 
             // ToolStripSeparator7
             // 
-            ToolStripSeparator7.Name = "ToolStripSeparator7";
-            ToolStripSeparator7.Size = new Size(6, 25);
+            this.ToolStripSeparator7.Name = "ToolStripSeparator7";
+            this.ToolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
             // ToolStripTextBox3
             // 
-            ToolStripTextBox3.AccessibleName = "Position";
-            ToolStripTextBox3.AutoSize = false;
-            ToolStripTextBox3.Font = new Font("Segoe UI", 9.75f);
-            ToolStripTextBox3.Name = "ToolStripTextBox3";
-            ToolStripTextBox3.Size = new Size(50, 25);
-            ToolStripTextBox3.Text = "0";
-            ToolStripTextBox3.ToolTipText = "Aktuelle Position";
+            this.ToolStripTextBox3.AccessibleName = "Position";
+            this.ToolStripTextBox3.AutoSize = false;
+            this.ToolStripTextBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ToolStripTextBox3.Name = "ToolStripTextBox3";
+            this.ToolStripTextBox3.Size = new System.Drawing.Size(50, 25);
+            this.ToolStripTextBox3.Text = "0";
+            this.ToolStripTextBox3.ToolTipText = "Aktuelle Position";
             // 
             // ToolStripSeparator8
             // 
-            ToolStripSeparator8.Name = "ToolStripSeparator8";
-            ToolStripSeparator8.Size = new Size(6, 25);
+            this.ToolStripSeparator8.Name = "ToolStripSeparator8";
+            this.ToolStripSeparator8.Size = new System.Drawing.Size(6, 25);
             // 
             // ToolStripButton18
             // 
-            ToolStripButton18.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton18.Image = (Image)resources.GetObject("ToolStripButton18.Image");
-            ToolStripButton18.Name = "ToolStripButton18";
-            ToolStripButton18.RightToLeftAutoMirrorImage = true;
-            ToolStripButton18.Size = new Size(23, 22);
-            ToolStripButton18.Text = "Nächste verschieben";
+            this.ToolStripButton18.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton18.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton18.Image")));
+            this.ToolStripButton18.Name = "ToolStripButton18";
+            this.ToolStripButton18.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton18.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton18.Text = "Nächste verschieben";
             // 
             // ToolStripButton19
             // 
-            ToolStripButton19.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton19.Image = (Image)resources.GetObject("ToolStripButton19.Image");
-            ToolStripButton19.Name = "ToolStripButton19";
-            ToolStripButton19.RightToLeftAutoMirrorImage = true;
-            ToolStripButton19.Size = new Size(23, 22);
-            ToolStripButton19.Text = "Letzte verschieben";
+            this.ToolStripButton19.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton19.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton19.Image")));
+            this.ToolStripButton19.Name = "ToolStripButton19";
+            this.ToolStripButton19.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton19.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton19.Text = "Letzte verschieben";
             // 
             // ToolStripSeparator9
             // 
-            ToolStripSeparator9.Name = "ToolStripSeparator9";
-            ToolStripSeparator9.Size = new Size(6, 25);
+            this.ToolStripSeparator9.Name = "ToolStripSeparator9";
+            this.ToolStripSeparator9.Size = new System.Drawing.Size(6, 25);
             // 
-            // BNAV_KontoSave
+            // _BNAV_KontoSave
             // 
-            _BNAV_KontoSave.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            _BNAV_KontoSave.Image = (Image)resources.GetObject("BNAV_KontoSave.Image");
-            _BNAV_KontoSave.Name = "_BNAV_KontoSave";
-            _BNAV_KontoSave.Size = new Size(23, 22);
-            _BNAV_KontoSave.Text = "Daten speichern";
+            this._BNAV_KontoSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._BNAV_KontoSave.Image = ((System.Drawing.Image)(resources.GetObject("_BNAV_KontoSave.Image")));
+            this._BNAV_KontoSave.Name = "_BNAV_KontoSave";
+            this._BNAV_KontoSave.Size = new System.Drawing.Size(23, 22);
+            this._BNAV_KontoSave.Text = "Daten speichern";
+            this._BNAV_KontoSave.Click += new System.EventHandler(this.BNAV_KontoSave_Click);
             // 
             // AnlageDatumDateTimePicker
             // 
-            AnlageDatumDateTimePicker.DataBindings.Add(new Binding("Value", KontoBindingSource, "Datum", true));
-            AnlageDatumDateTimePicker.Location = new Point(696, 85);
-            AnlageDatumDateTimePicker.Name = "AnlageDatumDateTimePicker";
-            AnlageDatumDateTimePicker.Size = new Size(200, 20);
-            AnlageDatumDateTimePicker.TabIndex = 8;
+            this.AnlageDatumDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.KontoBindingSource, "Datum", true));
+            this.AnlageDatumDateTimePicker.Location = new System.Drawing.Point(696, 85);
+            this.AnlageDatumDateTimePicker.Name = "AnlageDatumDateTimePicker";
+            this.AnlageDatumDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.AnlageDatumDateTimePicker.TabIndex = 8;
             // 
             // KontoNameTextBox
             // 
-            KontoNameTextBox.DataBindings.Add(new Binding("Text", KontoBindingSource, "KontoName", true));
-            KontoNameTextBox.Location = new Point(696, 59);
-            KontoNameTextBox.Name = "KontoNameTextBox";
-            KontoNameTextBox.Size = new Size(100, 20);
-            KontoNameTextBox.TabIndex = 6;
+            this.KontoNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontoBindingSource, "KontoName", true));
+            this.KontoNameTextBox.Location = new System.Drawing.Point(696, 59);
+            this.KontoNameTextBox.Name = "KontoNameTextBox";
+            this.KontoNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.KontoNameTextBox.TabIndex = 6;
             // 
             // IDFirmenNameTextBox2
             // 
-            IDFirmenNameTextBox2.DataBindings.Add(new Binding("Text", KontoBindingSource, "IDFirmenName", true));
-            IDFirmenNameTextBox2.Location = new Point(696, 33);
-            IDFirmenNameTextBox2.Name = "IDFirmenNameTextBox2";
-            IDFirmenNameTextBox2.Size = new Size(100, 20);
-            IDFirmenNameTextBox2.TabIndex = 4;
+            this.IDFirmenNameTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontoBindingSource, "IDFirmenName", true));
+            this.IDFirmenNameTextBox2.Location = new System.Drawing.Point(696, 33);
+            this.IDFirmenNameTextBox2.Name = "IDFirmenNameTextBox2";
+            this.IDFirmenNameTextBox2.Size = new System.Drawing.Size(100, 20);
+            this.IDFirmenNameTextBox2.TabIndex = 4;
             // 
             // IDKontoTextBox
             // 
-            IDKontoTextBox.DataBindings.Add(new Binding("Text", KontoBindingSource, "IDKonto", true));
-            IDKontoTextBox.Location = new Point(696, 7);
-            IDKontoTextBox.Name = "IDKontoTextBox";
-            IDKontoTextBox.Size = new Size(100, 20);
-            IDKontoTextBox.TabIndex = 2;
+            this.IDKontoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontoBindingSource, "IDKonto", true));
+            this.IDKontoTextBox.Location = new System.Drawing.Point(696, 7);
+            this.IDKontoTextBox.Name = "IDKontoTextBox";
+            this.IDKontoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.IDKontoTextBox.TabIndex = 2;
             // 
             // KontoDataGridView
             // 
-            KontoDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            KontoDataGridView.AutoGenerateColumns = false;
-            KontoDataGridView.BackgroundColor = Color.White;
-            KontoDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            KontoDataGridView.Columns.AddRange(new DataGridViewColumn[] { DataGridViewTextBoxColumn3, DataGridViewTextBoxColumn4, DataGridViewTextBoxColumn5, Datum });
-            KontoDataGridView.DataSource = KontoBindingSource;
-            KontoDataGridView.GridColor = SystemColors.AppWorkspace;
-            KontoDataGridView.Location = new Point(7, 6);
-            KontoDataGridView.Name = "KontoDataGridView";
-            KontoDataGridView.RowHeadersVisible = false;
-            KontoDataGridView.ScrollBars = ScrollBars.Vertical;
-            KontoDataGridView.Size = new Size(472, 395);
-            KontoDataGridView.TabIndex = 0;
+            this.KontoDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.KontoDataGridView.AutoGenerateColumns = false;
+            this.KontoDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.KontoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.KontoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridViewTextBoxColumn3,
+            this.DataGridViewTextBoxColumn4,
+            this.DataGridViewTextBoxColumn5,
+            this.Datum});
+            this.KontoDataGridView.DataSource = this.KontoBindingSource;
+            this.KontoDataGridView.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.KontoDataGridView.Location = new System.Drawing.Point(7, 6);
+            this.KontoDataGridView.Name = "KontoDataGridView";
+            this.KontoDataGridView.RowHeadersVisible = false;
+            this.KontoDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.KontoDataGridView.Size = new System.Drawing.Size(472, 395);
+            this.KontoDataGridView.TabIndex = 0;
             // 
             // DataGridViewTextBoxColumn3
             // 
-            DataGridViewTextBoxColumn3.DataPropertyName = "IDKonto";
-            DataGridViewTextBoxColumn3.HeaderText = "IDKonto";
-            DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3";
-            DataGridViewTextBoxColumn3.Width = 70;
+            this.DataGridViewTextBoxColumn3.DataPropertyName = "IDKonto";
+            this.DataGridViewTextBoxColumn3.HeaderText = "IDKonto";
+            this.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3";
+            this.DataGridViewTextBoxColumn3.Width = 70;
             // 
             // DataGridViewTextBoxColumn4
             // 
-            DataGridViewTextBoxColumn4.DataPropertyName = "IDFirmenName";
-            DataGridViewTextBoxColumn4.HeaderText = "IDFirmenName";
-            DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4";
+            this.DataGridViewTextBoxColumn4.DataPropertyName = "IDFirmenName";
+            this.DataGridViewTextBoxColumn4.HeaderText = "IDFirmenName";
+            this.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4";
             // 
             // DataGridViewTextBoxColumn5
             // 
-            DataGridViewTextBoxColumn5.DataPropertyName = "KontoName";
-            DataGridViewTextBoxColumn5.HeaderText = "KontoName";
-            DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5";
+            this.DataGridViewTextBoxColumn5.DataPropertyName = "KontoName";
+            this.DataGridViewTextBoxColumn5.HeaderText = "KontoName";
+            this.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5";
             // 
             // Datum
             // 
-            Datum.DataPropertyName = "Datum";
-            Datum.HeaderText = "Datum";
-            Datum.Name = "Datum";
+            this.Datum.DataPropertyName = "Datum";
+            this.Datum.HeaderText = "Datum";
+            this.Datum.Name = "Datum";
             // 
             // TabPage4
             // 
-            TabPage4.AutoScroll = true;
-            TabPage4.Controls.Add(BindingNavigator3);
-            TabPage4.Controls.Add(WebseiteLabel);
-            TabPage4.Controls.Add(WebseiteTextBox);
-            TabPage4.Controls.Add(UStIdNrLabel);
-            TabPage4.Controls.Add(UStIdNrTextBox);
-            TabPage4.Controls.Add(LandLabel);
-            TabPage4.Controls.Add(LandTextBox);
-            TabPage4.Controls.Add(BundeslandLabel);
-            TabPage4.Controls.Add(BundeslandTextBox);
-            TabPage4.Controls.Add(OrtLabel);
-            TabPage4.Controls.Add(OrtTextBox);
-            TabPage4.Controls.Add(PLZLabel);
-            TabPage4.Controls.Add(PLZTextBox);
-            TabPage4.Controls.Add(PostfachLabel);
-            TabPage4.Controls.Add(PostfachTextBox);
-            TabPage4.Controls.Add(StraßeLabel);
-            TabPage4.Controls.Add(StraßeTextBox);
-            TabPage4.Controls.Add(AdresstypLabel);
-            TabPage4.Controls.Add(AdresstypTextBox);
-            TabPage4.Controls.Add(IDKontoLabel1);
-            TabPage4.Controls.Add(IDKontoTextBox1);
-            TabPage4.Controls.Add(IDFirmenNameLabel3);
-            TabPage4.Controls.Add(IDFirmenNameTextBox3);
-            TabPage4.Controls.Add(IDAdresseLabel1);
-            TabPage4.Controls.Add(IDAdresseTextBox1);
-            TabPage4.Controls.Add(DataGridView1);
-            TabPage4.Location = new Point(4, 22);
-            TabPage4.Name = "TabPage4";
-            TabPage4.Padding = new Padding(3);
-            TabPage4.Size = new Size(1171, 374);
-            TabPage4.TabIndex = 3;
-            TabPage4.Text = "Adressen";
-            TabPage4.UseVisualStyleBackColor = true;
+            this.TabPage4.AutoScroll = true;
+            this.TabPage4.Controls.Add(this.BindingNavigator3);
+            this.TabPage4.Controls.Add(WebseiteLabel);
+            this.TabPage4.Controls.Add(this.WebseiteTextBox);
+            this.TabPage4.Controls.Add(UStIdNrLabel);
+            this.TabPage4.Controls.Add(this.UStIdNrTextBox);
+            this.TabPage4.Controls.Add(LandLabel);
+            this.TabPage4.Controls.Add(this.LandTextBox);
+            this.TabPage4.Controls.Add(BundeslandLabel);
+            this.TabPage4.Controls.Add(this.BundeslandTextBox);
+            this.TabPage4.Controls.Add(OrtLabel);
+            this.TabPage4.Controls.Add(this.OrtTextBox);
+            this.TabPage4.Controls.Add(PLZLabel);
+            this.TabPage4.Controls.Add(this.PLZTextBox);
+            this.TabPage4.Controls.Add(PostfachLabel);
+            this.TabPage4.Controls.Add(this.PostfachTextBox);
+            this.TabPage4.Controls.Add(StraßeLabel);
+            this.TabPage4.Controls.Add(this.StraßeTextBox);
+            this.TabPage4.Controls.Add(AdresstypLabel);
+            this.TabPage4.Controls.Add(this.AdresstypTextBox);
+            this.TabPage4.Controls.Add(IDKontoLabel1);
+            this.TabPage4.Controls.Add(this.IDKontoTextBox1);
+            this.TabPage4.Controls.Add(IDFirmenNameLabel3);
+            this.TabPage4.Controls.Add(this.IDFirmenNameTextBox3);
+            this.TabPage4.Controls.Add(IDAdresseLabel1);
+            this.TabPage4.Controls.Add(this.IDAdresseTextBox1);
+            this.TabPage4.Controls.Add(this.DataGridView1);
+            this.TabPage4.Location = new System.Drawing.Point(4, 22);
+            this.TabPage4.Name = "TabPage4";
+            this.TabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.TabPage4.Size = new System.Drawing.Size(1171, 374);
+            this.TabPage4.TabIndex = 3;
+            this.TabPage4.Text = "Adressen";
+            this.TabPage4.UseVisualStyleBackColor = true;
             // 
             // BindingNavigator3
             // 
-            BindingNavigator3.AddNewItem = ToolStripButton7;
-            BindingNavigator3.BindingSource = AdressenBindingSource;
-            BindingNavigator3.CountItem = ToolStripLabel2;
-            BindingNavigator3.DeleteItem = ToolStripButton8;
-            BindingNavigator3.Dock = DockStyle.Bottom;
-            BindingNavigator3.Items.AddRange(new ToolStripItem[] { ToolStripButton9, ToolStripButton10, ToolStripSeparator4, ToolStripTextBox2, ToolStripLabel2, ToolStripSeparator5, ToolStripButton11, ToolStripButton12, ToolStripSeparator6, ToolStripButton7, ToolStripButton8, _BNAV_AdressenSave });
-            BindingNavigator3.Location = new Point(3, 346);
-            BindingNavigator3.MoveFirstItem = ToolStripButton9;
-            BindingNavigator3.MoveLastItem = ToolStripButton12;
-            BindingNavigator3.MoveNextItem = ToolStripButton11;
-            BindingNavigator3.MovePreviousItem = ToolStripButton10;
-            BindingNavigator3.Name = "BindingNavigator3";
-            BindingNavigator3.PositionItem = ToolStripTextBox2;
-            BindingNavigator3.Size = new Size(1165, 25);
-            BindingNavigator3.TabIndex = 25;
-            BindingNavigator3.Text = "BindingNavigator1";
+            this.BindingNavigator3.AddNewItem = this.ToolStripButton7;
+            this.BindingNavigator3.BindingSource = this.AdressenBindingSource;
+            this.BindingNavigator3.CountItem = this.ToolStripLabel2;
+            this.BindingNavigator3.DeleteItem = this.ToolStripButton8;
+            this.BindingNavigator3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BindingNavigator3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripButton9,
+            this.ToolStripButton10,
+            this.ToolStripSeparator4,
+            this.ToolStripTextBox2,
+            this.ToolStripLabel2,
+            this.ToolStripSeparator5,
+            this.ToolStripButton11,
+            this.ToolStripButton12,
+            this.ToolStripSeparator6,
+            this.ToolStripButton7,
+            this.ToolStripButton8,
+            this._BNAV_AdressenSave});
+            this.BindingNavigator3.Location = new System.Drawing.Point(3, 346);
+            this.BindingNavigator3.MoveFirstItem = this.ToolStripButton9;
+            this.BindingNavigator3.MoveLastItem = this.ToolStripButton12;
+            this.BindingNavigator3.MoveNextItem = this.ToolStripButton11;
+            this.BindingNavigator3.MovePreviousItem = this.ToolStripButton10;
+            this.BindingNavigator3.Name = "BindingNavigator3";
+            this.BindingNavigator3.PositionItem = this.ToolStripTextBox2;
+            this.BindingNavigator3.Size = new System.Drawing.Size(1165, 25);
+            this.BindingNavigator3.TabIndex = 25;
+            this.BindingNavigator3.Text = "BindingNavigator1";
             // 
             // ToolStripButton7
             // 
-            ToolStripButton7.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton7.Image = (Image)resources.GetObject("ToolStripButton7.Image");
-            ToolStripButton7.Name = "ToolStripButton7";
-            ToolStripButton7.RightToLeftAutoMirrorImage = true;
-            ToolStripButton7.Size = new Size(23, 22);
-            ToolStripButton7.Text = "Neu hinzufügen";
+            this.ToolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton7.Image")));
+            this.ToolStripButton7.Name = "ToolStripButton7";
+            this.ToolStripButton7.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton7.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton7.Text = "Neu hinzufügen";
             // 
             // AdressenBindingSource
             // 
-            AdressenBindingSource.DataMember = "Adressen";
-            AdressenBindingSource.DataSource = _WSL_AdressenDataSet;
+            this.AdressenBindingSource.DataMember = "Adressen";
+            this.AdressenBindingSource.DataSource = this._WSL_AdressenDataSet;
             // 
             // ToolStripLabel2
             // 
-            ToolStripLabel2.Name = "ToolStripLabel2";
-            ToolStripLabel2.Size = new Size(44, 22);
-            ToolStripLabel2.Text = "von {0}";
-            ToolStripLabel2.ToolTipText = "Die Gesamtanzahl der Elemente.";
+            this.ToolStripLabel2.Name = "ToolStripLabel2";
+            this.ToolStripLabel2.Size = new System.Drawing.Size(48, 22);
+            this.ToolStripLabel2.Text = "von {0}";
+            this.ToolStripLabel2.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
             // ToolStripButton8
             // 
-            ToolStripButton8.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton8.Image = (Image)resources.GetObject("ToolStripButton8.Image");
-            ToolStripButton8.Name = "ToolStripButton8";
-            ToolStripButton8.RightToLeftAutoMirrorImage = true;
-            ToolStripButton8.Size = new Size(23, 22);
-            ToolStripButton8.Text = "Löschen";
+            this.ToolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton8.Image")));
+            this.ToolStripButton8.Name = "ToolStripButton8";
+            this.ToolStripButton8.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton8.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton8.Text = "Löschen";
             // 
             // ToolStripButton9
             // 
-            ToolStripButton9.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton9.Image = (Image)resources.GetObject("ToolStripButton9.Image");
-            ToolStripButton9.Name = "ToolStripButton9";
-            ToolStripButton9.RightToLeftAutoMirrorImage = true;
-            ToolStripButton9.Size = new Size(23, 22);
-            ToolStripButton9.Text = "Erste verschieben";
+            this.ToolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton9.Image")));
+            this.ToolStripButton9.Name = "ToolStripButton9";
+            this.ToolStripButton9.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton9.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton9.Text = "Erste verschieben";
             // 
             // ToolStripButton10
             // 
-            ToolStripButton10.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton10.Image = (Image)resources.GetObject("ToolStripButton10.Image");
-            ToolStripButton10.Name = "ToolStripButton10";
-            ToolStripButton10.RightToLeftAutoMirrorImage = true;
-            ToolStripButton10.Size = new Size(23, 22);
-            ToolStripButton10.Text = "Vorherige verschieben";
+            this.ToolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton10.Image")));
+            this.ToolStripButton10.Name = "ToolStripButton10";
+            this.ToolStripButton10.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton10.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton10.Text = "Vorherige verschieben";
             // 
             // ToolStripSeparator4
             // 
-            ToolStripSeparator4.Name = "ToolStripSeparator4";
-            ToolStripSeparator4.Size = new Size(6, 25);
+            this.ToolStripSeparator4.Name = "ToolStripSeparator4";
+            this.ToolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // ToolStripTextBox2
             // 
-            ToolStripTextBox2.AccessibleName = "Position";
-            ToolStripTextBox2.AutoSize = false;
-            ToolStripTextBox2.Font = new Font("Segoe UI", 9.75f);
-            ToolStripTextBox2.Name = "ToolStripTextBox2";
-            ToolStripTextBox2.Size = new Size(50, 25);
-            ToolStripTextBox2.Text = "0";
-            ToolStripTextBox2.ToolTipText = "Aktuelle Position";
+            this.ToolStripTextBox2.AccessibleName = "Position";
+            this.ToolStripTextBox2.AutoSize = false;
+            this.ToolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ToolStripTextBox2.Name = "ToolStripTextBox2";
+            this.ToolStripTextBox2.Size = new System.Drawing.Size(50, 25);
+            this.ToolStripTextBox2.Text = "0";
+            this.ToolStripTextBox2.ToolTipText = "Aktuelle Position";
             // 
             // ToolStripSeparator5
             // 
-            ToolStripSeparator5.Name = "ToolStripSeparator5";
-            ToolStripSeparator5.Size = new Size(6, 25);
+            this.ToolStripSeparator5.Name = "ToolStripSeparator5";
+            this.ToolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
             // ToolStripButton11
             // 
-            ToolStripButton11.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton11.Image = (Image)resources.GetObject("ToolStripButton11.Image");
-            ToolStripButton11.Name = "ToolStripButton11";
-            ToolStripButton11.RightToLeftAutoMirrorImage = true;
-            ToolStripButton11.Size = new Size(23, 22);
-            ToolStripButton11.Text = "Nächste verschieben";
+            this.ToolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton11.Image")));
+            this.ToolStripButton11.Name = "ToolStripButton11";
+            this.ToolStripButton11.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton11.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton11.Text = "Nächste verschieben";
             // 
             // ToolStripButton12
             // 
-            ToolStripButton12.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton12.Image = (Image)resources.GetObject("ToolStripButton12.Image");
-            ToolStripButton12.Name = "ToolStripButton12";
-            ToolStripButton12.RightToLeftAutoMirrorImage = true;
-            ToolStripButton12.Size = new Size(23, 22);
-            ToolStripButton12.Text = "Letzte verschieben";
+            this.ToolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton12.Image")));
+            this.ToolStripButton12.Name = "ToolStripButton12";
+            this.ToolStripButton12.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton12.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton12.Text = "Letzte verschieben";
             // 
             // ToolStripSeparator6
             // 
-            ToolStripSeparator6.Name = "ToolStripSeparator6";
-            ToolStripSeparator6.Size = new Size(6, 25);
+            this.ToolStripSeparator6.Name = "ToolStripSeparator6";
+            this.ToolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
-            // BNAV_AdressenSave
+            // _BNAV_AdressenSave
             // 
-            _BNAV_AdressenSave.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            _BNAV_AdressenSave.Image = (Image)resources.GetObject("BNAV_AdressenSave.Image");
-            _BNAV_AdressenSave.Name = "_BNAV_AdressenSave";
-            _BNAV_AdressenSave.Size = new Size(23, 22);
-            _BNAV_AdressenSave.Text = "Daten speichern";
+            this._BNAV_AdressenSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._BNAV_AdressenSave.Image = ((System.Drawing.Image)(resources.GetObject("_BNAV_AdressenSave.Image")));
+            this._BNAV_AdressenSave.Name = "_BNAV_AdressenSave";
+            this._BNAV_AdressenSave.Size = new System.Drawing.Size(23, 22);
+            this._BNAV_AdressenSave.Text = "Daten speichern";
+            this._BNAV_AdressenSave.Click += new System.EventHandler(this.BNAV_AdressenSave_Click);
             // 
             // WebseiteTextBox
             // 
-            WebseiteTextBox.DataBindings.Add(new Binding("Text", AdressenBindingSource, "Webseite", true));
-            WebseiteTextBox.Location = new Point(795, 32);
-            WebseiteTextBox.Name = "WebseiteTextBox";
-            WebseiteTextBox.Size = new Size(257, 20);
-            WebseiteTextBox.TabIndex = 24;
+            this.WebseiteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "Webseite", true));
+            this.WebseiteTextBox.Location = new System.Drawing.Point(795, 32);
+            this.WebseiteTextBox.Name = "WebseiteTextBox";
+            this.WebseiteTextBox.Size = new System.Drawing.Size(257, 20);
+            this.WebseiteTextBox.TabIndex = 24;
             // 
             // UStIdNrTextBox
             // 
-            UStIdNrTextBox.DataBindings.Add(new Binding("Text", AdressenBindingSource, "UStIdNr", true));
-            UStIdNrTextBox.Location = new Point(268, 30);
-            UStIdNrTextBox.Name = "UStIdNrTextBox";
-            UStIdNrTextBox.Size = new Size(100, 20);
-            UStIdNrTextBox.TabIndex = 22;
+            this.UStIdNrTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "UStIdNr", true));
+            this.UStIdNrTextBox.Location = new System.Drawing.Point(268, 30);
+            this.UStIdNrTextBox.Name = "UStIdNrTextBox";
+            this.UStIdNrTextBox.Size = new System.Drawing.Size(100, 20);
+            this.UStIdNrTextBox.TabIndex = 22;
             // 
             // LandTextBox
             // 
-            LandTextBox.DataBindings.Add(new Binding("Text", AdressenBindingSource, "Land", true));
-            LandTextBox.Location = new Point(951, 6);
-            LandTextBox.Name = "LandTextBox";
-            LandTextBox.Size = new Size(100, 20);
-            LandTextBox.TabIndex = 20;
+            this.LandTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "Land", true));
+            this.LandTextBox.Location = new System.Drawing.Point(951, 6);
+            this.LandTextBox.Name = "LandTextBox";
+            this.LandTextBox.Size = new System.Drawing.Size(100, 20);
+            this.LandTextBox.TabIndex = 20;
             // 
             // BundeslandTextBox
             // 
-            BundeslandTextBox.DataBindings.Add(new Binding("Text", AdressenBindingSource, "Bundesland", true));
-            BundeslandTextBox.Location = new Point(795, 6);
-            BundeslandTextBox.Name = "BundeslandTextBox";
-            BundeslandTextBox.Size = new Size(100, 20);
-            BundeslandTextBox.TabIndex = 18;
+            this.BundeslandTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "Bundesland", true));
+            this.BundeslandTextBox.Location = new System.Drawing.Point(795, 6);
+            this.BundeslandTextBox.Name = "BundeslandTextBox";
+            this.BundeslandTextBox.Size = new System.Drawing.Size(100, 20);
+            this.BundeslandTextBox.TabIndex = 18;
             // 
             // OrtTextBox
             // 
-            OrtTextBox.DataBindings.Add(new Binding("Text", AdressenBindingSource, "Ort", true));
-            OrtTextBox.Location = new Point(572, 56);
-            OrtTextBox.Name = "OrtTextBox";
-            OrtTextBox.Size = new Size(140, 20);
-            OrtTextBox.TabIndex = 16;
+            this.OrtTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "Ort", true));
+            this.OrtTextBox.Location = new System.Drawing.Point(572, 56);
+            this.OrtTextBox.Name = "OrtTextBox";
+            this.OrtTextBox.Size = new System.Drawing.Size(140, 20);
+            this.OrtTextBox.TabIndex = 16;
             // 
             // PLZTextBox
             // 
-            PLZTextBox.DataBindings.Add(new Binding("Text", AdressenBindingSource, "PLZ", true));
-            PLZTextBox.Location = new Point(454, 56);
-            PLZTextBox.Name = "PLZTextBox";
-            PLZTextBox.Size = new Size(67, 20);
-            PLZTextBox.TabIndex = 14;
+            this.PLZTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "PLZ", true));
+            this.PLZTextBox.Location = new System.Drawing.Point(454, 56);
+            this.PLZTextBox.Name = "PLZTextBox";
+            this.PLZTextBox.Size = new System.Drawing.Size(67, 20);
+            this.PLZTextBox.TabIndex = 14;
             // 
             // PostfachTextBox
             // 
-            PostfachTextBox.DataBindings.Add(new Binding("Text", AdressenBindingSource, "Postfach", true));
-            PostfachTextBox.Location = new Point(454, 5);
-            PostfachTextBox.Name = "PostfachTextBox";
-            PostfachTextBox.Size = new Size(100, 20);
-            PostfachTextBox.TabIndex = 12;
+            this.PostfachTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "Postfach", true));
+            this.PostfachTextBox.Location = new System.Drawing.Point(454, 5);
+            this.PostfachTextBox.Name = "PostfachTextBox";
+            this.PostfachTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PostfachTextBox.TabIndex = 12;
             // 
             // StraßeTextBox
             // 
-            StraßeTextBox.DataBindings.Add(new Binding("Text", AdressenBindingSource, "Straße", true));
-            StraßeTextBox.Location = new Point(454, 30);
-            StraßeTextBox.Name = "StraßeTextBox";
-            StraßeTextBox.Size = new Size(258, 20);
-            StraßeTextBox.TabIndex = 10;
+            this.StraßeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "Straße", true));
+            this.StraßeTextBox.Location = new System.Drawing.Point(454, 30);
+            this.StraßeTextBox.Name = "StraßeTextBox";
+            this.StraßeTextBox.Size = new System.Drawing.Size(258, 20);
+            this.StraßeTextBox.TabIndex = 10;
             // 
             // AdresstypTextBox
             // 
-            AdresstypTextBox.DataBindings.Add(new Binding("Text", AdressenBindingSource, "Adresstyp", true));
-            AdresstypTextBox.Location = new Point(268, 4);
-            AdresstypTextBox.Name = "AdresstypTextBox";
-            AdresstypTextBox.Size = new Size(100, 20);
-            AdresstypTextBox.TabIndex = 8;
+            this.AdresstypTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "Adresstyp", true));
+            this.AdresstypTextBox.Location = new System.Drawing.Point(268, 4);
+            this.AdresstypTextBox.Name = "AdresstypTextBox";
+            this.AdresstypTextBox.Size = new System.Drawing.Size(100, 20);
+            this.AdresstypTextBox.TabIndex = 8;
             // 
             // IDKontoTextBox1
             // 
-            IDKontoTextBox1.DataBindings.Add(new Binding("Text", AdressenBindingSource, "IDKonto", true));
-            IDKontoTextBox1.Location = new Point(92, 30);
-            IDKontoTextBox1.Name = "IDKontoTextBox1";
-            IDKontoTextBox1.Size = new Size(100, 20);
-            IDKontoTextBox1.TabIndex = 6;
+            this.IDKontoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "IDKonto", true));
+            this.IDKontoTextBox1.Location = new System.Drawing.Point(92, 30);
+            this.IDKontoTextBox1.Name = "IDKontoTextBox1";
+            this.IDKontoTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.IDKontoTextBox1.TabIndex = 6;
             // 
             // IDFirmenNameTextBox3
             // 
-            IDFirmenNameTextBox3.DataBindings.Add(new Binding("Text", AdressenBindingSource, "IDFirmenName", true));
-            IDFirmenNameTextBox3.Location = new Point(92, 55);
-            IDFirmenNameTextBox3.Name = "IDFirmenNameTextBox3";
-            IDFirmenNameTextBox3.Size = new Size(100, 20);
-            IDFirmenNameTextBox3.TabIndex = 4;
+            this.IDFirmenNameTextBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "IDFirmenName", true));
+            this.IDFirmenNameTextBox3.Location = new System.Drawing.Point(92, 55);
+            this.IDFirmenNameTextBox3.Name = "IDFirmenNameTextBox3";
+            this.IDFirmenNameTextBox3.Size = new System.Drawing.Size(100, 20);
+            this.IDFirmenNameTextBox3.TabIndex = 4;
             // 
             // IDAdresseTextBox1
             // 
-            IDAdresseTextBox1.DataBindings.Add(new Binding("Text", AdressenBindingSource, "IDAdresse", true));
-            IDAdresseTextBox1.Location = new Point(92, 4);
-            IDAdresseTextBox1.Name = "IDAdresseTextBox1";
-            IDAdresseTextBox1.Size = new Size(100, 20);
-            IDAdresseTextBox1.TabIndex = 2;
+            this.IDAdresseTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "IDAdresse", true));
+            this.IDAdresseTextBox1.Location = new System.Drawing.Point(92, 4);
+            this.IDAdresseTextBox1.Name = "IDAdresseTextBox1";
+            this.IDAdresseTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.IDAdresseTextBox1.TabIndex = 2;
             // 
             // DataGridView1
             // 
-            DataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            DataGridView1.AutoGenerateColumns = false;
-            DataGridView1.BackgroundColor = Color.White;
-            DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridView1.Columns.AddRange(new DataGridViewColumn[] { IDAdresse, DataGridViewTextBoxColumn7, IDKonto, Adresstyp, Straße, Postfach, PLZ, Ort, Bundesland, Land, UStIdNr, Webseite });
-            DataGridView1.DataSource = AdressenBindingSource;
-            DataGridView1.GridColor = SystemColors.AppWorkspace;
-            DataGridView1.Location = new Point(7, 98);
-            DataGridView1.Name = "DataGridView1";
-            DataGridView1.RowHeadersVisible = false;
-            DataGridView1.ScrollBars = ScrollBars.Vertical;
-            DataGridView1.Size = new Size(1156, 245);
-            DataGridView1.TabIndex = 1;
+            this.DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DataGridView1.AutoGenerateColumns = false;
+            this.DataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDAdresse,
+            this.DataGridViewTextBoxColumn7,
+            this.IDKonto,
+            this.Adresstyp,
+            this.Straße,
+            this.Postfach,
+            this.PLZ,
+            this.Ort,
+            this.Bundesland,
+            this.Land,
+            this.UStIdNr,
+            this.Webseite});
+            this.DataGridView1.DataSource = this.AdressenBindingSource;
+            this.DataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.DataGridView1.Location = new System.Drawing.Point(7, 98);
+            this.DataGridView1.Name = "DataGridView1";
+            this.DataGridView1.RowHeadersVisible = false;
+            this.DataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DataGridView1.Size = new System.Drawing.Size(1156, 245);
+            this.DataGridView1.TabIndex = 1;
             // 
             // IDAdresse
             // 
-            IDAdresse.DataPropertyName = "IDAdresse";
-            IDAdresse.HeaderText = "IDAdresse";
-            IDAdresse.Name = "IDAdresse";
-            IDAdresse.Width = 70;
+            this.IDAdresse.DataPropertyName = "IDAdresse";
+            this.IDAdresse.HeaderText = "IDAdresse";
+            this.IDAdresse.Name = "IDAdresse";
+            this.IDAdresse.Width = 70;
             // 
             // DataGridViewTextBoxColumn7
             // 
-            DataGridViewTextBoxColumn7.DataPropertyName = "IDFirmenName";
-            DataGridViewTextBoxColumn7.HeaderText = "IDFirmenName";
-            DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7";
-            DataGridViewTextBoxColumn7.Width = 70;
+            this.DataGridViewTextBoxColumn7.DataPropertyName = "IDFirmenName";
+            this.DataGridViewTextBoxColumn7.HeaderText = "IDFirmenName";
+            this.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7";
+            this.DataGridViewTextBoxColumn7.Width = 70;
             // 
             // IDKonto
             // 
-            IDKonto.DataPropertyName = "IDKonto";
-            IDKonto.HeaderText = "IDKonto";
-            IDKonto.Name = "IDKonto";
-            IDKonto.Width = 70;
+            this.IDKonto.DataPropertyName = "IDKonto";
+            this.IDKonto.HeaderText = "IDKonto";
+            this.IDKonto.Name = "IDKonto";
+            this.IDKonto.Width = 70;
             // 
             // Adresstyp
             // 
-            Adresstyp.DataPropertyName = "Adresstyp";
-            Adresstyp.HeaderText = "Adresstyp";
-            Adresstyp.Name = "Adresstyp";
+            this.Adresstyp.DataPropertyName = "Adresstyp";
+            this.Adresstyp.HeaderText = "Adresstyp";
+            this.Adresstyp.Name = "Adresstyp";
             // 
             // Straße
             // 
-            Straße.DataPropertyName = "Straße";
-            Straße.HeaderText = "Straße";
-            Straße.Name = "Straße";
+            this.Straße.DataPropertyName = "Straße";
+            this.Straße.HeaderText = "Straße";
+            this.Straße.Name = "Straße";
             // 
             // Postfach
             // 
-            Postfach.DataPropertyName = "Postfach";
-            Postfach.HeaderText = "Postfach";
-            Postfach.Name = "Postfach";
+            this.Postfach.DataPropertyName = "Postfach";
+            this.Postfach.HeaderText = "Postfach";
+            this.Postfach.Name = "Postfach";
             // 
             // PLZ
             // 
-            PLZ.DataPropertyName = "PLZ";
-            PLZ.HeaderText = "PLZ";
-            PLZ.Name = "PLZ";
-            PLZ.Width = 50;
+            this.PLZ.DataPropertyName = "PLZ";
+            this.PLZ.HeaderText = "PLZ";
+            this.PLZ.Name = "PLZ";
+            this.PLZ.Width = 50;
             // 
             // Ort
             // 
-            Ort.DataPropertyName = "Ort";
-            Ort.HeaderText = "Ort";
-            Ort.Name = "Ort";
+            this.Ort.DataPropertyName = "Ort";
+            this.Ort.HeaderText = "Ort";
+            this.Ort.Name = "Ort";
             // 
             // Bundesland
             // 
-            Bundesland.DataPropertyName = "Bundesland";
-            Bundesland.HeaderText = "Bundesland";
-            Bundesland.Name = "Bundesland";
+            this.Bundesland.DataPropertyName = "Bundesland";
+            this.Bundesland.HeaderText = "Bundesland";
+            this.Bundesland.Name = "Bundesland";
             // 
             // Land
             // 
-            Land.DataPropertyName = "Land";
-            Land.HeaderText = "Land";
-            Land.Name = "Land";
+            this.Land.DataPropertyName = "Land";
+            this.Land.HeaderText = "Land";
+            this.Land.Name = "Land";
             // 
             // UStIdNr
             // 
-            UStIdNr.DataPropertyName = "UStIdNr";
-            UStIdNr.HeaderText = "UStIdNr";
-            UStIdNr.Name = "UStIdNr";
+            this.UStIdNr.DataPropertyName = "UStIdNr";
+            this.UStIdNr.HeaderText = "UStIdNr";
+            this.UStIdNr.Name = "UStIdNr";
             // 
             // Webseite
             // 
-            Webseite.DataPropertyName = "Webseite";
-            Webseite.HeaderText = "Webseite";
-            Webseite.Name = "Webseite";
+            this.Webseite.DataPropertyName = "Webseite";
+            this.Webseite.HeaderText = "Webseite";
+            this.Webseite.Name = "Webseite";
             // 
             // TabPage5
             // 
-            TabPage5.AutoScroll = true;
-            TabPage5.Controls.Add(SachbearbeiterBindingNavigator);
-            TabPage5.Controls.Add(IDAdresseLabel2);
-            TabPage5.Controls.Add(IDAdresseTextBox2);
-            TabPage5.Controls.Add(FaxnummerLabel);
-            TabPage5.Controls.Add(FaxnummerTextBox);
-            TabPage5.Controls.Add(MobiltelefonLabel);
-            TabPage5.Controls.Add(MobiltelefonTextBox);
-            TabPage5.Controls.Add(TelefonPrivatLabel);
-            TabPage5.Controls.Add(TelefonPrivatTextBox);
-            TabPage5.Controls.Add(TelefonGeschaeftlichLabel);
-            TabPage5.Controls.Add(TelefonGeschaeftlichTextBox);
-            TabPage5.Controls.Add(JobtitleLabel);
-            TabPage5.Controls.Add(JobtitleTextBox);
-            TabPage5.Controls.Add(EmailAddresseLabel);
-            TabPage5.Controls.Add(EmailAddresseTextBox);
-            TabPage5.Controls.Add(AnredeLabel);
-            TabPage5.Controls.Add(AnredeTextBox);
-            TabPage5.Controls.Add(NachnameLabel);
-            TabPage5.Controls.Add(NachnameTextBox);
-            TabPage5.Controls.Add(VornameLabel);
-            TabPage5.Controls.Add(VornameTextBox);
-            TabPage5.Controls.Add(IDFirmenNameLabel4);
-            TabPage5.Controls.Add(IDFirmenNameTextBox4);
-            TabPage5.Controls.Add(IDKontaktLabel1);
-            TabPage5.Controls.Add(IDKontaktTextBox1);
-            TabPage5.Controls.Add(DataGridView2);
-            TabPage5.Location = new Point(4, 22);
-            TabPage5.Name = "TabPage5";
-            TabPage5.Padding = new Padding(3);
-            TabPage5.Size = new Size(1171, 374);
-            TabPage5.TabIndex = 4;
-            TabPage5.Text = "Kontakte";
-            TabPage5.UseVisualStyleBackColor = true;
+            this.TabPage5.AutoScroll = true;
+            this.TabPage5.Controls.Add(this.SachbearbeiterBindingNavigator);
+            this.TabPage5.Controls.Add(IDAdresseLabel2);
+            this.TabPage5.Controls.Add(this.IDAdresseTextBox2);
+            this.TabPage5.Controls.Add(FaxnummerLabel);
+            this.TabPage5.Controls.Add(this.FaxnummerTextBox);
+            this.TabPage5.Controls.Add(MobiltelefonLabel);
+            this.TabPage5.Controls.Add(this.MobiltelefonTextBox);
+            this.TabPage5.Controls.Add(TelefonPrivatLabel);
+            this.TabPage5.Controls.Add(this.TelefonPrivatTextBox);
+            this.TabPage5.Controls.Add(TelefonGeschaeftlichLabel);
+            this.TabPage5.Controls.Add(this.TelefonGeschaeftlichTextBox);
+            this.TabPage5.Controls.Add(JobtitleLabel);
+            this.TabPage5.Controls.Add(this.JobtitleTextBox);
+            this.TabPage5.Controls.Add(EmailAddresseLabel);
+            this.TabPage5.Controls.Add(this.EmailAddresseTextBox);
+            this.TabPage5.Controls.Add(AnredeLabel);
+            this.TabPage5.Controls.Add(this.AnredeTextBox);
+            this.TabPage5.Controls.Add(NachnameLabel);
+            this.TabPage5.Controls.Add(this.NachnameTextBox);
+            this.TabPage5.Controls.Add(VornameLabel);
+            this.TabPage5.Controls.Add(this.VornameTextBox);
+            this.TabPage5.Controls.Add(IDFirmenNameLabel4);
+            this.TabPage5.Controls.Add(this.IDFirmenNameTextBox4);
+            this.TabPage5.Controls.Add(IDKontaktLabel1);
+            this.TabPage5.Controls.Add(this.IDKontaktTextBox1);
+            this.TabPage5.Controls.Add(this.DataGridView2);
+            this.TabPage5.Location = new System.Drawing.Point(4, 22);
+            this.TabPage5.Name = "TabPage5";
+            this.TabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.TabPage5.Size = new System.Drawing.Size(1171, 374);
+            this.TabPage5.TabIndex = 4;
+            this.TabPage5.Text = "Kontakte";
+            this.TabPage5.UseVisualStyleBackColor = true;
             // 
             // SachbearbeiterBindingNavigator
             // 
-            SachbearbeiterBindingNavigator.AddNewItem = ToolStripButton1;
-            SachbearbeiterBindingNavigator.BindingSource = KontakteBindingSource;
-            SachbearbeiterBindingNavigator.CountItem = ToolStripLabel1;
-            SachbearbeiterBindingNavigator.DeleteItem = ToolStripButton2;
-            SachbearbeiterBindingNavigator.Dock = DockStyle.Bottom;
-            SachbearbeiterBindingNavigator.Items.AddRange(new ToolStripItem[] { ToolStripButton3, ToolStripButton4, ToolStripSeparator1, ToolStripTextBox1, ToolStripLabel1, ToolStripSeparator2, ToolStripButton5, ToolStripButton6, ToolStripSeparator3, ToolStripButton1, ToolStripButton2, _BNAV_KontakteSave });
-            SachbearbeiterBindingNavigator.Location = new Point(3, 346);
-            SachbearbeiterBindingNavigator.MoveFirstItem = ToolStripButton3;
-            SachbearbeiterBindingNavigator.MoveLastItem = ToolStripButton6;
-            SachbearbeiterBindingNavigator.MoveNextItem = ToolStripButton5;
-            SachbearbeiterBindingNavigator.MovePreviousItem = ToolStripButton4;
-            SachbearbeiterBindingNavigator.Name = "SachbearbeiterBindingNavigator";
-            SachbearbeiterBindingNavigator.PositionItem = ToolStripTextBox1;
-            SachbearbeiterBindingNavigator.Size = new Size(1165, 25);
-            SachbearbeiterBindingNavigator.TabIndex = 25;
-            SachbearbeiterBindingNavigator.Text = "BindingNavigator1";
+            this.SachbearbeiterBindingNavigator.AddNewItem = this.ToolStripButton1;
+            this.SachbearbeiterBindingNavigator.BindingSource = this.KontakteBindingSource;
+            this.SachbearbeiterBindingNavigator.CountItem = this.ToolStripLabel1;
+            this.SachbearbeiterBindingNavigator.DeleteItem = this.ToolStripButton2;
+            this.SachbearbeiterBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.SachbearbeiterBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripButton3,
+            this.ToolStripButton4,
+            this.ToolStripSeparator1,
+            this.ToolStripTextBox1,
+            this.ToolStripLabel1,
+            this.ToolStripSeparator2,
+            this.ToolStripButton5,
+            this.ToolStripButton6,
+            this.ToolStripSeparator3,
+            this.ToolStripButton1,
+            this.ToolStripButton2,
+            this._BNAV_KontakteSave});
+            this.SachbearbeiterBindingNavigator.Location = new System.Drawing.Point(3, 346);
+            this.SachbearbeiterBindingNavigator.MoveFirstItem = this.ToolStripButton3;
+            this.SachbearbeiterBindingNavigator.MoveLastItem = this.ToolStripButton6;
+            this.SachbearbeiterBindingNavigator.MoveNextItem = this.ToolStripButton5;
+            this.SachbearbeiterBindingNavigator.MovePreviousItem = this.ToolStripButton4;
+            this.SachbearbeiterBindingNavigator.Name = "SachbearbeiterBindingNavigator";
+            this.SachbearbeiterBindingNavigator.PositionItem = this.ToolStripTextBox1;
+            this.SachbearbeiterBindingNavigator.Size = new System.Drawing.Size(1165, 25);
+            this.SachbearbeiterBindingNavigator.TabIndex = 25;
+            this.SachbearbeiterBindingNavigator.Text = "BindingNavigator1";
             // 
             // ToolStripButton1
             // 
-            ToolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton1.Image = (Image)resources.GetObject("ToolStripButton1.Image");
-            ToolStripButton1.Name = "ToolStripButton1";
-            ToolStripButton1.RightToLeftAutoMirrorImage = true;
-            ToolStripButton1.Size = new Size(23, 22);
-            ToolStripButton1.Text = "Neu hinzufügen";
+            this.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton1.Image")));
+            this.ToolStripButton1.Name = "ToolStripButton1";
+            this.ToolStripButton1.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton1.Text = "Neu hinzufügen";
             // 
             // KontakteBindingSource
             // 
-            KontakteBindingSource.DataMember = "Kontakte";
-            KontakteBindingSource.DataSource = _WSL_AdressenDataSet;
+            this.KontakteBindingSource.DataMember = "Kontakte";
+            this.KontakteBindingSource.DataSource = this._WSL_AdressenDataSet;
             // 
             // ToolStripLabel1
             // 
-            ToolStripLabel1.Name = "ToolStripLabel1";
-            ToolStripLabel1.Size = new Size(44, 22);
-            ToolStripLabel1.Text = "von {0}";
-            ToolStripLabel1.ToolTipText = "Die Gesamtanzahl der Elemente.";
+            this.ToolStripLabel1.Name = "ToolStripLabel1";
+            this.ToolStripLabel1.Size = new System.Drawing.Size(48, 22);
+            this.ToolStripLabel1.Text = "von {0}";
+            this.ToolStripLabel1.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
             // ToolStripButton2
             // 
-            ToolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton2.Image = (Image)resources.GetObject("ToolStripButton2.Image");
-            ToolStripButton2.Name = "ToolStripButton2";
-            ToolStripButton2.RightToLeftAutoMirrorImage = true;
-            ToolStripButton2.Size = new Size(23, 22);
-            ToolStripButton2.Text = "Löschen";
+            this.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton2.Image")));
+            this.ToolStripButton2.Name = "ToolStripButton2";
+            this.ToolStripButton2.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton2.Text = "Löschen";
             // 
             // ToolStripButton3
             // 
-            ToolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton3.Image = (Image)resources.GetObject("ToolStripButton3.Image");
-            ToolStripButton3.Name = "ToolStripButton3";
-            ToolStripButton3.RightToLeftAutoMirrorImage = true;
-            ToolStripButton3.Size = new Size(23, 22);
-            ToolStripButton3.Text = "Erste verschieben";
+            this.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton3.Image")));
+            this.ToolStripButton3.Name = "ToolStripButton3";
+            this.ToolStripButton3.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton3.Text = "Erste verschieben";
             // 
             // ToolStripButton4
             // 
-            ToolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton4.Image = (Image)resources.GetObject("ToolStripButton4.Image");
-            ToolStripButton4.Name = "ToolStripButton4";
-            ToolStripButton4.RightToLeftAutoMirrorImage = true;
-            ToolStripButton4.Size = new Size(23, 22);
-            ToolStripButton4.Text = "Vorherige verschieben";
+            this.ToolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton4.Image")));
+            this.ToolStripButton4.Name = "ToolStripButton4";
+            this.ToolStripButton4.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton4.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton4.Text = "Vorherige verschieben";
             // 
             // ToolStripSeparator1
             // 
-            ToolStripSeparator1.Name = "ToolStripSeparator1";
-            ToolStripSeparator1.Size = new Size(6, 25);
+            this.ToolStripSeparator1.Name = "ToolStripSeparator1";
+            this.ToolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // ToolStripTextBox1
             // 
-            ToolStripTextBox1.AccessibleName = "Position";
-            ToolStripTextBox1.AutoSize = false;
-            ToolStripTextBox1.Font = new Font("Segoe UI", 9.75f);
-            ToolStripTextBox1.Name = "ToolStripTextBox1";
-            ToolStripTextBox1.Size = new Size(50, 25);
-            ToolStripTextBox1.Text = "0";
-            ToolStripTextBox1.ToolTipText = "Aktuelle Position";
+            this.ToolStripTextBox1.AccessibleName = "Position";
+            this.ToolStripTextBox1.AutoSize = false;
+            this.ToolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ToolStripTextBox1.Name = "ToolStripTextBox1";
+            this.ToolStripTextBox1.Size = new System.Drawing.Size(50, 25);
+            this.ToolStripTextBox1.Text = "0";
+            this.ToolStripTextBox1.ToolTipText = "Aktuelle Position";
             // 
             // ToolStripSeparator2
             // 
-            ToolStripSeparator2.Name = "ToolStripSeparator2";
-            ToolStripSeparator2.Size = new Size(6, 25);
+            this.ToolStripSeparator2.Name = "ToolStripSeparator2";
+            this.ToolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // ToolStripButton5
             // 
-            ToolStripButton5.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton5.Image = (Image)resources.GetObject("ToolStripButton5.Image");
-            ToolStripButton5.Name = "ToolStripButton5";
-            ToolStripButton5.RightToLeftAutoMirrorImage = true;
-            ToolStripButton5.Size = new Size(23, 22);
-            ToolStripButton5.Text = "Nächste verschieben";
+            this.ToolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton5.Image")));
+            this.ToolStripButton5.Name = "ToolStripButton5";
+            this.ToolStripButton5.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton5.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton5.Text = "Nächste verschieben";
             // 
             // ToolStripButton6
             // 
-            ToolStripButton6.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton6.Image = (Image)resources.GetObject("ToolStripButton6.Image");
-            ToolStripButton6.Name = "ToolStripButton6";
-            ToolStripButton6.RightToLeftAutoMirrorImage = true;
-            ToolStripButton6.Size = new Size(23, 22);
-            ToolStripButton6.Text = "Letzte verschieben";
+            this.ToolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton6.Image")));
+            this.ToolStripButton6.Name = "ToolStripButton6";
+            this.ToolStripButton6.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton6.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton6.Text = "Letzte verschieben";
             // 
             // ToolStripSeparator3
             // 
-            ToolStripSeparator3.Name = "ToolStripSeparator3";
-            ToolStripSeparator3.Size = new Size(6, 25);
+            this.ToolStripSeparator3.Name = "ToolStripSeparator3";
+            this.ToolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
-            // BNAV_KontakteSave
+            // _BNAV_KontakteSave
             // 
-            _BNAV_KontakteSave.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            _BNAV_KontakteSave.Image = (Image)resources.GetObject("BNAV_KontakteSave.Image");
-            _BNAV_KontakteSave.Name = "_BNAV_KontakteSave";
-            _BNAV_KontakteSave.Size = new Size(23, 22);
-            _BNAV_KontakteSave.Text = "Daten speichern";
+            this._BNAV_KontakteSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._BNAV_KontakteSave.Image = ((System.Drawing.Image)(resources.GetObject("_BNAV_KontakteSave.Image")));
+            this._BNAV_KontakteSave.Name = "_BNAV_KontakteSave";
+            this._BNAV_KontakteSave.Size = new System.Drawing.Size(23, 22);
+            this._BNAV_KontakteSave.Text = "Daten speichern";
+            this._BNAV_KontakteSave.Click += new System.EventHandler(this.BNAV_KontakteSave_Click);
             // 
             // IDAdresseTextBox2
             // 
-            IDAdresseTextBox2.DataBindings.Add(new Binding("Text", KontakteBindingSource, "IDAdresse", true));
-            IDAdresseTextBox2.Location = new Point(94, 58);
-            IDAdresseTextBox2.Name = "IDAdresseTextBox2";
-            IDAdresseTextBox2.Size = new Size(100, 20);
-            IDAdresseTextBox2.TabIndex = 24;
+            this.IDAdresseTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontakteBindingSource, "IDAdresse", true));
+            this.IDAdresseTextBox2.Location = new System.Drawing.Point(94, 58);
+            this.IDAdresseTextBox2.Name = "IDAdresseTextBox2";
+            this.IDAdresseTextBox2.Size = new System.Drawing.Size(100, 20);
+            this.IDAdresseTextBox2.TabIndex = 24;
             // 
             // FaxnummerTextBox
             // 
-            FaxnummerTextBox.DataBindings.Add(new Binding("Text", KontakteBindingSource, "Faxnummer", true));
-            FaxnummerTextBox.Location = new Point(715, 83);
-            FaxnummerTextBox.Name = "FaxnummerTextBox";
-            FaxnummerTextBox.Size = new Size(100, 20);
-            FaxnummerTextBox.TabIndex = 22;
+            this.FaxnummerTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontakteBindingSource, "Faxnummer", true));
+            this.FaxnummerTextBox.Location = new System.Drawing.Point(715, 83);
+            this.FaxnummerTextBox.Name = "FaxnummerTextBox";
+            this.FaxnummerTextBox.Size = new System.Drawing.Size(100, 20);
+            this.FaxnummerTextBox.TabIndex = 22;
             // 
             // MobiltelefonTextBox
             // 
-            MobiltelefonTextBox.DataBindings.Add(new Binding("Text", KontakteBindingSource, "Mobiltelefon", true));
-            MobiltelefonTextBox.Location = new Point(715, 57);
-            MobiltelefonTextBox.Name = "MobiltelefonTextBox";
-            MobiltelefonTextBox.Size = new Size(100, 20);
-            MobiltelefonTextBox.TabIndex = 20;
+            this.MobiltelefonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontakteBindingSource, "Mobiltelefon", true));
+            this.MobiltelefonTextBox.Location = new System.Drawing.Point(715, 57);
+            this.MobiltelefonTextBox.Name = "MobiltelefonTextBox";
+            this.MobiltelefonTextBox.Size = new System.Drawing.Size(100, 20);
+            this.MobiltelefonTextBox.TabIndex = 20;
             // 
             // TelefonPrivatTextBox
             // 
-            TelefonPrivatTextBox.DataBindings.Add(new Binding("Text", KontakteBindingSource, "TelefonPrivat", true));
-            TelefonPrivatTextBox.Location = new Point(715, 31);
-            TelefonPrivatTextBox.Name = "TelefonPrivatTextBox";
-            TelefonPrivatTextBox.Size = new Size(100, 20);
-            TelefonPrivatTextBox.TabIndex = 18;
+            this.TelefonPrivatTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontakteBindingSource, "TelefonPrivat", true));
+            this.TelefonPrivatTextBox.Location = new System.Drawing.Point(715, 31);
+            this.TelefonPrivatTextBox.Name = "TelefonPrivatTextBox";
+            this.TelefonPrivatTextBox.Size = new System.Drawing.Size(100, 20);
+            this.TelefonPrivatTextBox.TabIndex = 18;
             // 
             // TelefonGeschaeftlichTextBox
             // 
-            TelefonGeschaeftlichTextBox.DataBindings.Add(new Binding("Text", KontakteBindingSource, "TelefonGeschaeftlich", true));
-            TelefonGeschaeftlichTextBox.Location = new Point(715, 5);
-            TelefonGeschaeftlichTextBox.Name = "TelefonGeschaeftlichTextBox";
-            TelefonGeschaeftlichTextBox.Size = new Size(100, 20);
-            TelefonGeschaeftlichTextBox.TabIndex = 16;
+            this.TelefonGeschaeftlichTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontakteBindingSource, "TelefonGeschaeftlich", true));
+            this.TelefonGeschaeftlichTextBox.Location = new System.Drawing.Point(715, 5);
+            this.TelefonGeschaeftlichTextBox.Name = "TelefonGeschaeftlichTextBox";
+            this.TelefonGeschaeftlichTextBox.Size = new System.Drawing.Size(100, 20);
+            this.TelefonGeschaeftlichTextBox.TabIndex = 16;
             // 
             // JobtitleTextBox
             // 
-            JobtitleTextBox.DataBindings.Add(new Binding("Text", KontakteBindingSource, "Jobtitle", true));
-            JobtitleTextBox.Location = new Point(484, 6);
-            JobtitleTextBox.Name = "JobtitleTextBox";
-            JobtitleTextBox.Size = new Size(100, 20);
-            JobtitleTextBox.TabIndex = 14;
+            this.JobtitleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontakteBindingSource, "Jobtitle", true));
+            this.JobtitleTextBox.Location = new System.Drawing.Point(484, 6);
+            this.JobtitleTextBox.Name = "JobtitleTextBox";
+            this.JobtitleTextBox.Size = new System.Drawing.Size(100, 20);
+            this.JobtitleTextBox.TabIndex = 14;
             // 
             // EmailAddresseTextBox
             // 
-            EmailAddresseTextBox.DataBindings.Add(new Binding("Text", KontakteBindingSource, "EmailAddresse", true));
-            EmailAddresseTextBox.Location = new Point(484, 32);
-            EmailAddresseTextBox.Name = "EmailAddresseTextBox";
-            EmailAddresseTextBox.Size = new Size(100, 20);
-            EmailAddresseTextBox.TabIndex = 12;
+            this.EmailAddresseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontakteBindingSource, "EmailAddresse", true));
+            this.EmailAddresseTextBox.Location = new System.Drawing.Point(484, 32);
+            this.EmailAddresseTextBox.Name = "EmailAddresseTextBox";
+            this.EmailAddresseTextBox.Size = new System.Drawing.Size(100, 20);
+            this.EmailAddresseTextBox.TabIndex = 12;
             // 
             // AnredeTextBox
             // 
-            AnredeTextBox.DataBindings.Add(new Binding("Text", KontakteBindingSource, "Anrede", true));
-            AnredeTextBox.Location = new Point(285, 6);
-            AnredeTextBox.Name = "AnredeTextBox";
-            AnredeTextBox.Size = new Size(100, 20);
-            AnredeTextBox.TabIndex = 10;
+            this.AnredeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontakteBindingSource, "Anrede", true));
+            this.AnredeTextBox.Location = new System.Drawing.Point(285, 6);
+            this.AnredeTextBox.Name = "AnredeTextBox";
+            this.AnredeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.AnredeTextBox.TabIndex = 10;
             // 
             // NachnameTextBox
             // 
-            NachnameTextBox.DataBindings.Add(new Binding("Text", KontakteBindingSource, "Nachname", true));
-            NachnameTextBox.Location = new Point(285, 31);
-            NachnameTextBox.Name = "NachnameTextBox";
-            NachnameTextBox.Size = new Size(100, 20);
-            NachnameTextBox.TabIndex = 8;
+            this.NachnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontakteBindingSource, "Nachname", true));
+            this.NachnameTextBox.Location = new System.Drawing.Point(285, 31);
+            this.NachnameTextBox.Name = "NachnameTextBox";
+            this.NachnameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.NachnameTextBox.TabIndex = 8;
             // 
             // VornameTextBox
             // 
-            VornameTextBox.DataBindings.Add(new Binding("Text", KontakteBindingSource, "Vorname", true));
-            VornameTextBox.Location = new Point(285, 57);
-            VornameTextBox.Name = "VornameTextBox";
-            VornameTextBox.Size = new Size(100, 20);
-            VornameTextBox.TabIndex = 6;
+            this.VornameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontakteBindingSource, "Vorname", true));
+            this.VornameTextBox.Location = new System.Drawing.Point(285, 57);
+            this.VornameTextBox.Name = "VornameTextBox";
+            this.VornameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.VornameTextBox.TabIndex = 6;
             // 
             // IDFirmenNameTextBox4
             // 
-            IDFirmenNameTextBox4.DataBindings.Add(new Binding("Text", KontakteBindingSource, "IDFirmenName", true));
-            IDFirmenNameTextBox4.Location = new Point(94, 32);
-            IDFirmenNameTextBox4.Name = "IDFirmenNameTextBox4";
-            IDFirmenNameTextBox4.Size = new Size(100, 20);
-            IDFirmenNameTextBox4.TabIndex = 4;
+            this.IDFirmenNameTextBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontakteBindingSource, "IDFirmenName", true));
+            this.IDFirmenNameTextBox4.Location = new System.Drawing.Point(94, 32);
+            this.IDFirmenNameTextBox4.Name = "IDFirmenNameTextBox4";
+            this.IDFirmenNameTextBox4.Size = new System.Drawing.Size(100, 20);
+            this.IDFirmenNameTextBox4.TabIndex = 4;
             // 
             // IDKontaktTextBox1
             // 
-            IDKontaktTextBox1.DataBindings.Add(new Binding("Text", KontakteBindingSource, "IDKontakt", true));
-            IDKontaktTextBox1.Location = new Point(94, 6);
-            IDKontaktTextBox1.Name = "IDKontaktTextBox1";
-            IDKontaktTextBox1.Size = new Size(100, 20);
-            IDKontaktTextBox1.TabIndex = 3;
+            this.IDKontaktTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontakteBindingSource, "IDKontakt", true));
+            this.IDKontaktTextBox1.Location = new System.Drawing.Point(94, 6);
+            this.IDKontaktTextBox1.Name = "IDKontaktTextBox1";
+            this.IDKontaktTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.IDKontaktTextBox1.TabIndex = 3;
             // 
             // DataGridView2
             // 
-            DataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            DataGridView2.AutoGenerateColumns = false;
-            DataGridView2.BackgroundColor = Color.White;
-            DataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridView2.Columns.AddRange(new DataGridViewColumn[] { IDKontakt, IDFirmenName, Nachname, Vorname, EmailAddresseDataGridViewTextBoxColumn, JobtitleDataGridViewTextBoxColumn, TelefonGeschaeftlichDataGridViewTextBoxColumn, TelefonPrivatDataGridViewTextBoxColumn, MobiltelefonDataGridViewTextBoxColumn, FaxnummerDataGridViewTextBoxColumn, IDAdresseDataGridViewTextBoxColumn, AnredeDataGridViewTextBoxColumn });
-            DataGridView2.DataSource = KontakteBindingSource;
-            DataGridView2.GridColor = SystemColors.AppWorkspace;
-            DataGridView2.Location = new Point(7, 109);
-            DataGridView2.Name = "DataGridView2";
-            DataGridView2.RowHeadersVisible = false;
-            DataGridView2.ScrollBars = ScrollBars.Vertical;
-            DataGridView2.Size = new Size(1158, 234);
-            DataGridView2.TabIndex = 2;
+            this.DataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DataGridView2.AutoGenerateColumns = false;
+            this.DataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDKontakt,
+            this.IDFirmenName,
+            this.Nachname,
+            this.Vorname,
+            this.EmailAddresseDataGridViewTextBoxColumn,
+            this.JobtitleDataGridViewTextBoxColumn,
+            this.TelefonGeschaeftlichDataGridViewTextBoxColumn,
+            this.TelefonPrivatDataGridViewTextBoxColumn,
+            this.MobiltelefonDataGridViewTextBoxColumn,
+            this.FaxnummerDataGridViewTextBoxColumn,
+            this.IDAdresseDataGridViewTextBoxColumn,
+            this.AnredeDataGridViewTextBoxColumn});
+            this.DataGridView2.DataSource = this.KontakteBindingSource;
+            this.DataGridView2.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.DataGridView2.Location = new System.Drawing.Point(7, 109);
+            this.DataGridView2.Name = "DataGridView2";
+            this.DataGridView2.RowHeadersVisible = false;
+            this.DataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DataGridView2.Size = new System.Drawing.Size(1158, 234);
+            this.DataGridView2.TabIndex = 2;
             // 
             // IDKontakt
             // 
-            IDKontakt.DataPropertyName = "IDKontakt";
-            IDKontakt.HeaderText = "IDKontakt";
-            IDKontakt.Name = "IDKontakt";
-            IDKontakt.Width = 70;
+            this.IDKontakt.DataPropertyName = "IDKontakt";
+            this.IDKontakt.HeaderText = "IDKontakt";
+            this.IDKontakt.Name = "IDKontakt";
+            this.IDKontakt.Width = 70;
             // 
             // IDFirmenName
             // 
-            IDFirmenName.DataPropertyName = "IDFirmenName";
-            IDFirmenName.HeaderText = "IDFirmenName";
-            IDFirmenName.Name = "IDFirmenName";
-            IDFirmenName.Width = 80;
+            this.IDFirmenName.DataPropertyName = "IDFirmenName";
+            this.IDFirmenName.HeaderText = "IDFirmenName";
+            this.IDFirmenName.Name = "IDFirmenName";
+            this.IDFirmenName.Width = 80;
             // 
             // Nachname
             // 
-            Nachname.DataPropertyName = "Nachname";
-            Nachname.HeaderText = "Nachname";
-            Nachname.Name = "Nachname";
-            Nachname.Width = 90;
+            this.Nachname.DataPropertyName = "Nachname";
+            this.Nachname.HeaderText = "Nachname";
+            this.Nachname.Name = "Nachname";
+            this.Nachname.Width = 90;
             // 
             // Vorname
             // 
-            Vorname.DataPropertyName = "Vorname";
-            Vorname.HeaderText = "Vorname";
-            Vorname.Name = "Vorname";
-            Vorname.Width = 90;
+            this.Vorname.DataPropertyName = "Vorname";
+            this.Vorname.HeaderText = "Vorname";
+            this.Vorname.Name = "Vorname";
+            this.Vorname.Width = 90;
             // 
             // EmailAddresseDataGridViewTextBoxColumn
             // 
-            EmailAddresseDataGridViewTextBoxColumn.DataPropertyName = "EmailAddresse";
-            EmailAddresseDataGridViewTextBoxColumn.HeaderText = "EmailAddresse";
-            EmailAddresseDataGridViewTextBoxColumn.Name = "EmailAddresseDataGridViewTextBoxColumn";
+            this.EmailAddresseDataGridViewTextBoxColumn.DataPropertyName = "EmailAddresse";
+            this.EmailAddresseDataGridViewTextBoxColumn.HeaderText = "EmailAddresse";
+            this.EmailAddresseDataGridViewTextBoxColumn.Name = "EmailAddresseDataGridViewTextBoxColumn";
             // 
             // JobtitleDataGridViewTextBoxColumn
             // 
-            JobtitleDataGridViewTextBoxColumn.DataPropertyName = "Jobtitle";
-            JobtitleDataGridViewTextBoxColumn.HeaderText = "Jobtitle";
-            JobtitleDataGridViewTextBoxColumn.Name = "JobtitleDataGridViewTextBoxColumn";
-            JobtitleDataGridViewTextBoxColumn.Width = 90;
+            this.JobtitleDataGridViewTextBoxColumn.DataPropertyName = "Jobtitle";
+            this.JobtitleDataGridViewTextBoxColumn.HeaderText = "Jobtitle";
+            this.JobtitleDataGridViewTextBoxColumn.Name = "JobtitleDataGridViewTextBoxColumn";
+            this.JobtitleDataGridViewTextBoxColumn.Width = 90;
             // 
             // TelefonGeschaeftlichDataGridViewTextBoxColumn
             // 
-            TelefonGeschaeftlichDataGridViewTextBoxColumn.DataPropertyName = "TelefonGeschaeftlich";
-            TelefonGeschaeftlichDataGridViewTextBoxColumn.HeaderText = "TelefonGeschaeftlich";
-            TelefonGeschaeftlichDataGridViewTextBoxColumn.Name = "TelefonGeschaeftlichDataGridViewTextBoxColumn";
+            this.TelefonGeschaeftlichDataGridViewTextBoxColumn.DataPropertyName = "TelefonGeschaeftlich";
+            this.TelefonGeschaeftlichDataGridViewTextBoxColumn.HeaderText = "TelefonGeschaeftlich";
+            this.TelefonGeschaeftlichDataGridViewTextBoxColumn.Name = "TelefonGeschaeftlichDataGridViewTextBoxColumn";
             // 
             // TelefonPrivatDataGridViewTextBoxColumn
             // 
-            TelefonPrivatDataGridViewTextBoxColumn.DataPropertyName = "TelefonPrivat";
-            TelefonPrivatDataGridViewTextBoxColumn.HeaderText = "TelefonPrivat";
-            TelefonPrivatDataGridViewTextBoxColumn.Name = "TelefonPrivatDataGridViewTextBoxColumn";
+            this.TelefonPrivatDataGridViewTextBoxColumn.DataPropertyName = "TelefonPrivat";
+            this.TelefonPrivatDataGridViewTextBoxColumn.HeaderText = "TelefonPrivat";
+            this.TelefonPrivatDataGridViewTextBoxColumn.Name = "TelefonPrivatDataGridViewTextBoxColumn";
             // 
             // MobiltelefonDataGridViewTextBoxColumn
             // 
-            MobiltelefonDataGridViewTextBoxColumn.DataPropertyName = "Mobiltelefon";
-            MobiltelefonDataGridViewTextBoxColumn.HeaderText = "Mobiltelefon";
-            MobiltelefonDataGridViewTextBoxColumn.Name = "MobiltelefonDataGridViewTextBoxColumn";
+            this.MobiltelefonDataGridViewTextBoxColumn.DataPropertyName = "Mobiltelefon";
+            this.MobiltelefonDataGridViewTextBoxColumn.HeaderText = "Mobiltelefon";
+            this.MobiltelefonDataGridViewTextBoxColumn.Name = "MobiltelefonDataGridViewTextBoxColumn";
             // 
             // FaxnummerDataGridViewTextBoxColumn
             // 
-            FaxnummerDataGridViewTextBoxColumn.DataPropertyName = "Faxnummer";
-            FaxnummerDataGridViewTextBoxColumn.HeaderText = "Faxnummer";
-            FaxnummerDataGridViewTextBoxColumn.Name = "FaxnummerDataGridViewTextBoxColumn";
+            this.FaxnummerDataGridViewTextBoxColumn.DataPropertyName = "Faxnummer";
+            this.FaxnummerDataGridViewTextBoxColumn.HeaderText = "Faxnummer";
+            this.FaxnummerDataGridViewTextBoxColumn.Name = "FaxnummerDataGridViewTextBoxColumn";
             // 
             // IDAdresseDataGridViewTextBoxColumn
             // 
-            IDAdresseDataGridViewTextBoxColumn.DataPropertyName = "IDAdresse";
-            IDAdresseDataGridViewTextBoxColumn.HeaderText = "IDAdresse";
-            IDAdresseDataGridViewTextBoxColumn.Name = "IDAdresseDataGridViewTextBoxColumn";
-            IDAdresseDataGridViewTextBoxColumn.Width = 70;
+            this.IDAdresseDataGridViewTextBoxColumn.DataPropertyName = "IDAdresse";
+            this.IDAdresseDataGridViewTextBoxColumn.HeaderText = "IDAdresse";
+            this.IDAdresseDataGridViewTextBoxColumn.Name = "IDAdresseDataGridViewTextBoxColumn";
+            this.IDAdresseDataGridViewTextBoxColumn.Width = 70;
             // 
             // AnredeDataGridViewTextBoxColumn
             // 
-            AnredeDataGridViewTextBoxColumn.DataPropertyName = "Anrede";
-            AnredeDataGridViewTextBoxColumn.HeaderText = "Anrede";
-            AnredeDataGridViewTextBoxColumn.Name = "AnredeDataGridViewTextBoxColumn";
-            AnredeDataGridViewTextBoxColumn.Width = 60;
+            this.AnredeDataGridViewTextBoxColumn.DataPropertyName = "Anrede";
+            this.AnredeDataGridViewTextBoxColumn.HeaderText = "Anrede";
+            this.AnredeDataGridViewTextBoxColumn.Name = "AnredeDataGridViewTextBoxColumn";
+            this.AnredeDataGridViewTextBoxColumn.Width = 60;
             // 
             // Belege
             // 
-            Belege.AutoScroll = true;
-            Belege.Controls.Add(BNAV_Belege);
-            Belege.Controls.Add(BelegeDataGridView);
-            Belege.Location = new Point(4, 22);
-            Belege.Name = "Belege";
-            Belege.Padding = new Padding(3);
-            Belege.Size = new Size(1171, 374);
-            Belege.TabIndex = 5;
-            Belege.Text = "Belege";
-            Belege.UseVisualStyleBackColor = true;
+            this.Belege.AutoScroll = true;
+            this.Belege.Controls.Add(this.BNAV_Belege);
+            this.Belege.Controls.Add(this.BelegeDataGridView);
+            this.Belege.Location = new System.Drawing.Point(4, 22);
+            this.Belege.Name = "Belege";
+            this.Belege.Padding = new System.Windows.Forms.Padding(3);
+            this.Belege.Size = new System.Drawing.Size(1171, 374);
+            this.Belege.TabIndex = 5;
+            this.Belege.Text = "Belege";
+            this.Belege.UseVisualStyleBackColor = true;
             // 
             // BNAV_Belege
             // 
-            BNAV_Belege.AddNewItem = ToolStripButton28;
-            BNAV_Belege.BindingSource = BelegeBindingSource;
-            BNAV_Belege.CountItem = ToolStripLabel5;
-            BNAV_Belege.DeleteItem = ToolStripButton29;
-            BNAV_Belege.Dock = DockStyle.Bottom;
-            BNAV_Belege.Items.AddRange(new ToolStripItem[] { ToolStripButton30, ToolStripButton31, ToolStripSeparator13, ToolStripTextBox5, ToolStripLabel5, ToolStripSeparator14, ToolStripButton32, ToolStripButton33, ToolStripSeparator15, ToolStripButton28, ToolStripButton29, _BNAV_BelegeSaveItem });
-            BNAV_Belege.Location = new Point(3, 346);
-            BNAV_Belege.MoveFirstItem = ToolStripButton30;
-            BNAV_Belege.MoveLastItem = ToolStripButton33;
-            BNAV_Belege.MoveNextItem = ToolStripButton32;
-            BNAV_Belege.MovePreviousItem = ToolStripButton31;
-            BNAV_Belege.Name = "BNAV_Belege";
-            BNAV_Belege.PositionItem = ToolStripTextBox5;
-            BNAV_Belege.Size = new Size(1165, 25);
-            BNAV_Belege.TabIndex = 26;
-            BNAV_Belege.Text = "BindingNavigator1";
+            this.BNAV_Belege.AddNewItem = this.ToolStripButton28;
+            this.BNAV_Belege.BindingSource = this.BelegeBindingSource;
+            this.BNAV_Belege.CountItem = this.ToolStripLabel5;
+            this.BNAV_Belege.DeleteItem = this.ToolStripButton29;
+            this.BNAV_Belege.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BNAV_Belege.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripButton30,
+            this.ToolStripButton31,
+            this.ToolStripSeparator13,
+            this.ToolStripTextBox5,
+            this.ToolStripLabel5,
+            this.ToolStripSeparator14,
+            this.ToolStripButton32,
+            this.ToolStripButton33,
+            this.ToolStripSeparator15,
+            this.ToolStripButton28,
+            this.ToolStripButton29,
+            this._BNAV_BelegeSaveItem});
+            this.BNAV_Belege.Location = new System.Drawing.Point(3, 346);
+            this.BNAV_Belege.MoveFirstItem = this.ToolStripButton30;
+            this.BNAV_Belege.MoveLastItem = this.ToolStripButton33;
+            this.BNAV_Belege.MoveNextItem = this.ToolStripButton32;
+            this.BNAV_Belege.MovePreviousItem = this.ToolStripButton31;
+            this.BNAV_Belege.Name = "BNAV_Belege";
+            this.BNAV_Belege.PositionItem = this.ToolStripTextBox5;
+            this.BNAV_Belege.Size = new System.Drawing.Size(1165, 25);
+            this.BNAV_Belege.TabIndex = 26;
+            this.BNAV_Belege.Text = "BindingNavigator1";
             // 
             // ToolStripButton28
             // 
-            ToolStripButton28.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton28.Image = (Image)resources.GetObject("ToolStripButton28.Image");
-            ToolStripButton28.Name = "ToolStripButton28";
-            ToolStripButton28.RightToLeftAutoMirrorImage = true;
-            ToolStripButton28.Size = new Size(23, 22);
-            ToolStripButton28.Text = "Neu hinzufügen";
+            this.ToolStripButton28.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton28.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton28.Image")));
+            this.ToolStripButton28.Name = "ToolStripButton28";
+            this.ToolStripButton28.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton28.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton28.Text = "Neu hinzufügen";
             // 
             // BelegeBindingSource
             // 
-            BelegeBindingSource.DataMember = "Belege";
-            BelegeBindingSource.DataSource = _WSL_AdressenDataSet;
+            this.BelegeBindingSource.DataMember = "Belege";
+            this.BelegeBindingSource.DataSource = this._WSL_AdressenDataSet;
             // 
             // ToolStripLabel5
             // 
-            ToolStripLabel5.Name = "ToolStripLabel5";
-            ToolStripLabel5.Size = new Size(44, 22);
-            ToolStripLabel5.Text = "von {0}";
-            ToolStripLabel5.ToolTipText = "Die Gesamtanzahl der Elemente.";
+            this.ToolStripLabel5.Name = "ToolStripLabel5";
+            this.ToolStripLabel5.Size = new System.Drawing.Size(48, 22);
+            this.ToolStripLabel5.Text = "von {0}";
+            this.ToolStripLabel5.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
             // ToolStripButton29
             // 
-            ToolStripButton29.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton29.Image = (Image)resources.GetObject("ToolStripButton29.Image");
-            ToolStripButton29.Name = "ToolStripButton29";
-            ToolStripButton29.RightToLeftAutoMirrorImage = true;
-            ToolStripButton29.Size = new Size(23, 22);
-            ToolStripButton29.Text = "Löschen";
+            this.ToolStripButton29.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton29.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton29.Image")));
+            this.ToolStripButton29.Name = "ToolStripButton29";
+            this.ToolStripButton29.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton29.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton29.Text = "Löschen";
             // 
             // ToolStripButton30
             // 
-            ToolStripButton30.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton30.Image = (Image)resources.GetObject("ToolStripButton30.Image");
-            ToolStripButton30.Name = "ToolStripButton30";
-            ToolStripButton30.RightToLeftAutoMirrorImage = true;
-            ToolStripButton30.Size = new Size(23, 22);
-            ToolStripButton30.Text = "Erste verschieben";
+            this.ToolStripButton30.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton30.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton30.Image")));
+            this.ToolStripButton30.Name = "ToolStripButton30";
+            this.ToolStripButton30.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton30.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton30.Text = "Erste verschieben";
             // 
             // ToolStripButton31
             // 
-            ToolStripButton31.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton31.Image = (Image)resources.GetObject("ToolStripButton31.Image");
-            ToolStripButton31.Name = "ToolStripButton31";
-            ToolStripButton31.RightToLeftAutoMirrorImage = true;
-            ToolStripButton31.Size = new Size(23, 22);
-            ToolStripButton31.Text = "Vorherige verschieben";
+            this.ToolStripButton31.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton31.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton31.Image")));
+            this.ToolStripButton31.Name = "ToolStripButton31";
+            this.ToolStripButton31.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton31.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton31.Text = "Vorherige verschieben";
             // 
             // ToolStripSeparator13
             // 
-            ToolStripSeparator13.Name = "ToolStripSeparator13";
-            ToolStripSeparator13.Size = new Size(6, 25);
+            this.ToolStripSeparator13.Name = "ToolStripSeparator13";
+            this.ToolStripSeparator13.Size = new System.Drawing.Size(6, 25);
             // 
             // ToolStripTextBox5
             // 
-            ToolStripTextBox5.AccessibleName = "Position";
-            ToolStripTextBox5.AutoSize = false;
-            ToolStripTextBox5.Font = new Font("Segoe UI", 9.75f);
-            ToolStripTextBox5.Name = "ToolStripTextBox5";
-            ToolStripTextBox5.Size = new Size(50, 25);
-            ToolStripTextBox5.Text = "0";
-            ToolStripTextBox5.ToolTipText = "Aktuelle Position";
+            this.ToolStripTextBox5.AccessibleName = "Position";
+            this.ToolStripTextBox5.AutoSize = false;
+            this.ToolStripTextBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.ToolStripTextBox5.Name = "ToolStripTextBox5";
+            this.ToolStripTextBox5.Size = new System.Drawing.Size(50, 25);
+            this.ToolStripTextBox5.Text = "0";
+            this.ToolStripTextBox5.ToolTipText = "Aktuelle Position";
             // 
             // ToolStripSeparator14
             // 
-            ToolStripSeparator14.Name = "ToolStripSeparator14";
-            ToolStripSeparator14.Size = new Size(6, 25);
+            this.ToolStripSeparator14.Name = "ToolStripSeparator14";
+            this.ToolStripSeparator14.Size = new System.Drawing.Size(6, 25);
             // 
             // ToolStripButton32
             // 
-            ToolStripButton32.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton32.Image = (Image)resources.GetObject("ToolStripButton32.Image");
-            ToolStripButton32.Name = "ToolStripButton32";
-            ToolStripButton32.RightToLeftAutoMirrorImage = true;
-            ToolStripButton32.Size = new Size(23, 22);
-            ToolStripButton32.Text = "Nächste verschieben";
+            this.ToolStripButton32.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton32.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton32.Image")));
+            this.ToolStripButton32.Name = "ToolStripButton32";
+            this.ToolStripButton32.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton32.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton32.Text = "Nächste verschieben";
             // 
             // ToolStripButton33
             // 
-            ToolStripButton33.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ToolStripButton33.Image = (Image)resources.GetObject("ToolStripButton33.Image");
-            ToolStripButton33.Name = "ToolStripButton33";
-            ToolStripButton33.RightToLeftAutoMirrorImage = true;
-            ToolStripButton33.Size = new Size(23, 22);
-            ToolStripButton33.Text = "Letzte verschieben";
+            this.ToolStripButton33.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ToolStripButton33.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton33.Image")));
+            this.ToolStripButton33.Name = "ToolStripButton33";
+            this.ToolStripButton33.RightToLeftAutoMirrorImage = true;
+            this.ToolStripButton33.Size = new System.Drawing.Size(23, 22);
+            this.ToolStripButton33.Text = "Letzte verschieben";
             // 
             // ToolStripSeparator15
             // 
-            ToolStripSeparator15.Name = "ToolStripSeparator15";
-            ToolStripSeparator15.Size = new Size(6, 25);
+            this.ToolStripSeparator15.Name = "ToolStripSeparator15";
+            this.ToolStripSeparator15.Size = new System.Drawing.Size(6, 25);
             // 
-            // BNAV_BelegeSaveItem
+            // _BNAV_BelegeSaveItem
             // 
-            _BNAV_BelegeSaveItem.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            _BNAV_BelegeSaveItem.Image = (Image)resources.GetObject("BNAV_BelegeSaveItem.Image");
-            _BNAV_BelegeSaveItem.Name = "_BNAV_BelegeSaveItem";
-            _BNAV_BelegeSaveItem.Size = new Size(23, 22);
-            _BNAV_BelegeSaveItem.Text = "Daten speichern";
+            this._BNAV_BelegeSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._BNAV_BelegeSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("_BNAV_BelegeSaveItem.Image")));
+            this._BNAV_BelegeSaveItem.Name = "_BNAV_BelegeSaveItem";
+            this._BNAV_BelegeSaveItem.Size = new System.Drawing.Size(23, 22);
+            this._BNAV_BelegeSaveItem.Text = "Daten speichern";
+            this._BNAV_BelegeSaveItem.Click += new System.EventHandler(this.BNAV_BelegeSaveItem_Click);
             // 
             // BelegeDataGridView
             // 
-            BelegeDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            BelegeDataGridView.AutoGenerateColumns = false;
-            BelegeDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            BelegeDataGridView.Columns.AddRange(new DataGridViewColumn[] { DataGridViewTextBoxColumn6, DataGridViewTextBoxColumn8, DataGridViewTextBoxColumn9, DataGridViewTextBoxColumn10, DataGridViewTextBoxColumn11, DataGridViewTextBoxColumn12, DataGridViewTextBoxColumn13, DataGridViewTextBoxColumn14, DataGridViewTextBoxColumn15, DataGridViewTextBoxColumn16, DataGridViewTextBoxColumn17, DataGridViewTextBoxColumn18, DataGridViewTextBoxColumn19 });
-            BelegeDataGridView.DataSource = BelegeBindingSource;
-            BelegeDataGridView.Location = new Point(0, 0);
-            BelegeDataGridView.Name = "BelegeDataGridView";
-            BelegeDataGridView.Size = new Size(1168, 343);
-            BelegeDataGridView.TabIndex = 0;
+            this.BelegeDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BelegeDataGridView.AutoGenerateColumns = false;
+            this.BelegeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BelegeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridViewTextBoxColumn6,
+            this.DataGridViewTextBoxColumn8,
+            this.DataGridViewTextBoxColumn9,
+            this.DataGridViewTextBoxColumn10,
+            this.DataGridViewTextBoxColumn11,
+            this.DataGridViewTextBoxColumn12,
+            this.DataGridViewTextBoxColumn13,
+            this.DataGridViewTextBoxColumn14,
+            this.DataGridViewTextBoxColumn15,
+            this.DataGridViewTextBoxColumn16,
+            this.DataGridViewTextBoxColumn17,
+            this.DataGridViewTextBoxColumn18,
+            this.DataGridViewTextBoxColumn19});
+            this.BelegeDataGridView.DataSource = this.BelegeBindingSource;
+            this.BelegeDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.BelegeDataGridView.Name = "BelegeDataGridView";
+            this.BelegeDataGridView.Size = new System.Drawing.Size(1168, 343);
+            this.BelegeDataGridView.TabIndex = 0;
             // 
             // DataGridViewTextBoxColumn6
             // 
-            DataGridViewTextBoxColumn6.DataPropertyName = "IDBeleg";
-            DataGridViewTextBoxColumn6.HeaderText = "IDBeleg";
-            DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6";
+            this.DataGridViewTextBoxColumn6.DataPropertyName = "IDBeleg";
+            this.DataGridViewTextBoxColumn6.HeaderText = "IDBeleg";
+            this.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6";
             // 
             // DataGridViewTextBoxColumn8
             // 
-            DataGridViewTextBoxColumn8.DataPropertyName = "IDFirmenName";
-            DataGridViewTextBoxColumn8.HeaderText = "IDFirmenName";
-            DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8";
+            this.DataGridViewTextBoxColumn8.DataPropertyName = "IDFirmenName";
+            this.DataGridViewTextBoxColumn8.HeaderText = "IDFirmenName";
+            this.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8";
             // 
             // DataGridViewTextBoxColumn9
             // 
-            DataGridViewTextBoxColumn9.DataPropertyName = "FirmenName";
-            DataGridViewTextBoxColumn9.HeaderText = "FirmenName";
-            DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9";
+            this.DataGridViewTextBoxColumn9.DataPropertyName = "FirmenName";
+            this.DataGridViewTextBoxColumn9.HeaderText = "FirmenName";
+            this.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9";
             // 
             // DataGridViewTextBoxColumn10
             // 
-            DataGridViewTextBoxColumn10.DataPropertyName = "Datum";
-            DataGridViewTextBoxColumn10.HeaderText = "Datum";
-            DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10";
+            this.DataGridViewTextBoxColumn10.DataPropertyName = "Datum";
+            this.DataGridViewTextBoxColumn10.HeaderText = "Datum";
+            this.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10";
             // 
             // DataGridViewTextBoxColumn11
             // 
-            DataGridViewTextBoxColumn11.DataPropertyName = "IDAdresse";
-            DataGridViewTextBoxColumn11.HeaderText = "IDAdresse";
-            DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11";
+            this.DataGridViewTextBoxColumn11.DataPropertyName = "IDAdresse";
+            this.DataGridViewTextBoxColumn11.HeaderText = "IDAdresse";
+            this.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11";
             // 
             // DataGridViewTextBoxColumn12
             // 
-            DataGridViewTextBoxColumn12.DataPropertyName = "IDKonto";
-            DataGridViewTextBoxColumn12.HeaderText = "IDKonto";
-            DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12";
+            this.DataGridViewTextBoxColumn12.DataPropertyName = "IDKonto";
+            this.DataGridViewTextBoxColumn12.HeaderText = "IDKonto";
+            this.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12";
             // 
             // DataGridViewTextBoxColumn13
             // 
-            DataGridViewTextBoxColumn13.DataPropertyName = "Kuerzel";
-            DataGridViewTextBoxColumn13.HeaderText = "Kuerzel";
-            DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13";
+            this.DataGridViewTextBoxColumn13.DataPropertyName = "Kuerzel";
+            this.DataGridViewTextBoxColumn13.HeaderText = "Kuerzel";
+            this.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13";
             // 
             // DataGridViewTextBoxColumn14
             // 
-            DataGridViewTextBoxColumn14.DataPropertyName = "Kontakt";
-            DataGridViewTextBoxColumn14.HeaderText = "Kontakt";
-            DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14";
+            this.DataGridViewTextBoxColumn14.DataPropertyName = "Kontakt";
+            this.DataGridViewTextBoxColumn14.HeaderText = "Kontakt";
+            this.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14";
             // 
             // DataGridViewTextBoxColumn15
             // 
-            DataGridViewTextBoxColumn15.DataPropertyName = "WeitereKontakte";
-            DataGridViewTextBoxColumn15.HeaderText = "WeitereKontakte";
-            DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15";
+            this.DataGridViewTextBoxColumn15.DataPropertyName = "WeitereKontakte";
+            this.DataGridViewTextBoxColumn15.HeaderText = "WeitereKontakte";
+            this.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15";
             // 
             // DataGridViewTextBoxColumn16
             // 
-            DataGridViewTextBoxColumn16.DataPropertyName = "Thema";
-            DataGridViewTextBoxColumn16.HeaderText = "Thema";
-            DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16";
+            this.DataGridViewTextBoxColumn16.DataPropertyName = "Thema";
+            this.DataGridViewTextBoxColumn16.HeaderText = "Thema";
+            this.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16";
             // 
             // DataGridViewTextBoxColumn17
             // 
-            DataGridViewTextBoxColumn17.DataPropertyName = "WeitereBesucher";
-            DataGridViewTextBoxColumn17.HeaderText = "WeitereBesucher";
-            DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17";
+            this.DataGridViewTextBoxColumn17.DataPropertyName = "WeitereBesucher";
+            this.DataGridViewTextBoxColumn17.HeaderText = "WeitereBesucher";
+            this.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17";
             // 
             // DataGridViewTextBoxColumn18
             // 
-            DataGridViewTextBoxColumn18.DataPropertyName = "Login";
-            DataGridViewTextBoxColumn18.HeaderText = "Login";
-            DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18";
+            this.DataGridViewTextBoxColumn18.DataPropertyName = "Login";
+            this.DataGridViewTextBoxColumn18.HeaderText = "Login";
+            this.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18";
             // 
             // DataGridViewTextBoxColumn19
             // 
-            DataGridViewTextBoxColumn19.DataPropertyName = "Belegname";
-            DataGridViewTextBoxColumn19.HeaderText = "Belegname";
-            DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19";
+            this.DataGridViewTextBoxColumn19.DataPropertyName = "Belegname";
+            this.DataGridViewTextBoxColumn19.HeaderText = "Belegname";
+            this.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19";
             // 
             // FirmenNameTableAdapter
             // 
-            FirmenNameTableAdapter.ClearBeforeFill = true;
+            this.FirmenNameTableAdapter.ClearBeforeFill = true;
             // 
             // KontoTableAdapter
             // 
-            KontoTableAdapter.ClearBeforeFill = true;
+            this.KontoTableAdapter.ClearBeforeFill = true;
             // 
             // AdressenTableAdapter
             // 
-            AdressenTableAdapter.ClearBeforeFill = true;
+            this.AdressenTableAdapter.ClearBeforeFill = true;
             // 
             // KontakteTableAdapter
             // 
-            KontakteTableAdapter.ClearBeforeFill = true;
+            this.KontakteTableAdapter.ClearBeforeFill = true;
             // 
             // BelegeTableAdapter
             // 
-            BelegeTableAdapter.ClearBeforeFill = true;
+            this.BelegeTableAdapter.ClearBeforeFill = true;
             // 
             // TableLayoutPanel1
             // 
-            TableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            TableLayoutPanel1.ColumnCount = 1;
-            TableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50.0f));
-            TableLayoutPanel1.Controls.Add(Panel2, 0, 0);
-            TableLayoutPanel1.Controls.Add(TC_Administration, 0, 1);
-            TableLayoutPanel1.Controls.Add(Panel3, 0, 2);
-            TableLayoutPanel1.Location = new Point(1, 0);
-            TableLayoutPanel1.Name = "TableLayoutPanel1";
-            TableLayoutPanel1.RowCount = 3;
-            TableLayoutPanel1.RowStyles.Add(new RowStyle());
-            TableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50.0f));
-            TableLayoutPanel1.RowStyles.Add(new RowStyle());
-            TableLayoutPanel1.Size = new Size(1185, 522);
-            TableLayoutPanel1.TabIndex = 31;
+            this.TableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TableLayoutPanel1.ColumnCount = 1;
+            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TableLayoutPanel1.Controls.Add(this.Panel2, 0, 0);
+            this.TableLayoutPanel1.Controls.Add(this.TC_Administration, 0, 1);
+            this.TableLayoutPanel1.Controls.Add(this.Panel3, 0, 2);
+            this.TableLayoutPanel1.Location = new System.Drawing.Point(1, 0);
+            this.TableLayoutPanel1.Name = "TableLayoutPanel1";
+            this.TableLayoutPanel1.RowCount = 3;
+            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.TableLayoutPanel1.Size = new System.Drawing.Size(1185, 522);
+            this.TableLayoutPanel1.TabIndex = 31;
+            // 
+            // propertiesBindingSource
+            // 
+            this.propertiesBindingSource.DataMember = "properties";
+            this.propertiesBindingSource.DataSource = this._WSL_AdressenDataSet;
+            // 
+            // propertiesTableAdapter
+            // 
+            this.propertiesTableAdapter.ClearBeforeFill = true;
+            // 
+            // propertiesDataGridView
+            // 
+            this.propertiesDataGridView.AutoGenerateColumns = false;
+            this.propertiesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.propertiesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23});
+            this.propertiesDataGridView.DataSource = this.propertiesBindingSource;
+            this.propertiesDataGridView.Location = new System.Drawing.Point(6, 6);
+            this.propertiesDataGridView.Name = "propertiesDataGridView";
+            this.propertiesDataGridView.Size = new System.Drawing.Size(1158, 302);
+            this.propertiesDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn20.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "Bezeichner";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Bezeichner";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "Wert";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Wert";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "Beschreibung";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Beschreibung";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // bindingNavigator4
+            // 
+            this.bindingNavigator4.AddNewItem = this.toolStripButton13;
+            this.bindingNavigator4.BindingSource = this.FirmenNameBindingSource;
+            this.bindingNavigator4.CountItem = this.toolStripLabel6;
+            this.bindingNavigator4.DeleteItem = this.toolStripButton20;
+            this.bindingNavigator4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigator4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton27,
+            this.toolStripButton34,
+            this.toolStripSeparator16,
+            this.toolStripTextBox6,
+            this.toolStripLabel6,
+            this.toolStripSeparator17,
+            this.toolStripButton35,
+            this.toolStripButton36,
+            this.toolStripSeparator18,
+            this.toolStripButton13,
+            this.toolStripButton20,
+            this._BNAV_PropertiesSave});
+            this.bindingNavigator4.Location = new System.Drawing.Point(3, 346);
+            this.bindingNavigator4.MoveFirstItem = this.toolStripButton27;
+            this.bindingNavigator4.MoveLastItem = this.toolStripButton36;
+            this.bindingNavigator4.MoveNextItem = this.toolStripButton35;
+            this.bindingNavigator4.MovePreviousItem = this.toolStripButton34;
+            this.bindingNavigator4.Name = "bindingNavigator4";
+            this.bindingNavigator4.PositionItem = this.toolStripTextBox6;
+            this.bindingNavigator4.Size = new System.Drawing.Size(1165, 25);
+            this.bindingNavigator4.TabIndex = 11;
+            this.bindingNavigator4.Text = "bindingNavigator4";
+            // 
+            // toolStripButton13
+            // 
+            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
+            this.toolStripButton13.Name = "toolStripButton13";
+            this.toolStripButton13.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton13.Text = "Neu hinzufügen";
+            // 
+            // toolStripLabel6
+            // 
+            this.toolStripLabel6.Name = "toolStripLabel6";
+            this.toolStripLabel6.Size = new System.Drawing.Size(48, 22);
+            this.toolStripLabel6.Text = "von {0}";
+            this.toolStripLabel6.ToolTipText = "Die Gesamtanzahl der Elemente.";
+            // 
+            // toolStripButton20
+            // 
+            this.toolStripButton20.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton20.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton20.Image")));
+            this.toolStripButton20.Name = "toolStripButton20";
+            this.toolStripButton20.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton20.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton20.Text = "Löschen";
+            // 
+            // toolStripButton27
+            // 
+            this.toolStripButton27.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton27.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton27.Image")));
+            this.toolStripButton27.Name = "toolStripButton27";
+            this.toolStripButton27.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton27.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton27.Text = "Erste verschieben";
+            // 
+            // toolStripButton34
+            // 
+            this.toolStripButton34.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton34.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton34.Image")));
+            this.toolStripButton34.Name = "toolStripButton34";
+            this.toolStripButton34.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton34.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton34.Text = "Vorherige verschieben";
+            // 
+            // toolStripSeparator16
+            // 
+            this.toolStripSeparator16.Name = "toolStripSeparator16";
+            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripTextBox6
+            // 
+            this.toolStripTextBox6.AccessibleName = "Position";
+            this.toolStripTextBox6.AutoSize = false;
+            this.toolStripTextBox6.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.toolStripTextBox6.Name = "toolStripTextBox6";
+            this.toolStripTextBox6.Size = new System.Drawing.Size(50, 25);
+            this.toolStripTextBox6.Text = "0";
+            this.toolStripTextBox6.ToolTipText = "Aktuelle Position";
+            // 
+            // toolStripSeparator17
+            // 
+            this.toolStripSeparator17.Name = "toolStripSeparator17";
+            this.toolStripSeparator17.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton35
+            // 
+            this.toolStripButton35.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton35.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton35.Image")));
+            this.toolStripButton35.Name = "toolStripButton35";
+            this.toolStripButton35.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton35.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton35.Text = "Nächste verschieben";
+            // 
+            // toolStripButton36
+            // 
+            this.toolStripButton36.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton36.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton36.Image")));
+            this.toolStripButton36.Name = "toolStripButton36";
+            this.toolStripButton36.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton36.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton36.Text = "Letzte verschieben";
+            // 
+            // toolStripSeparator18
+            // 
+            this.toolStripSeparator18.Name = "toolStripSeparator18";
+            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 25);
+            // 
+            // _BNAV_PropertiesSave
+            // 
+            this._BNAV_PropertiesSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._BNAV_PropertiesSave.Image = ((System.Drawing.Image)(resources.GetObject("_BNAV_PropertiesSave.Image")));
+            this._BNAV_PropertiesSave.Name = "_BNAV_PropertiesSave";
+            this._BNAV_PropertiesSave.Size = new System.Drawing.Size(23, 22);
+            this._BNAV_PropertiesSave.Text = "Daten speichern";
+            this._BNAV_PropertiesSave.Click += new System.EventHandler(this._BNAV_PropertiesSave_Click);
             // 
             // Administration
             // 
-            AutoScaleDimensions = new SizeF(6.0f, 13.0f);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1184, 523);
-            Controls.Add(TableLayoutPanel1);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Administration";
-            Text = "Administration";
-            ((System.ComponentModel.ISupportInitialize)KonfigurationBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_WSL_AdressenDataSet).EndInit();
-            Panel2.ResumeLayout(false);
-            Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)SachbearbeiterBindingSource).EndInit();
-            Panel3.ResumeLayout(false);
-            TC_Administration.ResumeLayout(false);
-            TabPage1.ResumeLayout(false);
-            TabPage1.PerformLayout();
-            TabPage2.ResumeLayout(false);
-            TabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)FirmenNameBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)BindingNavigator1).EndInit();
-            BindingNavigator1.ResumeLayout(false);
-            BindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)FirmenNameDataGridView).EndInit();
-            TabPage3.ResumeLayout(false);
-            TabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)BindingNavigator2).EndInit();
-            BindingNavigator2.ResumeLayout(false);
-            BindingNavigator2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)KontoBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)KontoDataGridView).EndInit();
-            TabPage4.ResumeLayout(false);
-            TabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)BindingNavigator3).EndInit();
-            BindingNavigator3.ResumeLayout(false);
-            BindingNavigator3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)AdressenBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)DataGridView1).EndInit();
-            TabPage5.ResumeLayout(false);
-            TabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)SachbearbeiterBindingNavigator).EndInit();
-            SachbearbeiterBindingNavigator.ResumeLayout(false);
-            SachbearbeiterBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)KontakteBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)DataGridView2).EndInit();
-            Belege.ResumeLayout(false);
-            Belege.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)BNAV_Belege).EndInit();
-            BNAV_Belege.ResumeLayout(false);
-            BNAV_Belege.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)BelegeBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)BelegeDataGridView).EndInit();
-            TableLayoutPanel1.ResumeLayout(false);
-            Load += new EventHandler(Form4_Load);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1184, 523);
+            this.Controls.Add(this.TableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Administration";
+            this.Text = "Administration";
+            this.Load += new System.EventHandler(this.Form4_Load);
+            ((System.ComponentModel.ISupportInitialize)(this._WSL_AdressenDataSet)).EndInit();
+            this.Panel2.ResumeLayout(false);
+            this.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SachbearbeiterBindingSource)).EndInit();
+            this.Panel3.ResumeLayout(false);
+            this.TC_Administration.ResumeLayout(false);
+            this.TabPage1.ResumeLayout(false);
+            this.TabPage1.PerformLayout();
+            this.TabPage2.ResumeLayout(false);
+            this.TabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FirmenNameBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingNavigator1)).EndInit();
+            this.BindingNavigator1.ResumeLayout(false);
+            this.BindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FirmenNameDataGridView)).EndInit();
+            this.TabPage3.ResumeLayout(false);
+            this.TabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingNavigator2)).EndInit();
+            this.BindingNavigator2.ResumeLayout(false);
+            this.BindingNavigator2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.KontoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KontoDataGridView)).EndInit();
+            this.TabPage4.ResumeLayout(false);
+            this.TabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingNavigator3)).EndInit();
+            this.BindingNavigator3.ResumeLayout(false);
+            this.BindingNavigator3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AdressenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
+            this.TabPage5.ResumeLayout(false);
+            this.TabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SachbearbeiterBindingNavigator)).EndInit();
+            this.SachbearbeiterBindingNavigator.ResumeLayout(false);
+            this.SachbearbeiterBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.KontakteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView2)).EndInit();
+            this.Belege.ResumeLayout(false);
+            this.Belege.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BNAV_Belege)).EndInit();
+            this.BNAV_Belege.ResumeLayout(false);
+            this.BNAV_Belege.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BelegeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BelegeDataGridView)).EndInit();
+            this.TableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.propertiesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertiesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).EndInit();
+            this.bindingNavigator4.ResumeLayout(false);
+            this.bindingNavigator4.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
-        internal FolderBrowserDialog FolderBrowserDialog1;
-        private Button _BTN_Vorlagenpfad;
-
-        internal Button BTN_Vorlagenpfad
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _BTN_Vorlagenpfad;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_BTN_Vorlagenpfad != null)
-                {
-                    _BTN_Vorlagenpfad.Click -= BTN_Vorlagenpfad_Click;
-                }
-
-                _BTN_Vorlagenpfad = value;
-                if (_BTN_Vorlagenpfad != null)
-                {
-                    _BTN_Vorlagenpfad.Click += BTN_Vorlagenpfad_Click;
-                }
-            }
-        }
 
         private Button _BTN_Schliessen;
 
@@ -2610,47 +2605,14 @@ namespace Adress_DB
 
         internal _WSL_AdressenDataSet _WSL_AdressenDataSet;
         internal _WSL_AdressenDataSetTableAdapters.TableAdapterManager TableAdapterManager;
-        internal BindingSource KonfigurationBindingSource;
-        internal _WSL_AdressenDataSetTableAdapters.KonfigurationTableAdapter KonfigurationTableAdapter;
-        internal TextBox VorlagenpfadTextBox;
-        internal TextBox IDBesuchTextBox;
-        internal TextBox IDKontaktTextBox;
-        internal TextBox IDAdresseTextBox;
-        internal TextBox LieferantennummerTextBox;
-        internal TextBox KundennummerTextBox;
-        internal TextBox LeadnummerTextBox;
-        internal TextBox IDFirmenNameTextBox;
         internal Panel Panel2;
         internal Label Label1;
         internal BindingSource SachbearbeiterBindingSource;
         internal _WSL_AdressenDataSetTableAdapters.SachbearbeiterTableAdapter SachbearbeiterTableAdapter;
         internal Label SachbearbeiterLabel1;
         internal CheckBox AdminCheckBox;
-        private Button _BTN_Speichern;
 
-        internal Button BTN_Speichern
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _BTN_Speichern;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_BTN_Speichern != null)
-                {
-                    _BTN_Speichern.Click -= BTN_Speichern_Click;
-                }
-
-                _BTN_Speichern = value;
-                if (_BTN_Speichern != null)
-                {
-                    _BTN_Speichern.Click += BTN_Speichern_Click;
-                }
-            }
-        }
+        
 
         internal Panel Panel3;
         internal TabControl TC_Administration;
@@ -2907,34 +2869,6 @@ namespace Adress_DB
             }
         }
 
-        private Button _BTN_DWPfad;
-
-        internal Button BTN_DWPfad
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _BTN_DWPfad;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_BTN_DWPfad != null)
-                {
-                    _BTN_DWPfad.Click -= BTN_DWPfad_Click;
-                }
-
-                _BTN_DWPfad = value;
-                if (_BTN_DWPfad != null)
-                {
-                    _BTN_DWPfad.Click += BTN_DWPfad_Click;
-                }
-            }
-        }
-
-        internal TextBox DWDateinameTextBox;
-        internal TextBox DWpfadTextBox;
         internal DataGridViewTextBoxColumn IDKontakt;
         internal DataGridViewTextBoxColumn IDFirmenName;
         internal DataGridViewTextBoxColumn Nachname;
@@ -3024,7 +2958,26 @@ namespace Adress_DB
         internal DataGridViewTextBoxColumn Login;
         internal DataGridViewTextBoxColumn changed;
         internal DataGridViewCheckBoxColumn inaktiv;
-        internal TextBox HilfelinkTextBox;
         internal TableLayoutPanel TableLayoutPanel1;
+        private BindingSource propertiesBindingSource;
+        private _WSL_AdressenDataSetTableAdapters.propertiesTableAdapter propertiesTableAdapter;
+        internal BindingNavigator bindingNavigator4;
+        internal ToolStripButton toolStripButton13;
+        internal ToolStripLabel toolStripLabel6;
+        internal ToolStripButton toolStripButton20;
+        internal ToolStripButton toolStripButton27;
+        internal ToolStripButton toolStripButton34;
+        internal ToolStripSeparator toolStripSeparator16;
+        internal ToolStripTextBox toolStripTextBox6;
+        internal ToolStripSeparator toolStripSeparator17;
+        internal ToolStripButton toolStripButton35;
+        internal ToolStripButton toolStripButton36;
+        internal ToolStripSeparator toolStripSeparator18;
+        private ToolStripButton _BNAV_PropertiesSave;
+        private DataGridView propertiesDataGridView;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
     }
 }

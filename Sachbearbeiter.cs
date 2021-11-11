@@ -43,12 +43,17 @@ namespace Adress_DB
                 // anschließend Tabelle mit aktiven Usern füllen und den gefundenen markieren:
                 My.MyProject.Forms.Hauptform.SachbearbeiterTableAdapter.FillByAktive(My.MyProject.Forms.Hauptform._WSL_AdressenDataSet.Sachbearbeiter);
                 My.MyProject.Forms.Hauptform.SachbearbeiterBindingSource.Position = My.MyProject.Forms.Hauptform.SachbearbeiterBindingSource.Find("Login", Environment.UserName);
+                My.MyProject.Forms.Hauptform.BTN_Speichern.Visible = true;
+                My.MyProject.Forms.Hauptform.BTN_DocErzeugen.Visible = true;
             }
             else
             {
                 Interaction.MsgBox("Ihr Login wurde nicht erkannt. Bitte Ihre Benutzerdaten prüfen/korrigieren oder ergänzen.", Constants.vbExclamation);
                 My.MyProject.Forms.Hauptform.lblUser.Text = "Sachbearbeiter nicht erkannt";
                 My.MyProject.Forms.Hauptform.lblUser.ForeColor = Color.Red;
+                My.MyProject.Forms.Hauptform.BTN_Speichern.Visible = false;
+                My.MyProject.Forms.Hauptform.BTN_DocErzeugen.Visible = false;
+              
             }
 
             Close();

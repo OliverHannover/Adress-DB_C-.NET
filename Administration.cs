@@ -13,9 +13,7 @@ namespace Adress_DB
             _BTN_Alle.Name = "BTN_Alle";
             _BTN_Aktuell.Name = "BTN_Aktuell";
             _BTN_Schliessen.Name = "BTN_Schliessen";
-            _BTN_DWPfad.Name = "BTN_DWPfad";
-            _BTN_Speichern.Name = "BTN_Speichern";
-            _BTN_Vorlagenpfad.Name = "BTN_Vorlagenpfad";
+
             _BNAV_FirmenNameSave.Name = "BNAV_FirmenNameSave";
             _BNAV_KontoSave.Name = "BNAV_KontoSave";
             _BNAV_AdressenSave.Name = "BNAV_AdressenSave";
@@ -25,13 +23,14 @@ namespace Adress_DB
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "_WSL_AdressenDataSet.properties". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.propertiesTableAdapter.Fill(this._WSL_AdressenDataSet.properties);
             BelegeTableAdapter.Fill(_WSL_AdressenDataSet.Belege);
             KontakteTableAdapter.Fill(_WSL_AdressenDataSet.Kontakte);
             AdressenTableAdapter.Fill(_WSL_AdressenDataSet.Adressen);
             KontoTableAdapter.Fill(_WSL_AdressenDataSet.Konto);
             FirmenNameTableAdapter.Fill(_WSL_AdressenDataSet.FirmenName);
             SachbearbeiterTableAdapter.FillByAktive(_WSL_AdressenDataSet.Sachbearbeiter);
-            KonfigurationTableAdapter.Fill(_WSL_AdressenDataSet.Konfiguration);
             int foundIndex = SachbearbeiterBindingSource.Find("Login", Environment.UserName);
             SachbearbeiterBindingSource.Position = foundIndex;
             if (AdminCheckBox.Checked == true)
@@ -48,34 +47,13 @@ namespace Adress_DB
             }
         }
 
-        private void BTN_Vorlagenpfad_Click(object sender, EventArgs e)
-        {
-            // MsgBox("Vorlagenpfad ist " & Me.KonfigurationTableAdapter.ScalarVorlagenpfad().ToString)
-
-            FolderBrowserDialog1.SelectedPath = KonfigurationTableAdapter.ScalarVorlagenpfad().ToString();
-            FolderBrowserDialog1.ShowDialog();
-            string files = FolderBrowserDialog1.SelectedPath;
-            VorlagenpfadTextBox.Text = files + @"\";
-        }
-
+       
         private void BTN_Schliessen_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void BTN_Speichern_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                KonfigurationTableAdapter.UpdateAlles(Conversions.ToInteger(IDFirmenNameTextBox.Text), Conversions.ToInteger(LeadnummerTextBox.Text), Conversions.ToInteger(KundennummerTextBox.Text), Conversions.ToInteger(LieferantennummerTextBox.Text), Conversions.ToInteger(IDAdresseTextBox.Text), Conversions.ToInteger(IDKontaktTextBox.Text), Conversions.ToInteger(IDBesuchTextBox.Text), VorlagenpfadTextBox.Text, DWpfadTextBox.Text, DWDateinameTextBox.Text, HilfelinkTextBox.Text, false);
-            }
-            catch (Exception ex)
-            {
-                Interaction.MsgBox("Update der Konfigurations-Tabelle fehlgeschlagen");
-            }
-
-            Interaction.MsgBox("Update der Konfigurations-Tabelle erfolgreich");
-        }
+        
 
         private void BTN_Aktuell_Click(object sender, EventArgs e)
         {
@@ -108,16 +86,7 @@ namespace Adress_DB
             BelegeTableAdapter.Fill(_WSL_AdressenDataSet.Belege);
         }
 
-        private void BTN_DWPfad_Click(object sender, EventArgs e)
-        {
-            // MsgBox("DW-Dateinpfad ist " & Me.KonfigurationTableAdapter.ScalarDWPfad().ToString)
-
-            FolderBrowserDialog1.SelectedPath = KonfigurationTableAdapter.ScalarDWPfad().ToString();
-            FolderBrowserDialog1.ShowDialog();
-            string files = FolderBrowserDialog1.SelectedPath;
-            DWpfadTextBox.Text = files + @"\";
-        }
-
+       
         private void BNAV_BelegeSaveItem_Click(object sender, EventArgs e)
         {
             Validate();
@@ -156,6 +125,15 @@ namespace Adress_DB
             KontakteBindingSource.EndEdit();
             KontakteTableAdapter.Update(_WSL_AdressenDataSet.Kontakte);
             BTN_Aktuell.PerformClick();
+        }
+
+        private void _BNAV_PropertiesSave_Click(object sender, EventArgs e)
+        {
+            Validate();
+            propertiesBindingSource.EndEdit();
+            propertiesTableAdapter.Update(_WSL_AdressenDataSet.properties);
+            BTN_Aktuell.PerformClick();
+
         }
     }
 }

@@ -1,0 +1,462 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Adress-DB
+</name>
+</assembly>
+<members>
+<member name="T:Adress_DB.My.Resources.Form1">
+<summary>
+  Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.ResourceManager">
+<summary>
+  Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.Culture">
+<summary>
+  Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+  Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1._WSL_AdressenDataSet_TrayLocation">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=578,Y=17}.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.AdressenBindingSource_TrayLocation">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=184,Y=57}.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.AdressenKontakteMitAdresseBindingSource_TrayLocation">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=17,Y=17}.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.AdressenTableAdapter_TrayLocation">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=375,Y=57}.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.AdresstypLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.AdresstypLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.AnredeLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.AnredeLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.BTN_MapsSuche_Image">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.BTN_ZuOutlook_Image">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.BundeslandLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.BundeslandLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.EmailAddresseLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.EmailAddresseLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.FaxnummerLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.FaxnummerLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.FirmenNameBindingSource_TrayLocation">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=767,Y=17}.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.FirmenNameTableAdapter_TrayLocation">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=980,Y=17}.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.IDAdresse_UserAddedColumn">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie True.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.IDAdresseLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.IDKontakt_UserAddedColumn">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie True.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.IDKontoLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.KontakteBindingSource_TrayLocation">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=560,Y=57}.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.KontakteMitAdresseTableAdapter_TrayLocation">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=328,Y=17}.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.KontakteTableAdapter_TrayLocation">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=750,Y=57}.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.KontoBindingSource_TrayLocation">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=1371,Y=17}.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.KontoTableAdapter_TrayLocation">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=17,Y=57}.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.LandLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.LandLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.MobiltelefonLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.MobiltelefonLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.NachnameLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.NachnameLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.OrtLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.OrtLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.PictureBox1_Image">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.PLZLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.PLZLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.PositionLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.PositionLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.PostfachLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.PostfachLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.StraßeLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.StraßeLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.TableAdapterManager_TrayLocation">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=1187,Y=17}.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.TelefonGeschaeftlichLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.TelefonGeschaeftlichLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.TelefonPrivatLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.TelefonPrivatLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.UStIdNrLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.UStIdNrLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.VornameLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.VornameLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.WebseiteLabel_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Form1.WebseiteLabel1_GenerateMember">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
+</summary>
+</member>
+<member name="T:Adress_DB.My.Resources.Resources">
+<summary>
+  Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Resources.ResourceManager">
+<summary>
+  Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+</summary>
+</member>
+<member name="P:Adress_DB.My.Resources.Resources.Culture">
+<summary>
+  Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+  Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet.FirmenNameDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet.KontoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet.AdressenDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet.KontakteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet.KontakteMitAdresseDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet.FirmenNameRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet.KontoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet.AdressenRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet.KontakteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet.KontakteMitAdresseRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet.FirmenNameRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet.KontoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet.AdressenRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet.KontakteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSet.KontakteMitAdresseRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSetTableAdapters.FirmenNameTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSetTableAdapters.KontoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSetTableAdapters.AdressenTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSetTableAdapters.KontakteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSetTableAdapters.KontakteMitAdresseTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Adress_DB._WSL_AdressenDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Adress_DB._WSL_AdressenDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Adress_DB._WSL_AdressenDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager.UpdateAll(Adress_DB._WSL_AdressenDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

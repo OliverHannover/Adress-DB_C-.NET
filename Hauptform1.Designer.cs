@@ -491,26 +491,6 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=167,Y=99}.
-        /// </summary>
-        internal static System.Drawing.Point KonfigurationBindingSource_TrayLocation {
-            get {
-                object obj = ResourceManager.GetObject("KonfigurationBindingSource.TrayLocation", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=390,Y=98}.
-        /// </summary>
-        internal static System.Drawing.Point KonfigurationTableAdapter_TrayLocation {
-            get {
-                object obj = ResourceManager.GetObject("KonfigurationTableAdapter.TrayLocation", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=550,Y=57}.
         /// </summary>
         internal static System.Drawing.Point KontakteBindingSource_TrayLocation {

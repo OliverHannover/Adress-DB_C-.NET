@@ -57,7 +57,8 @@ namespace Adress_DB
             // die neuen Daten in die Tabelle 'Konto' schreiben: 
             int IDKonto = Conversions.ToInteger(this.lblKontoNummer.Text);
             int IDFirmenName = Conversions.ToInteger(this.lblIDFirmenName.Text);
-            this.KontoTableAdapter.Insert(IDKonto, IDFirmenName, KontoName, DateAndTime.Now);
+            this.KontoTableAdapter.Insert(IDKonto, IDFirmenName, KontoName, DateTime.Now);
+            //this.KontoTableAdapter.Insert(IDKonto, IDFirmenName, KontoName, DateAndTime.Now);
             Adress_DB.Module1.Logging(2, IDKonto, IDFirmenName, KontoName); // LogTabelle schreiben
 
 

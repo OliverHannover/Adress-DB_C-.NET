@@ -213,6 +213,11 @@
     <Compile Include="Personensuche.Designer.cs">
       <DependentUpon>Personensuche.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -242,12 +247,12 @@
     <Compile Include="Umkreissuche.Designer.cs">
       <DependentUpon>Umkreissuche.cs</DependentUpon>
     </Compile>
+    <Compile Include="_WSL_AdressenDataSet.cs">
+      <DependentUpon>_WSL_AdressenDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="_WSL_AdressenDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>_WSL_AdressenDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="_WSL_AdressenDataSet.cs">
       <DependentUpon>_WSL_AdressenDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -257,6 +262,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administration.resx">
       <DependentUpon>Administration.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
@@ -305,6 +311,10 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="_WSL_AdressenDataSet.xsc">
       <DependentUpon>_WSL_AdressenDataSet.xsd</DependentUpon>
     </None>

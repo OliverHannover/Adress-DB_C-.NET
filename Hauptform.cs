@@ -24,7 +24,7 @@ namespace Adress_DB
             _BTN_ZuOutlook.Name = "BTN_ZuOutlook";
             _BTN_MapsSuche.Name = "BTN_MapsSuche";
             _btnNeuesKonto.Name = "btnNeuesKonto";
-            _btnSpeichern.Name = "btnSpeichern";
+            BTN_Speichern.Name = "btnSpeichern";
             _btnKontoZuAdresse.Name = "btnKontoZuAdresse";
             _TB_PLZ.Name = "TB_PLZ";
             _EmailAddresseLinkLabel.Name = "EmailAddresseLinkLabel";
@@ -36,7 +36,6 @@ namespace Adress_DB
             _CB_Vorlagen.Name = "CB_Vorlagen";
             _LBL_FirmenName.Name = "LBL_FirmenName";
             _btnAbbrechen.Name = "btnAbbrechen";
-            _BTN_DocErzeugen.Name = "BTN_DocErzeugen";
             _LBL_IDKontoZuAdresse.Name = "LBL_IDKontoZuAdresse";
             _WebseiteLinkLabel.Name = "WebseiteLinkLabel";
             _LBL_IDAdresseZuKontakt.Name = "LBL_IDAdresseZuKontakt";
@@ -68,7 +67,6 @@ namespace Adress_DB
 
             // Me.BelegeMitAdresseTableAdapter.Fill(Me._WSL_AdressenDataSet.BelegeMitAdresse)
             // Me.BelegeTableAdapter.Fill(Me._WSL_AdressenDataSet.Belege)
-            // Me.KonfigurationTableAdapter.Fill(Me._WSL_AdressenDataSet.Konfiguration)
             // Me.LogTabelleTableAdapter.Fill(Me._WSL_AdressenDataSet.LogTabelle)
             // Me.DocuwareCSVTableAdapter.Fill(Me._WSL_AdressenDataSet.DocuwareCSV)
             // Me.KontakteMitAdresseTableAdapter.Fill(Me._WSL_AdressenDataSet.KontakteMitAdresse)
@@ -86,12 +84,14 @@ namespace Adress_DB
             LBL_BBBesuchterKontakt.Text = string.Empty;
             // LBL_IDFirmenName.Text = String.Empty
             LBL_IDFirmenName.Text = "0";
+            _LBL_IDAdresse.Text = "0";
             lblHinweisKeinTreffer.Visible = false;
             TB_FirmenName.Select();
             lblHinweisKeinTreffer.Location = new Point(200, 200);
             TLP_1.Location = new Point(0, 25);
-            // TLP_1.Width = Me.Width
-            // TLP_1.Height = Me.Height - 100
+            DTP_BBDatum.Value = DateTime.Now;
+            DTP_Diverse.Value = DateTime.Now;
+
 
 
             // zuerst (wichtig) Combobox Anrede füllen
@@ -112,7 +112,7 @@ namespace Adress_DB
         private void Hauptform_Shown(object sender, EventArgs e)
         {
             // Erest prüfen, ob das System im Wartungsmodus ist:
-            bool Wartung = KonfigurationTableAdapter.ScalarWartung() == true;
+            bool Wartung = Conversions.ToBoolean(My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("Wartung")) == true;
             if (Wartung == true)
             {
                 Interaction.MsgBox("Das System, befindet sich in der Wartung!" + Constants.vbNewLine + "Das Progamm wird sich jetzt beenden." + Constants.vbNewLine + "Bitte später noch einmal versuchen.", Constants.vbExclamation);
@@ -124,7 +124,6 @@ namespace Adress_DB
             StaatenTableAdapter.Fill(_WSL_AdressenDataSet.Staaten);
             BelegeMitAdresseTableAdapter.Fill(_WSL_AdressenDataSet.BelegeMitAdresse);
             BelegeTableAdapter.Fill(_WSL_AdressenDataSet.Belege);
-            KonfigurationTableAdapter.Fill(_WSL_AdressenDataSet.Konfiguration);
             LogTabelleTableAdapter.Fill(_WSL_AdressenDataSet.LogTabelle);
             DocuwareCSVTableAdapter.Fill(_WSL_AdressenDataSet.DocuwareCSV);
             KontakteMitAdresseTableAdapter.Fill(_WSL_AdressenDataSet.KontakteMitAdresse);
@@ -142,6 +141,9 @@ namespace Adress_DB
                 Interaction.MsgBox("Ihr Login wurde nicht erkannt. Bitte im Menü über Einstellungen/Benutzerliste Ihre Benutzerdaten prüfen/korrigieren oder ergänzen.", Constants.vbExclamation);
                 lblUser.Text = "Sachbearbeiter nicht erkannt";
                 lblUser.ForeColor = Color.Red;
+                BTN_Speichern.Visible = false;
+                BTN_DocErzeugen.Visible = false;
+                My.MyProject.Forms.Sachbearbeiter.Show();
             }
             else
             {
@@ -197,6 +199,7 @@ namespace Adress_DB
             if ((LBL_FirmenName.Text ?? "") != (string.Empty ?? ""))
             {
                 TB_FirmenName.Text = LBL_FirmenName.Text;
+                AdresseBauen();
             }
             // MsgBox(IDFirmenName & " LBL_(ohneID)FirmenName_TextChanged")
 
@@ -206,6 +209,7 @@ namespace Adress_DB
         {
             // Das Label lblIDFirmenName ist an die Datenquelle 'FirmenNameTableAdapter' gebunden. Ändert sich dieser
             // oder wird ein anderer Datensatz davon selektiert, ändert sich auch der Text im Label.
+            // IDFirmenName MUSS Double sein - weil es zwischendurch den Wert 0 oder empty annimmt. Dies kann nicht zu integer konvertiert werden!
             double IDFirmenName;
             IDFirmenName = Conversion.Val(LBL_IDFirmenName.Text);
             //MessageBox.Show("ID=" + IDFirmenName + " LBL_IDFirmenName_TextChanged");
@@ -213,7 +217,7 @@ namespace Adress_DB
             if (IDFirmenName != 0d)
             {
                 // Es wurden Treffer gefunden ----------------------------------------------------
-                MessageBox.Show("Treffer gefunden");
+                //MessageBox.Show("Treffer gefunden");
                 PNL_Konto.Visible = true; // Groupboxen Konto, Adresse, Kontakt einblenden
                 TC_Adresse.Visible = true;
                 TC_Kontakt.Visible = true;
@@ -238,6 +242,8 @@ namespace Adress_DB
                 TB_FirmenName.Text = Suchstring;
             }
         }
+
+
 
         private void btnSpeichern_Click(object sender, EventArgs e)
         {
@@ -342,7 +348,7 @@ namespace Adress_DB
             {
                 // MsgBox("Adresse neu anlegen")
                 // Wert aus Konfig-Tabelle holen
-                IDAdresse = Conversions.ToInteger(KonfigurationTableAdapter.ScalarIDAdresse());
+                IDAdresse = Conversions.ToInteger(My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("IDAdresse"));
 
                 // Datensatz Adresse hinzufügen
                 try
@@ -358,8 +364,8 @@ namespace Adress_DB
                 try
                 {
                     // Nächsten Wert in der Konfig-Tabelle aktualisieren
-                    KonfigurationTableAdapter.UpdateIDAdresse(IDAdresse + 1, IDAdresse);
-                }
+                    PropertiesTableAdapter.UpdateWert((++IDAdresse).ToString(), "IDAdresse");
+                                    }
                 catch (Exception ex)
                 {
                     Interaction.MsgBox("Fehler beim änmdern der neuen IDAdresse in der Konfig-Tabelle");
@@ -388,7 +394,7 @@ namespace Adress_DB
             {
                 // MsgBox("Kontakt neu anlegen")
                 // Wert aus Konfig-Tabelle holen
-                IDKontakt = Conversions.ToInteger(KonfigurationTableAdapter.ScalarIDKontakt());
+                IDKontakt = Conversions.ToInteger(PropertiesTableAdapter.ScalarWert("IDKontakt"));
 
                 // Datensatz Kontakt hinzufügen
                 try
@@ -404,7 +410,8 @@ namespace Adress_DB
                 try
                 {
                     // Nächsten Wert in der Konfig-Tabelle aktualisieren
-                    KonfigurationTableAdapter.UpdateIDKontakt(IDKontakt + 1, IDKontakt);
+                    PropertiesTableAdapter.UpdateWert((++IDKontakt).ToString(), "IDKontakt");
+                    
                 }
                 catch (Exception ex)
                 {
@@ -1079,140 +1086,6 @@ namespace Adress_DB
             My.MyProject.Forms.Administration.Show();
         }
 
-        private void BTN_DocErzeugen_Click(object sender, EventArgs e)
-        {
-            string BelegName;
-            IDBeleg = Conversions.ToInteger(PropertiesTableAdapter.ScalarWert("IDBeleg"));
-            int IDKonto;
-
-            // Die TabSeite mit 'Besuchsbericht' wird angezeigt, dann..
-            if (TC_Beleg.SelectedIndex == 0)
-            {
-                if ((TB_BBThema.Text ?? "") == (string.Empty ?? ""))
-                {
-                    Interaction.MsgBox("Bitte das Thema des Besuchs erfassen!", Constants.vbExclamation, "Neuen BB anlegen");
-                    TB_BBThema.Select();
-                    TB_BBThema.BackColor = Color.MistyRose;
-                    return;
-                }
-
-
-                // Falls die Adresse keine Konto-ID hat, wird die ID aus "Konto" gnommen!
-                if ((LBL_BBIDKonto.Text ?? "") != (string.Empty ?? ""))
-                {
-                    IDKonto = Conversions.ToInteger(LBL_BBIDKonto.Text);
-                }
-                else
-                {
-                    IDKonto = Conversions.ToInteger(lblIDKonto.Text);
-                }
-
-                BelegName = "Besuchsbericht.dotx";
-                if (Module1.WordStarten(BelegName) == true)
-                {
-                    // Datensatz Adresse hinzufügen
-                    try
-                    {
-                        BelegeTableAdapter.Insert(IDBeleg, Conversions.ToInteger(LBL_IDFirmenName.Text), LBL_FirmenName.Text, DTP_BBDatum.Value, Conversions.ToInteger(LBL_IDAdresse.Text), IDKonto, CB_BBKuerzel.Text, LBL_BBBesuchterKontakt.Text, TB_BBWeitereKontakte.Text, TB_BBThema.Text, TB_BBWeitereBesucher.Text, Environment.UserName, BelegName);
-                    }
-                    catch (Exception ex)
-                    {
-                        Interaction.MsgBox("Fehler beim hinzufügen eines neuen Besuchsberichtes");
-                        MessageBox.Show(ex.Message);
-                    }
-
-                    try
-                    {
-                        // Nächsten Wert in der Konfig-Tabelle aktualisieren;
-                        PropertiesTableAdapter.UpdateWert((++IDBeleg).ToString(), "IDBeleg");
-                    }
-                    catch (Exception ex)
-                    {
-                        Interaction.MsgBox("Fehler beim Update der neuen IDBeleg-Nummer (BB)");
-                        MessageBox.Show(ex.Message);
-                    }
-
-                    Module1.Logging(8, IDBeleg, Conversions.ToInteger(LBL_IDFirmenName.Text), BelegName + " / " + TB_BBThema.Text); // LogTabelle schreiben mit BB!
-
-                    // Aktuellen Satz in Tabelle markieren
-                    Module1.IDBBInBesucheMitAdresse(Conversions.ToInteger(LBL_IDFirmenName.Text), IDBeleg);
-                }
-            }
-
-
-
-            // Erzeugen eines anderen Beleges: #####################################################################
-
-            if (TC_Beleg.SelectedIndex == 1)
-            {
-                BelegName = CB_Vorlagen.Text;
-
-                // Falls keine Belege geladen werden konnten, kann auch kein Dokument erzeugt wertden:
-                if ((BelegName ?? "") == (string.Empty ?? ""))
-                    return;
-
-                // Das Feld Thema soll immer ausgefüllt sein:
-                if ((TB_DIVThema.Text ?? "") == (string.Empty ?? ""))
-                {
-                    Interaction.MsgBox("Bitte einen Betreff erfassen!", Constants.vbExclamation, "kein Betreff");
-                    TB_DIVThema.Select();
-                    TB_DIVThema.BackColor = Color.MistyRose;
-                    return;
-                }
-
-                // Falls die FAX-Vorlage gewählt wurde, sollte auch eine FAX-Nummer angegeben werden:
-                if (Strings.Mid(CB_Vorlagen.Text, 1, 3) == "Fax" & (TB_DIVFaxnummer.Text ?? "") == (string.Empty ?? ""))
-                {
-                    Interaction.MsgBox("Bitte eine Fax-Nummererfassen!", Constants.vbExclamation, "Faxnummer fehlt");
-                    TB_DIVFaxnummer.Select();
-                    TB_DIVFaxnummer.BackColor = Color.MistyRose;
-                    return;
-                }
-
-                // Falls die Adresse keine Konto-ID hat, wird die ID aus "Konto" gnommen!
-                if ((LBL_DIVIDKonto.Text ?? "") != (string.Empty ?? ""))
-                {
-                    IDKonto = Conversions.ToInteger(LBL_DIVIDKonto.Text);
-                }
-                else
-                {
-                    IDKonto = Conversions.ToInteger(lblIDKonto.Text);
-                }
-
-                if (Module1.WordStarten(BelegName) == true)
-                {
-                    // Datensatz Adresse hinzufügen
-                    try
-                    {
-                        BelegeTableAdapter.Insert(IDBeleg, Conversions.ToInteger(LBL_IDFirmenName.Text), LBL_FirmenName.Text, DTP_Diverse.Value, Conversions.ToInteger(LBL_IDAdresse.Text), IDKonto, CB_DIVSachbearbeiter.Text, LBL_Anrede.Text + " " + LBL_Vorname.Text + " " + LBL_Nachname.Text, "", TB_DIVThema.Text, "", Environment.UserName, BelegName);
-                    }
-                    catch (Exception ex)
-                    {
-                        Interaction.MsgBox("Fehler beim Speichern des Datensatzes vom Besuchsbericht");
-                        MessageBox.Show(ex.Message);
-                    }
-
-                    try
-                    {
-                        // Nächsten Wert in der Konfig-Tabelle aktualisieren
-                        KonfigurationTableAdapter.UpdateIDBeleg(IDBeleg + 1, IDBeleg);
-                    }
-                    catch (Exception ex)
-                    {
-                        Interaction.MsgBox("Fehler beim Update der neuen IDBeleg-Nummer (Div. Belege)");
-                        MessageBox.Show(ex.Message);
-                    }
-
-                    Module1.Logging(9, IDBeleg, Conversions.ToInteger(LBL_IDFirmenName.Text), BelegName + " / " + TB_DIVThema.Text); // LogTabelle schreiben mit BB!
-                    TB_DIVThema.BackColor = Color.White;
-                    TB_DIVFaxnummer.BackColor = Color.White;
-
-                    // Aktuellen Satz in Tabelle markieren
-                    Module1.IDBBInBesucheMitAdresse(Conversions.ToInteger(LBL_IDFirmenName.Text), IDBeleg);
-                }
-            }
-        }
-
         private void BenutzerlisteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             My.MyProject.Forms.Sachbearbeiter.Show();
@@ -1348,7 +1221,7 @@ namespace Adress_DB
 
         private void HilfeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string Helplink = Conversions.ToString(KonfigurationTableAdapter.ScalarHilfelink());
+            string Helplink = Conversions.ToString(PropertiesTableAdapter.ScalarWert("Hilfelink"));
             Process.Start(Helplink);
         }
 
@@ -1377,6 +1250,164 @@ namespace Adress_DB
         private void Button1_Click(object sender, EventArgs e)
         {
             My.MyProject.Forms.Umkreissuche.Show();
+        }
+
+        private void BTN_DocErzeugen_Click(object sender, EventArgs e)
+        {
+            string BelegName;
+            IDBeleg = Conversions.ToInteger(PropertiesTableAdapter.ScalarWert("IDBeleg"));
+            int IDKonto;
+
+            // Die TabSeite mit 'Besuchsbericht' wird angezeigt, dann..
+            if (TC_Beleg.SelectedIndex == 0)
+            {
+                if ((TB_BBThema.Text ?? "") == (string.Empty ?? ""))
+                {
+                    Interaction.MsgBox("Bitte das Thema des Besuchs erfassen!", Constants.vbExclamation, "Neuen BB anlegen");
+                    TB_BBThema.Select();
+                    TB_BBThema.BackColor = Color.MistyRose;
+                    return;
+                }
+
+
+                // Falls die Adresse keine Konto-ID hat, wird die ID aus "Konto" gnommen!
+                if ((LBL_BBIDKonto.Text ?? "") != (string.Empty ?? ""))
+                {
+                    IDKonto = Conversions.ToInteger(LBL_BBIDKonto.Text);
+                }
+                else
+                {
+                    IDKonto = Conversions.ToInteger(lblIDKonto.Text);
+                }
+
+                BelegName = "Besuchsbericht.dotx";
+                if (Module1.WordStarten(BelegName) == true)
+                {
+                    // Datensatz Adresse hinzufügen
+                    try
+                    {
+                        BelegeTableAdapter.Insert(IDBeleg,
+                                                  Conversions.ToInteger(LBL_IDFirmenName.Text),
+                                                  LBL_FirmenName.Text,
+                                                  DTP_BBDatum.Value,
+                                                  Conversions.ToInteger(LBL_IDAdresse.Text),
+                                                  IDKonto,
+                                                  CB_BBKuerzel.Text,
+                                                  LBL_BBBesuchterKontakt.Text,
+                                                  TB_BBWeitereKontakte.Text,
+                                                  TB_BBThema.Text,
+                                                  TB_BBWeitereBesucher.Text,
+                                                  Environment.UserName,
+                                                  BelegName);
+                    }
+                    catch (Exception ex)
+                    {
+                        Interaction.MsgBox("Fehler beim hinzufügen eines neuen Besuchsberichtes");
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    try
+                    {
+                        // Nächsten Wert in der Konfig-Tabelle aktualisieren;
+                        PropertiesTableAdapter.UpdateWert((++IDBeleg).ToString(), "IDBeleg");
+                    }
+                    catch (Exception ex)
+                    {
+                        Interaction.MsgBox("Fehler beim Update der neuen IDBeleg-Nummer (BB)");
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    Module1.Logging(8, IDBeleg, Conversions.ToInteger(LBL_IDFirmenName.Text), BelegName + " / " + TB_BBThema.Text); // LogTabelle schreiben mit BB!
+
+                    // Aktuellen Satz in Tabelle markieren
+                    Module1.IDBBInBesucheMitAdresse(Conversions.ToInteger(LBL_IDFirmenName.Text), IDBeleg);
+                }
+            }
+
+
+
+            // Erzeugen eines anderen Beleges: #####################################################################
+
+            if (TC_Beleg.SelectedIndex == 1)
+            {
+                BelegName = CB_Vorlagen.Text;
+
+                // Falls keine Belege geladen werden konnten, kann auch kein Dokument erzeugt wertden:
+                if ((BelegName ?? "") == (string.Empty ?? ""))
+                    return;
+
+                // Das Feld Thema soll immer ausgefüllt sein:
+                if ((TB_DIVThema.Text ?? "") == (string.Empty ?? ""))
+                {
+                    Interaction.MsgBox("Bitte einen Betreff erfassen!", Constants.vbExclamation, "kein Betreff");
+                    TB_DIVThema.Select();
+                    TB_DIVThema.BackColor = Color.MistyRose;
+                    return;
+                }
+
+                // Falls die FAX-Vorlage gewählt wurde, sollte auch eine FAX-Nummer angegeben werden:
+                if (Strings.Mid(CB_Vorlagen.Text, 1, 3) == "Fax" & (TB_DIVFaxnummer.Text ?? "") == (string.Empty ?? ""))
+                {
+                    Interaction.MsgBox("Bitte eine Fax-Nummererfassen!", Constants.vbExclamation, "Faxnummer fehlt");
+                    TB_DIVFaxnummer.Select();
+                    TB_DIVFaxnummer.BackColor = Color.MistyRose;
+                    return;
+                }
+
+                // Falls die Adresse keine Konto-ID hat, wird die ID aus "Konto" gnommen!
+                if ((LBL_DIVIDKonto.Text ?? "") != (string.Empty ?? ""))
+                {
+                    IDKonto = Conversions.ToInteger(LBL_DIVIDKonto.Text);
+                }
+                else
+                {
+                    IDKonto = Conversions.ToInteger(lblIDKonto.Text);
+                }
+
+                if (Module1.WordStarten(BelegName) == true)
+                {
+                    // Datensatz Adresse hinzufügen
+                    try
+                    {
+                        BelegeTableAdapter.Insert(IDBeleg,
+                                                  Conversions.ToInteger(LBL_IDFirmenName.Text),
+                                                  LBL_FirmenName.Text,
+                                                  DTP_Diverse.Value,
+                                                  Conversions.ToInteger(LBL_IDAdresse.Text),
+                                                  IDKonto,
+                                                  CB_DIVSachbearbeiter.Text,
+                                                  LBL_Anrede.Text + " " + LBL_Vorname.Text + " " + LBL_Nachname.Text,
+                                                  "",
+                                                  TB_DIVThema.Text,
+                                                  "",
+                                                  Environment.UserName,
+                                                  BelegName);
+                    }
+                    catch (Exception ex)
+                    {
+                        Interaction.MsgBox("Fehler beim Speichern des Datensatzes vom Besuchsbericht");
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    try
+                    {
+                        // Nächsten Wert in der Konfig-Tabelle aktualisieren
+                        PropertiesTableAdapter.UpdateWert((++IDBeleg).ToString(), "IDBeleg");
+                    }
+                    catch (Exception ex)
+                    {
+                        Interaction.MsgBox("Fehler beim Update der neuen IDBeleg-Nummer (Div. Belege)");
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    Module1.Logging(9, IDBeleg, Conversions.ToInteger(LBL_IDFirmenName.Text), BelegName + " / " + TB_DIVThema.Text); // LogTabelle schreiben mit BB!
+                    TB_DIVThema.BackColor = Color.White;
+                    TB_DIVFaxnummer.BackColor = Color.White;
+
+                    // Aktuellen Satz in Tabelle markieren
+                    Module1.IDBBInBesucheMitAdresse(Conversions.ToInteger(LBL_IDFirmenName.Text), IDBeleg);
+                }
+            }
         }
     }
 }

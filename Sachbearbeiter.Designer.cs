@@ -227,7 +227,6 @@ namespace Adress_DB
             TableAdapterManager.BackupDataSetBeforeUpdate = false;
             TableAdapterManager.BelegeTableAdapter = null;
             TableAdapterManager.FirmenNameTableAdapter = null;
-            TableAdapterManager.KonfigurationTableAdapter = null;
             TableAdapterManager.KontakteTableAdapter = null;
             TableAdapterManager.KontoTableAdapter = null;
             TableAdapterManager.LogTabelleTableAdapter = null;

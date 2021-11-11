@@ -3,7 +3,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
-using Outlook = Microsoft.Office.Interop.Outlook;
+//using Outlook = Microsoft.Office.Interop.Outlook;
 
 namespace Adress_DB
 {
@@ -18,7 +18,7 @@ namespace Adress_DB
             _BTN_hinzufügen.Name = "BTN_hinzufügen";
         }
 
-        private Contact tmpContact;
+        
 
         // declared like Outlook does
         private const long olFolderContacts = 10L;

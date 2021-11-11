@@ -109,7 +109,6 @@ namespace Adress_DB
             TableAdapterManager.BelegeTableAdapter = null;
             TableAdapterManager.Connection = null;
             TableAdapterManager.FirmenNameTableAdapter = null;
-            TableAdapterManager.KonfigurationTableAdapter = null;
             TableAdapterManager.KontakteTableAdapter = null;
             TableAdapterManager.KontoTableAdapter = null;
             TableAdapterManager.LogTabelleTableAdapter = null;
