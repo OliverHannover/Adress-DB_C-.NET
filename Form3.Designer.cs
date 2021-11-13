@@ -75,9 +75,9 @@ namespace Adress_DB
             LBL_IDKontakt = new Label();
             Label3 = new Label();
             KontakteMitAdresseBindingSource = new BindingSource(components);
-            _WSL_AdressenDataSet = new _WSL_AdressenDataSet();
-            KontakteMitAdresseTableAdapter = new _WSL_AdressenDataSetTableAdapters.KontakteMitAdresseTableAdapter();
-            TableAdapterManager = new _WSL_AdressenDataSetTableAdapters.TableAdapterManager();
+            _WSL_AdressenDataSet = new Adress_DB._WSL_AdressenDataSet();
+            KontakteMitAdresseTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.KontakteMitAdresseTableAdapter();
+            TableAdapterManager = new Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager();
             LBL_FirmenName = new Label();
             NachnameLabel1 = new Label();
             VornameLabel1 = new Label();
@@ -94,7 +94,7 @@ namespace Adress_DB
             LandLabel1 = new Label();
             WebseiteLabel1 = new Label();
             _BTN_aktualisieren = new Button();
-  //          _BTN_aktualisieren.Click += new EventHandler(BTN_aktualisieren_Click);
+            _BTN_aktualisieren.Click += new EventHandler(BTN_aktualisieren_Click);
             LBLGEF_FirmenName = new Label();
             LBLGEF_Nachname = new Label();
             LBLGEF_Vorname = new Label();
@@ -112,7 +112,7 @@ namespace Adress_DB
             LBLGEF_Website = new Label();
             PNL_GefundenerKontakt = new Panel();
             _BTN_olContDelete = new Button();
-  //          _BTN_olContDelete.Click += new EventHandler(BTN_olContDelete_Click);
+            _BTN_olContDelete.Click += new EventHandler(BTN_olContDelete_Click);
             Panel3 = new Panel();
             LBL_olContID = new Label();
             Label18 = new Label();
@@ -121,9 +121,9 @@ namespace Adress_DB
             Label1 = new Label();
             Panel5 = new Panel();
             _Button1 = new Button();
-  //          _Button1.Click += new EventHandler(Button1_Click_1);
+            _Button1.Click += new EventHandler(Button1_Click_1);
             _BTN_hinzufügen = new Button();
-  //          _BTN_hinzufügen.Click += new EventHandler(BTN_hinzufügen_Click);
+            _BTN_hinzufügen.Click += new EventHandler(BTN_hinzufügen_Click);
             LBL_Hinweis = new Label();
             FirmenNameLabel = new Label();
             NachnameLabel = new Label();
@@ -449,7 +449,7 @@ namespace Adress_DB
             // 
             // PictureBox1
             // 
-            PictureBox1.Image = My.Resources.Resources.outlook_groß;
+            PictureBox1.Image = Adress_DB.My.Resources.Resources.outlook_groß;
             PictureBox1.Location = new Point(7, 0);
             PictureBox1.Name = "PictureBox1";
             PictureBox1.Size = new Size(38, 38);
@@ -508,7 +508,7 @@ namespace Adress_DB
             TableAdapterManager.PLZ_GeodatenTableAdapter = null;
             TableAdapterManager.SachbearbeiterTableAdapter = null;
             TableAdapterManager.StaatenTableAdapter = null;
-            TableAdapterManager.UpdateOrder = _WSL_AdressenDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            TableAdapterManager.UpdateOrder = Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // LBL_FirmenName
             // 
@@ -647,7 +647,7 @@ namespace Adress_DB
             // 
             // BTN_aktualisieren
             // 
-            _BTN_aktualisieren.Image = My.Resources.Resources.AssignToUser_16x;
+            _BTN_aktualisieren.Image = Adress_DB.My.Resources.Resources.AssignToUser_16x;
             _BTN_aktualisieren.ImageAlign = ContentAlignment.MiddleRight;
             _BTN_aktualisieren.Location = new Point(246, 268);
             _BTN_aktualisieren.Name = "_BTN_aktualisieren";
@@ -839,7 +839,7 @@ namespace Adress_DB
             _BTN_olContDelete.BackColor = Color.Red;
             _BTN_olContDelete.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
             _BTN_olContDelete.ForeColor = Color.White;
-            _BTN_olContDelete.Image = My.Resources.Resources.DeleteUser_16x;
+            _BTN_olContDelete.Image = Adress_DB.My.Resources.Resources.DeleteUser_16x;
             _BTN_olContDelete.ImageAlign = ContentAlignment.MiddleRight;
             _BTN_olContDelete.Location = new Point(11, 268);
             _BTN_olContDelete.Name = "_BTN_olContDelete";
@@ -951,7 +951,7 @@ namespace Adress_DB
             // 
             // Button1
             // 
-            _Button1.Image = My.Resources.Resources.Cancel_16x;
+            _Button1.Image = Adress_DB.My.Resources.Resources.Cancel_16x;
             _Button1.ImageAlign = ContentAlignment.MiddleRight;
             _Button1.Location = new Point(477, 10);
             _Button1.Name = "_Button1";
@@ -963,7 +963,7 @@ namespace Adress_DB
             // 
             // BTN_hinzufügen
             // 
-            _BTN_hinzufügen.Image = My.Resources.Resources.AddUser_16x;
+            _BTN_hinzufügen.Image = Adress_DB.My.Resources.Resources.AddUser_16x;
             _BTN_hinzufügen.ImageAlign = ContentAlignment.MiddleRight;
             _BTN_hinzufügen.Location = new Point(645, 10);
             _BTN_hinzufügen.Name = "_BTN_hinzufügen";
@@ -1011,7 +1011,7 @@ namespace Adress_DB
             Panel6.ResumeLayout(false);
             Panel6.PerformLayout();
             Panel5.ResumeLayout(false);
-  //          Load += new EventHandler(Form3_Load);
+            Load += new EventHandler(Form3_Load);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1031,13 +1031,13 @@ namespace Adress_DB
             {
                 if (_BTN_hinzufügen != null)
                 {
-     //               _BTN_hinzufügen.Click -= BTN_hinzufügen_Click;
+                    _BTN_hinzufügen.Click -= BTN_hinzufügen_Click;
                 }
 
                 _BTN_hinzufügen = value;
                 if (_BTN_hinzufügen != null)
                 {
-  //                  _BTN_hinzufügen.Click += BTN_hinzufügen_Click;
+                    _BTN_hinzufügen.Click += BTN_hinzufügen_Click;
                 }
             }
         }
@@ -1045,10 +1045,10 @@ namespace Adress_DB
         internal Panel Panel1;
         internal Label LBL_IDKontakt;
         internal Label Label3;
-        internal _WSL_AdressenDataSet _WSL_AdressenDataSet;
+        internal Adress_DB._WSL_AdressenDataSet _WSL_AdressenDataSet;
         internal BindingSource KontakteMitAdresseBindingSource;
-        internal _WSL_AdressenDataSetTableAdapters.KontakteMitAdresseTableAdapter KontakteMitAdresseTableAdapter;
-        internal _WSL_AdressenDataSetTableAdapters.TableAdapterManager TableAdapterManager;
+        internal Adress_DB._WSL_AdressenDataSetTableAdapters.KontakteMitAdresseTableAdapter KontakteMitAdresseTableAdapter;
+        internal Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager TableAdapterManager;
         internal Label LBL_FirmenName;
         internal Label NachnameLabel1;
         internal Label VornameLabel1;
@@ -1079,13 +1079,13 @@ namespace Adress_DB
             {
                 if (_BTN_aktualisieren != null)
                 {
- //                   _BTN_aktualisieren.Click -= BTN_aktualisieren_Click;
+                    _BTN_aktualisieren.Click -= BTN_aktualisieren_Click;
                 }
 
                 _BTN_aktualisieren = value;
                 if (_BTN_aktualisieren != null)
                 {
-  //                  _BTN_aktualisieren.Click += BTN_aktualisieren_Click;
+                    _BTN_aktualisieren.Click += BTN_aktualisieren_Click;
                 }
             }
         }
@@ -1127,13 +1127,13 @@ namespace Adress_DB
             {
                 if (_Button1 != null)
                 {
- //                   _Button1.Click -= Button1_Click_1;
+                    _Button1.Click -= Button1_Click_1;
                 }
 
                 _Button1 = value;
                 if (_Button1 != null)
                 {
- //                   _Button1.Click += Button1_Click_1;
+                    _Button1.Click += Button1_Click_1;
                 }
             }
         }
@@ -1155,13 +1155,13 @@ namespace Adress_DB
             {
                 if (_BTN_olContDelete != null)
                 {
-  //                  _BTN_olContDelete.Click -= BTN_olContDelete_Click;
+                    _BTN_olContDelete.Click -= BTN_olContDelete_Click;
                 }
 
                 _BTN_olContDelete = value;
                 if (_BTN_olContDelete != null)
                 {
-  //                  _BTN_olContDelete.Click += BTN_olContDelete_Click;
+                    _BTN_olContDelete.Click += BTN_olContDelete_Click;
                 }
             }
         }

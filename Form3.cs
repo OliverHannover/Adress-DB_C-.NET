@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Linq;
+using System.Drawing;
+//using System.Linq;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
-//using Outlook = Microsoft.Office.Interop.Outlook;
+using Outlook = Microsoft.Office.Interop.Outlook;
 
 namespace Adress_DB
 {
@@ -28,7 +29,7 @@ namespace Adress_DB
 
         // Switch to turn off the logging functionality
         // Shouldn't be turned off, only unexpected errors were logged
-        private const bool doErrorLogging = true;
+        //private const bool doErrorLogging = true;
 
         public struct Contact
         {
@@ -49,57 +50,57 @@ namespace Adress_DB
             public string BusinessHomePage;
         }
 
-        /*
+
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: Diese Codezeile lädt Daten in die Tabelle "_WSL_AdressenDataSet.KontakteMitAdresse". Sie können sie bei Bedarf verschieben oder entfernen.
-            // Me.KontakteMitAdresseTableAdapter.Fill(Me._WSL_AdressenDataSet.KontakteMitAdresse)
 
-            Initialisierung();
+            LBL_Hinweis.Location = new Point(70, 80);
+            LBL_Hinweis.Visible = false;
+
+           Initialisierung();
         }
 
-        public bool Initialisierung()
+
+        public void Initialisierung()
         {
-            bool InitialisierungRet = default;
+            
             PNL_GefundenerKontakt.Visible = false;
             LBL_Hinweis.Visible = true;
             int olContID;
             Cursor.Current = Cursors.WaitCursor;
-            olContID = findContact(LBL_FirmenName.Text, NachnameLabel1.Text, VornameLabel1.Text);
+            olContID = FindContact(LBL_FirmenName.Text, NachnameLabel1.Text, VornameLabel1.Text);
             LBL_olContID.Text = olContID.ToString();
+
+            MessageBox.Show(LBL_olContID.Text);
+
             if (olContID != 0)
             {
-                InitialisierungRet = true;
-                // With getContact(findContact(LBL_FirmenName.Text, NachnameLabel1.Text, VornameLabel1.Text))
+                
+                // With getContact(findContact(LBL_FirmenName.Text, NachnameLabel1.Text, VornameLabel1.Text)) !
                 {
-                    var withBlock = getContact(olContID);
-                    LBLGEF_FirmenName.Text = withBlock.CompanyName;
-                    LBLGEF_Nachname.Text = withBlock.LastName;
-                    LBLGEF_Vorname.Text = withBlock.FirstName;
-                    LBLGEF_Position.Text = withBlock.JobTitle;
-                    LBLGEF_Email.Text = withBlock.Email1Address;
-                    LBLGEF_TelefonGesch.Text = withBlock.BusinessTelephoneNumber;
-                    LBLGEF_TelefonPriv.Text = withBlock.HomeTelephoneNumber;
-                    LBLGEF_Mobiltelefon.Text = withBlock.MobileTelephoneNumber;
-                    LBLGEF_Faxnummer.Text = withBlock.BusinessFaxNumber;
-                    LBLGEF_Strasse.Text = withBlock.BusinessAddressStreet;
-                    LBLGEF_PLZ.Text = withBlock.BusinessAddressPostalCode;
-                    LBLGEF_Ort.Text = withBlock.BusinessAddressCity;
-                    LBLGEF_Bundesland.Text = withBlock.BusinessAddressState;
-                    LBLGEF_Land.Text = withBlock.BusinessAddressCountry;
-                    LBLGEF_Website.Text = withBlock.BusinessHomePage;
+                    var getCont = GetContact(olContID);
+                    LBLGEF_FirmenName.Text = getCont.CompanyName;
+                    LBLGEF_Nachname.Text = getCont.LastName;
+                    LBLGEF_Vorname.Text = getCont.FirstName;
+                    LBLGEF_Position.Text = getCont.JobTitle;
+                    LBLGEF_Email.Text = getCont.Email1Address;
+                    LBLGEF_TelefonGesch.Text = getCont.BusinessTelephoneNumber;
+                    LBLGEF_TelefonPriv.Text = getCont.HomeTelephoneNumber;
+                    LBLGEF_Mobiltelefon.Text = getCont.MobileTelephoneNumber;
+                    LBLGEF_Faxnummer.Text = getCont.BusinessFaxNumber;
+                    LBLGEF_Strasse.Text = getCont.BusinessAddressStreet;
+                    LBLGEF_PLZ.Text = getCont.BusinessAddressPostalCode;
+                    LBLGEF_Ort.Text = getCont.BusinessAddressCity;
+                    LBLGEF_Bundesland.Text = getCont.BusinessAddressState;
+                    LBLGEF_Land.Text = getCont.BusinessAddressCountry;
+                    LBLGEF_Website.Text = getCont.BusinessHomePage;
                 }
 
                 PNL_GefundenerKontakt.Visible = true;
                 LBL_Hinweis.Visible = false;
             }
-            else
-            {
-                InitialisierungRet = false;
-            }
 
             Cursor.Current = Cursors.Default;
-            return InitialisierungRet;
         }
 
         
@@ -136,7 +137,7 @@ namespace Adress_DB
             newContact.BusinessAddressState = BundeslandLabel1.Text;
             newContact.BusinessAddressCountry = LandLabel1.Text;
             newContact.BusinessHomePage = WebseiteLabel1.Text;
-            if (addContact(newContact) != 0)
+            if (AddContact(newContact) != 0)
             {
                 Interaction.MsgBox("Kontakt erfolgreich hinzugefügt");
                 Close();
@@ -148,131 +149,127 @@ namespace Adress_DB
             }
         }
 
-        public bool isOutlookInstalled()
+        public bool IsOutlookInstalled()
         {
-            bool isOutlookInstalledRet = default;
             // Tries to create an instance of Outlook
             // Returnes true if successful, otherwise false
 
             object olApp;
-            
+            bool isOutlookInstalledRet;
 
-            olApp = Interaction.CreateObject("Outlook.Application");
-            isOutlookInstalledRet = true;
-            olApp = null;
-            return isOutlookInstalledRet;
-
-         
-            if (Information.Err().Number == 429)
+            try
             {
+                olApp = Interaction.CreateObject("Outlook.Application");
+                isOutlookInstalledRet = true;
+                olApp = null;
             }
-            // Can't create Object -> Outlook is not installed
-            // Don't need to log as error.
-            else
+            catch
             {
                 Interaction.MsgBox("Function isOutlookInstalled() returned with error");
+                isOutlookInstalledRet = false;
             }
 
-            isOutlookInstalledRet = false;
+            //MessageBox.Show(Convert.ToString(isOutlookInstalledRet));
+            return isOutlookInstalledRet;
+            
         }
 
-        public int getContactFolderCount()
+        public int GetContactFolderCount()
         {
-            int getContactFolderCountRet = default;
+            int getContactFolderCountRet = 0;
             // Returnes the number of contacts in the Outlook contacts folder,
             // returnes zero if Outlook is not installed
 
-            Outlook.Application application = new Microsoft.Office.Interop.Outlook.Application();
-            Microsoft.Office.Interop.Outlook._Application olApp = application;
+            Outlook.Application olApp = new Outlook.Application();
 
-            object olNameSpace = olApp.GetNamespace("MAPI"); ;
-            object olFolder = mapiNamespace.GetDefaultFolder(OlDefaultFolders.olFolderContacts);
-
-            if (!isOutlookInstalled())
+            if (!IsOutlookInstalled())
             {
                 getContactFolderCountRet = 0;
             }
             else
             {
-                
-                //olApp = Interaction.CreateObject("Outlook.Application");
-    
-                olFolder = olNameSpace.GetDefaultFolder((object)olFolderContacts);
-                getContactFolderCountRet = Conversions.ToInteger(olFolder.Items.Count);
-                olFolder = null;
-                olNameSpace = null;
-                olApp = null;
-            }
+                try
+                {
+                    Outlook.NameSpace olNameSpace = olApp.GetNamespace("MAPI");
+                    Outlook.MAPIFolder olFolder = olNameSpace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderContacts);
+                    //Outlook.Items ContactItems = olFolder.Items;
 
+                    getContactFolderCountRet = Conversions.ToInteger(olFolder.Items.Count);
+                    olFolder = null;
+                    olNameSpace = null;
+                    olApp = null;
+                }
+                catch
+                {
+                    MessageBox.Show("Funktion GetContactFolderCount() erzeugt einen Fehler", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    getContactFolderCountRet = 0;                  
+                }
+            }    
             return getContactFolderCountRet;
-
-            ;
-            Interaction.MsgBox("Function getContactFolderCount() returned with error");
-            getContactFolderCountRet = 0;
         }
 
-        public Contact getContact(int index)
+        public Contact GetContact(int index)
         {
             Contact getContactRet = default;
             // Returnes the Outlook contact information of the entry,
             // containes only the information which siemens mobile supports.
             // Returnes Nothing if Outlook is not installed or
-            // the specified entry doesn't exist.
+            // the specified entry doesn't exist.           
 
-            object olApp;
-            object olNameSpace;
-            object olFolder;
-            object olContact;
-            ;
-
-            if (!isOutlookInstalled())
+            if (!IsOutlookInstalled())
             {
+                getContactRet = default;
             }
             // getContact = Nothing
-            else if (getContactFolderCount() < index)
+            else if (GetContactFolderCount() < index)
             {
+                getContactRet = default;
             }
-            // getContact = Nothing
+        
             else
             {
-                olApp = Interaction.CreateObject("Outlook.Application");
-                olNameSpace = olApp.GetNamespace("MAPI");
-                olFolder = olNameSpace.GetDefaultFolder((object)olFolderContacts);
-                olContact = olFolder.Items(index);
-                {
-                    var withBlock = tmpContact;
-                    withBlock.CompanyName = Conversions.ToString(olContact.CompanyName);
-                    withBlock.LastName = Conversions.ToString(olContact.LastName);
-                    withBlock.FirstName = Conversions.ToString(olContact.FirstName);
-                    withBlock.JobTitle = Conversions.ToString(olContact.JobTitle);
-                    withBlock.Email1Address = Conversions.ToString(olContact.Email1Address);
-                    withBlock.BusinessTelephoneNumber = Conversions.ToString(olContact.BusinessTelephoneNumber);
-                    withBlock.HomeTelephoneNumber = Conversions.ToString(olContact.HomeTelephoneNumber);
-                    withBlock.MobileTelephoneNumber = Conversions.ToString(olContact.MobileTelephoneNumber);
-                    withBlock.BusinessFaxNumber = Conversions.ToString(olContact.BusinessFaxNumber);
-                    withBlock.BusinessAddressStreet = Conversions.ToString(olContact.BusinessAddressStreet);
-                    withBlock.BusinessAddressPostalCode = Conversions.ToString(olContact.BusinessAddressPostalCode);
-                    withBlock.BusinessAddressCity = Conversions.ToString(olContact.BusinessAddressCity);
-                    withBlock.BusinessAddressState = Conversions.ToString(olContact.BusinessAddressState);
-                    withBlock.BusinessAddressCountry = Conversions.ToString(olContact.BusinessAddressCountry);
-                    withBlock.BusinessHomePage = Conversions.ToString(olContact.BusinessHomePage);
+                try
+                { 
+                    Outlook.Application olApp = new Outlook.Application();
+                    Outlook.NameSpace olNameSpace = olApp.GetNamespace("MAPI");
+                    Outlook.MAPIFolder olFolder = olNameSpace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderContacts);
+                    Outlook.Items olItems = olFolder.Items;
+                    Outlook.ContactItem olContact = (Outlook.ContactItem)olItems[index];
+
+                    Contact tmpContact;
+                    
+                    tmpContact.CompanyName = Conversions.ToString(olContact.CompanyName);
+                    tmpContact.LastName = Conversions.ToString(olContact.LastName);
+                    tmpContact.FirstName = Conversions.ToString(olContact.FirstName);
+                    tmpContact.JobTitle = Conversions.ToString(olContact.JobTitle);
+                    tmpContact.Email1Address = Conversions.ToString(olContact.Email1Address);
+                    tmpContact.BusinessTelephoneNumber = Conversions.ToString(olContact.BusinessTelephoneNumber);
+                    tmpContact.HomeTelephoneNumber = Conversions.ToString(olContact.HomeTelephoneNumber);
+                    tmpContact.MobileTelephoneNumber = Conversions.ToString(olContact.MobileTelephoneNumber);
+                    tmpContact.BusinessFaxNumber = Conversions.ToString(olContact.BusinessFaxNumber);
+                    tmpContact.BusinessAddressStreet = Conversions.ToString(olContact.BusinessAddressStreet);
+                    tmpContact.BusinessAddressPostalCode = Conversions.ToString(olContact.BusinessAddressPostalCode);
+                    tmpContact.BusinessAddressCity = Conversions.ToString(olContact.BusinessAddressCity);
+                    tmpContact.BusinessAddressState = Conversions.ToString(olContact.BusinessAddressState);
+                    tmpContact.BusinessAddressCountry = Conversions.ToString(olContact.BusinessAddressCountry);
+                    tmpContact.BusinessHomePage = Conversions.ToString(olContact.BusinessHomePage);
+
+                    olContact = null;
+                    olFolder = null;
+                    olNameSpace = null;
+                    olApp = null;
+                    getContactRet = tmpContact;
                 }
-
-                olContact = null;
-                olFolder = null;
-                olNameSpace = null;
-                olApp = null;
-                getContactRet = tmpContact;
+                catch
+                {
+                    MessageBox.Show("Funktion getContact() erzeugt einen Fehler", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    getContactRet = default;
+                }
             }
-
             return getContactRet;
-
-            ;
-            Interaction.MsgBox("Function getContact() returned with error");
-            // getContact = Nothing
         }
 
-        public bool modifyContact(int index, Contact modContact)
+        public bool ModifyContact(int index, Contact modContact)
         {
             bool modifyContactRet = default;
             // Sets the new information to the outlook contact entry
@@ -280,116 +277,111 @@ namespace Adress_DB
             // Returnes True if successful, 
             // otherwise False (e.G. if entry doesn't exist)
 
-            object olApp;
-            object olNameSpace;
-            object olFolder;
-            object olContact;
-            ;
 
-            if (!isOutlookInstalled())
+            if (!IsOutlookInstalled())
             {
                 modifyContactRet = false;
             }
-            else if (getContactFolderCount() < index)
+            else if (GetContactFolderCount() < index)
             {
                 modifyContactRet = false;
             }
             else
             {
-                olApp = Interaction.CreateObject("Outlook.Application");
-                olNameSpace = olApp.GetNamespace("MAPI");
-                olFolder = olNameSpace.GetDefaultFolder((object)olFolderContacts);
-                olContact = olFolder.Items(index);
+                try
                 {
-                    var withBlock = olContact;
-                    withBlock.CompanyName = modContact.CompanyName;
-                    withBlock.LastName = modContact.LastName;
-                    withBlock.FirstName = modContact.FirstName;
-                    withBlock.JobTitle = modContact.JobTitle;
-                    withBlock.Email1Address = modContact.Email1Address;
-                    withBlock.BusinessTelephoneNumber = modContact.BusinessTelephoneNumber;
-                    withBlock.HomeTelephoneNumber = modContact.HomeTelephoneNumber;
-                    withBlock.MobileTelephoneNumber = modContact.MobileTelephoneNumber;
-                    withBlock.BusinessFaxNumber = modContact.BusinessFaxNumber;
-                    withBlock.BusinessAddressStreet = modContact.BusinessAddressStreet;
-                    withBlock.BusinessAddressPostalCode = modContact.BusinessAddressPostalCode;
-                    withBlock.BusinessAddressCity = modContact.BusinessAddressCity;
-                    withBlock.BusinessAddressState = modContact.BusinessAddressState;
-                    withBlock.BusinessAddressCountry = modContact.BusinessAddressCountry;
-                    withBlock.BusinessHomePage = modContact.BusinessHomePage;
-                    withBlock.Save();
-                }
+                    Outlook.Application olApp = new Outlook.Application();
+                    Outlook.NameSpace olNameSpace = olApp.GetNamespace("MAPI");
+                    Outlook.MAPIFolder olFolder = olNameSpace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderContacts);
+                    Outlook.Items olItems = olFolder.Items;
+                    Outlook.ContactItem olContact = (Outlook.ContactItem)olItems[index];
 
-                olContact = null;
-                olFolder = null;
-                olNameSpace = null;
-                olApp = null;
-                modifyContactRet = true;
+
+                    var modCont = olContact;
+                    modCont.CompanyName = modContact.CompanyName;
+                    modCont.LastName = modContact.LastName;
+                    modCont.FirstName = modContact.FirstName;
+                    modCont.JobTitle = modContact.JobTitle;
+                    modCont.Email1Address = modContact.Email1Address;
+                    modCont.BusinessTelephoneNumber = modContact.BusinessTelephoneNumber;
+                    modCont.HomeTelephoneNumber = modContact.HomeTelephoneNumber;
+                    modCont.MobileTelephoneNumber = modContact.MobileTelephoneNumber;
+                    modCont.BusinessFaxNumber = modContact.BusinessFaxNumber;
+                    modCont.BusinessAddressStreet = modContact.BusinessAddressStreet;
+                    modCont.BusinessAddressPostalCode = modContact.BusinessAddressPostalCode;
+                    modCont.BusinessAddressCity = modContact.BusinessAddressCity;
+                    modCont.BusinessAddressState = modContact.BusinessAddressState;
+                    modCont.BusinessAddressCountry = modContact.BusinessAddressCountry;
+                    modCont.BusinessHomePage = modContact.BusinessHomePage;
+                    modCont.Save();
+
+                    olContact = null;
+                    olFolder = null;
+                    olNameSpace = null;
+                    olApp = null;
+                    modifyContactRet = true;
+
+                }
+                catch
+                {
+                    Interaction.MsgBox("Function modifyContact() returned with error");
+                    modifyContactRet = false;
+                }
             }
 
             return modifyContactRet;
-        errHandler:
-            ;
-            Interaction.MsgBox("Function modifyContact() returned with error");
-            modifyContactRet = false;
+
         }
 
-        public int addContact(Contact newContact)
+        public int AddContact(Contact newContact)
         {
             int addContactRet = default;
             // Adds the new contact to the outlook contact folder
             // Returnes Tthe index of the new entry, Zero if creation failed
 
-            object olApp;
-            object olNameSpace;
-            object olFolder;
-            object olContact;
-
-            if (!isOutlookInstalled())
+            if (!IsOutlookInstalled())
             {
                 addContactRet = 0;
             }
             else
             {
-                olApp = Interaction.CreateObject("Outlook.Application");
-                olNameSpace = olApp.GetNamespace("MAPI");
-                olFolder = olNameSpace.GetDefaultFolder((object)olFolderContacts);
-                olContact = olFolder.Items.Add;
-                {
-                    var withBlock = olContact;
-                    withBlock.CompanyName = newContact.CompanyName;
-                    withBlock.LastName = newContact.LastName;
-                    withBlock.FirstName = newContact.FirstName;
-                    withBlock.JobTitle = newContact.JobTitle;
-                    withBlock.Email1Address = newContact.Email1Address;
-                    withBlock.BusinessTelephoneNumber = newContact.BusinessTelephoneNumber;
-                    withBlock.HomeTelephoneNumber = newContact.HomeTelephoneNumber;
-                    withBlock.MobileTelephoneNumber = newContact.MobileTelephoneNumber;
-                    withBlock.BusinessFaxNumber = newContact.BusinessFaxNumber;
-                    withBlock.BusinessAddressStreet = newContact.BusinessAddressStreet;
-                    withBlock.BusinessAddressPostalCode = newContact.BusinessAddressPostalCode;
-                    withBlock.BusinessAddressCity = newContact.BusinessAddressCity;
-                    withBlock.BusinessAddressState = newContact.BusinessAddressState;
-                    withBlock.BusinessAddressCountry = newContact.BusinessAddressCountry;
-                    withBlock.BusinessHomePage = newContact.BusinessHomePage;
-                    withBlock.Save();
+                try 
+                { 
+                    Outlook.Application olApp = new Outlook.Application();
+                    Outlook.ContactItem olContact = olApp.CreateItem(Outlook.OlItemType.olContactItem);
+
+                    var addCont = olContact;
+                    addCont.CompanyName = newContact.CompanyName;
+                    addCont.LastName = newContact.LastName;
+                    addCont.FirstName = newContact.FirstName;
+                    addCont.JobTitle = newContact.JobTitle;
+                    addCont.Email1Address = newContact.Email1Address;
+                    addCont.BusinessTelephoneNumber = newContact.BusinessTelephoneNumber;
+                    addCont.HomeTelephoneNumber = newContact.HomeTelephoneNumber;
+                    addCont.MobileTelephoneNumber = newContact.MobileTelephoneNumber;
+                    addCont.BusinessFaxNumber = newContact.BusinessFaxNumber;
+                    addCont.BusinessAddressStreet = newContact.BusinessAddressStreet;
+                    addCont.BusinessAddressPostalCode = newContact.BusinessAddressPostalCode;
+                    addCont.BusinessAddressCity = newContact.BusinessAddressCity;
+                    addCont.BusinessAddressState = newContact.BusinessAddressState;
+                    addCont.BusinessAddressCountry = newContact.BusinessAddressCountry;
+                    addCont.BusinessHomePage = newContact.BusinessHomePage;
+                    addCont.Save();
+
+                    olContact = null;
+                    olApp = null;
+                    addContactRet = GetContactFolderCount();
                 }
-
-                olContact = null;
-                olFolder = null;
-                olNameSpace = null;
-                olApp = null;
-                addContactRet = getContactFolderCount();
+                catch
+                {
+                Interaction.MsgBox("Function addContact() returned with error");
+                addContactRet = 0;
+                }
             }
-
             return addContactRet;
-        errHandler:
-            ;
-            Interaction.MsgBox("Function addContact() returned with error");
-            addContactRet = 0;
         }
 
-        public bool deleteContact(int index)
+        public bool DeleteContact(int index)
         {
             bool deleteContactRet = default;
             // Deletes the specified entry from the Outlook contact folder
@@ -397,94 +389,93 @@ namespace Adress_DB
             // otherwise False (e.G. if entry doesn't exist)
             // MsgBox("deleteContact aufgerufen")
 
-            object olApp;
-            object olNameSpace;
-            object olFolder;
-            object olContact;
-
-            if (!isOutlookInstalled())
+            if (!IsOutlookInstalled())
             {
                 deleteContactRet = false;
             }
-            else if (getContactFolderCount() < index)
+            else if (GetContactFolderCount() < index)
             {
                 deleteContactRet = false;
             }
             else
             {
-                olApp = Interaction.CreateObject("Outlook.Application");
-                olNameSpace = olApp.GetNamespace("MAPI");
-                olFolder = olNameSpace.GetDefaultFolder((object)olFolderContacts);
-                olContact = olFolder.Items(index);
-                olContact.Delete();
-                olContact = null;
-                olFolder = null;
-                olNameSpace = null;
-                olApp = null;
-                deleteContactRet = true;
+                try
+                {
+                    Outlook.Application olApp = new Outlook.Application();
+                    Outlook.NameSpace olNameSpace = olApp.GetNamespace("MAPI");
+                    Outlook.MAPIFolder olFolder = olNameSpace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderContacts);
+                    Outlook.Items olItems = olFolder.Items;
+                    Outlook.ContactItem olContact = (Outlook.ContactItem)olItems[index];
+                    olContact.Delete();
+                    olContact = null;
+                    olFolder = null;
+                    olNameSpace = null;
+                    olApp = null;
+                    deleteContactRet = true;
+                }
+                catch
+                {
+                    Interaction.MsgBox("Function deleteContact() returned with error");
+                    deleteContactRet = false;
+                }
             }
-
             return deleteContactRet;
-        errHandler:
-            ;
-            Interaction.MsgBox("Function deleteContact() returned with error");
-            deleteContactRet = false;
         }
 
-        public int findContact(string FirmenName, string LastName, string FirstName = Constants.vbNullString)
+        public int FindContact(string FirmenName, string LastName, string FirstName = Constants.vbNullString)
         {
             int findContactRet = default;
             // Searches for specified entry in the Outlook contact folder
             // Returnes the index if found, otherwise Zero
 
-            object olApp;
-            object olNameSpace;
-            object olFolder; // Object
-            object olContact; // Object
-            int i;
-
-            if (!isOutlookInstalled())
+            if (!IsOutlookInstalled())
             {
                 findContactRet = 0;
             }
             else
             {
-                olApp = Interaction.CreateObject("Outlook.Application");
-                olNameSpace = olApp.GetNamespace("MAPI");
-                olFolder = olNameSpace.GetDefaultFolder((object)olFolderContacts);
-                findContactRet = 0;
-                var loopTo = Conversions.ToInteger(olFolder.Items.Count);
-                for (i = 1; i <= loopTo; i++)
+                try
                 {
-                    // MsgBox(olFolder.Items.Count)
-                    olContact = olFolder.Items(i);
-                    if (Conversions.ToBoolean(Operators.AndObject(Operators.ConditionalCompareObjectEqual(LCase(olContact.LastName), Strings.LCase(LastName), false), Operators.ConditionalCompareObjectEqual(LCase(olContact.CompanyName), Strings.LCase(FirmenName), false))))
+                    Outlook.Application olApp = new Outlook.Application();
+                    Outlook.NameSpace olNameSpace = olApp.GetNamespace("MAPI");
+                    Outlook.MAPIFolder olFolder = olNameSpace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderContacts);
+                    Outlook.Items olItems = olFolder.Items;
+
+                    var loopTo = Convert.ToInt32(olFolder.Items.Count);
+                    int i;
+
+                    for (i = 1; i <= loopTo; i++)
                     {
-                        if (string.IsNullOrEmpty(FirstName))
+                        Outlook.ContactItem olContact = (Outlook.ContactItem)olItems[i];
+                        if (olContact.CompanyName.ToLower() == FirmenName.ToLower() && olContact.LastName.ToLower() == LastName.ToLower())
                         {
-                            findContactRet = i;
-                            break;
-                        }
-                        else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(olContact.FirstName, FirstName, false)))
-                        {
-                            findContactRet = i;
-                            break;
-                        }
+                            if (string.IsNullOrEmpty(FirstName))
+                            {
+                                findContactRet = i;
+                                break;
+                            }
+                            else if (olContact.FirstName.ToLower() == FirstName.ToLower())
+                            {
+                                findContactRet = i;
+                                break;
+                            }
+                        } 
+                        olContact = null;
+                        olFolder = null;
+                        olNameSpace = null;
+                        olApp = null;
                     }
+
+                }
+                catch 
+                {
+                    Interaction.MsgBox("Function findContact() returned with error");
+                    findContactRet = 0;
+                    
                 }
 
-                olContact = null;
-                olFolder = null;
-                olNameSpace = null;
-                olApp = null;
             }
-
-            // MsgBox("Kontakt-Nummer: " & findContact)
             return findContactRet;
-        errHandler:
-            ;
-            Interaction.MsgBox("Function findContact() returned with error");
-            findContactRet = 0;
         }
 
         private void Button1_Click_1(object sender, EventArgs e)
@@ -617,7 +608,7 @@ namespace Adress_DB
                 modContact.BusinessHomePage = LBLGEF_Website.Text;
             }
 
-            if (modifyContact(Index, modContact) == true)
+            if (ModifyContact(Index, modContact) == true)
             {
                 Interaction.MsgBox("Kontakt erfolgreich geändert");
                 Hide();
@@ -637,7 +628,7 @@ namespace Adress_DB
             Result = MessageBox.Show("Soll der Kontakt '" + LBLGEF_Nachname.Text + "', Kontaktnummer:" + olContID + " wirklich im Outlook gelöscht werden!", "Kontakt löschen", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (Result == DialogResult.Yes)
             {
-                if (deleteContact(olContID) == true)
+                if (DeleteContact(olContID) == true)
                 {
                     Interaction.MsgBox("gelöscht!");
                     Initialisierung();
@@ -649,6 +640,7 @@ namespace Adress_DB
                 // exit the procedure
                 return;
             }
-        }*/
-    } 
+        }
+
+   } 
 }

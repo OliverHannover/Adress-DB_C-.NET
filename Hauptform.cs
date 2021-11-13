@@ -60,8 +60,7 @@ namespace Adress_DB
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-
+           
             // 'Tabellen laden:
             // Me.StaatenTableAdapter.Fill(Me._WSL_AdressenDataSet.Staaten)
 
@@ -112,12 +111,12 @@ namespace Adress_DB
         private void Hauptform_Shown(object sender, EventArgs e)
         {
             // Erest prüfen, ob das System im Wartungsmodus ist:
-            bool Wartung = Conversions.ToBoolean(My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("Wartung")) == true;
-            if (Wartung == true)
-            {
-                Interaction.MsgBox("Das System, befindet sich in der Wartung!" + Constants.vbNewLine + "Das Progamm wird sich jetzt beenden." + Constants.vbNewLine + "Bitte später noch einmal versuchen.", Constants.vbExclamation);
-                Application.Exit();
-            }
+            //bool Wartung = Convert.ToBoolean(My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("Wartung")) == true;
+            //if (Wartung == true)
+            //{
+            //    MessageBox.Show("Das System, befindet sich in der Wartung!" + Environment.NewLine + "Das Progamm wird sich jetzt beenden." + Environment.NewLine + "Bitte später noch einmal versuchen.");
+            //    Application.Exit();
+            //}
 
             // Dann Tabellen laden
             // Tabellen laden:
@@ -138,7 +137,8 @@ namespace Adress_DB
             int foundIndex = SachbearbeiterBindingSource.Find("Login", Environment.UserName);
             if (foundIndex < 0)
             {
-                Interaction.MsgBox("Ihr Login wurde nicht erkannt. Bitte im Menü über Einstellungen/Benutzerliste Ihre Benutzerdaten prüfen/korrigieren oder ergänzen.", Constants.vbExclamation);
+                MessageBox.Show("Ihr Login wurde nicht erkannt. Bitte im Menü über Einstellungen/Benutzerliste Ihre Benutzerdaten prüfen/korrigieren oder ergänzen.", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 lblUser.Text = "Sachbearbeiter nicht erkannt";
                 lblUser.ForeColor = Color.Red;
                 BTN_Speichern.Visible = false;
@@ -283,7 +283,7 @@ namespace Adress_DB
 
             // 2) #####################################################################################################################
 
-            int IDFirmenName = Conversions.ToInteger(LBL_IDFirmenName.Text);
+            int IDFirmenName = Convert.ToInt32(LBL_IDFirmenName.Text);
             var IDAdresse = default(int);
             var IDKontakt = default(int);
 
@@ -348,12 +348,12 @@ namespace Adress_DB
             {
                 // MsgBox("Adresse neu anlegen")
                 // Wert aus Konfig-Tabelle holen
-                IDAdresse = Conversions.ToInteger(My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("IDAdresse"));
+                IDAdresse = Convert.ToInt32(My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("IDAdresse"));
 
                 // Datensatz Adresse hinzufügen
                 try
                 {
-                    AdressenTableAdapter.Insert(IDAdresse, IDFirmenName, Conversions.ToInteger(IDKontoTextBox.Text), AdresstypTextBox.Text, StraßeTextBox.Text, PostfachTextBox.Text, TB_PLZ.Text, CB_Ort.Text, TB_Bundesland.Text, CB_Staat.Text, UStIdNrTextBox.Text, WebseiteTextBox.Text, LBL_Countrycode.Text);
+                    AdressenTableAdapter.Insert(IDAdresse, IDFirmenName, Convert.ToInt32(IDKontoTextBox.Text), AdresstypTextBox.Text, StraßeTextBox.Text, PostfachTextBox.Text, TB_PLZ.Text, CB_Ort.Text, TB_Bundesland.Text, CB_Staat.Text, UStIdNrTextBox.Text, WebseiteTextBox.Text, LBL_Countrycode.Text);
                 }
                 catch (Exception ex)
                 {
@@ -394,12 +394,23 @@ namespace Adress_DB
             {
                 // MsgBox("Kontakt neu anlegen")
                 // Wert aus Konfig-Tabelle holen
-                IDKontakt = Conversions.ToInteger(PropertiesTableAdapter.ScalarWert("IDKontakt"));
+                IDKontakt = Convert.ToInt32(PropertiesTableAdapter.ScalarWert("IDKontakt"));
 
                 // Datensatz Kontakt hinzufügen
                 try
                 {
-                    KontakteTableAdapter.Insert(IDKontakt, IDFirmenName, NachnameTextBox.Text, VornameTextBox.Text, EmailAddresseTextBox.Text, PositionTextBox.Text, TelefonGeschaeftlichTextBox.Text, TelefonPrivatTextBox.Text, MobiltelefonTextBox.Text, FaxnummerTextBox.Text, Conversions.ToInteger(IDAdresseTextBox.Text), AnredeComboBox.Text);
+                    KontakteTableAdapter.Insert(IDKontakt,
+                                                IDFirmenName,
+                                                NachnameTextBox.Text,
+                                                VornameTextBox.Text,
+                                                EmailAddresseTextBox.Text,
+                                                PositionTextBox.Text,
+                                                TelefonGeschaeftlichTextBox.Text,
+                                                TelefonPrivatTextBox.Text,
+                                                MobiltelefonTextBox.Text,
+                                                FaxnummerTextBox.Text,
+                                                Convert.ToInt32(IDAdresseTextBox.Text),
+                                                AnredeComboBox.Text);
                 }
                 catch (Exception ex)
                 {
@@ -445,16 +456,28 @@ namespace Adress_DB
                 int IDKonto;
                 if ((IDKontoTextBox.Text ?? "") == (string.Empty ?? ""))
                 {
-                    IDKonto = Conversions.ToInteger(lblIDKonto.Text);
+                    IDKonto = Convert.ToInt32(lblIDKonto.Text);
                 }
                 else
                 {
-                    IDKonto = Conversions.ToInteger(IDKontoTextBox.Text);
+                    IDKonto = Convert.ToInt32(IDKontoTextBox.Text);
                 }
 
                 try
                 {
-                    AdressenTableAdapter.UpdateAdressen(IDFirmenName, IDKonto, AdresstypTextBox.Text, StraßeTextBox.Text, PostfachTextBox.Text, TB_PLZ.Text, CB_Ort.Text, TB_Bundesland.Text, CB_Staat.Text, LBL_Countrycode.Text, UStIdNrTextBox.Text, WebseiteTextBox.Text, Conversions.ToInteger(LBL_IDAdresse.Text));
+                    AdressenTableAdapter.UpdateAdressen(IDFirmenName,
+                                                        IDKonto,
+                                                        AdresstypTextBox.Text,
+                                                        StraßeTextBox.Text,
+                                                        PostfachTextBox.Text,
+                                                        TB_PLZ.Text,
+                                                        CB_Ort.Text,
+                                                        TB_Bundesland.Text,
+                                                        CB_Staat.Text,
+                                                        LBL_Countrycode.Text,
+                                                        UStIdNrTextBox.Text,
+                                                        WebseiteTextBox.Text,
+                                                        Convert.ToInt32(LBL_IDAdresse.Text));
                 }
                 catch (Exception ex)
                 {
@@ -462,7 +485,7 @@ namespace Adress_DB
                     MessageBox.Show(ex.Message);
                 }
 
-                Module1.Logging(5, Conversions.ToInteger(LBL_IDAdresse.Text), IDFirmenName, CB_Ort.Text); // LogTabelle schreiben
+                Module1.Logging(5, Convert.ToInt32(LBL_IDAdresse.Text), IDFirmenName, CB_Ort.Text); // LogTabelle schreiben
                 Interaction.MsgBox("Adresse geändert");
                 TC_Adresse.SelectedIndex = 0;
                 // Exit Sub 'keine weiteren IF/Then-Prüfungen!
@@ -476,7 +499,18 @@ namespace Adress_DB
 
                 try
                 {
-                    KontakteTableAdapter.UpdateKontakte(IDFirmenName, NachnameTextBox.Text, VornameTextBox.Text, EmailAddresseTextBox.Text, PositionTextBox.Text, TelefonGeschaeftlichTextBox.Text, TelefonPrivatTextBox.Text, MobiltelefonTextBox.Text, FaxnummerTextBox.Text, Conversions.ToInteger(IDAdresseTextBox.Text), AnredeComboBox.Text, Conversions.ToInteger(LBL_IDKontakt.Text));
+                    KontakteTableAdapter.UpdateKontakte(IDFirmenName,
+                                                        NachnameTextBox.Text,
+                                                        VornameTextBox.Text,
+                                                        EmailAddresseTextBox.Text,
+                                                        PositionTextBox.Text,
+                                                        TelefonGeschaeftlichTextBox.Text,
+                                                        TelefonPrivatTextBox.Text,
+                                                        MobiltelefonTextBox.Text,
+                                                        FaxnummerTextBox.Text,
+                                                        Convert.ToInt32(IDAdresseTextBox.Text),
+                                                        AnredeComboBox.Text,
+                                                        Convert.ToInt32(LBL_IDKontakt.Text));
                 }
                 catch (Exception ex)
                 {
@@ -484,7 +518,7 @@ namespace Adress_DB
                     MessageBox.Show(ex.Message);
                 }
 
-                Module1.Logging(7, Conversions.ToInteger(LBL_IDKontakt.Text), IDFirmenName, NachnameTextBox.Text); // LogTabelle schreiben
+                Module1.Logging(7, System.Convert.ToInt32(LBL_IDKontakt.Text), IDFirmenName, NachnameTextBox.Text); // LogTabelle schreiben
                 Interaction.MsgBox("Kontakt geändert");
                 TC_Kontakt.SelectedIndex = 0;
                 // Exit Sub 'keine weiteren IF/Then-Prüfungen!
@@ -808,7 +842,7 @@ namespace Adress_DB
                     }
             }
 
-            Module1.AlleTableAdapterAktualisieren(Conversions.ToInteger(LBL_IDFirmenName.Text));
+            Module1.AlleTableAdapterAktualisieren(System.Convert.ToInt32(LBL_IDFirmenName.Text));
         }
 
         private void LBL_IDAdresseZuKontakt_TextChanged(object sender, EventArgs e)
@@ -823,8 +857,8 @@ namespace Adress_DB
             {
                 LBL_IDAdresseZuKontakt.ForeColor = Color.Black;
                 double IDAdresse = Conversion.Val(LBL_IDAdresseZuKontakt.Text);
-                StraßeLabel3.Text = Conversions.ToString(KontakteMitAdresseTableAdapter.ScalarStrasseInKontakteMitAdresse((int?)IDAdresse));
-                OrtLabel3.Text = Conversions.ToString(KontakteMitAdresseTableAdapter.ScalarOrtInKontakteMitAdresse((int?)IDAdresse));
+                StraßeLabel3.Text = System.Convert.ToString(KontakteMitAdresseTableAdapter.ScalarStrasseInKontakteMitAdresse((int?)IDAdresse));
+                OrtLabel3.Text = System.Convert.ToString(KontakteMitAdresseTableAdapter.ScalarOrtInKontakteMitAdresse((int?)IDAdresse));
             }
         }
 
@@ -1184,7 +1218,7 @@ namespace Adress_DB
 
         private void BTN_DeleteUser_Click(object sender, EventArgs e)
         {
-            int IDKOntakt = Conversions.ToInteger(LBL_IDKontakt.Text);
+            int IDKOntakt = System.Convert.ToInt32(LBL_IDKontakt.Text);
             string Nachname = NachnameTextBox.Text;
             if (KontaktNeu != true)
             {
@@ -1205,7 +1239,7 @@ namespace Adress_DB
 
                             KontakteTableAdapter.SucheIDFirmenNameInKontakte(_WSL_AdressenDataSet.Kontakte, Convert.ToInt32(LBL_IDFirmenName.Text));
                             Interaction.MsgBox("Kontakt gelöscht");
-                            Module1.Logging(10, IDKOntakt, Conversions.ToInteger(LBL_IDFirmenName.Text), Nachname);
+                            Module1.Logging(10, IDKOntakt, System.Convert.ToInt32(LBL_IDFirmenName.Text), Nachname);
                             TC_Kontakt.SelectedIndex = 0;
                             break;
                         }
@@ -1221,7 +1255,7 @@ namespace Adress_DB
 
         private void HilfeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string Helplink = Conversions.ToString(PropertiesTableAdapter.ScalarWert("Hilfelink"));
+            string Helplink = System.Convert.ToString(PropertiesTableAdapter.ScalarWert("Hilfelink"));
             Process.Start(Helplink);
         }
 
@@ -1255,7 +1289,7 @@ namespace Adress_DB
         private void BTN_DocErzeugen_Click(object sender, EventArgs e)
         {
             string BelegName;
-            IDBeleg = Conversions.ToInteger(PropertiesTableAdapter.ScalarWert("IDBeleg"));
+            IDBeleg = System.Convert.ToInt32(PropertiesTableAdapter.ScalarWert("IDBeleg"));
             int IDKonto;
 
             // Die TabSeite mit 'Besuchsbericht' wird angezeigt, dann..
@@ -1273,11 +1307,11 @@ namespace Adress_DB
                 // Falls die Adresse keine Konto-ID hat, wird die ID aus "Konto" gnommen!
                 if ((LBL_BBIDKonto.Text ?? "") != (string.Empty ?? ""))
                 {
-                    IDKonto = Conversions.ToInteger(LBL_BBIDKonto.Text);
+                    IDKonto = Convert.ToInt32(LBL_BBIDKonto.Text);
                 }
                 else
                 {
-                    IDKonto = Conversions.ToInteger(lblIDKonto.Text);
+                    IDKonto = Convert.ToInt32(lblIDKonto.Text);
                 }
 
                 BelegName = "Besuchsbericht.dotx";
@@ -1287,10 +1321,10 @@ namespace Adress_DB
                     try
                     {
                         BelegeTableAdapter.Insert(IDBeleg,
-                                                  Conversions.ToInteger(LBL_IDFirmenName.Text),
+                                                  Convert.ToInt32(LBL_IDFirmenName.Text),
                                                   LBL_FirmenName.Text,
                                                   DTP_BBDatum.Value,
-                                                  Conversions.ToInteger(LBL_IDAdresse.Text),
+                                                  Convert.ToInt32(LBL_IDAdresse.Text),
                                                   IDKonto,
                                                   CB_BBKuerzel.Text,
                                                   LBL_BBBesuchterKontakt.Text,
@@ -1317,10 +1351,10 @@ namespace Adress_DB
                         MessageBox.Show(ex.Message);
                     }
 
-                    Module1.Logging(8, IDBeleg, Conversions.ToInteger(LBL_IDFirmenName.Text), BelegName + " / " + TB_BBThema.Text); // LogTabelle schreiben mit BB!
+                    Module1.Logging(8, IDBeleg, Convert.ToInt32(LBL_IDFirmenName.Text), BelegName + " / " + TB_BBThema.Text); // LogTabelle schreiben mit BB!
 
                     // Aktuellen Satz in Tabelle markieren
-                    Module1.IDBBInBesucheMitAdresse(Conversions.ToInteger(LBL_IDFirmenName.Text), IDBeleg);
+                    Module1.IDBBInBesucheMitAdresse(Convert.ToInt32(LBL_IDFirmenName.Text), IDBeleg);
                 }
             }
 
@@ -1357,11 +1391,11 @@ namespace Adress_DB
                 // Falls die Adresse keine Konto-ID hat, wird die ID aus "Konto" gnommen!
                 if ((LBL_DIVIDKonto.Text ?? "") != (string.Empty ?? ""))
                 {
-                    IDKonto = Conversions.ToInteger(LBL_DIVIDKonto.Text);
+                    IDKonto = Convert.ToInt32(LBL_DIVIDKonto.Text);
                 }
                 else
                 {
-                    IDKonto = Conversions.ToInteger(lblIDKonto.Text);
+                    IDKonto = Convert.ToInt32(lblIDKonto.Text);
                 }
 
                 if (Module1.WordStarten(BelegName) == true)
@@ -1370,10 +1404,10 @@ namespace Adress_DB
                     try
                     {
                         BelegeTableAdapter.Insert(IDBeleg,
-                                                  Conversions.ToInteger(LBL_IDFirmenName.Text),
+                                                  Convert.ToInt32(LBL_IDFirmenName.Text),
                                                   LBL_FirmenName.Text,
                                                   DTP_Diverse.Value,
-                                                  Conversions.ToInteger(LBL_IDAdresse.Text),
+                                                  Convert.ToInt32(LBL_IDAdresse.Text),
                                                   IDKonto,
                                                   CB_DIVSachbearbeiter.Text,
                                                   LBL_Anrede.Text + " " + LBL_Vorname.Text + " " + LBL_Nachname.Text,
@@ -1400,12 +1434,12 @@ namespace Adress_DB
                         MessageBox.Show(ex.Message);
                     }
 
-                    Module1.Logging(9, IDBeleg, Conversions.ToInteger(LBL_IDFirmenName.Text), BelegName + " / " + TB_DIVThema.Text); // LogTabelle schreiben mit BB!
+                    Module1.Logging(9, IDBeleg, Convert.ToInt32(LBL_IDFirmenName.Text), BelegName + " / " + TB_DIVThema.Text); // LogTabelle schreiben mit BB!
                     TB_DIVThema.BackColor = Color.White;
                     TB_DIVFaxnummer.BackColor = Color.White;
 
                     // Aktuellen Satz in Tabelle markieren
-                    Module1.IDBBInBesucheMitAdresse(Conversions.ToInteger(LBL_IDFirmenName.Text), IDBeleg);
+                    Module1.IDBBInBesucheMitAdresse(Convert.ToInt32(LBL_IDFirmenName.Text), IDBeleg);
                 }
             }
         }
