@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
+//using Microsoft.VisualBasic;
+//using Microsoft.VisualBasic.CompilerServices;
 
 namespace Adress_DB
 {
@@ -19,7 +19,7 @@ namespace Adress_DB
         private void KontoForm_Load(object sender, EventArgs e)
         {
             this.PropertiesTableAdapter.Fill(this._WSL_AdressenDataSet.properties);
-            IDFirmenName = Conversions.ToInteger(Adress_DB.My.MyProject.Forms.Hauptform.LBL_IDFirmenName.Text);
+            IDFirmenName = Convert.ToInt32(Adress_DB.My.MyProject.Forms.Hauptform.LBL_IDFirmenName.Text);
             this.lblIDFirmenName.Text = IDFirmenName.ToString();
             this.lblFirmenName.Text = Adress_DB.My.MyProject.Forms.Hauptform.LBL_FirmenName.Text;
             this.lblKontoNummer.Text = string.Empty;
@@ -40,14 +40,14 @@ namespace Adress_DB
             if (this.rdbKundenNr.Checked == true)
             {
                 KontoName = "Kunde";
-                double KundenNummer = Conversion.Val(this.PropertiesTableAdapter.ScalarWert("Kundennummer"));
+                double KundenNummer = Convert.ToDouble(this.PropertiesTableAdapter.ScalarWert("Kundennummer"));
                 this.lblKontoNummer.Text = KundenNummer.ToString();
                 this.PropertiesTableAdapter.UpdateWert((++KundenNummer).ToString(), "KundenNummer");
             }
             else if (this.rdbLieferantenNr.Checked == true)
             {
                 KontoName = "Lieferant";
-                double LieferantenNummer = Conversion.Val(this.PropertiesTableAdapter.ScalarWert("Lieferantennummer"));
+                double LieferantenNummer = Convert.ToDouble(this.PropertiesTableAdapter.ScalarWert("Lieferantennummer"));
                 this.lblKontoNummer.Text = LieferantenNummer.ToString();
                 this.PropertiesTableAdapter.UpdateWert((++LieferantenNummer).ToString(), "LieferantenNummer");
             }
@@ -55,8 +55,8 @@ namespace Adress_DB
             this.Refresh();
 
             // die neuen Daten in die Tabelle 'Konto' schreiben: 
-            int IDKonto = Conversions.ToInteger(this.lblKontoNummer.Text);
-            int IDFirmenName = Conversions.ToInteger(this.lblIDFirmenName.Text);
+            int IDKonto = Convert.ToInt32(this.lblKontoNummer.Text);
+            int IDFirmenName = Convert.ToInt32(this.lblIDFirmenName.Text);
             this.KontoTableAdapter.Insert(IDKonto, IDFirmenName, KontoName, DateTime.Now);
             //this.KontoTableAdapter.Insert(IDKonto, IDFirmenName, KontoName, DateAndTime.Now);
             Adress_DB.Module1.Logging(2, IDKonto, IDFirmenName, KontoName); // LogTabelle schreiben

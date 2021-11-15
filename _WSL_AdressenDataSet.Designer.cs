@@ -19232,8 +19232,8 @@ SELECT IDFirmenName, FirmenName, Login, changed, inaktiv FROM FirmenName WHERE (
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param1", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "FirmenName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "UPDATE       FirmenName\r\nSET               FirmenName = @FirmenName, Login = @Log" +
-                "in, changed = @changed\r\nWHERE        (IDFirmenName = @Param1)";
+            this._commandCollection[3].CommandText = "UPDATE  FirmenName\r\nSET         FirmenName = @FirmenName, Login = @Login, changed" +
+                " = @changed\r\nWHERE   (IDFirmenName = @Param1)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirmenName", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "FirmenName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Login", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "Login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

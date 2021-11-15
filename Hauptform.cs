@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Linq;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
+//using Microsoft.VisualBasic;
+//using Microsoft.VisualBasic.CompilerServices;
 
 namespace Adress_DB
 {
@@ -61,18 +62,6 @@ namespace Adress_DB
         private void Form1_Load(object sender, EventArgs e)
         {
            
-            // 'Tabellen laden:
-            // Me.StaatenTableAdapter.Fill(Me._WSL_AdressenDataSet.Staaten)
-
-            // Me.BelegeMitAdresseTableAdapter.Fill(Me._WSL_AdressenDataSet.BelegeMitAdresse)
-            // Me.BelegeTableAdapter.Fill(Me._WSL_AdressenDataSet.Belege)
-            // Me.LogTabelleTableAdapter.Fill(Me._WSL_AdressenDataSet.LogTabelle)
-            // Me.DocuwareCSVTableAdapter.Fill(Me._WSL_AdressenDataSet.DocuwareCSV)
-            // Me.KontakteMitAdresseTableAdapter.Fill(Me._WSL_AdressenDataSet.KontakteMitAdresse)
-
-            // 'Liste wird mit ALLEN Usern gefüllt, auch den inaktiven (für die Usererkennung)!
-            // Me.SachbearbeiterTableAdapter.Fill(Me._WSL_AdressenDataSet.Sachbearbeiter)
-
             Width = 1190;
             Height = 680;
             lblTrefferAnzahl.Text = "Trefferanzahl"; // Starttext
@@ -95,14 +84,13 @@ namespace Adress_DB
 
             // zuerst (wichtig) Combobox Anrede füllen
             {
-                var withBlock = AnredeComboBox;
-                withBlock.Items.Add("Hr.");
-                withBlock.Items.Add("Hr. Dr.");
-                withBlock.Items.Add("Fr.");
-                withBlock.Items.Add("Fr. Dr.");
-                withBlock.Items.Add("Mr.");
-                withBlock.Items.Add("Mrs.");
-                withBlock.SelectedIndex = 0;
+                AnredeComboBox.Items.Add("Hr.");
+                AnredeComboBox.Items.Add("Hr. Dr.");
+                AnredeComboBox.Items.Add("Fr.");
+                AnredeComboBox.Items.Add("Fr. Dr.");
+                AnredeComboBox.Items.Add("Mr.");
+                AnredeComboBox.Items.Add("Mrs.");
+                AnredeComboBox.SelectedIndex = 0;
             }
 
             DocuwareCSVDataGridView.Sort(DocuwareCSVDataGridView.Columns[0], System.ComponentModel.ListSortDirection.Ascending);
@@ -110,13 +98,13 @@ namespace Adress_DB
 
         private void Hauptform_Shown(object sender, EventArgs e)
         {
-            // Erest prüfen, ob das System im Wartungsmodus ist:
-            //bool Wartung = Convert.ToBoolean(My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("Wartung")) == true;
-            //if (Wartung == true)
-            //{
-            //    MessageBox.Show("Das System, befindet sich in der Wartung!" + Environment.NewLine + "Das Progamm wird sich jetzt beenden." + Environment.NewLine + "Bitte später noch einmal versuchen.");
-            //    Application.Exit();
-            //}
+            // Erst prüfen, ob das System im Wartungsmodus ist:
+            int Wartung = Convert.ToInt32(My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("Wartung"));
+            if (Wartung == 1)
+            {
+                MessageBox.Show("Das System, befindet sich in der Wartung!" + Environment.NewLine + "Das Progamm wird sich jetzt beenden." + Environment.NewLine + "Bitte später noch einmal versuchen.");
+                Application.Exit();
+            }
 
             // Dann Tabellen laden
             // Tabellen laden:
@@ -129,8 +117,6 @@ namespace Adress_DB
 
             // Liste wird mit ALLEN Usern gefüllt, auch den inaktiven (für die Usererkennung)!
             SachbearbeiterTableAdapter.Fill(_WSL_AdressenDataSet.Sachbearbeiter);
-
-
 
 
             // Benutzer erkennen in der Tabelle mit ALLEN Usern - auch inaktive:
@@ -165,7 +151,7 @@ namespace Adress_DB
             // MsgBox("Starte Suche...")
 
             Suchstring = TB_FirmenName.Text;
-            if ((TB_FirmenName.Text ?? "") != (string.Empty ?? ""))
+            if (TB_FirmenName.Text != string.Empty)
             {
                 try
                 {
@@ -173,7 +159,7 @@ namespace Adress_DB
                 }
                 catch (Exception ex)
                 {
-                    Interaction.MsgBox("FirmenName");
+                    MessageBox.Show("Fehler bei der Suche nach FirmenName");
                     MessageBox.Show(ex.Message);
                 }
 
@@ -181,7 +167,7 @@ namespace Adress_DB
             }
             else
             {
-                Interaction.MsgBox("Bitte einen Suchbegriff eingeben", Constants.vbExclamation);
+                MessageBox.Show("Bitte einen Suchbegriff eingeben", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             // MsgBox("beende Suche.")
@@ -196,7 +182,7 @@ namespace Adress_DB
         {
             // gefundenen/ausgewählten Firmennamen in die Suchtextbox zurück schreiben:
 
-            if ((LBL_FirmenName.Text ?? "") != (string.Empty ?? ""))
+            if (LBL_FirmenName.Text != string.Empty)
             {
                 TB_FirmenName.Text = LBL_FirmenName.Text;
                 AdresseBauen();
@@ -209,38 +195,42 @@ namespace Adress_DB
         {
             // Das Label lblIDFirmenName ist an die Datenquelle 'FirmenNameTableAdapter' gebunden. Ändert sich dieser
             // oder wird ein anderer Datensatz davon selektiert, ändert sich auch der Text im Label.
-            // IDFirmenName MUSS Double sein - weil es zwischendurch den Wert 0 oder empty annimmt. Dies kann nicht zu integer konvertiert werden!
-            double IDFirmenName;
-            IDFirmenName = Conversion.Val(LBL_IDFirmenName.Text);
-            //MessageBox.Show("ID=" + IDFirmenName + " LBL_IDFirmenName_TextChanged");
 
-            if (IDFirmenName != 0d)
+            int IDFirmenName;
+            if(LBL_IDFirmenName.Text != String.Empty)
             {
-                // Es wurden Treffer gefunden ----------------------------------------------------
-                //MessageBox.Show("Treffer gefunden");
-                PNL_Konto.Visible = true; // Groupboxen Konto, Adresse, Kontakt einblenden
-                TC_Adresse.Visible = true;
-                TC_Kontakt.Visible = true;
-                TC_Beleg.Visible = true;
-                CB_FirmenName.Enabled = true;
-                lblHinweisKeinTreffer.Visible = false;
-                // Alle anderen Tableadapter werden erst neu befüllt, wenn lblIDFirmenName auch einen Wert <> 0 zurück gibt!
-                Module1.AlleTableAdapterAktualisieren((int)Math.Round(IDFirmenName));
+                IDFirmenName = Convert.ToInt32(LBL_IDFirmenName.Text);    
+
+                if (IDFirmenName != 0)
+                {
+                    // Es wurden Treffer gefunden ----------------------------------------------------
+                    //MessageBox.Show("Treffer gefunden");
+                    PNL_Konto.Visible = true; // Groupboxen Konto, Adresse, Kontakt einblenden
+                    TC_Adresse.Visible = true;
+                    TC_Kontakt.Visible = true;
+                    TC_Beleg.Visible = true;
+                    CB_FirmenName.Enabled = true;
+                    lblHinweisKeinTreffer.Visible = false;
+
+                    // Alle anderen Tableadapter werden erst neu befüllt, wenn lblIDFirmenName auch einen Wert <> 0 zurück gibt!
+                    Module1.AlleTableAdapterAktualisieren(IDFirmenName);
+                }
             }
             else
             {
-                // keine Treffer -----------------------------------------------------------------
-                // MsgBox("keine Treffer gefunden")
-                PNL_Konto.Visible = false; // Groupboxen Konto, Adresse, Kontakt ausblenden
-                TC_Adresse.Visible = false;
-                TC_Kontakt.Visible = false;
-                TC_Beleg.Visible = false;
-                CB_FirmenName.Enabled = false;
-                lblHinweisKeinTreffer.Visible = true;
-                lblHinweisKeinTreffer.Text = "Nichts gefunden!" + Constants.vbNewLine + "Klicke 'Speichern', um diesen Geschäftspartner neu anzulegen.";
-                // btnSpeichern.BackColor = Color.Green
-                TB_FirmenName.Text = Suchstring;
+                    // keine Treffer -----------------------------------------------------------------
+                    MessageBox.Show("keine Treffer gefunden");
+                    PNL_Konto.Visible = false; // Groupboxen Konto, Adresse, Kontakt ausblenden
+                    TC_Adresse.Visible = false;
+                    TC_Kontakt.Visible = false;
+                    TC_Beleg.Visible = false;
+                    CB_FirmenName.Enabled = false;
+                    lblHinweisKeinTreffer.Visible = true;
+                    lblHinweisKeinTreffer.Text = "Nichts gefunden!" + System.Environment.NewLine + "Klicke 'Speichern', um diesen Geschäftspartner neu anzulegen.";
+                    // btnSpeichern.BackColor = Color.Green
+                    TB_FirmenName.Text = Suchstring;
             }
+
         }
 
 
@@ -267,7 +257,7 @@ namespace Adress_DB
 
 
                 DialogResult Result;
-                Result = MessageBox.Show("Folgenden Geschäftspartner anlegen:" + Constants.vbNewLine + Constants.vbNewLine + "auf RECHTSCHREIBUNG achten...!" + Constants.vbNewLine + Constants.vbNewLine + TB_FirmenName.Text, "Neuen Geschäftspartner anlegen", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                Result = MessageBox.Show("Folgenden Geschäftspartner anlegen:" + System.Environment.NewLine + System.Environment.NewLine + "auf RECHTSCHREIBUNG achten...!" + System.Environment.NewLine + System.Environment.NewLine + TB_FirmenName.Text, "Neuen Geschäftspartner anlegen", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (Result == DialogResult.Yes)
                 {
                     Module1.NeuenFirmenNamenAnlegen();
@@ -288,57 +278,53 @@ namespace Adress_DB
             var IDKontakt = default(int);
 
             // FirmenName / Name Geschäftspartner ändern/aktualisieren
-            if ((TB_FirmenName.Text ?? "") != (CB_FirmenName.Text ?? "") & (TB_FirmenName.Text ?? "") != (string.Empty ?? "") & Conversion.Val(LBL_IDFirmenName.Text) != 0d)
+            //If TB_FirmenName.Text <> CB_FirmenName.Text And TB_FirmenName.Text <> String.Empty And Val(LBL_IDFirmenName.Text) <> 0 Then
+            if ((TB_FirmenName.Text != CB_FirmenName.Text) && (TB_FirmenName.Text != string.Empty) && (Convert.ToInt32(LBL_IDFirmenName.Text) != 0))
             {
                 // MsgBox("Geschäftspartner umbenennen")
-
 
                 string FirmenNameNeu = TB_FirmenName.Text;
                 string FirmenNameAlt = CB_FirmenName.Text;
 
                 // Abfrage ob Umbenennen oder neu anlegen?
-                int intAnswer;
-                intAnswer = (int)MessageBox.Show("auf RECHTSCHREIBUNG achten...!" + Constants.vbNewLine + Constants.vbNewLine + "'Ja' für Umbenennen: " + FirmenNameAlt + " --> " + FirmenNameNeu + Constants.vbNewLine + Constants.vbNewLine + "'Nein' für NEU anlegen: " + FirmenNameNeu, "Geschäftspartner umbenennen oder neu?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-                switch (intAnswer)
+                DialogResult result = MessageBox.Show("auf RECHTSCHREIBUNG achten...!" + System.Environment.NewLine + System.Environment.NewLine + "'Ja' für Umbenennen: " + FirmenNameAlt + " --> " + FirmenNameNeu + System.Environment.NewLine + System.Environment.NewLine + "'Nein' für NEU anlegen: " + FirmenNameNeu, "Geschäftspartner umbenennen oder neu?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                
+                if (result == DialogResult.Yes)
                 {
-                    case (int)Constants.vbYes:
-                        {
-                            try
-                            {
-                                // Datensatz FirmenName schreiben
-                                FirmenNameTableAdapter.UpdateFirmenName(FirmenNameNeu, Environment.UserName, DateAndTime.Now.ToString(), IDFirmenName);
-                            }
-                            catch (Exception ex)
-                            {
-                                Interaction.MsgBox("Umbenennen fehlgeschlagen", Constants.vbExclamation);
-                                MessageBox.Show(ex.Message);
-                            }
+                    try
+                    {
+                        // Datensatz FirmenName schreiben **DateTime solle eigentlich ein DAtum Sein, kein String!
+                        this.FirmenNameTableAdapter.UpdateFirmenName(FirmenNameNeu, Environment.UserName, Convert.ToString(DateTime.Now), IDFirmenName);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Umbenennen fehlgeschlagen", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(ex.Message);
+                    }
 
-                            Module1.Logging(3, IDFirmenName, IDFirmenName, FirmenNameAlt + " --> " + FirmenNameNeu); // LogTabelle schreiben
-                            Interaction.MsgBox("Firmenname umbenannt");
+                    Module1.Logging(3, IDFirmenName, IDFirmenName, FirmenNameAlt + " --> " + FirmenNameNeu); // LogTabelle schreiben
+                    MessageBox.Show("Firmenname umbenannt", "Hinweis", MessageBoxButtons.OK);
 
-                            // DocuWare-Datei schreiben:
-                            BTN_Suche.PerformClick();
-                            Module1.SaveToCSV();
-                            return;
-                        }
-
-                    case (int)Constants.vbNo:
-                        {
-                            // MsgBox("neu anlegen")
-                            Module1.NeuenFirmenNamenAnlegen();
-                            return;
-                        }
-
-                    case (int)Constants.vbCancel:
-                        {
-                            // MsgBox("Abbrechen")
-                            return;
-                        }
+                    // DocuWare-Datei schreiben:
+                    BTN_Suche.PerformClick();
+                    Module1.SaveToCSV();
+                    return;
+                }
+                else if(result == DialogResult.No)
+                {
+                    // MsgBox("neu anlegen")
+                    Module1.NeuenFirmenNamenAnlegen();
+                    return;
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    // MsgBox("Abbrechen")
+                    return;
                 }
 
                 return; // keine weiteren IF/Then-Prüfungen!
             } // FirmenName/Geschäftspartner umbenennen
+   
 
             // 3) #####################################################################################################################
 
@@ -357,7 +343,7 @@ namespace Adress_DB
                 }
                 catch (Exception ex)
                 {
-                    Interaction.MsgBox("Fehler beim hinzufügen einer Adresse");
+                    MessageBox.Show("Fehler beim hinzufügen einer Adresse", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MessageBox.Show(ex.Message);
                 }
 
@@ -368,7 +354,7 @@ namespace Adress_DB
                                     }
                 catch (Exception ex)
                 {
-                    Interaction.MsgBox("Fehler beim änmdern der neuen IDAdresse in der Konfig-Tabelle");
+                    MessageBox.Show("Fehler beim änmdern der neuen IDAdresse in der Konfig-Tabelle", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MessageBox.Show(ex.Message);
                 }
 
@@ -381,7 +367,7 @@ namespace Adress_DB
             }
             else if (AdresseNeu == true & (CB_Ort.Text ?? "") == (string.Empty ?? ""))
             {
-                Interaction.MsgBox("Bitte einen Ort für Adresse erfassen!", Constants.vbExclamation, "Neue Adresse Anlegen");
+                MessageBox.Show("Bitte einen Ort für Adresse erfassen!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CB_Ort.Select();
                 CB_Ort.BackColor = Color.MistyRose;
                 return; // keine weiteren IF/Then-Prüfungen!
@@ -414,7 +400,7 @@ namespace Adress_DB
                 }
                 catch (Exception ex)
                 {
-                    Interaction.MsgBox("Fehler beim hinzufügen eines Kontaktes");
+                    MessageBox.Show("Fehler beim hinzufügen eines Kontaktes", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MessageBox.Show(ex.Message);
                 }
 
@@ -426,7 +412,7 @@ namespace Adress_DB
                 }
                 catch (Exception ex)
                 {
-                    Interaction.MsgBox("Fehler beim Aktualisieren der neuen IDKontakt-Nummer in der Konfig-Tabelle");
+                    MessageBox.Show("Fehler beim Aktualisieren der neuen IDKontakt-Nummer in der Konfig-Tabelle", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MessageBox.Show(ex.Message);
                 }
 
@@ -439,7 +425,7 @@ namespace Adress_DB
             }
             else if (KontaktNeu == true & (NachnameTextBox.Text ?? "") == (string.Empty ?? ""))
             {
-                Interaction.MsgBox("Bitte einen Nachnamen bei Kontakt erfassen!", Constants.vbExclamation, "Neuen Kontakt anlegen");
+                MessageBox.Show("Bitte einen Nachnamen bei Kontakt erfassen!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 NachnameTextBox.Select();
                 NachnameTextBox.BackColor = Color.MistyRose;
                 return; // keine weiteren IF/Then-Prüfungen!
@@ -481,12 +467,12 @@ namespace Adress_DB
                 }
                 catch (Exception ex)
                 {
-                    Interaction.MsgBox("Fehler bei 'Adresse ändern' in der Adress-Tabelle", Constants.vbExclamation);
+                    MessageBox.Show("Fehler bei 'Adresse ändern' in der Adress-Tabelle!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     MessageBox.Show(ex.Message);
                 }
 
                 Module1.Logging(5, Convert.ToInt32(LBL_IDAdresse.Text), IDFirmenName, CB_Ort.Text); // LogTabelle schreiben
-                Interaction.MsgBox("Adresse geändert");
+                MessageBox.Show("Adresse geändert", "Hinweis", MessageBoxButtons.OK);
                 TC_Adresse.SelectedIndex = 0;
                 // Exit Sub 'keine weiteren IF/Then-Prüfungen!
             }
@@ -514,12 +500,12 @@ namespace Adress_DB
                 }
                 catch (Exception ex)
                 {
-                    Interaction.MsgBox("Fehler bei 'Kontakt ändern' in der Kontakte-Tabelle", Constants.vbExclamation);
+                    MessageBox.Show("Fehler bei 'Kontakt ändern' in der Kontakte-Tabelle!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     MessageBox.Show(ex.Message);
                 }
 
                 Module1.Logging(7, System.Convert.ToInt32(LBL_IDKontakt.Text), IDFirmenName, NachnameTextBox.Text); // LogTabelle schreiben
-                Interaction.MsgBox("Kontakt geändert");
+                MessageBox.Show("Kontakt geändert!", "Hinweis", MessageBoxButtons.OK);
                 TC_Kontakt.SelectedIndex = 0;
                 // Exit Sub 'keine weiteren IF/Then-Prüfungen!
             }
@@ -733,7 +719,7 @@ namespace Adress_DB
             }
             else
             {
-                Interaction.MsgBox("Fehler bei der Bildung der Suchzeichenfolge für Google (zu wenig Infos)", Constants.vbExclamation);
+                MessageBox.Show("Fehler bei der Bildung der Suchzeichenfolge für Google (zu wenig Infos)", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             
       
@@ -766,7 +752,7 @@ namespace Adress_DB
             }
             catch (Exception ex)
             {
-                Interaction.MsgBox("Öffnen des Links nicht möglich");
+                MessageBox.Show("Öffnen des Links nicht möglich", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 MessageBox.Show(ex.Message);
             }
         }
@@ -787,14 +773,14 @@ namespace Adress_DB
             MobiltelefonTextBox.Text = string.Empty;
             FaxnummerTextBox.Text = string.Empty;
             WebseiteLinkLabel.Text = string.Empty;
-            // Falls noch keine Adresse vorhanden ist:
-            var IDAdresse = default(double);
-            if ((LBL_IDAdresse.Text ?? "") != (string.Empty ?? ""))
-            {
-                IDAdresse = Conversion.Val(LBL_IDAdresse.Text);
-            }
+            IDAdresseTextBox.Text = string.Empty;
 
-            IDAdresseTextBox.Text = IDAdresse.ToString();
+            // Falls eine Adresse vorhanden ist:
+            if (LBL_IDAdresse.Text != string.Empty)
+            {
+                IDAdresseTextBox.Text = LBL_IDAdresse.Text;
+            }
+        
             AnredeComboBox.Enabled = true;
             NachnameTextBox.Enabled = true;
             VornameTextBox.Enabled = true;
@@ -847,18 +833,24 @@ namespace Adress_DB
 
         private void LBL_IDAdresseZuKontakt_TextChanged(object sender, EventArgs e)
         {
+            string AdressNummer;
+            AdressNummer = LBL_IDAdresseZuKontakt.Text;
+
             // ID-Zuordnungslabel rot färben, wenn nicht zugeordnet
-            if ((LBL_IDAdresseZuKontakt.Text ?? "") == (string.Empty ?? "") & (LBL_IDKontakt.Text ?? "") != (string.Empty ?? "") | LBL_IDAdresseZuKontakt.Text == "0" & (LBL_IDKontakt.Text ?? "") != (string.Empty ?? ""))
+            if (((LBL_IDAdresseZuKontakt.Text == string.Empty) && (LBL_IDKontakt.Text != string.Empty)) || ((LBL_IDAdresseZuKontakt.Text == "0") && (LBL_IDKontakt.Text != string.Empty)))
             {
                 LBL_IDAdresseZuKontakt.Text = "Kontakt hat keine Adresse!";
                 LBL_IDAdresseZuKontakt.ForeColor = Color.Red;
             }
             else
             {
-                LBL_IDAdresseZuKontakt.ForeColor = Color.Black;
-                double IDAdresse = Conversion.Val(LBL_IDAdresseZuKontakt.Text);
-                StraßeLabel3.Text = System.Convert.ToString(KontakteMitAdresseTableAdapter.ScalarStrasseInKontakteMitAdresse((int?)IDAdresse));
-                OrtLabel3.Text = System.Convert.ToString(KontakteMitAdresseTableAdapter.ScalarOrtInKontakteMitAdresse((int?)IDAdresse));
+                if (AdressNummer.All(char.IsDigit) && (AdressNummer != String.Empty))
+                {
+                    LBL_IDAdresseZuKontakt.ForeColor = Color.Black;
+                    int IDAdresse = Convert.ToInt32(LBL_IDAdresseZuKontakt.Text);
+                    StraßeLabel3.Text = System.Convert.ToString(KontakteMitAdresseTableAdapter.ScalarStrasseInKontakteMitAdresse(IDAdresse));
+                    OrtLabel3.Text = System.Convert.ToString(KontakteMitAdresseTableAdapter.ScalarOrtInKontakteMitAdresse(IDAdresse));
+                }
             }
         }
 
@@ -880,7 +872,7 @@ namespace Adress_DB
         {
             // Ändert sich der Label-Text, wird geprüft, ob er leer ist, dann:
             int foundIndex;
-            if ((LBL_IDAdresse.Text ?? "") == (string.Empty ?? ""))
+            if (LBL_IDAdresse.Text == string.Empty)
             {
                 AdresstypTextBox.Enabled = false;
                 StraßeTextBox.Enabled = false;
@@ -1056,7 +1048,7 @@ namespace Adress_DB
             My.MyProject.Forms.Form3.LBL_IDKontakt.Text = LBL_IDKontakt.Text;
 
             // Wenn KEIN Kontakt, dann:
-            if ((LBL_IDKontakt.Text ?? "") == (string.Empty ?? ""))
+            if (LBL_IDKontakt.Text == string.Empty)
             {
                 AnredeComboBox.Enabled = false;
                 NachnameTextBox.Enabled = false;
@@ -1101,7 +1093,7 @@ namespace Adress_DB
 
         private void BTN_ZuOutlook_Click(object sender, EventArgs e)
         {
-            double IDKontakt = Conversion.Val(LBL_IDKontakt.Text);
+            double IDKontakt = Convert.ToDouble(LBL_IDKontakt.Text);
             try
             {
                 My.MyProject.Forms.Form3.KontakteMitAdresseTableAdapter.SucheAllesVonKontakt(My.MyProject.Forms.Form3._WSL_AdressenDataSet.KontakteMitAdresse, (int)Math.Round(IDKontakt));
@@ -1131,8 +1123,9 @@ namespace Adress_DB
             string Datei = CB_Vorlagen.Text;
             string Endung8;
             string Endung2;
-            Endung8 = Strings.Right(Datei, 8);
-            Endung2 = Strings.Mid(Endung8, 1, 3);
+            Endung8 = Datei.Substring(Datei.Length -8, 8);
+            //MessageBox.Show(Endung8);
+            Endung2 = Endung8.Substring(0, 3);
             if (Endung2 == "_UK")
             {
                 LBL_Sprache.Text = "englisch";
@@ -1161,11 +1154,11 @@ namespace Adress_DB
         {
             if (RB_OhneAnrede.Checked == true)
             {
-                LBL_DIVAdresse.Text = LBL_FirmenName.Text + Constants.vbNewLine + LBL_Strasse.Text + Constants.vbNewLine + LBL_PLZ.Text + " " + LBL_Ort.Text + Constants.vbNewLine + LBL_Land.Text;
+                LBL_DIVAdresse.Text = LBL_FirmenName.Text + System.Environment.NewLine + LBL_Strasse.Text + System.Environment.NewLine + LBL_PLZ.Text + " " + LBL_Ort.Text + System.Environment.NewLine + LBL_Land.Text;
             }
             else if (RB_MitAnrede.Checked == true)
             {
-                LBL_DIVAdresse.Text = LBL_FirmenName.Text + Constants.vbNewLine + LBL_Anrede.Text + " " + LBL_Vorname.Text + " " + LBL_Nachname.Text + Constants.vbNewLine + LBL_Strasse.Text + Constants.vbNewLine + LBL_PLZ.Text + " " + LBL_Ort.Text + Constants.vbNewLine + LBL_Land.Text;
+                LBL_DIVAdresse.Text = LBL_FirmenName.Text + System.Environment.NewLine + LBL_Anrede.Text + " " + LBL_Vorname.Text + " " + LBL_Nachname.Text + System.Environment.NewLine + LBL_Strasse.Text + System.Environment.NewLine + LBL_PLZ.Text + " " + LBL_Ort.Text + System.Environment.NewLine + LBL_Land.Text;
             }
         }
 
@@ -1222,34 +1215,36 @@ namespace Adress_DB
             string Nachname = NachnameTextBox.Text;
             if (KontaktNeu != true)
             {
-                int intAnswer;
-                intAnswer = (int)MessageBox.Show("Ein Kontakt sollte nur dann gelöscht werden," + Constants.vbNewLine + "wenn er das Unternehmen verlassen hat!" + Constants.vbNewLine + Constants.vbNewLine + "Kontakt löschen?", "Kontakt löschen", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                switch (intAnswer)
+
+                DialogResult result = MessageBox.Show("Ein Kontakt sollte nur dann gelöscht werden," + Environment.NewLine + "wenn er das Unternehmen verlassen hat!" + Environment.NewLine + System.Environment.NewLine + "Kontakt löschen?", "Kontakt löschen", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    case (int)Constants.vbYes:
-                        {
-                            try
-                            {
-                                KontakteTableAdapter.DeleteKontakt(IDKOntakt); // LogTabelle schreiben
-                            }
-                            catch (Exception)
-                            {
-                                Interaction.MsgBox("Fehler beim Löschen des Kontakts", Constants.vbExclamation);
-                            }
+                    try
+                    {
+                        KontakteTableAdapter.DeleteKontakt(IDKOntakt); // LogTabelle schreiben
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Fehler beim Löschen des Kontakts", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show(ex.Message);
+                    }
 
-                            KontakteTableAdapter.SucheIDFirmenNameInKontakte(_WSL_AdressenDataSet.Kontakte, Convert.ToInt32(LBL_IDFirmenName.Text));
-                            Interaction.MsgBox("Kontakt gelöscht");
-                            Module1.Logging(10, IDKOntakt, System.Convert.ToInt32(LBL_IDFirmenName.Text), Nachname);
-                            TC_Kontakt.SelectedIndex = 0;
-                            break;
-                        }
+                    KontakteTableAdapter.SucheIDFirmenNameInKontakte(_WSL_AdressenDataSet.Kontakte, Convert.ToInt32(LBL_IDFirmenName.Text));
 
-                    case (int)Constants.vbNo:
-                        {
-                            // exit the procedure
-                            return;
-                        }
+                    MessageBox.Show("Kontakt gelöscht", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    Module1.Logging(10, IDKOntakt, System.Convert.ToInt32(LBL_IDFirmenName.Text), Nachname);
+
+                    TC_Kontakt.SelectedIndex = 0;
+
+                    return;
                 }
+                else if (result == DialogResult.No)
+                {
+                    return;
+                }
+
+               
             }
         }
 
@@ -1269,13 +1264,13 @@ namespace Adress_DB
                 }
                 catch (Exception ex)
                 {
-                    Interaction.MsgBox("Nachname - Fehler bei der Suche");
+                    MessageBox.Show("Nachname - Fehler bei der Suche", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     MessageBox.Show(ex.Message);
                 }
             }
             else
             {
-                Interaction.MsgBox("Bitte einen Suchbegriff eingeben", Constants.vbExclamation);
+                MessageBox.Show("Bitte einen Suchbegriff eingeben", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             My.MyProject.Forms.Personensuche.Show();
@@ -1297,7 +1292,7 @@ namespace Adress_DB
             {
                 if ((TB_BBThema.Text ?? "") == (string.Empty ?? ""))
                 {
-                    Interaction.MsgBox("Bitte das Thema des Besuchs erfassen!", Constants.vbExclamation, "Neuen BB anlegen");
+                    MessageBox.Show("Bitte das Thema des Besuchs erfassen", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     TB_BBThema.Select();
                     TB_BBThema.BackColor = Color.MistyRose;
                     return;
@@ -1336,7 +1331,7 @@ namespace Adress_DB
                     }
                     catch (Exception ex)
                     {
-                        Interaction.MsgBox("Fehler beim hinzufügen eines neuen Besuchsberichtes");
+                        MessageBox.Show("Fehler beim hinzufügen eines neuen Besuchsberichtes", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         MessageBox.Show(ex.Message);
                     }
 
@@ -1347,7 +1342,7 @@ namespace Adress_DB
                     }
                     catch (Exception ex)
                     {
-                        Interaction.MsgBox("Fehler beim Update der neuen IDBeleg-Nummer (BB)");
+                        MessageBox.Show("Fehler beim Update der neuen IDBeleg-Nummer (BB)", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         MessageBox.Show(ex.Message);
                     }
 
@@ -1373,16 +1368,16 @@ namespace Adress_DB
                 // Das Feld Thema soll immer ausgefüllt sein:
                 if ((TB_DIVThema.Text ?? "") == (string.Empty ?? ""))
                 {
-                    Interaction.MsgBox("Bitte einen Betreff erfassen!", Constants.vbExclamation, "kein Betreff");
+                    MessageBox.Show("Bitte einen Betreff erfassen", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     TB_DIVThema.Select();
                     TB_DIVThema.BackColor = Color.MistyRose;
                     return;
                 }
 
                 // Falls die FAX-Vorlage gewählt wurde, sollte auch eine FAX-Nummer angegeben werden:
-                if (Strings.Mid(CB_Vorlagen.Text, 1, 3) == "Fax" & (TB_DIVFaxnummer.Text ?? "") == (string.Empty ?? ""))
+                if (BelegName.Substring(0, 3) == "Fax" & (TB_DIVFaxnummer.Text ?? "") == (string.Empty ?? ""))
                 {
-                    Interaction.MsgBox("Bitte eine Fax-Nummererfassen!", Constants.vbExclamation, "Faxnummer fehlt");
+                    MessageBox.Show("Bitte eine Fax-Nummererfassen", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     TB_DIVFaxnummer.Select();
                     TB_DIVFaxnummer.BackColor = Color.MistyRose;
                     return;
@@ -1419,7 +1414,7 @@ namespace Adress_DB
                     }
                     catch (Exception ex)
                     {
-                        Interaction.MsgBox("Fehler beim Speichern des Datensatzes vom Besuchsbericht");
+                        MessageBox.Show("Fehler beim Speichern des Datensatzes vom Besuchsbericht", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         MessageBox.Show(ex.Message);
                     }
 
@@ -1430,7 +1425,7 @@ namespace Adress_DB
                     }
                     catch (Exception ex)
                     {
-                        Interaction.MsgBox("Fehler beim Update der neuen IDBeleg-Nummer (Div. Belege)");
+                        MessageBox.Show("Fehler beim Update der neuen IDBeleg-Nummer (Div. Belege)", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         MessageBox.Show(ex.Message);
                     }
 

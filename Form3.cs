@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Drawing;
-//using System.Linq;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 using Outlook = Microsoft.Office.Interop.Outlook;
 
 namespace Adress_DB
@@ -71,7 +68,7 @@ namespace Adress_DB
             olContID = FindContact(LBL_FirmenName.Text, NachnameLabel1.Text, VornameLabel1.Text);
             LBL_olContID.Text = olContID.ToString();
 
-            MessageBox.Show(LBL_olContID.Text);
+            //MessageBox.Show(LBL_olContID.Text);
 
             if (olContID != 0)
             {
@@ -139,12 +136,12 @@ namespace Adress_DB
             newContact.BusinessHomePage = WebseiteLabel1.Text;
             if (AddContact(newContact) != 0)
             {
-                Interaction.MsgBox("Kontakt erfolgreich hinzugefügt");
+                MessageBox.Show("Kontakt erfolgreich hinzugefügt");
                 Close();
             }
             else
             {
-                Interaction.MsgBox("Hinzufügen des Kontaktes ist fehlgeschlagen");
+                MessageBox.Show("Hinzufügen des Kontaktes ist fehlgeschlagen");
                 Close();
             }
         }
@@ -154,18 +151,17 @@ namespace Adress_DB
             // Tries to create an instance of Outlook
             // Returnes true if successful, otherwise false
 
-            object olApp;
             bool isOutlookInstalledRet;
 
             try
             {
-                olApp = Interaction.CreateObject("Outlook.Application");
+                Outlook.Application olApp = new Outlook.Application();
                 isOutlookInstalledRet = true;
                 olApp = null;
             }
             catch
             {
-                Interaction.MsgBox("Function isOutlookInstalled() returned with error");
+                MessageBox.Show("Function isOutlookInstalled() returned with error");
                 isOutlookInstalledRet = false;
             }
 
@@ -194,7 +190,7 @@ namespace Adress_DB
                     Outlook.MAPIFolder olFolder = olNameSpace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderContacts);
                     //Outlook.Items ContactItems = olFolder.Items;
 
-                    getContactFolderCountRet = Conversions.ToInteger(olFolder.Items.Count);
+                    getContactFolderCountRet = Convert.ToInt32(olFolder.Items.Count);
                     olFolder = null;
                     olNameSpace = null;
                     olApp = null;
@@ -238,21 +234,21 @@ namespace Adress_DB
 
                     Contact tmpContact;
                     
-                    tmpContact.CompanyName = Conversions.ToString(olContact.CompanyName);
-                    tmpContact.LastName = Conversions.ToString(olContact.LastName);
-                    tmpContact.FirstName = Conversions.ToString(olContact.FirstName);
-                    tmpContact.JobTitle = Conversions.ToString(olContact.JobTitle);
-                    tmpContact.Email1Address = Conversions.ToString(olContact.Email1Address);
-                    tmpContact.BusinessTelephoneNumber = Conversions.ToString(olContact.BusinessTelephoneNumber);
-                    tmpContact.HomeTelephoneNumber = Conversions.ToString(olContact.HomeTelephoneNumber);
-                    tmpContact.MobileTelephoneNumber = Conversions.ToString(olContact.MobileTelephoneNumber);
-                    tmpContact.BusinessFaxNumber = Conversions.ToString(olContact.BusinessFaxNumber);
-                    tmpContact.BusinessAddressStreet = Conversions.ToString(olContact.BusinessAddressStreet);
-                    tmpContact.BusinessAddressPostalCode = Conversions.ToString(olContact.BusinessAddressPostalCode);
-                    tmpContact.BusinessAddressCity = Conversions.ToString(olContact.BusinessAddressCity);
-                    tmpContact.BusinessAddressState = Conversions.ToString(olContact.BusinessAddressState);
-                    tmpContact.BusinessAddressCountry = Conversions.ToString(olContact.BusinessAddressCountry);
-                    tmpContact.BusinessHomePage = Conversions.ToString(olContact.BusinessHomePage);
+                    tmpContact.CompanyName = Convert.ToString(olContact.CompanyName);
+                    tmpContact.LastName = Convert.ToString(olContact.LastName);
+                    tmpContact.FirstName = Convert.ToString(olContact.FirstName);
+                    tmpContact.JobTitle = Convert.ToString(olContact.JobTitle);
+                    tmpContact.Email1Address = Convert.ToString(olContact.Email1Address);
+                    tmpContact.BusinessTelephoneNumber = Convert.ToString(olContact.BusinessTelephoneNumber);
+                    tmpContact.HomeTelephoneNumber = Convert.ToString(olContact.HomeTelephoneNumber);
+                    tmpContact.MobileTelephoneNumber = Convert.ToString(olContact.MobileTelephoneNumber);
+                    tmpContact.BusinessFaxNumber = Convert.ToString(olContact.BusinessFaxNumber);
+                    tmpContact.BusinessAddressStreet = Convert.ToString(olContact.BusinessAddressStreet);
+                    tmpContact.BusinessAddressPostalCode = Convert.ToString(olContact.BusinessAddressPostalCode);
+                    tmpContact.BusinessAddressCity = Convert.ToString(olContact.BusinessAddressCity);
+                    tmpContact.BusinessAddressState = Convert.ToString(olContact.BusinessAddressState);
+                    tmpContact.BusinessAddressCountry = Convert.ToString(olContact.BusinessAddressCountry);
+                    tmpContact.BusinessHomePage = Convert.ToString(olContact.BusinessHomePage);
 
                     olContact = null;
                     olFolder = null;
@@ -324,7 +320,7 @@ namespace Adress_DB
                 }
                 catch
                 {
-                    Interaction.MsgBox("Function modifyContact() returned with error");
+                    MessageBox.Show("Function modifyContact() returned with error");
                     modifyContactRet = false;
                 }
             }
@@ -374,7 +370,7 @@ namespace Adress_DB
                 }
                 catch
                 {
-                Interaction.MsgBox("Function addContact() returned with error");
+                MessageBox.Show("Function addContact() returned with error");
                 addContactRet = 0;
                 }
             }
@@ -415,14 +411,14 @@ namespace Adress_DB
                 }
                 catch
                 {
-                    Interaction.MsgBox("Function deleteContact() returned with error");
+                    MessageBox.Show("Function deleteContact() returned with error");
                     deleteContactRet = false;
                 }
             }
             return deleteContactRet;
         }
 
-        public int FindContact(string FirmenName, string LastName, string FirstName = Constants.vbNullString)
+        public int FindContact(string FirmenName, string LastName, string FirstName = null)
         {
             int findContactRet = default;
             // Searches for specified entry in the Outlook contact folder
@@ -447,19 +443,25 @@ namespace Adress_DB
                     for (i = 1; i <= loopTo; i++)
                     {
                         Outlook.ContactItem olContact = (Outlook.ContactItem)olItems[i];
-                        if (olContact.CompanyName.ToLower() == FirmenName.ToLower() && olContact.LastName.ToLower() == LastName.ToLower())
+                        //MessageBox.Show(olContact.LastName);
+
+                        if (olContact.CompanyName != null && olContact.LastName != null)
                         {
-                            if (string.IsNullOrEmpty(FirstName))
+                            if (olContact.CompanyName.ToLower() == FirmenName.ToLower() && olContact.LastName.ToLower() == LastName.ToLower())
                             {
-                                findContactRet = i;
-                                break;
-                            }
-                            else if (olContact.FirstName.ToLower() == FirstName.ToLower())
-                            {
-                                findContactRet = i;
-                                break;
-                            }
-                        } 
+                                if (string.IsNullOrEmpty(FirstName))
+                                {
+                                    findContactRet = i;
+                                    break;
+                                }
+                                else if (olContact.FirstName.ToLower() == FirstName.ToLower())
+                                {
+                                    findContactRet = i;
+                                    break;
+                                }
+                            } 
+                        }
+
                         olContact = null;
                         olFolder = null;
                         olNameSpace = null;
@@ -469,7 +471,7 @@ namespace Adress_DB
                 }
                 catch 
                 {
-                    Interaction.MsgBox("Function findContact() returned with error");
+                    MessageBox.Show("Function findContact() returned with error");
                     findContactRet = 0;
                     
                 }
@@ -487,7 +489,7 @@ namespace Adress_DB
         {
             Contact modContact;
             int Index;
-            Index = (int)Math.Round(Conversion.Val(LBL_olContID.Text));
+            Index = Convert.ToInt32(LBL_olContID.Text);
             modContact.CompanyName = LBL_FirmenName.Text;
             modContact.LastName = NachnameLabel1.Text;
             // --------
@@ -610,12 +612,12 @@ namespace Adress_DB
 
             if (ModifyContact(Index, modContact) == true)
             {
-                Interaction.MsgBox("Kontakt erfolgreich geändert");
+                MessageBox.Show("Kontakt erfolgreich geändert");
                 Hide();
             }
             else
             {
-                Interaction.MsgBox("ändern des Kontaktes ist fehlgeschlagen");
+                MessageBox.Show("ändern des Kontaktes ist fehlgeschlagen");
                 Hide();
             }
         }
@@ -623,14 +625,14 @@ namespace Adress_DB
         private void BTN_olContDelete_Click(object sender, EventArgs e)
         {
             int olContID;
-            olContID = (int)Math.Round(Conversion.Val(LBL_olContID.Text));
+            olContID = Convert.ToInt32(LBL_olContID.Text);
             DialogResult Result;
             Result = MessageBox.Show("Soll der Kontakt '" + LBLGEF_Nachname.Text + "', Kontaktnummer:" + olContID + " wirklich im Outlook gelöscht werden!", "Kontakt löschen", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (Result == DialogResult.Yes)
             {
                 if (DeleteContact(olContID) == true)
                 {
-                    Interaction.MsgBox("gelöscht!");
+                    MessageBox.Show("gelöscht!");
                     Initialisierung();
                     // Me.Close()
                 }
