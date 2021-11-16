@@ -1048,7 +1048,7 @@ namespace Adress_DB
             this.DocuwareCSVDataGridView.Name = "DocuwareCSVDataGridView";
             this.DocuwareCSVDataGridView.RowHeadersVisible = false;
             this.DocuwareCSVDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DocuwareCSVDataGridView.Size = new System.Drawing.Size(129, 122);
+            this.DocuwareCSVDataGridView.Size = new System.Drawing.Size(137, 122);
             this.DocuwareCSVDataGridView.TabIndex = 23;
             this.DocuwareCSVDataGridView.Visible = false;
             // 
@@ -1112,7 +1112,7 @@ namespace Adress_DB
             this._btnNeueAdresse.Location = new System.Drawing.Point(175, 5);
             this._btnNeueAdresse.Name = "_btnNeueAdresse";
             this._btnNeueAdresse.Size = new System.Drawing.Size(105, 23);
-            this._btnNeueAdresse.TabIndex = 7;
+            this._btnNeueAdresse.TabIndex = 0;
             this._btnNeueAdresse.Text = "neue Adresse";
             this._btnNeueAdresse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this._btnNeueAdresse.UseVisualStyleBackColor = false;
@@ -1260,7 +1260,7 @@ namespace Adress_DB
             this._btnKontoZuAdresse.Location = new System.Drawing.Point(74, 270);
             this._btnKontoZuAdresse.Name = "_btnKontoZuAdresse";
             this._btnKontoZuAdresse.Size = new System.Drawing.Size(92, 23);
-            this._btnKontoZuAdresse.TabIndex = 17;
+            this._btnKontoZuAdresse.TabIndex = 10;
             this._btnKontoZuAdresse.Text = "Konto zuord.";
             this._btnKontoZuAdresse.UseVisualStyleBackColor = true;
             this._btnKontoZuAdresse.Click += new System.EventHandler(this.btnKontoZuAdresse_Click);
@@ -2737,7 +2737,7 @@ namespace Adress_DB
             this.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.MenuStrip1.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip1.Name = "MenuStrip1";
-            this.MenuStrip1.Size = new System.Drawing.Size(1186, 25);
+            this.MenuStrip1.Size = new System.Drawing.Size(1186, 24);
             this.MenuStrip1.TabIndex = 23;
             this.MenuStrip1.Text = "MenuStrip1";
             // 
@@ -2747,14 +2747,14 @@ namespace Adress_DB
             this._DocuWareDateiManuellToolStripMenuItem,
             this._SchließenToolStripMenuItem});
             this.DateiToolStripMenuItem.Name = "DateiToolStripMenuItem";
-            this.DateiToolStripMenuItem.Size = new System.Drawing.Size(50, 21);
+            this.DateiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.DateiToolStripMenuItem.Text = "Datei";
             // 
             // _DocuWareDateiManuellToolStripMenuItem
             // 
             this._DocuWareDateiManuellToolStripMenuItem.Image = global::Adress_DB.My.Resources.Resources.DocuWare_Logo;
             this._DocuWareDateiManuellToolStripMenuItem.Name = "_DocuWareDateiManuellToolStripMenuItem";
-            this._DocuWareDateiManuellToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this._DocuWareDateiManuellToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this._DocuWareDateiManuellToolStripMenuItem.Text = "DocuWare-Datei manuell";
             this._DocuWareDateiManuellToolStripMenuItem.Click += new System.EventHandler(this.DocuWareDateiManuellToolStripMenuItem_Click);
             // 
@@ -2762,7 +2762,7 @@ namespace Adress_DB
             // 
             this._SchließenToolStripMenuItem.Image = global::Adress_DB.My.Resources.Resources.CloseSolution_16x;
             this._SchließenToolStripMenuItem.Name = "_SchließenToolStripMenuItem";
-            this._SchließenToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this._SchließenToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this._SchließenToolStripMenuItem.Text = "Schließen";
             this._SchließenToolStripMenuItem.Click += new System.EventHandler(this.SchließenToolStripMenuItem_Click);
             // 
@@ -2772,14 +2772,14 @@ namespace Adress_DB
             this._BenutzerlisteToolStripMenuItem,
             this._EinstellungenToolStripMenuItem});
             this.ToolStripMenuItem1.Name = "ToolStripMenuItem1";
-            this.ToolStripMenuItem1.Size = new System.Drawing.Size(96, 21);
+            this.ToolStripMenuItem1.Size = new System.Drawing.Size(90, 20);
             this.ToolStripMenuItem1.Text = "Einstellungen";
             // 
             // _BenutzerlisteToolStripMenuItem
             // 
             this._BenutzerlisteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("_BenutzerlisteToolStripMenuItem.Image")));
             this._BenutzerlisteToolStripMenuItem.Name = "_BenutzerlisteToolStripMenuItem";
-            this._BenutzerlisteToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this._BenutzerlisteToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this._BenutzerlisteToolStripMenuItem.Text = "Benutzerliste";
             this._BenutzerlisteToolStripMenuItem.Click += new System.EventHandler(this.BenutzerlisteToolStripMenuItem_Click);
             // 
@@ -2787,7 +2787,7 @@ namespace Adress_DB
             // 
             this._EinstellungenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("_EinstellungenToolStripMenuItem.Image")));
             this._EinstellungenToolStripMenuItem.Name = "_EinstellungenToolStripMenuItem";
-            this._EinstellungenToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this._EinstellungenToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this._EinstellungenToolStripMenuItem.Text = "Administration";
             this._EinstellungenToolStripMenuItem.Click += new System.EventHandler(this.EinstellungenToolStripMenuItem_Click);
             // 
@@ -2798,14 +2798,14 @@ namespace Adress_DB
             this._InfoÜberAdressenDBToolStripMenuItem1,
             this._HilfeToolStripMenuItem});
             this.InfoToolStripMenuItem.Name = "InfoToolStripMenuItem";
-            this.InfoToolStripMenuItem.Size = new System.Drawing.Size(42, 21);
+            this.InfoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.InfoToolStripMenuItem.Text = "Info";
             // 
             // _AktivitätslogToolStripMenuItem
             // 
             this._AktivitätslogToolStripMenuItem.Image = global::Adress_DB.My.Resources.Resources.EnableLog_16x;
             this._AktivitätslogToolStripMenuItem.Name = "_AktivitätslogToolStripMenuItem";
-            this._AktivitätslogToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this._AktivitätslogToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this._AktivitätslogToolStripMenuItem.Text = "Aktivitätslog";
             this._AktivitätslogToolStripMenuItem.Click += new System.EventHandler(this.AktivitätslogToolStripMenuItem_Click);
             // 
@@ -2813,7 +2813,7 @@ namespace Adress_DB
             // 
             this._InfoÜberAdressenDBToolStripMenuItem1.Image = global::Adress_DB.My.Resources.Resources.StatusInformation_16x;
             this._InfoÜberAdressenDBToolStripMenuItem1.Name = "_InfoÜberAdressenDBToolStripMenuItem1";
-            this._InfoÜberAdressenDBToolStripMenuItem1.Size = new System.Drawing.Size(208, 22);
+            this._InfoÜberAdressenDBToolStripMenuItem1.Size = new System.Drawing.Size(193, 22);
             this._InfoÜberAdressenDBToolStripMenuItem1.Text = "Info über Adressen-DB";
             this._InfoÜberAdressenDBToolStripMenuItem1.Click += new System.EventHandler(this.InfoÜberAdressenDBToolStripMenuItem1_Click);
             // 
@@ -2821,7 +2821,7 @@ namespace Adress_DB
             // 
             this._HilfeToolStripMenuItem.Image = global::Adress_DB.My.Resources.Resources.F1Help_16x;
             this._HilfeToolStripMenuItem.Name = "_HilfeToolStripMenuItem";
-            this._HilfeToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this._HilfeToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this._HilfeToolStripMenuItem.Text = "Hilfe";
             this._HilfeToolStripMenuItem.Click += new System.EventHandler(this.HilfeToolStripMenuItem_Click);
             // 
@@ -3057,7 +3057,7 @@ namespace Adress_DB
             // ToolStripStatusLabel1
             // 
             this.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1";
-            this.ToolStripStatusLabel1.Size = new System.Drawing.Size(213, 17);
+            this.ToolStripStatusLabel1.Size = new System.Drawing.Size(192, 17);
             this.ToolStripStatusLabel1.Text = "DocuWare-Datei erfolgreich erstellt";
             this.ToolStripStatusLabel1.Visible = false;
             // 

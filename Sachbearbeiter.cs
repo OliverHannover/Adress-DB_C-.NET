@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace Adress_DB
 {
@@ -48,7 +47,7 @@ namespace Adress_DB
             }
             else
             {
-                Interaction.MsgBox("Ihr Login wurde nicht erkannt. Bitte Ihre Benutzerdaten prüfen/korrigieren oder ergänzen.", Constants.vbExclamation);
+                MessageBox.Show("Ihr Login wurde nicht erkannt. Bitte Ihre Benutzerdaten prüfen/korrigieren oder ergänzen.", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 My.MyProject.Forms.Hauptform.lblUser.Text = "Sachbearbeiter nicht erkannt";
                 My.MyProject.Forms.Hauptform.lblUser.ForeColor = Color.Red;
                 My.MyProject.Forms.Hauptform.BTN_Speichern.Visible = false;
@@ -132,16 +131,16 @@ namespace Adress_DB
             {
                 if (ctrl is TextBox & (ctrl.Text ?? "") == (string.Empty ?? ""))
                 {
-                    Interaction.MsgBox("Bitte alle Felder ausfüllen!");
+                    MessageBox.Show("Bitte alle Felder ausfüllen!");
                     return;
                 }
             }
 
             if (lblBenutzerNeu.Visible == true)
             {
-                SachbearbeiterTableAdapter.Insert(SachbearbeiterTextBox.Text, LoginTextBox.Text, KuerzelTextBox.Text, Conversion.Val(DurchwahlTextBox.Text), EmailTextBox.Text, JobtitleTextBox.Text, EnglJobtitleTextBox.Text, AktivCheckBox.Checked, false, false);
+                SachbearbeiterTableAdapter.Insert(SachbearbeiterTextBox.Text, LoginTextBox.Text, KuerzelTextBox.Text, Convert.ToDouble(DurchwahlTextBox.Text), EmailTextBox.Text, JobtitleTextBox.Text, EnglJobtitleTextBox.Text, AktivCheckBox.Checked, false, false);
             }
-            // MsgBox("insert")
+            // MessageBox.Show("insert")
             else if (lblBenutzerNeu.Visible == false)
             {
                 try
@@ -154,7 +153,7 @@ namespace Adress_DB
                 // MsgBox("update " & CInt(IDSachbearbeiterLabel1.Text))
                 catch (Exception ex)
                 {
-                    Interaction.MsgBox("Update des Sachbearbeiters fehlgeschlagen", Constants.vbExclamation);
+                    MessageBox.Show("Update des Sachbearbeiters fehlgeschlagen", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     MessageBox.Show(ex.Message);
                 }
             }

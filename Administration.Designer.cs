@@ -89,9 +89,24 @@ namespace Adress_DB
             this.SachbearbeiterTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.SachbearbeiterTableAdapter();
             this.TC_Administration = new System.Windows.Forms.TabControl();
             this.TabPage1 = new System.Windows.Forms.TabPage();
+            this.bindingNavigator4 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
+            this.FirmenNameBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton20 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton27 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton34 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox6 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton35 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton36 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
+            this._BNAV_PropertiesSave = new System.Windows.Forms.ToolStripButton();
+            this.propertiesDataGridView = new System.Windows.Forms.DataGridView();
+            this.propertiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TabPage2 = new System.Windows.Forms.TabPage();
             this.InaktivCheckBox = new System.Windows.Forms.CheckBox();
-            this.FirmenNameBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.ToolStripButton21 = new System.Windows.Forms.ToolStripButton();
             this.ToolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
@@ -254,26 +269,11 @@ namespace Adress_DB
             this.KontakteTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.KontakteTableAdapter();
             this.BelegeTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.BelegeTableAdapter();
             this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.propertiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.propertiesTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.propertiesTableAdapter();
-            this.propertiesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingNavigator4 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton20 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton27 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton34 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox6 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton35 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton36 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
-            this._BNAV_PropertiesSave = new System.Windows.Forms.ToolStripButton();
             SachbearbeiterLabel = new System.Windows.Forms.Label();
             AdminLabel = new System.Windows.Forms.Label();
             IDFirmenNameLabel1 = new System.Windows.Forms.Label();
@@ -315,8 +315,12 @@ namespace Adress_DB
             this.Panel3.SuspendLayout();
             this.TC_Administration.SuspendLayout();
             this.TabPage1.SuspendLayout();
-            this.TabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).BeginInit();
+            this.bindingNavigator4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FirmenNameBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertiesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertiesBindingSource)).BeginInit();
+            this.TabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingNavigator1)).BeginInit();
             this.BindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FirmenNameDataGridView)).BeginInit();
@@ -341,10 +345,6 @@ namespace Adress_DB
             ((System.ComponentModel.ISupportInitialize)(this.BelegeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BelegeDataGridView)).BeginInit();
             this.TableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.propertiesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertiesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).BeginInit();
-            this.bindingNavigator4.SuspendLayout();
             this.SuspendLayout();
             // 
             // SachbearbeiterLabel
@@ -824,6 +824,157 @@ namespace Adress_DB
             this.TabPage1.Text = "Konfiguration";
             this.TabPage1.UseVisualStyleBackColor = true;
             // 
+            // bindingNavigator4
+            // 
+            this.bindingNavigator4.AddNewItem = this.toolStripButton13;
+            this.bindingNavigator4.BindingSource = this.FirmenNameBindingSource;
+            this.bindingNavigator4.CountItem = this.toolStripLabel6;
+            this.bindingNavigator4.DeleteItem = this.toolStripButton20;
+            this.bindingNavigator4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigator4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton27,
+            this.toolStripButton34,
+            this.toolStripSeparator16,
+            this.toolStripTextBox6,
+            this.toolStripLabel6,
+            this.toolStripSeparator17,
+            this.toolStripButton35,
+            this.toolStripButton36,
+            this.toolStripSeparator18,
+            this.toolStripButton13,
+            this.toolStripButton20,
+            this._BNAV_PropertiesSave});
+            this.bindingNavigator4.Location = new System.Drawing.Point(3, 346);
+            this.bindingNavigator4.MoveFirstItem = this.toolStripButton27;
+            this.bindingNavigator4.MoveLastItem = this.toolStripButton36;
+            this.bindingNavigator4.MoveNextItem = this.toolStripButton35;
+            this.bindingNavigator4.MovePreviousItem = this.toolStripButton34;
+            this.bindingNavigator4.Name = "bindingNavigator4";
+            this.bindingNavigator4.PositionItem = this.toolStripTextBox6;
+            this.bindingNavigator4.Size = new System.Drawing.Size(1165, 25);
+            this.bindingNavigator4.TabIndex = 11;
+            this.bindingNavigator4.Text = "bindingNavigator4";
+            // 
+            // toolStripButton13
+            // 
+            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
+            this.toolStripButton13.Name = "toolStripButton13";
+            this.toolStripButton13.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton13.Text = "Neu hinzufügen";
+            // 
+            // FirmenNameBindingSource
+            // 
+            this.FirmenNameBindingSource.DataMember = "FirmenName";
+            this.FirmenNameBindingSource.DataSource = this._WSL_AdressenDataSet;
+            // 
+            // toolStripLabel6
+            // 
+            this.toolStripLabel6.Name = "toolStripLabel6";
+            this.toolStripLabel6.Size = new System.Drawing.Size(44, 22);
+            this.toolStripLabel6.Text = "von {0}";
+            this.toolStripLabel6.ToolTipText = "Die Gesamtanzahl der Elemente.";
+            // 
+            // toolStripButton20
+            // 
+            this.toolStripButton20.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton20.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton20.Image")));
+            this.toolStripButton20.Name = "toolStripButton20";
+            this.toolStripButton20.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton20.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton20.Text = "Löschen";
+            // 
+            // toolStripButton27
+            // 
+            this.toolStripButton27.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton27.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton27.Image")));
+            this.toolStripButton27.Name = "toolStripButton27";
+            this.toolStripButton27.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton27.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton27.Text = "Erste verschieben";
+            // 
+            // toolStripButton34
+            // 
+            this.toolStripButton34.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton34.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton34.Image")));
+            this.toolStripButton34.Name = "toolStripButton34";
+            this.toolStripButton34.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton34.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton34.Text = "Vorherige verschieben";
+            // 
+            // toolStripSeparator16
+            // 
+            this.toolStripSeparator16.Name = "toolStripSeparator16";
+            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripTextBox6
+            // 
+            this.toolStripTextBox6.AccessibleName = "Position";
+            this.toolStripTextBox6.AutoSize = false;
+            this.toolStripTextBox6.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.toolStripTextBox6.Name = "toolStripTextBox6";
+            this.toolStripTextBox6.Size = new System.Drawing.Size(50, 25);
+            this.toolStripTextBox6.Text = "0";
+            this.toolStripTextBox6.ToolTipText = "Aktuelle Position";
+            // 
+            // toolStripSeparator17
+            // 
+            this.toolStripSeparator17.Name = "toolStripSeparator17";
+            this.toolStripSeparator17.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton35
+            // 
+            this.toolStripButton35.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton35.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton35.Image")));
+            this.toolStripButton35.Name = "toolStripButton35";
+            this.toolStripButton35.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton35.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton35.Text = "Nächste verschieben";
+            // 
+            // toolStripButton36
+            // 
+            this.toolStripButton36.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton36.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton36.Image")));
+            this.toolStripButton36.Name = "toolStripButton36";
+            this.toolStripButton36.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton36.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton36.Text = "Letzte verschieben";
+            // 
+            // toolStripSeparator18
+            // 
+            this.toolStripSeparator18.Name = "toolStripSeparator18";
+            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 25);
+            // 
+            // _BNAV_PropertiesSave
+            // 
+            this._BNAV_PropertiesSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._BNAV_PropertiesSave.Image = ((System.Drawing.Image)(resources.GetObject("_BNAV_PropertiesSave.Image")));
+            this._BNAV_PropertiesSave.Name = "_BNAV_PropertiesSave";
+            this._BNAV_PropertiesSave.Size = new System.Drawing.Size(23, 22);
+            this._BNAV_PropertiesSave.Text = "Daten speichern";
+            this._BNAV_PropertiesSave.Click += new System.EventHandler(this._BNAV_PropertiesSave_Click);
+            // 
+            // propertiesDataGridView
+            // 
+            this.propertiesDataGridView.AutoGenerateColumns = false;
+            this.propertiesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.propertiesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23});
+            this.propertiesDataGridView.DataSource = this.propertiesBindingSource;
+            this.propertiesDataGridView.Location = new System.Drawing.Point(6, 6);
+            this.propertiesDataGridView.Name = "propertiesDataGridView";
+            this.propertiesDataGridView.Size = new System.Drawing.Size(1158, 302);
+            this.propertiesDataGridView.TabIndex = 0;
+            // 
+            // propertiesBindingSource
+            // 
+            this.propertiesBindingSource.DataMember = "properties";
+            this.propertiesBindingSource.DataSource = this._WSL_AdressenDataSet;
+            // 
             // TabPage2
             // 
             this.TabPage2.AutoScroll = true;
@@ -856,11 +1007,6 @@ namespace Adress_DB
             this.InaktivCheckBox.TabIndex = 11;
             this.InaktivCheckBox.Text = "Geschäftspartner deaktivieren";
             this.InaktivCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // FirmenNameBindingSource
-            // 
-            this.FirmenNameBindingSource.DataMember = "FirmenName";
-            this.FirmenNameBindingSource.DataSource = this._WSL_AdressenDataSet;
             // 
             // BindingNavigator1
             // 
@@ -905,7 +1051,7 @@ namespace Adress_DB
             // ToolStripLabel4
             // 
             this.ToolStripLabel4.Name = "ToolStripLabel4";
-            this.ToolStripLabel4.Size = new System.Drawing.Size(48, 22);
+            this.ToolStripLabel4.Size = new System.Drawing.Size(44, 22);
             this.ToolStripLabel4.Text = "von {0}";
             this.ToolStripLabel4.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
@@ -1146,7 +1292,7 @@ namespace Adress_DB
             // ToolStripLabel3
             // 
             this.ToolStripLabel3.Name = "ToolStripLabel3";
-            this.ToolStripLabel3.Size = new System.Drawing.Size(48, 22);
+            this.ToolStripLabel3.Size = new System.Drawing.Size(44, 22);
             this.ToolStripLabel3.Text = "von {0}";
             this.ToolStripLabel3.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
@@ -1392,7 +1538,7 @@ namespace Adress_DB
             // ToolStripLabel2
             // 
             this.ToolStripLabel2.Name = "ToolStripLabel2";
-            this.ToolStripLabel2.Size = new System.Drawing.Size(48, 22);
+            this.ToolStripLabel2.Size = new System.Drawing.Size(44, 22);
             this.ToolStripLabel2.Text = "von {0}";
             this.ToolStripLabel2.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
@@ -1762,7 +1908,7 @@ namespace Adress_DB
             // ToolStripLabel1
             // 
             this.ToolStripLabel1.Name = "ToolStripLabel1";
-            this.ToolStripLabel1.Size = new System.Drawing.Size(48, 22);
+            this.ToolStripLabel1.Size = new System.Drawing.Size(44, 22);
             this.ToolStripLabel1.Text = "von {0}";
             this.ToolStripLabel1.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
@@ -2111,7 +2257,7 @@ namespace Adress_DB
             // ToolStripLabel5
             // 
             this.ToolStripLabel5.Name = "ToolStripLabel5";
-            this.ToolStripLabel5.Size = new System.Drawing.Size(48, 22);
+            this.ToolStripLabel5.Size = new System.Drawing.Size(44, 22);
             this.ToolStripLabel5.Text = "von {0}";
             this.ToolStripLabel5.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
@@ -2338,29 +2484,9 @@ namespace Adress_DB
             this.TableLayoutPanel1.Size = new System.Drawing.Size(1185, 522);
             this.TableLayoutPanel1.TabIndex = 31;
             // 
-            // propertiesBindingSource
-            // 
-            this.propertiesBindingSource.DataMember = "properties";
-            this.propertiesBindingSource.DataSource = this._WSL_AdressenDataSet;
-            // 
             // propertiesTableAdapter
             // 
             this.propertiesTableAdapter.ClearBeforeFill = true;
-            // 
-            // propertiesDataGridView
-            // 
-            this.propertiesDataGridView.AutoGenerateColumns = false;
-            this.propertiesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.propertiesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn23});
-            this.propertiesDataGridView.DataSource = this.propertiesBindingSource;
-            this.propertiesDataGridView.Location = new System.Drawing.Point(6, 6);
-            this.propertiesDataGridView.Name = "propertiesDataGridView";
-            this.propertiesDataGridView.Size = new System.Drawing.Size(1158, 302);
-            this.propertiesDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn20
             // 
@@ -2380,138 +2506,13 @@ namespace Adress_DB
             this.dataGridViewTextBoxColumn22.DataPropertyName = "Wert";
             this.dataGridViewTextBoxColumn22.HeaderText = "Wert";
             this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.Width = 300;
             // 
             // dataGridViewTextBoxColumn23
             // 
             this.dataGridViewTextBoxColumn23.DataPropertyName = "Beschreibung";
             this.dataGridViewTextBoxColumn23.HeaderText = "Beschreibung";
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            // 
-            // bindingNavigator4
-            // 
-            this.bindingNavigator4.AddNewItem = this.toolStripButton13;
-            this.bindingNavigator4.BindingSource = this.FirmenNameBindingSource;
-            this.bindingNavigator4.CountItem = this.toolStripLabel6;
-            this.bindingNavigator4.DeleteItem = this.toolStripButton20;
-            this.bindingNavigator4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton27,
-            this.toolStripButton34,
-            this.toolStripSeparator16,
-            this.toolStripTextBox6,
-            this.toolStripLabel6,
-            this.toolStripSeparator17,
-            this.toolStripButton35,
-            this.toolStripButton36,
-            this.toolStripSeparator18,
-            this.toolStripButton13,
-            this.toolStripButton20,
-            this._BNAV_PropertiesSave});
-            this.bindingNavigator4.Location = new System.Drawing.Point(3, 346);
-            this.bindingNavigator4.MoveFirstItem = this.toolStripButton27;
-            this.bindingNavigator4.MoveLastItem = this.toolStripButton36;
-            this.bindingNavigator4.MoveNextItem = this.toolStripButton35;
-            this.bindingNavigator4.MovePreviousItem = this.toolStripButton34;
-            this.bindingNavigator4.Name = "bindingNavigator4";
-            this.bindingNavigator4.PositionItem = this.toolStripTextBox6;
-            this.bindingNavigator4.Size = new System.Drawing.Size(1165, 25);
-            this.bindingNavigator4.TabIndex = 11;
-            this.bindingNavigator4.Text = "bindingNavigator4";
-            // 
-            // toolStripButton13
-            // 
-            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
-            this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton13.Text = "Neu hinzufügen";
-            // 
-            // toolStripLabel6
-            // 
-            this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(48, 22);
-            this.toolStripLabel6.Text = "von {0}";
-            this.toolStripLabel6.ToolTipText = "Die Gesamtanzahl der Elemente.";
-            // 
-            // toolStripButton20
-            // 
-            this.toolStripButton20.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton20.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton20.Image")));
-            this.toolStripButton20.Name = "toolStripButton20";
-            this.toolStripButton20.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton20.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton20.Text = "Löschen";
-            // 
-            // toolStripButton27
-            // 
-            this.toolStripButton27.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton27.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton27.Image")));
-            this.toolStripButton27.Name = "toolStripButton27";
-            this.toolStripButton27.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton27.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton27.Text = "Erste verschieben";
-            // 
-            // toolStripButton34
-            // 
-            this.toolStripButton34.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton34.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton34.Image")));
-            this.toolStripButton34.Name = "toolStripButton34";
-            this.toolStripButton34.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton34.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton34.Text = "Vorherige verschieben";
-            // 
-            // toolStripSeparator16
-            // 
-            this.toolStripSeparator16.Name = "toolStripSeparator16";
-            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripTextBox6
-            // 
-            this.toolStripTextBox6.AccessibleName = "Position";
-            this.toolStripTextBox6.AutoSize = false;
-            this.toolStripTextBox6.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.toolStripTextBox6.Name = "toolStripTextBox6";
-            this.toolStripTextBox6.Size = new System.Drawing.Size(50, 25);
-            this.toolStripTextBox6.Text = "0";
-            this.toolStripTextBox6.ToolTipText = "Aktuelle Position";
-            // 
-            // toolStripSeparator17
-            // 
-            this.toolStripSeparator17.Name = "toolStripSeparator17";
-            this.toolStripSeparator17.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton35
-            // 
-            this.toolStripButton35.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton35.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton35.Image")));
-            this.toolStripButton35.Name = "toolStripButton35";
-            this.toolStripButton35.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton35.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton35.Text = "Nächste verschieben";
-            // 
-            // toolStripButton36
-            // 
-            this.toolStripButton36.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton36.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton36.Image")));
-            this.toolStripButton36.Name = "toolStripButton36";
-            this.toolStripButton36.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton36.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton36.Text = "Letzte verschieben";
-            // 
-            // toolStripSeparator18
-            // 
-            this.toolStripSeparator18.Name = "toolStripSeparator18";
-            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 25);
-            // 
-            // _BNAV_PropertiesSave
-            // 
-            this._BNAV_PropertiesSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._BNAV_PropertiesSave.Image = ((System.Drawing.Image)(resources.GetObject("_BNAV_PropertiesSave.Image")));
-            this._BNAV_PropertiesSave.Name = "_BNAV_PropertiesSave";
-            this._BNAV_PropertiesSave.Size = new System.Drawing.Size(23, 22);
-            this._BNAV_PropertiesSave.Text = "Daten speichern";
-            this._BNAV_PropertiesSave.Click += new System.EventHandler(this._BNAV_PropertiesSave_Click);
             // 
             // Administration
             // 
@@ -2531,9 +2532,14 @@ namespace Adress_DB
             this.TC_Administration.ResumeLayout(false);
             this.TabPage1.ResumeLayout(false);
             this.TabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).EndInit();
+            this.bindingNavigator4.ResumeLayout(false);
+            this.bindingNavigator4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FirmenNameBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertiesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertiesBindingSource)).EndInit();
             this.TabPage2.ResumeLayout(false);
             this.TabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FirmenNameBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingNavigator1)).EndInit();
             this.BindingNavigator1.ResumeLayout(false);
             this.BindingNavigator1.PerformLayout();
@@ -2567,11 +2573,6 @@ namespace Adress_DB
             ((System.ComponentModel.ISupportInitialize)(this.BelegeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BelegeDataGridView)).EndInit();
             this.TableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.propertiesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertiesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).EndInit();
-            this.bindingNavigator4.ResumeLayout(false);
-            this.bindingNavigator4.PerformLayout();
             this.ResumeLayout(false);
 
         }

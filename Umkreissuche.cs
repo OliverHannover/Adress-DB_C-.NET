@@ -76,7 +76,7 @@ namespace Adress_DB
         {
             if ((TB_PLZ.Text ?? "") == (string.Empty ?? "") | (CB_Ort.Text ?? "") == (string.Empty ?? "") | (TB_Entfernung.Text ?? "") == (string.Empty ?? ""))
             {
-                Interaction.MsgBox("Bitte alle Felder ausfüllen", Constants.vbExclamation);
+                MessageBox.Show("Bitte alle Felder ausfüllen", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -87,7 +87,7 @@ namespace Adress_DB
             }
             catch (Exception ex)
             {
-                Interaction.MsgBox("Fehler beim Abrufen der Entfernungen!");
+                MessageBox.Show("Fehler beim Abrufen der Entfernungen!");
                 MessageBox.Show(ex.Message);
             }
 

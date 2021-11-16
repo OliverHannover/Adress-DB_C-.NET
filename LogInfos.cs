@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
+//using Microsoft.VisualBasic;
 
 namespace Adress_DB
 {
@@ -24,14 +24,14 @@ namespace Adress_DB
 
         private void BTN_Aktuell_Click(object sender, EventArgs e)
         {
-            double IDFirmenName = Conversion.Val(My.MyProject.Forms.Hauptform.LBL_IDFirmenName.Text);
+            int IDFirmenName = Convert.ToInt32(My.MyProject.Forms.Hauptform.LBL_IDFirmenName.Text);
             try
             {
                 LogTabelleTableAdapter.SucheIDFirmenNameInLogtabelle(_WSL_AdressenDataSet.LogTabelle, IDFirmenName);
             }
             catch (Exception ex)
             {
-                Interaction.MsgBox("lblIDFirmenName ohne Inhalt - Fehler");
+                MessageBox.Show("lblIDFirmenName ohne Inhalt - Fehler");
                 MessageBox.Show(ex.Message);
             }
         }

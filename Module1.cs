@@ -3,8 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
+//using Microsoft.VisualBasic;
 using Word = Microsoft.Office.Interop.Word;
 
 namespace Adress_DB
@@ -18,12 +17,12 @@ namespace Adress_DB
             // MsgBox("Neuen Geschäftspartner anlegen")
 
             // hole die nächste freie IDFirmenName
-            int IDFirmenName = Conversions.ToInteger(My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("IDFirmenName"));
+            int IDFirmenName = Convert.ToInt32(My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("IDFirmenName"));
             string FirmenName = My.MyProject.Forms.Hauptform.TB_FirmenName.Text;
 
             // hole die nächste freie Leadnummer
-            int Leadnummer = Conversions.ToInteger(My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("Leadnummer"));
-            string KontoName = "Lead-" + DateAndTime.Year(DateAndTime.Now).ToString();
+            int Leadnummer = Convert.ToInt32(My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("Leadnummer"));
+            string KontoName = "Lead-" + Convert.ToString(DateTime.Now.Year);
 
             // Datensatz in Tabelle 'FirmenName' schreiben
             // MsgBox(IDFirmenName.ToString)
@@ -51,7 +50,7 @@ namespace Adress_DB
             }
             catch (Exception ex)
             {
-                Interaction.MsgBox("Fehler beim Aktualisieren der neuen IDFirmenName in der Konfig-Tabelle");
+                MessageBox.Show("Fehler beim Aktualisieren der neuen IDFirmenName in der Konfig-Tabelle");
                 MessageBox.Show(ex.Message);
             }
 
@@ -61,11 +60,11 @@ namespace Adress_DB
             }
             catch (Exception ex)
             {
-                Interaction.MsgBox("Fehler beim Aktualisieren der neuen Lead-Nummer in der Konfig-Tabelle");
+                MessageBox.Show("Fehler beim Aktualisieren der neuen Lead-Nummer in der Konfig-Tabelle");
                 MessageBox.Show(ex.Message);
             }
 
-            //Interaction.MsgBox("vom neu anlegen:");
+            //MessageBox.Show("vom neu anlegen:");
             //AlleTableAdapterAktualisieren(IDFirmenName);
 
 
@@ -130,7 +129,7 @@ namespace Adress_DB
             }
             catch (Exception ex)
             {
-                Interaction.MsgBox("lblIDFirmenName in Besuche suchen - Fehler");
+                MessageBox.Show("lblIDFirmenName in Besuche suchen - Fehler");
                 MessageBox.Show(ex.Message);
             }
 
@@ -166,7 +165,7 @@ namespace Adress_DB
             }
             catch (Exception)
             {
-                Interaction.MsgBox("lblIDFirmenName ohne Inhalt - Fehler");
+                MessageBox.Show("lblIDFirmenName ohne Inhalt - Fehler");
             }
 
             // MsgBox("Datagrid leer und ungebunden, neu gesucht...")
@@ -183,7 +182,7 @@ namespace Adress_DB
             // öffnet den Word-Besuchsbericht und füllt den Kopf mit markierten Daten,
             string Pfad;
             Pfad = My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("Vorlagenpfad");
-            if (Strings.Right(Pfad, 1) != @"\")
+            if (Pfad.Substring(Pfad.Length -1 , 1) != @"\")
                 Pfad += @"\";
             Pfad += Belegtyp;
 
@@ -276,7 +275,7 @@ namespace Adress_DB
             }
             catch (Exception ex)
             {
-                Interaction.MsgBox("Fehler beim Ersezten von Text in Word-Dokument");
+                MessageBox.Show("Fehler beim Ersezten von Text in Word-Dokument");
                 MessageBox.Show(ex.ToString());
                 
             }
@@ -329,7 +328,7 @@ namespace Adress_DB
                 csv += column.HeaderText.ToString() + ';';
 
             // Add new line.
-            csv += Constants.vbCr + Constants.vbLf;
+            csv += Environment.NewLine;
 
             // Adding the Rows
             foreach (DataGridViewRow row in My.MyProject.Forms.Hauptform.DocuwareCSVDataGridView.Rows)
@@ -339,7 +338,7 @@ namespace Adress_DB
                     // csv += cell.Value.ToString().Replace(",", ";") & ","c
                     csv += cell.Value.ToString() + ';';
                 // Add new line.
-                csv += Constants.vbCr + Constants.vbLf;
+                csv += Environment.NewLine;
 
             }
 
@@ -361,35 +360,35 @@ namespace Adress_DB
 
         public static void FillVorlagen()
         {
-            string fname;
             string pfad;
             pfad = My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("Vorlagenpfad"); // anpassen
-            if (Strings.Right(pfad, 1) != @"\")
+
+            if (pfad.Substring(pfad.Length -1, 1) != @"\")
                 pfad += @"\";
 
-            // MsgBox(pfad)
+            //MessageBox.Show(pfad);
 
-            fname = FileSystem.Dir(pfad + "*.dotx");
-            // MsgBox(fname)
-            if ((fname ?? "") != (string.Empty ?? ""))
+            DirectoryInfo ParentDirectory = new System.IO.DirectoryInfo(pfad);
+            foreach (FileInfo f in ParentDirectory.GetFiles())
             {
-                while (!string.IsNullOrEmpty(fname))
+                //MessageBox.Show((f.Name);
+                if (f.Name != "" )
                 {
-                    // MsgBox(fname)
-                    if (fname != "Besuchsbericht.dotx") // der Besuchsbericht soll NICHT eingelesen werden!
+                    if ((f.Extension == ".dotx") && (f.Name).Substring(1, 1) != "$")
                     {
-                        My.MyProject.Forms.Hauptform.CB_Vorlagen.Items.Add(fname);
+                        if (f.Name != "Besuchsbericht.dotx") // der Besuchsbericht soll NICHT eingelesen werden!
+                        {
+                            My.MyProject.Forms.Hauptform.CB_Vorlagen.Items.Add(f.Name);
+                        }
                     }
-
-                    fname = FileSystem.Dir();
                 }
-
-                My.MyProject.Forms.Hauptform.CB_Vorlagen.SelectedIndex = 0;
+                else
+                {
+                    MessageBox.Show("Der Vorlagenordner auf N:.. wurde nicht gefunden! BItte Info an den Administrator", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+               
             }
-            else
-            {
-                Interaction.MsgBox(@"Der Vorlagenordner auf N:\.. wurde nicht gefunden! BItte Info an den Administrator", Constants.vbExclamation);
-            }
+               My.MyProject.Forms.Hauptform.CB_Vorlagen.SelectedIndex = 0; 
         }
 
         public static void Logging(int Typ, int IDInTabelle, int IDFirmenName, string Hinweis)
@@ -471,7 +470,7 @@ namespace Adress_DB
                     }
             }
 
-            My.MyProject.Forms.Hauptform.LogTabelleTableAdapter.Insert(Meldung, Tabelle, IDInTabelle, Hinweis, Environment.UserName, DateAndTime.Now, IDFirmenName, My.MyProject.Forms.Hauptform.LBL_FirmenName.Text);
+            My.MyProject.Forms.Hauptform.LogTabelleTableAdapter.Insert(Meldung, Tabelle, IDInTabelle, Hinweis, Environment.UserName, DateTime.Now, IDFirmenName, My.MyProject.Forms.Hauptform.LBL_FirmenName.Text);
         }
     }
 }

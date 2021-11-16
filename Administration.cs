@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace Adress_DB
 {
@@ -59,7 +57,7 @@ namespace Adress_DB
         {
             var IDFirmenName = default(int);
             if ((My.MyProject.Forms.Hauptform.LBL_IDFirmenName.Text ?? "") != (string.Empty ?? ""))
-                IDFirmenName = Conversions.ToInteger(My.MyProject.Forms.Hauptform.LBL_IDFirmenName.Text);
+                IDFirmenName = Convert.ToInt32(My.MyProject.Forms.Hauptform.LBL_IDFirmenName.Text);
             try
             {
                 FirmenNameTableAdapter.SucheAktiveIDFirmenNameInFirmenName(_WSL_AdressenDataSet.FirmenName, IDFirmenName);
@@ -70,7 +68,7 @@ namespace Adress_DB
             }
             catch (Exception ex)
             {
-                Interaction.MsgBox("lblIDFirmenName ohne Inhalt - Fehler");
+                MessageBox.Show("lblIDFirmenName ohne Inhalt - Fehler");
                 MessageBox.Show(ex.Message);
             }
 

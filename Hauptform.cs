@@ -71,7 +71,7 @@ namespace Adress_DB
             TC_Beleg.Visible = false;
             LBL_BBBesuchterKontakt.Text = string.Empty;
             // LBL_IDFirmenName.Text = String.Empty
-            LBL_IDFirmenName.Text = "0";
+            //LBL_IDFirmenName.Text = "0";
             _LBL_IDAdresse.Text = "0";
             lblHinweisKeinTreffer.Visible = false;
             TB_FirmenName.Select();
@@ -191,10 +191,12 @@ namespace Adress_DB
 
         }
 
+
+
         private void LBL_IDFirmenName_TextChanged(object sender, EventArgs e)
         {
             // Das Label lblIDFirmenName ist an die Datenquelle 'FirmenNameTableAdapter' gebunden. Ändert sich dieser
-            // oder wird ein anderer Datensatz davon selektiert, ändert sich auch der Text im Label.
+            // oder wird ein anderer Datensatz davon selektiert, ändert sich auch der Text im Label. Wird kein Datensatz gefunden, bleibt das Label leer
 
             int IDFirmenName;
             if(LBL_IDFirmenName.Text != String.Empty)
@@ -219,7 +221,7 @@ namespace Adress_DB
             else
             {
                     // keine Treffer -----------------------------------------------------------------
-                    MessageBox.Show("keine Treffer gefunden");
+                    //MessageBox.Show("keine Treffer gefunden");
                     PNL_Konto.Visible = false; // Groupboxen Konto, Adresse, Kontakt ausblenden
                     TC_Adresse.Visible = false;
                     TC_Kontakt.Visible = false;
@@ -249,12 +251,11 @@ namespace Adress_DB
             // Neuen Geschäftspartner anlegen:
             // Ein Datensatz in FirmenNamen ergänzen + LeadKonto in Konto ergänzen, wenn:
             // ComboBox leer, TextBox FirmenName hat Wert und Hinweislabel sichtbar
-            // Wird ausgeführt im Modul1 / NeuenFirmenNamenAnlegen
+            // Wird ausgeführt im Modul1 / 'NeuenFirmenNamenAnlegen'
             if (CB_FirmenName.Items.Count == 0 & !string.IsNullOrEmpty(TB_FirmenName.Text) & lblHinweisKeinTreffer.Visible == true)
             {
                 // MsgBox("Neuen Geschäftspartner anlegen")
-                // Abfrage ob gespeichert werden soll
-
+                // Abfrage ob gespeichert werden soll:
 
                 DialogResult Result;
                 Result = MessageBox.Show("Folgenden Geschäftspartner anlegen:" + System.Environment.NewLine + System.Environment.NewLine + "auf RECHTSCHREIBUNG achten...!" + System.Environment.NewLine + System.Environment.NewLine + TB_FirmenName.Text, "Neuen Geschäftspartner anlegen", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -272,13 +273,11 @@ namespace Adress_DB
             } // Ende neuen Geschäftspartner anlegen
 
             // 2) #####################################################################################################################
-
+                 // FirmenName / Name Geschäftspartner ändern/aktualisieren
             int IDFirmenName = Convert.ToInt32(LBL_IDFirmenName.Text);
-            var IDAdresse = default(int);
-            var IDKontakt = default(int);
-
-            // FirmenName / Name Geschäftspartner ändern/aktualisieren
-            //If TB_FirmenName.Text <> CB_FirmenName.Text And TB_FirmenName.Text <> String.Empty And Val(LBL_IDFirmenName.Text) <> 0 Then
+            int IDAdresse = 0;
+            int IDKontakt = 0;
+           
             if ((TB_FirmenName.Text != CB_FirmenName.Text) && (TB_FirmenName.Text != string.Empty) && (Convert.ToInt32(LBL_IDFirmenName.Text) != 0))
             {
                 // MsgBox("Geschäftspartner umbenennen")
@@ -330,7 +329,7 @@ namespace Adress_DB
 
 
             // Adresse neu anlegen
-            if (AdresseNeu == true & (CB_Ort.Text ?? "") != (string.Empty ?? ""))
+            if (AdresseNeu == true && CB_Ort.Text != string.Empty)
             {
                 // MsgBox("Adresse neu anlegen")
                 // Wert aus Konfig-Tabelle holen
@@ -339,7 +338,19 @@ namespace Adress_DB
                 // Datensatz Adresse hinzufügen
                 try
                 {
-                    AdressenTableAdapter.Insert(IDAdresse, IDFirmenName, Convert.ToInt32(IDKontoTextBox.Text), AdresstypTextBox.Text, StraßeTextBox.Text, PostfachTextBox.Text, TB_PLZ.Text, CB_Ort.Text, TB_Bundesland.Text, CB_Staat.Text, UStIdNrTextBox.Text, WebseiteTextBox.Text, LBL_Countrycode.Text);
+                    AdressenTableAdapter.Insert(IDAdresse,
+                                                IDFirmenName,
+                                                Convert.ToInt32(IDKontoTextBox.Text),
+                                                AdresstypTextBox.Text,
+                                                StraßeTextBox.Text,
+                                                PostfachTextBox.Text,
+                                                TB_PLZ.Text,
+                                                CB_Ort.Text,
+                                                TB_Bundesland.Text,
+                                                CB_Staat.Text,
+                                                LBL_Countrycode.Text,
+                                                UStIdNrTextBox.Text,
+                                                WebseiteTextBox.Text);
                 }
                 catch (Exception ex)
                 {
@@ -365,7 +376,7 @@ namespace Adress_DB
                 TC_Adresse.SelectedIndex = 0;
                 CB_Ort.BackColor = Color.White;
             }
-            else if (AdresseNeu == true & (CB_Ort.Text ?? "") == (string.Empty ?? ""))
+            else if (AdresseNeu == true && CB_Ort.Text == string.Empty)
             {
                 MessageBox.Show("Bitte einen Ort für Adresse erfassen!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CB_Ort.Select();
@@ -376,7 +387,7 @@ namespace Adress_DB
             // 4) #####################################################################################################################
             // Kontakt neu anlegen
 
-            if (KontaktNeu == true & (NachnameTextBox.Text ?? "") != (string.Empty ?? ""))
+            if (KontaktNeu == true && NachnameTextBox.Text != string.Empty)
             {
                 // MsgBox("Kontakt neu anlegen")
                 // Wert aus Konfig-Tabelle holen
@@ -423,7 +434,7 @@ namespace Adress_DB
                 TC_Kontakt.SelectedIndex = 0;
                 NachnameTextBox.BackColor = Color.White;
             }
-            else if (KontaktNeu == true & (NachnameTextBox.Text ?? "") == (string.Empty ?? ""))
+            else if (KontaktNeu == true && NachnameTextBox.Text == string.Empty)
             {
                 MessageBox.Show("Bitte einen Nachnamen bei Kontakt erfassen!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 NachnameTextBox.Select();
@@ -436,11 +447,11 @@ namespace Adress_DB
             // MsgBox(tcAdresse.SelectedIndex.ToString)
 
 
-            if (AdresseNeu == false & TC_Adresse.SelectedIndex == 1 & (CB_Ort.Text ?? "") != (string.Empty ?? ""))
+            if (AdresseNeu == false && TC_Adresse.SelectedIndex == 1 && CB_Ort.Text != string.Empty)
             {
                 // MsgBox("Adresse ändern")
                 int IDKonto;
-                if ((IDKontoTextBox.Text ?? "") == (string.Empty ?? ""))
+                if (IDKontoTextBox.Text == string.Empty)
                 {
                     IDKonto = Convert.ToInt32(lblIDKonto.Text);
                 }
@@ -479,7 +490,7 @@ namespace Adress_DB
 
             // 6) #####################################################################################################################
             // TableUpdate Kontakte bei Änderung
-            if (KontaktNeu == false & TC_Kontakt.SelectedIndex == 1 & (NachnameTextBox.Text ?? "") != (string.Empty ?? ""))
+            if (KontaktNeu == false && TC_Kontakt.SelectedIndex == 1 && NachnameTextBox.Text != string.Empty)
             {
                 // MsgBox("Kontakt ändern")
 
@@ -558,7 +569,6 @@ namespace Adress_DB
             CB_Ort.Text = string.Empty;
             CB_Ort.BackColor = Color.MistyRose;
             TB_Bundesland.Text = string.Empty;
-            // CB_Staat.Text = "Deutschland"
             UStIdNrTextBox.Text = string.Empty;
             WebseiteTextBox.Text = string.Empty;
             WebseiteLinkLabel.Text = string.Empty;
@@ -577,19 +587,16 @@ namespace Adress_DB
         private void TB_PLZ_TextChanged(object sender, EventArgs e)
         {
             int foundIndex;
-            switch (CB_Staat.Text ?? "")
+            switch (CB_Staat.Text)
             {
                 case "Deutschland":
                     {
-                        // MsgBox("DE")
+                        // MessageBox("DE")
                         DE_PLZ_GeodatenTableAdapter.SuchePLZ(_WSL_AdressenDataSet.DE_PLZ_Geodaten, TB_PLZ.Text);
                         CB_Ort.DataSource = DE_PLZ_GeodatenBindingSource;
                         CB_Ort.DisplayMember = "Ort";
-                        {
-                            var withBlock = TB_Bundesland;
-                            withBlock.DataBindings.Clear();
-                            withBlock.DataBindings.Add(new Binding("Text", DE_PLZ_GeodatenBindingSource, "Bundesland", true));
-                        }
+                        TB_Bundesland.DataBindings.Clear();
+                        TB_Bundesland.DataBindings.Add(new Binding("Text", DE_PLZ_GeodatenBindingSource, "Bundesland", true));
 
                         foundIndex = DE_PLZ_GeodatenBindingSource.Find("Ort", LBL_Ort.Text);
                         DE_PLZ_GeodatenBindingSource.Position = foundIndex;
@@ -609,15 +616,12 @@ namespace Adress_DB
 
                 case "Österreich": // -------------------------------------------------------------------
                     {
-                        // MsgBox("DE")
+                        // MessageBox("AT")
                         AT_PLZ_GeodatenTableAdapter.SuchePLZ(_WSL_AdressenDataSet.AT_PLZ_Geodaten, TB_PLZ.Text);
                         CB_Ort.DataSource = AT_PLZ_GeodatenBindingSource;
                         CB_Ort.DisplayMember = "Ort";
-                        {
-                            var withBlock1 = TB_Bundesland;
-                            withBlock1.DataBindings.Clear();
-                            withBlock1.DataBindings.Add(new Binding("Text", AT_PLZ_GeodatenBindingSource, "Bundesland", true));
-                        }
+                        TB_Bundesland.DataBindings.Clear();
+                        TB_Bundesland.DataBindings.Add(new Binding("Text", AT_PLZ_GeodatenBindingSource, "Bundesland", true));
 
                         foundIndex = AT_PLZ_GeodatenBindingSource.Find("Ort", LBL_Ort.Text);
                         AT_PLZ_GeodatenBindingSource.Position = foundIndex;
@@ -637,15 +641,12 @@ namespace Adress_DB
 
                 case "Schweiz":  // ------------------------------------------------------------------------------
                     {
-                        // MsgBox("DE")
+                        // MessageBox("CH")
                         CH_PLZ_GeodatenTableAdapter.SuchePLZ(_WSL_AdressenDataSet.CH_PLZ_Geodaten, TB_PLZ.Text);
                         CB_Ort.DataSource = CH_PLZ_GeodatenBindingSource;
                         CB_Ort.DisplayMember = "Ort";
-                        {
-                            var withBlock2 = TB_Bundesland;
-                            withBlock2.DataBindings.Clear();
-                            withBlock2.DataBindings.Add(new Binding("Text", CH_PLZ_GeodatenBindingSource, "Bundesland", true));
-                        }
+                        TB_Bundesland.DataBindings.Clear();
+                        TB_Bundesland.DataBindings.Add(new Binding("Text", CH_PLZ_GeodatenBindingSource, "Bundesland", true));
 
                         foundIndex = CH_PLZ_GeodatenBindingSource.Find("Ort", LBL_Ort.Text);
                         CH_PLZ_GeodatenBindingSource.Position = foundIndex;
@@ -667,12 +668,8 @@ namespace Adress_DB
                     {
                         CB_Ort.DataSource = AdressenBindingSource;
                         CB_Ort.DisplayMember = "Ort";
-                        {
-                            var withBlock3 = TB_Bundesland;
-                            withBlock3.DataBindings.Clear();
-                            withBlock3.Text = string.Empty;
-                        }
-
+                        TB_Bundesland.DataBindings.Clear();
+                        TB_Bundesland.Text = string.Empty;
                         break;
                     }
             }
@@ -688,25 +685,25 @@ namespace Adress_DB
      
                 var querryAddress = new System.Text.StringBuilder();
                 querryAddress.Append("https://www.google.de/maps/place/");
-                if ((LBL_Strasse.Text ?? "") != (string.Empty ?? ""))
+                if (LBL_Strasse.Text != string.Empty)
                 {
                     querryAddress.Append(strasse + "," + "+");
                     i = 1;
                 }
 
-                if ((LBL_Ort.Text ?? "") != (string.Empty ?? ""))
+                if (LBL_Ort.Text  != string.Empty)
                 {
                     querryAddress.Append(ort + "," + "+");
                     i += 1;
                 }
 
-                if ((LBL_Land.Text ?? "") != (string.Empty ?? ""))
+                if (LBL_Land.Text != string.Empty)
                 {
                     querryAddress.Append(land + "," + "+");
                     i += 1;
                 }
 
-                if ((LBL_PLZ.Text ?? "") != (string.Empty ?? ""))
+                if (LBL_PLZ.Text != string.Empty)
                 {
                     querryAddress.Append(plz);
                     i += 1;
@@ -837,7 +834,7 @@ namespace Adress_DB
             AdressNummer = LBL_IDAdresseZuKontakt.Text;
 
             // ID-Zuordnungslabel rot färben, wenn nicht zugeordnet
-            if (((LBL_IDAdresseZuKontakt.Text == string.Empty) && (LBL_IDKontakt.Text != string.Empty)) || ((LBL_IDAdresseZuKontakt.Text == "0") && (LBL_IDKontakt.Text != string.Empty)))
+            if ((LBL_IDAdresseZuKontakt.Text == string.Empty && LBL_IDKontakt.Text != string.Empty) || (LBL_IDAdresseZuKontakt.Text == "0" && LBL_IDKontakt.Text != string.Empty))
             {
                 LBL_IDAdresseZuKontakt.Text = "Kontakt hat keine Adresse!";
                 LBL_IDAdresseZuKontakt.ForeColor = Color.Red;
@@ -857,7 +854,7 @@ namespace Adress_DB
         private void LBL_IDKontoZuAdresse_TextChanged(object sender, EventArgs e)
         {
             // ID-Zuordnungslabel rot färben, wenn nicht zugeordnet
-            if ((LBL_IDKontoZuAdresse.Text ?? "") == (string.Empty ?? "") & (LBL_IDAdresse.Text ?? "") != (string.Empty ?? "") | LBL_IDKontoZuAdresse.Text == "0" & (LBL_IDAdresse.Text ?? "") != (string.Empty ?? ""))
+            if ((LBL_IDKontoZuAdresse.Text  == string.Empty && LBL_IDAdresse.Text != string.Empty ) || (LBL_IDKontoZuAdresse.Text == "0" && LBL_IDAdresse.Text != string.Empty))
             {
                 LBL_IDKontoZuAdresse.Text = "Adresse nicht zugeordnet!";
                 LBL_IDKontoZuAdresse.ForeColor = Color.Red;
@@ -905,7 +902,7 @@ namespace Adress_DB
                 BTN_MapsSuche.Enabled = true;
  
 
-                if ((LBL_Land.Text ?? "") != (string.Empty ?? ""))
+                if (LBL_Land.Text  != string.Empty)
                 {
                     // MsgBox(LBL_Land.Text)
                     foundIndex = StaatenBindingSource.Find("Staat", LBL_Land.Text);
@@ -927,7 +924,7 @@ namespace Adress_DB
 
                 // Zu jeder Adresse such das System im Falle der DACH-Staaten die Koordinaten und zeigt diese an. Nur dann kann eine Umkreissuche realisiert werden
                 DataTable dt;
-                switch (LBL_Land.Text ?? "")
+                switch (LBL_Land.Text)
                 {
                     case "Deutschland":
                         {
@@ -946,17 +943,10 @@ namespace Adress_DB
 
                             // Ist die Kombi vorhanden, führt die folgende Suche zu einem Treffer und zeigt die Koordinaten an.
                             DE_PLZ_GeodatenTableAdapter.SuchePLZundOrt(_WSL_AdressenDataSet.DE_PLZ_Geodaten, LBL_PLZ.Text, LBL_Ort.Text);
-                            {
-                                var withBlock = LBL_Lat;
-                                withBlock.DataBindings.Clear();
-                                withBlock.DataBindings.Add(new Binding("Text", DE_PLZ_GeodatenBindingSource, "latitude", true));
-                            }
-
-                            {
-                                var withBlock1 = LBL_Long;
-                                withBlock1.DataBindings.Clear();
-                                withBlock1.DataBindings.Add(new Binding("Text", DE_PLZ_GeodatenBindingSource, "longitude", true));
-                            }
+                            LBL_Lat.DataBindings.Clear();
+                            LBL_Lat.DataBindings.Add(new Binding("Text", DE_PLZ_GeodatenBindingSource, "latitude", true));
+                            LBL_Long.DataBindings.Clear();
+                            LBL_Long.DataBindings.Add(new Binding("Text", DE_PLZ_GeodatenBindingSource, "longitude", true));
 
                             break;
                         }
@@ -976,17 +966,10 @@ namespace Adress_DB
                             }
 
                             AT_PLZ_GeodatenTableAdapter.SuchePLZundOrt(_WSL_AdressenDataSet.AT_PLZ_Geodaten, LBL_PLZ.Text, LBL_Ort.Text);
-                            {
-                                var withBlock2 = LBL_Lat;
-                                withBlock2.DataBindings.Clear();
-                                withBlock2.DataBindings.Add(new Binding("Text", AT_PLZ_GeodatenBindingSource, "latitude", true));
-                            }
-
-                            {
-                                var withBlock3 = LBL_Long;
-                                withBlock3.DataBindings.Clear();
-                                withBlock3.DataBindings.Add(new Binding("Text", AT_PLZ_GeodatenBindingSource, "longitude", true));
-                            }
+                            LBL_Lat.DataBindings.Clear();
+                            LBL_Lat.DataBindings.Add(new Binding("Text", AT_PLZ_GeodatenBindingSource, "latitude", true));
+                            LBL_Long.DataBindings.Clear();
+                            LBL_Long.DataBindings.Add(new Binding("Text", AT_PLZ_GeodatenBindingSource, "longitude", true));
 
                             break;
                         }
@@ -1006,17 +989,10 @@ namespace Adress_DB
                             }
 
                             CH_PLZ_GeodatenTableAdapter.SuchePLZundOrt(_WSL_AdressenDataSet.CH_PLZ_Geodaten, LBL_PLZ.Text, LBL_Ort.Text);
-                            {
-                                var withBlock4 = LBL_Lat;
-                                withBlock4.DataBindings.Clear();
-                                withBlock4.DataBindings.Add(new Binding("Text", CH_PLZ_GeodatenBindingSource, "latitude", true));
-                            }
-
-                            {
-                                var withBlock5 = LBL_Long;
-                                withBlock5.DataBindings.Clear();
-                                withBlock5.DataBindings.Add(new Binding("Text", CH_PLZ_GeodatenBindingSource, "longitude", true));
-                            }
+                            LBL_Lat.DataBindings.Clear();
+                            LBL_Lat.DataBindings.Add(new Binding("Text", CH_PLZ_GeodatenBindingSource, "latitude", true));
+                            LBL_Long.DataBindings.Clear();
+                            LBL_Long.DataBindings.Add(new Binding("Text", CH_PLZ_GeodatenBindingSource, "longitude", true));
 
                             break;
                         }
@@ -1034,7 +1010,7 @@ namespace Adress_DB
             }
 
             // ID-Zuordnungslabel rot färben: Falls es leer ist, das TextänderungsEvent auslösen für das Label:
-            if ((LBL_IDKontoZuAdresse.Text ?? "") == (string.Empty ?? "") & (LBL_IDAdresse.Text ?? "") != (string.Empty ?? ""))
+            if (LBL_IDKontoZuAdresse.Text  == string.Empty && LBL_IDAdresse.Text != string.Empty)
             {
                 LBL_IDKontoZuAdresse.Text = "-";
             }
@@ -1083,7 +1059,7 @@ namespace Adress_DB
             }
 
             // ID-Zuordnungslabel rot färben: Falls es leer ist, das TextänderungsEvent auslösen für das Label:
-            if ((LBL_IDAdresseZuKontakt.Text ?? "") == (string.Empty ?? "") & (LBL_IDKontakt.Text ?? "") != (string.Empty ?? ""))
+            if (LBL_IDAdresseZuKontakt.Text  == string.Empty && LBL_IDKontakt.Text  != string.Empty)
             {
                 LBL_IDAdresseZuKontakt.Text = "-";
             }
@@ -1256,7 +1232,7 @@ namespace Adress_DB
 
         private void BTN_NachnameSuche_Click(object sender, EventArgs e)
         {
-            if ((TB_FirmenName.Text ?? "") != (string.Empty ?? ""))
+            if (TB_FirmenName.Text != string.Empty)
             {
                 try
                 {
@@ -1290,7 +1266,7 @@ namespace Adress_DB
             // Die TabSeite mit 'Besuchsbericht' wird angezeigt, dann..
             if (TC_Beleg.SelectedIndex == 0)
             {
-                if ((TB_BBThema.Text ?? "") == (string.Empty ?? ""))
+                if (TB_BBThema.Text == string.Empty)
                 {
                     MessageBox.Show("Bitte das Thema des Besuchs erfassen", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     TB_BBThema.Select();
@@ -1300,7 +1276,7 @@ namespace Adress_DB
 
 
                 // Falls die Adresse keine Konto-ID hat, wird die ID aus "Konto" gnommen!
-                if ((LBL_BBIDKonto.Text ?? "") != (string.Empty ?? ""))
+                if (LBL_BBIDKonto.Text != string.Empty)
                 {
                     IDKonto = Convert.ToInt32(LBL_BBIDKonto.Text);
                 }
@@ -1362,11 +1338,11 @@ namespace Adress_DB
                 BelegName = CB_Vorlagen.Text;
 
                 // Falls keine Belege geladen werden konnten, kann auch kein Dokument erzeugt wertden:
-                if ((BelegName ?? "") == (string.Empty ?? ""))
+                if (BelegName == string.Empty)
                     return;
 
                 // Das Feld Thema soll immer ausgefüllt sein:
-                if ((TB_DIVThema.Text ?? "") == (string.Empty ?? ""))
+                if (TB_DIVThema.Text == string.Empty)
                 {
                     MessageBox.Show("Bitte einen Betreff erfassen", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     TB_DIVThema.Select();
@@ -1375,7 +1351,7 @@ namespace Adress_DB
                 }
 
                 // Falls die FAX-Vorlage gewählt wurde, sollte auch eine FAX-Nummer angegeben werden:
-                if (BelegName.Substring(0, 3) == "Fax" & (TB_DIVFaxnummer.Text ?? "") == (string.Empty ?? ""))
+                if (BelegName.Substring(0, 3) == "Fax" && TB_DIVFaxnummer.Text == string.Empty)
                 {
                     MessageBox.Show("Bitte eine Fax-Nummererfassen", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     TB_DIVFaxnummer.Select();
@@ -1384,7 +1360,7 @@ namespace Adress_DB
                 }
 
                 // Falls die Adresse keine Konto-ID hat, wird die ID aus "Konto" gnommen!
-                if ((LBL_DIVIDKonto.Text ?? "") != (string.Empty ?? ""))
+                if (LBL_DIVIDKonto.Text != string.Empty)
                 {
                     IDKonto = Convert.ToInt32(LBL_DIVIDKonto.Text);
                 }
