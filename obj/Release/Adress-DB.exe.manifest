@@ -4,7 +4,7 @@
   <description asmv2:iconFile="addressbook.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Adress-DB" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Adress-DB" version="2.0.1.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="Adress-DB.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Adress-DB.exe" size="1439200">
-      <assemblyIdentity name="Adress-DB" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Adress-DB.exe" size="1314272">
+      <assemblyIdentity name="Adress-DB" version="2.0.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3o9cM/6hq376ue74Vd4+47/mkpLL4QnE+Br6IL6D0V8=</dsig:DigestValue>
+        <dsig:DigestValue>jAWRBtUKCi1//rzIN6nj3LF7SD9h5DWP9h0KgYxc9m4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,13 +63,13 @@
       <dsig:DigestValue>Avgf6vNpOVHWwCJ3hMocRTOqA5Tzs5u5vihVR3mdOAo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Adress-DB.exe.config" size="547">
+  <file name="Adress-DB.exe.config" size="1120">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>fPUmK8BRSp3RlYbg1Wngq1ottBt29icBnHtpYVm5kVI=</dsig:DigestValue>
+      <dsig:DigestValue>f7Ajxl03CIwrimykyL0S+U63xubva7jcOO0JbzcxFZ8=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

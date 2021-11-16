@@ -14,14 +14,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Adress-DB.exe.manifest" size="5168">
+    <dependentAssembly dependencyType="install" codebase="Adress-DB.exe.manifest" size="5169">
       <assemblyIdentity name="Adress-DB.exe" version="2.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QBOkZ2T1hTvSqKMpjJV0YSSmxXEp1htUYAgn8FvT71o=</dsig:DigestValue>
+        <dsig:DigestValue>zoH//2UwXFVvmAX2/TfMYXbOz4UimtwAtRiHm+QhSJc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
