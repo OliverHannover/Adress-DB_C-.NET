@@ -100,3 +100,5 @@ C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\bin\Debug\Adress-D
 C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\obj\Debug\Adress-DB.TrustInfo.xml
 C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\obj\Debug\Adress-DB.exe.manifest
 C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\obj\Debug\Adress-DB.application
+C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\obj\Debug\Adress_DB.Hinweisfenster.resources
+C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\obj\Debug\Interop.Redemption.dll

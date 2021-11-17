@@ -4,8 +4,6 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-//using Microsoft.VisualBasic;
-//using Microsoft.VisualBasic.CompilerServices;
 
 namespace Adress_DB
 {
@@ -14,44 +12,6 @@ namespace Adress_DB
         public Hauptform()
         {
             InitializeComponent();
-            _BTN_Suche.Name = "BTN_Suche";
-            _LBL_IDFirmenName.Name = "LBL_IDFirmenName";
-            _CB_FirmenName.Name = "CB_FirmenName";
-            _BTN_NachnameSuche.Name = "BTN_NachnameSuche";
-            _Button1.Name = "Button1";
-            _LBL_IDAdresse.Name = "LBL_IDAdresse";
-            _btnNeueAdresse.Name = "btnNeueAdresse";
-            _btnNeuerKontakt.Name = "btnNeuerKontakt";
-            _BTN_ZuOutlook.Name = "BTN_ZuOutlook";
-            _BTN_MapsSuche.Name = "BTN_MapsSuche";
-            _btnNeuesKonto.Name = "btnNeuesKonto";
-            BTN_Speichern.Name = "btnSpeichern";
-            _btnKontoZuAdresse.Name = "btnKontoZuAdresse";
-            _TB_PLZ.Name = "TB_PLZ";
-            _EmailAddresseLinkLabel.Name = "EmailAddresseLinkLabel";
-            _btnAdresseZuKontakt.Name = "btnAdresseZuKontakt";
-            _LBL_IDKontakt.Name = "LBL_IDKontakt";
-            _RB_OhneAnrede.Name = "RB_OhneAnrede";
-            _RB_MitAnrede.Name = "RB_MitAnrede";
-            _LBL_Sprache.Name = "LBL_Sprache";
-            _CB_Vorlagen.Name = "CB_Vorlagen";
-            _LBL_FirmenName.Name = "LBL_FirmenName";
-            _btnAbbrechen.Name = "btnAbbrechen";
-            _LBL_IDKontoZuAdresse.Name = "LBL_IDKontoZuAdresse";
-            _WebseiteLinkLabel.Name = "WebseiteLinkLabel";
-            _LBL_IDAdresseZuKontakt.Name = "LBL_IDAdresseZuKontakt";
-            _MobiltelefonLinkLabel.Name = "MobiltelefonLinkLabel";
-            _TelefonPrivatLinkLabel.Name = "TelefonPrivatLinkLabel";
-            _TelefonGeschaeftlichLinkLabel.Name = "TelefonGeschaeftlichLinkLabel";
-            _LBL_Anrede.Name = "LBL_Anrede";
-            _BTN_DeleteUser.Name = "BTN_DeleteUser";
-            _DocuWareDateiManuellToolStripMenuItem.Name = "DocuWareDateiManuellToolStripMenuItem";
-            _SchließenToolStripMenuItem.Name = "SchließenToolStripMenuItem";
-            _BenutzerlisteToolStripMenuItem.Name = "BenutzerlisteToolStripMenuItem";
-            _EinstellungenToolStripMenuItem.Name = "EinstellungenToolStripMenuItem";
-            _AktivitätslogToolStripMenuItem.Name = "AktivitätslogToolStripMenuItem";
-            _InfoÜberAdressenDBToolStripMenuItem1.Name = "InfoÜberAdressenDBToolStripMenuItem1";
-            _HilfeToolStripMenuItem.Name = "HilfeToolStripMenuItem";
         }
 
         public int IDBeleg;
@@ -70,8 +30,6 @@ namespace Adress_DB
             TC_Kontakt.Visible = false;
             TC_Beleg.Visible = false;
             LBL_BBBesuchterKontakt.Text = string.Empty;
-            // LBL_IDFirmenName.Text = String.Empty
-            //LBL_IDFirmenName.Text = "0";
             _LBL_IDAdresse.Text = "0";
             lblHinweisKeinTreffer.Visible = false;
             TB_FirmenName.Select();
@@ -257,17 +215,8 @@ namespace Adress_DB
                 // MsgBox("Neuen Geschäftspartner anlegen")
                 // Abfrage ob gespeichert werden soll:
 
-                DialogResult Result;
-                Result = MessageBox.Show("Folgenden Geschäftspartner anlegen:" + System.Environment.NewLine + System.Environment.NewLine + "auf RECHTSCHREIBUNG achten...!" + System.Environment.NewLine + System.Environment.NewLine + TB_FirmenName.Text, "Neuen Geschäftspartner anlegen", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (Result == DialogResult.Yes)
-                {
-                    Module1.NeuenFirmenNamenAnlegen();
-                }
-                else if (Result == DialogResult.No)
-                {
-                    // exit the procedure
-                    return;
-                }
+                Hinweisfenster Hinweisfenster = new(TB_FirmenName.Text, "", 0, "Neuen Geschäftspartner anlegen?", 1);
+                Hinweisfenster.ShowDialog();
 
                 return; // keine weiteren IF/Then-Prüfungen! KEIN WEITERER PROZESSABLAUF!
             } // Ende neuen Geschäftspartner anlegen
@@ -282,44 +231,8 @@ namespace Adress_DB
             {
                 // MsgBox("Geschäftspartner umbenennen")
 
-                string FirmenNameNeu = TB_FirmenName.Text;
-                string FirmenNameAlt = CB_FirmenName.Text;
-
-                // Abfrage ob Umbenennen oder neu anlegen?
-                DialogResult result = MessageBox.Show("auf RECHTSCHREIBUNG achten...!" + System.Environment.NewLine + System.Environment.NewLine + "'Ja' für Umbenennen: " + FirmenNameAlt + " --> " + FirmenNameNeu + System.Environment.NewLine + System.Environment.NewLine + "'Nein' für NEU anlegen: " + FirmenNameNeu, "Geschäftspartner umbenennen oder neu?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-                
-                if (result == DialogResult.Yes)
-                {
-                    try
-                    {
-                        // Datensatz FirmenName schreiben **DateTime solle eigentlich ein DAtum Sein, kein String!
-                        this.FirmenNameTableAdapter.UpdateFirmenName(FirmenNameNeu, Environment.UserName, Convert.ToString(DateTime.Now), IDFirmenName);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Umbenennen fehlgeschlagen", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        MessageBox.Show(ex.Message);
-                    }
-
-                    Module1.Logging(3, IDFirmenName, IDFirmenName, FirmenNameAlt + " --> " + FirmenNameNeu); // LogTabelle schreiben
-                    MessageBox.Show("Firmenname umbenannt", "Hinweis", MessageBoxButtons.OK);
-
-                    // DocuWare-Datei schreiben:
-                    BTN_Suche.PerformClick();
-                    Module1.SaveToCSV();
-                    return;
-                }
-                else if(result == DialogResult.No)
-                {
-                    // MsgBox("neu anlegen")
-                    Module1.NeuenFirmenNamenAnlegen();
-                    return;
-                }
-                else if (result == DialogResult.Cancel)
-                {
-                    // MsgBox("Abbrechen")
-                    return;
-                }
+                Hinweisfenster Hinweisfenster = new(TB_FirmenName.Text, CB_FirmenName.Text, IDFirmenName, "Umbennen oder neu anlegen?", 2);
+                Hinweisfenster.ShowDialog();
 
                 return; // keine weiteren IF/Then-Prüfungen!
             } // FirmenName/Geschäftspartner umbenennen

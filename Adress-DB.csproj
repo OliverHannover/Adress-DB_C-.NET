@@ -161,6 +161,12 @@
     <Compile Include="Administration.Designer.cs">
       <DependentUpon>Administration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hinweisfenster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hinweisfenster.Designer.cs">
+      <DependentUpon>Hinweisfenster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Hinweisfenster.resx">
+      <DependentUpon>Hinweisfenster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogInfos.resx">
       <DependentUpon>LogInfos.cs</DependentUpon>
     </EmbeddedResource>
@@ -343,6 +352,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="addressbook.ico" />
+    <None Include="Symbole\Rename_cyan_7x_16x.png" />
+    <None Include="Symbole\Add_16x.png" />
     <None Include="Symbole\EnableLog_16x.png" />
     <None Include="Symbole\BackToResultList_16x.png" />
     <None Include="Symbole\PrintDocument_16x.png" />

@@ -8,8 +8,6 @@ namespace Adress_DB
         public KontoForm()
         {
             InitializeComponent();
-            _btnKontoSave.Name = "btnKontoSave";
-            _Button1.Name = "Button1";
         }
 
         private int IDFirmenName;

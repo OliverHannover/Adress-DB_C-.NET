@@ -38,518 +38,533 @@ namespace Adress_DB
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            Label SachbearbeiterLabel;
-            Label KuerzelLabel;
-            Label DurchwahlLabel;
-            Label EmailLabel;
-            Label JobtitleLabel;
-            Label EnglJobtitleLabel;
-            Label AktivLabel;
-            Label LoginLabel;
-            Label AdminLabel;
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(Sachbearbeiter));
-            Panel1 = new Panel();
-            Label1 = new Label();
-            _WSL_AdressenDataSet = new _WSL_AdressenDataSet();
-            _SachbearbeiterBindingSource = new BindingSource(components);
-            _SachbearbeiterBindingSource.PositionChanged += new EventHandler(SachbearbeiterBindingSource_PositionChanged);
-            SachbearbeiterTableAdapter = new _WSL_AdressenDataSetTableAdapters.SachbearbeiterTableAdapter();
-            TableAdapterManager = new _WSL_AdressenDataSetTableAdapters.TableAdapterManager();
-            SachbearbeiterDataGridView = new DataGridView();
-            IDSachbearbeiter = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            _BTN_Schliessen = new Button();
-            _BTN_Schliessen.Click += new EventHandler(BTN_Schliessen_Click);
-            Panel2 = new Panel();
-            _BTN_NeuerSachbearbeiter = new Button();
-            _BTN_NeuerSachbearbeiter.Click += new EventHandler(BTN_NeuerSachbearbeiter_Click);
-            _BTN_Speichern = new Button();
-            _BTN_Speichern.Click += new EventHandler(BTN_Speichern_Click);
-            PNL_Edit = new Panel();
-            lblBenutzerNeu = new Label();
-            IDSachbearbeiterLabel1 = new Label();
-            EnglJobtitleTextBox = new TextBox();
-            PNL_Admin = new Panel();
-            Label4 = new Label();
-            LockedCheckBox = new CheckBox();
-            AdminCheckBox = new CheckBox();
-            SachbearbeiterTextBox = new TextBox();
-            Label3 = new Label();
-            Label2 = new Label();
-            KuerzelTextBox = new TextBox();
-            LoginTextBox = new TextBox();
-            DurchwahlTextBox = new TextBox();
-            AktivCheckBox = new CheckBox();
-            EmailTextBox = new TextBox();
-            JobtitleTextBox = new TextBox();
-            TableLayoutPanel1 = new TableLayoutPanel();
-            TableLayoutPanel2 = new TableLayoutPanel();
-            SachbearbeiterLabel = new Label();
-            KuerzelLabel = new Label();
-            DurchwahlLabel = new Label();
-            EmailLabel = new Label();
-            JobtitleLabel = new Label();
-            EnglJobtitleLabel = new Label();
-            AktivLabel = new Label();
-            LoginLabel = new Label();
-            AdminLabel = new Label();
-            Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_WSL_AdressenDataSet).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_SachbearbeiterBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)SachbearbeiterDataGridView).BeginInit();
-            Panel2.SuspendLayout();
-            PNL_Edit.SuspendLayout();
-            PNL_Admin.SuspendLayout();
-            TableLayoutPanel1.SuspendLayout();
-            TableLayoutPanel2.SuspendLayout();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label SachbearbeiterLabel;
+            System.Windows.Forms.Label KuerzelLabel;
+            System.Windows.Forms.Label DurchwahlLabel;
+            System.Windows.Forms.Label EmailLabel;
+            System.Windows.Forms.Label JobtitleLabel;
+            System.Windows.Forms.Label EnglJobtitleLabel;
+            System.Windows.Forms.Label AktivLabel;
+            System.Windows.Forms.Label LoginLabel;
+            System.Windows.Forms.Label AdminLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sachbearbeiter));
+            this.Panel1 = new System.Windows.Forms.Panel();
+            this.Label1 = new System.Windows.Forms.Label();
+            this._WSL_AdressenDataSet = new Adress_DB._WSL_AdressenDataSet();
+            this._SachbearbeiterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SachbearbeiterTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.SachbearbeiterTableAdapter();
+            this.TableAdapterManager = new Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager();
+            this.SachbearbeiterDataGridView = new System.Windows.Forms.DataGridView();
+            this.IDSachbearbeiter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._BTN_Schliessen = new System.Windows.Forms.Button();
+            this.Panel2 = new System.Windows.Forms.Panel();
+            this._BTN_NeuerSachbearbeiter = new System.Windows.Forms.Button();
+            this._BTN_Speichern = new System.Windows.Forms.Button();
+            this.PNL_Edit = new System.Windows.Forms.Panel();
+            this.lblBenutzerNeu = new System.Windows.Forms.Label();
+            this.IDSachbearbeiterLabel1 = new System.Windows.Forms.Label();
+            this.EnglJobtitleTextBox = new System.Windows.Forms.TextBox();
+            this.PNL_Admin = new System.Windows.Forms.Panel();
+            this.Label4 = new System.Windows.Forms.Label();
+            this.LockedCheckBox = new System.Windows.Forms.CheckBox();
+            this.AdminCheckBox = new System.Windows.Forms.CheckBox();
+            this.SachbearbeiterTextBox = new System.Windows.Forms.TextBox();
+            this.Label3 = new System.Windows.Forms.Label();
+            this.Label2 = new System.Windows.Forms.Label();
+            this.KuerzelTextBox = new System.Windows.Forms.TextBox();
+            this.LoginTextBox = new System.Windows.Forms.TextBox();
+            this.DurchwahlTextBox = new System.Windows.Forms.TextBox();
+            this.AktivCheckBox = new System.Windows.Forms.CheckBox();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
+            this.JobtitleTextBox = new System.Windows.Forms.TextBox();
+            this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.TableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            SachbearbeiterLabel = new System.Windows.Forms.Label();
+            KuerzelLabel = new System.Windows.Forms.Label();
+            DurchwahlLabel = new System.Windows.Forms.Label();
+            EmailLabel = new System.Windows.Forms.Label();
+            JobtitleLabel = new System.Windows.Forms.Label();
+            EnglJobtitleLabel = new System.Windows.Forms.Label();
+            AktivLabel = new System.Windows.Forms.Label();
+            LoginLabel = new System.Windows.Forms.Label();
+            AdminLabel = new System.Windows.Forms.Label();
+            this.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._WSL_AdressenDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._SachbearbeiterBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SachbearbeiterDataGridView)).BeginInit();
+            this.Panel2.SuspendLayout();
+            this.PNL_Edit.SuspendLayout();
+            this.PNL_Admin.SuspendLayout();
+            this.TableLayoutPanel1.SuspendLayout();
+            this.TableLayoutPanel2.SuspendLayout();
+            this.SuspendLayout();
             // 
             // SachbearbeiterLabel
             // 
             SachbearbeiterLabel.AutoSize = true;
-            SachbearbeiterLabel.Location = new Point(14, 29);
+            SachbearbeiterLabel.Location = new System.Drawing.Point(14, 29);
             SachbearbeiterLabel.Name = "SachbearbeiterLabel";
-            SachbearbeiterLabel.Size = new Size(82, 13);
+            SachbearbeiterLabel.Size = new System.Drawing.Size(82, 13);
             SachbearbeiterLabel.TabIndex = 3;
             SachbearbeiterLabel.Text = "Sachbearbeiter:";
             // 
             // KuerzelLabel
             // 
             KuerzelLabel.AutoSize = true;
-            KuerzelLabel.Location = new Point(51, 55);
+            KuerzelLabel.Location = new System.Drawing.Point(51, 55);
             KuerzelLabel.Name = "KuerzelLabel";
-            KuerzelLabel.Size = new Size(45, 13);
+            KuerzelLabel.Size = new System.Drawing.Size(45, 13);
             KuerzelLabel.TabIndex = 5;
             KuerzelLabel.Text = "Kuerzel:";
             // 
             // DurchwahlLabel
             // 
             DurchwahlLabel.AutoSize = true;
-            DurchwahlLabel.Location = new Point(35, 107);
+            DurchwahlLabel.Location = new System.Drawing.Point(35, 107);
             DurchwahlLabel.Name = "DurchwahlLabel";
-            DurchwahlLabel.Size = new Size(61, 13);
+            DurchwahlLabel.Size = new System.Drawing.Size(61, 13);
             DurchwahlLabel.TabIndex = 7;
             DurchwahlLabel.Text = "Durchwahl:";
             // 
             // EmailLabel
             // 
             EmailLabel.AutoSize = true;
-            EmailLabel.Location = new Point(61, 133);
+            EmailLabel.Location = new System.Drawing.Point(61, 133);
             EmailLabel.Name = "EmailLabel";
-            EmailLabel.Size = new Size(35, 13);
+            EmailLabel.Size = new System.Drawing.Size(35, 13);
             EmailLabel.TabIndex = 9;
             EmailLabel.Text = "Email:";
             // 
             // JobtitleLabel
             // 
             JobtitleLabel.AutoSize = true;
-            JobtitleLabel.Location = new Point(14, 156);
+            JobtitleLabel.Location = new System.Drawing.Point(14, 156);
             JobtitleLabel.Name = "JobtitleLabel";
-            JobtitleLabel.Size = new Size(85, 13);
+            JobtitleLabel.Size = new System.Drawing.Size(85, 13);
             JobtitleLabel.TabIndex = 11;
             JobtitleLabel.Text = "Jobtitel/Position:";
             // 
             // EnglJobtitleLabel
             // 
             EnglJobtitleLabel.AutoSize = true;
-            EnglJobtitleLabel.Location = new Point(14, 185);
+            EnglJobtitleLabel.Location = new System.Drawing.Point(14, 185);
             EnglJobtitleLabel.Name = "EnglJobtitleLabel";
-            EnglJobtitleLabel.Size = new Size(85, 13);
+            EnglJobtitleLabel.Size = new System.Drawing.Size(85, 13);
             EnglJobtitleLabel.TabIndex = 13;
             EnglJobtitleLabel.Text = "Jobtitel/Position:";
             // 
             // AktivLabel
             // 
             AktivLabel.AutoSize = true;
-            AktivLabel.Location = new Point(99, 217);
+            AktivLabel.Location = new System.Drawing.Point(99, 217);
             AktivLabel.Name = "AktivLabel";
-            AktivLabel.Size = new Size(121, 13);
+            AktivLabel.Size = new System.Drawing.Size(121, 13);
             AktivLabel.TabIndex = 15;
             AktivLabel.Text = "Sachbearbeiter ist aktiv:";
             // 
             // LoginLabel
             // 
             LoginLabel.AutoSize = true;
-            LoginLabel.Location = new Point(60, 81);
+            LoginLabel.Location = new System.Drawing.Point(60, 81);
             LoginLabel.Name = "LoginLabel";
-            LoginLabel.Size = new Size(36, 13);
+            LoginLabel.Size = new System.Drawing.Size(36, 13);
             LoginLabel.TabIndex = 17;
             LoginLabel.Text = "Login:";
             // 
             // AdminLabel
             // 
             AdminLabel.AutoSize = true;
-            AdminLabel.Location = new Point(3, 9);
+            AdminLabel.Location = new System.Drawing.Point(3, 9);
             AdminLabel.Name = "AdminLabel";
-            AdminLabel.Size = new Size(127, 13);
+            AdminLabel.Size = new System.Drawing.Size(127, 13);
             AdminLabel.TabIndex = 19;
             AdminLabel.Text = "Sachbearbeiter ist Admin:";
             // 
             // Panel1
             // 
-            Panel1.BackColor = Color.Silver;
-            Panel1.Controls.Add(Label1);
-            Panel1.Dock = DockStyle.Fill;
-            Panel1.Location = new Point(3, 3);
-            Panel1.Name = "Panel1";
-            Panel1.Size = new Size(635, 38);
-            Panel1.TabIndex = 0;
+            this.Panel1.BackColor = System.Drawing.Color.Silver;
+            this.Panel1.Controls.Add(this.Label1);
+            this.Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel1.Location = new System.Drawing.Point(3, 3);
+            this.Panel1.Name = "Panel1";
+            this.Panel1.Size = new System.Drawing.Size(635, 38);
+            this.Panel1.TabIndex = 0;
             // 
             // Label1
             // 
-            Label1.AutoSize = true;
-            Label1.Font = new Font("Microsoft Sans Serif", 12.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label1.ForeColor = Color.Black;
-            Label1.Location = new Point(12, 9);
-            Label1.Name = "Label1";
-            Label1.Size = new Size(182, 20);
-            Label1.TabIndex = 1;
-            Label1.Text = "Benutzerliste bearbeiten";
+            this.Label1.AutoSize = true;
+            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.ForeColor = System.Drawing.Color.Black;
+            this.Label1.Location = new System.Drawing.Point(12, 9);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(182, 20);
+            this.Label1.TabIndex = 1;
+            this.Label1.Text = "Benutzerliste bearbeiten";
             // 
             // _WSL_AdressenDataSet
             // 
-            _WSL_AdressenDataSet.DataSetName = "_WSL_AdressenDataSet";
-            _WSL_AdressenDataSet.SchemaSerializationMode = SchemaSerializationMode.IncludeSchema;
+            this._WSL_AdressenDataSet.DataSetName = "_WSL_AdressenDataSet";
+            this._WSL_AdressenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // SachbearbeiterBindingSource
+            // _SachbearbeiterBindingSource
             // 
-            _SachbearbeiterBindingSource.DataMember = "Sachbearbeiter";
-            _SachbearbeiterBindingSource.DataSource = _WSL_AdressenDataSet;
+            this._SachbearbeiterBindingSource.DataMember = "Sachbearbeiter";
+            this._SachbearbeiterBindingSource.DataSource = this._WSL_AdressenDataSet;
+            this._SachbearbeiterBindingSource.PositionChanged += new System.EventHandler(this.SachbearbeiterBindingSource_PositionChanged);
             // 
             // SachbearbeiterTableAdapter
             // 
-            SachbearbeiterTableAdapter.ClearBeforeFill = true;
+            this.SachbearbeiterTableAdapter.ClearBeforeFill = true;
             // 
             // TableAdapterManager
             // 
-            TableAdapterManager.AdressenTableAdapter = null;
-            TableAdapterManager.BackupDataSetBeforeUpdate = false;
-            TableAdapterManager.BelegeTableAdapter = null;
-            TableAdapterManager.FirmenNameTableAdapter = null;
-            TableAdapterManager.KontakteTableAdapter = null;
-            TableAdapterManager.KontoTableAdapter = null;
-            TableAdapterManager.LogTabelleTableAdapter = null;
-            TableAdapterManager.SachbearbeiterTableAdapter = SachbearbeiterTableAdapter;
-            TableAdapterManager.UpdateOrder = _WSL_AdressenDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.TableAdapterManager.AdressenTableAdapter = null;
+            this.TableAdapterManager.AT_PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.TableAdapterManager.BelegeTableAdapter = null;
+            this.TableAdapterManager.CH_PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.DE_PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.FirmenNameTableAdapter = null;
+            this.TableAdapterManager.KontakteTableAdapter = null;
+            this.TableAdapterManager.KontoTableAdapter = null;
+            this.TableAdapterManager.LogTabelleTableAdapter = null;
+            this.TableAdapterManager.PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.propertiesTableAdapter = null;
+            this.TableAdapterManager.SachbearbeiterTableAdapter = this.SachbearbeiterTableAdapter;
+            this.TableAdapterManager.StaatenTableAdapter = null;
+            this.TableAdapterManager.UpdateOrder = Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // SachbearbeiterDataGridView
             // 
-            SachbearbeiterDataGridView.AllowUserToAddRows = false;
-            SachbearbeiterDataGridView.AllowUserToDeleteRows = false;
-            SachbearbeiterDataGridView.AutoGenerateColumns = false;
-            SachbearbeiterDataGridView.BackgroundColor = Color.White;
-            SachbearbeiterDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            SachbearbeiterDataGridView.Columns.AddRange(new DataGridViewColumn[] { IDSachbearbeiter, DataGridViewTextBoxColumn2 });
-            SachbearbeiterDataGridView.DataSource = _SachbearbeiterBindingSource;
-            SachbearbeiterDataGridView.Dock = DockStyle.Fill;
-            SachbearbeiterDataGridView.GridColor = Color.White;
-            SachbearbeiterDataGridView.Location = new Point(3, 3);
-            SachbearbeiterDataGridView.Name = "SachbearbeiterDataGridView";
-            SachbearbeiterDataGridView.RowHeadersVisible = false;
-            SachbearbeiterDataGridView.ScrollBars = ScrollBars.Vertical;
-            SachbearbeiterDataGridView.Size = new Size(204, 354);
-            SachbearbeiterDataGridView.TabIndex = 1;
+            this.SachbearbeiterDataGridView.AllowUserToAddRows = false;
+            this.SachbearbeiterDataGridView.AllowUserToDeleteRows = false;
+            this.SachbearbeiterDataGridView.AutoGenerateColumns = false;
+            this.SachbearbeiterDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.SachbearbeiterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SachbearbeiterDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDSachbearbeiter,
+            this.DataGridViewTextBoxColumn2});
+            this.SachbearbeiterDataGridView.DataSource = this._SachbearbeiterBindingSource;
+            this.SachbearbeiterDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SachbearbeiterDataGridView.GridColor = System.Drawing.Color.White;
+            this.SachbearbeiterDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.SachbearbeiterDataGridView.Name = "SachbearbeiterDataGridView";
+            this.SachbearbeiterDataGridView.RowHeadersVisible = false;
+            this.SachbearbeiterDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.SachbearbeiterDataGridView.Size = new System.Drawing.Size(204, 354);
+            this.SachbearbeiterDataGridView.TabIndex = 1;
             // 
             // IDSachbearbeiter
             // 
-            IDSachbearbeiter.DataPropertyName = "IDSachbearbeiter";
-            IDSachbearbeiter.HeaderText = "ID";
-            IDSachbearbeiter.Name = "IDSachbearbeiter";
-            IDSachbearbeiter.ReadOnly = true;
-            IDSachbearbeiter.SortMode = DataGridViewColumnSortMode.NotSortable;
-            IDSachbearbeiter.Width = 30;
+            this.IDSachbearbeiter.DataPropertyName = "IDSachbearbeiter";
+            this.IDSachbearbeiter.HeaderText = "ID";
+            this.IDSachbearbeiter.Name = "IDSachbearbeiter";
+            this.IDSachbearbeiter.ReadOnly = true;
+            this.IDSachbearbeiter.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.IDSachbearbeiter.Width = 30;
             // 
             // DataGridViewTextBoxColumn2
             // 
-            DataGridViewTextBoxColumn2.DataPropertyName = "Sachbearbeiter";
-            DataGridViewTextBoxColumn2.HeaderText = "Sachbearbeiter";
-            DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2";
-            DataGridViewTextBoxColumn2.SortMode = DataGridViewColumnSortMode.NotSortable;
-            DataGridViewTextBoxColumn2.Width = 170;
+            this.DataGridViewTextBoxColumn2.DataPropertyName = "Sachbearbeiter";
+            this.DataGridViewTextBoxColumn2.HeaderText = "Sachbearbeiter";
+            this.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2";
+            this.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DataGridViewTextBoxColumn2.Width = 170;
             // 
-            // BTN_Schliessen
+            // _BTN_Schliessen
             // 
-            _BTN_Schliessen.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _BTN_Schliessen.Image = My.Resources.Resources.CloseSolution_16x;
-            _BTN_Schliessen.ImageAlign = ContentAlignment.MiddleRight;
-            _BTN_Schliessen.Location = new Point(549, 10);
-            _BTN_Schliessen.Name = "_BTN_Schliessen";
-            _BTN_Schliessen.Size = new Size(75, 23);
-            _BTN_Schliessen.TabIndex = 9;
-            _BTN_Schliessen.Text = "schließen";
-            _BTN_Schliessen.TextAlign = ContentAlignment.MiddleLeft;
-            _BTN_Schliessen.UseVisualStyleBackColor = true;
+            this._BTN_Schliessen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._BTN_Schliessen.Image = global::Adress_DB.My.Resources.Resources.Cancel_16x;
+            this._BTN_Schliessen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._BTN_Schliessen.Location = new System.Drawing.Point(542, 10);
+            this._BTN_Schliessen.Name = "_BTN_Schliessen";
+            this._BTN_Schliessen.Size = new System.Drawing.Size(82, 23);
+            this._BTN_Schliessen.TabIndex = 9;
+            this._BTN_Schliessen.Text = "Abbrechen";
+            this._BTN_Schliessen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._BTN_Schliessen.UseVisualStyleBackColor = true;
+            this._BTN_Schliessen.Click += new System.EventHandler(this.BTN_Schliessen_Click);
             // 
             // Panel2
             // 
-            Panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            Panel2.BackColor = Color.Gray;
-            Panel2.Controls.Add(_BTN_Schliessen);
-            Panel2.Controls.Add(_BTN_NeuerSachbearbeiter);
-            Panel2.Controls.Add(_BTN_Speichern);
-            Panel2.Location = new Point(3, 413);
-            Panel2.Name = "Panel2";
-            Panel2.Size = new Size(635, 43);
-            Panel2.TabIndex = 24;
+            this.Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Panel2.BackColor = System.Drawing.Color.Gray;
+            this.Panel2.Controls.Add(this._BTN_Schliessen);
+            this.Panel2.Controls.Add(this._BTN_NeuerSachbearbeiter);
+            this.Panel2.Controls.Add(this._BTN_Speichern);
+            this.Panel2.Location = new System.Drawing.Point(3, 413);
+            this.Panel2.Name = "Panel2";
+            this.Panel2.Size = new System.Drawing.Size(635, 43);
+            this.Panel2.TabIndex = 24;
             // 
-            // BTN_NeuerSachbearbeiter
+            // _BTN_NeuerSachbearbeiter
             // 
-            _BTN_NeuerSachbearbeiter.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _BTN_NeuerSachbearbeiter.Image = My.Resources.Resources.AddUser_16x;
-            _BTN_NeuerSachbearbeiter.ImageAlign = ContentAlignment.MiddleRight;
-            _BTN_NeuerSachbearbeiter.Location = new Point(213, 10);
-            _BTN_NeuerSachbearbeiter.Name = "_BTN_NeuerSachbearbeiter";
-            _BTN_NeuerSachbearbeiter.Size = new Size(106, 23);
-            _BTN_NeuerSachbearbeiter.TabIndex = 27;
-            _BTN_NeuerSachbearbeiter.Text = "Neuer Benutzer";
-            _BTN_NeuerSachbearbeiter.TextAlign = ContentAlignment.MiddleLeft;
-            _BTN_NeuerSachbearbeiter.UseVisualStyleBackColor = true;
+            this._BTN_NeuerSachbearbeiter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._BTN_NeuerSachbearbeiter.Image = global::Adress_DB.My.Resources.Resources.AddUser_16x;
+            this._BTN_NeuerSachbearbeiter.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._BTN_NeuerSachbearbeiter.Location = new System.Drawing.Point(213, 10);
+            this._BTN_NeuerSachbearbeiter.Name = "_BTN_NeuerSachbearbeiter";
+            this._BTN_NeuerSachbearbeiter.Size = new System.Drawing.Size(106, 23);
+            this._BTN_NeuerSachbearbeiter.TabIndex = 27;
+            this._BTN_NeuerSachbearbeiter.Text = "Neuer Benutzer";
+            this._BTN_NeuerSachbearbeiter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._BTN_NeuerSachbearbeiter.UseVisualStyleBackColor = true;
+            this._BTN_NeuerSachbearbeiter.Click += new System.EventHandler(this.BTN_NeuerSachbearbeiter_Click);
             // 
-            // BTN_Speichern
+            // _BTN_Speichern
             // 
-            _BTN_Speichern.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _BTN_Speichern.Image = My.Resources.Resources.Save_16x;
-            _BTN_Speichern.ImageAlign = ContentAlignment.MiddleRight;
-            _BTN_Speichern.Location = new Point(379, 10);
-            _BTN_Speichern.Name = "_BTN_Speichern";
-            _BTN_Speichern.Size = new Size(106, 23);
-            _BTN_Speichern.TabIndex = 28;
-            _BTN_Speichern.Text = "speichern";
-            _BTN_Speichern.TextAlign = ContentAlignment.MiddleLeft;
-            _BTN_Speichern.UseVisualStyleBackColor = true;
+            this._BTN_Speichern.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._BTN_Speichern.Image = global::Adress_DB.My.Resources.Resources.Save_16x;
+            this._BTN_Speichern.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._BTN_Speichern.Location = new System.Drawing.Point(379, 10);
+            this._BTN_Speichern.Name = "_BTN_Speichern";
+            this._BTN_Speichern.Size = new System.Drawing.Size(106, 23);
+            this._BTN_Speichern.TabIndex = 28;
+            this._BTN_Speichern.Text = "speichern";
+            this._BTN_Speichern.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._BTN_Speichern.UseVisualStyleBackColor = true;
+            this._BTN_Speichern.Click += new System.EventHandler(this.BTN_Speichern_Click);
             // 
             // PNL_Edit
             // 
-            PNL_Edit.Controls.Add(lblBenutzerNeu);
-            PNL_Edit.Controls.Add(IDSachbearbeiterLabel1);
-            PNL_Edit.Controls.Add(EnglJobtitleTextBox);
-            PNL_Edit.Controls.Add(PNL_Admin);
-            PNL_Edit.Controls.Add(SachbearbeiterTextBox);
-            PNL_Edit.Controls.Add(Label3);
-            PNL_Edit.Controls.Add(SachbearbeiterLabel);
-            PNL_Edit.Controls.Add(Label2);
-            PNL_Edit.Controls.Add(KuerzelTextBox);
-            PNL_Edit.Controls.Add(LoginLabel);
-            PNL_Edit.Controls.Add(KuerzelLabel);
-            PNL_Edit.Controls.Add(LoginTextBox);
-            PNL_Edit.Controls.Add(DurchwahlTextBox);
-            PNL_Edit.Controls.Add(AktivLabel);
-            PNL_Edit.Controls.Add(DurchwahlLabel);
-            PNL_Edit.Controls.Add(AktivCheckBox);
-            PNL_Edit.Controls.Add(EmailTextBox);
-            PNL_Edit.Controls.Add(EnglJobtitleLabel);
-            PNL_Edit.Controls.Add(EmailLabel);
-            PNL_Edit.Controls.Add(JobtitleTextBox);
-            PNL_Edit.Controls.Add(JobtitleLabel);
-            PNL_Edit.Dock = DockStyle.Fill;
-            PNL_Edit.Location = new Point(213, 3);
-            PNL_Edit.Name = "PNL_Edit";
-            PNL_Edit.Size = new Size(419, 354);
-            PNL_Edit.TabIndex = 26;
+            this.PNL_Edit.Controls.Add(this.lblBenutzerNeu);
+            this.PNL_Edit.Controls.Add(this.IDSachbearbeiterLabel1);
+            this.PNL_Edit.Controls.Add(this.EnglJobtitleTextBox);
+            this.PNL_Edit.Controls.Add(this.PNL_Admin);
+            this.PNL_Edit.Controls.Add(this.SachbearbeiterTextBox);
+            this.PNL_Edit.Controls.Add(this.Label3);
+            this.PNL_Edit.Controls.Add(SachbearbeiterLabel);
+            this.PNL_Edit.Controls.Add(this.Label2);
+            this.PNL_Edit.Controls.Add(this.KuerzelTextBox);
+            this.PNL_Edit.Controls.Add(LoginLabel);
+            this.PNL_Edit.Controls.Add(KuerzelLabel);
+            this.PNL_Edit.Controls.Add(this.LoginTextBox);
+            this.PNL_Edit.Controls.Add(this.DurchwahlTextBox);
+            this.PNL_Edit.Controls.Add(AktivLabel);
+            this.PNL_Edit.Controls.Add(DurchwahlLabel);
+            this.PNL_Edit.Controls.Add(this.AktivCheckBox);
+            this.PNL_Edit.Controls.Add(this.EmailTextBox);
+            this.PNL_Edit.Controls.Add(EnglJobtitleLabel);
+            this.PNL_Edit.Controls.Add(EmailLabel);
+            this.PNL_Edit.Controls.Add(this.JobtitleTextBox);
+            this.PNL_Edit.Controls.Add(JobtitleLabel);
+            this.PNL_Edit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PNL_Edit.Location = new System.Drawing.Point(213, 3);
+            this.PNL_Edit.Name = "PNL_Edit";
+            this.PNL_Edit.Size = new System.Drawing.Size(419, 354);
+            this.PNL_Edit.TabIndex = 26;
             // 
             // lblBenutzerNeu
             // 
-            lblBenutzerNeu.AutoSize = true;
-            lblBenutzerNeu.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblBenutzerNeu.ForeColor = Color.Red;
-            lblBenutzerNeu.Location = new Point(99, 8);
-            lblBenutzerNeu.Name = "lblBenutzerNeu";
-            lblBenutzerNeu.Size = new Size(33, 13);
-            lblBenutzerNeu.TabIndex = 29;
-            lblBenutzerNeu.Text = "NEU";
-            lblBenutzerNeu.Visible = false;
+            this.lblBenutzerNeu.AutoSize = true;
+            this.lblBenutzerNeu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBenutzerNeu.ForeColor = System.Drawing.Color.Red;
+            this.lblBenutzerNeu.Location = new System.Drawing.Point(99, 8);
+            this.lblBenutzerNeu.Name = "lblBenutzerNeu";
+            this.lblBenutzerNeu.Size = new System.Drawing.Size(33, 13);
+            this.lblBenutzerNeu.TabIndex = 29;
+            this.lblBenutzerNeu.Text = "NEU";
+            this.lblBenutzerNeu.Visible = false;
             // 
             // IDSachbearbeiterLabel1
             // 
-            IDSachbearbeiterLabel1.DataBindings.Add(new Binding("Text", _SachbearbeiterBindingSource, "IDSachbearbeiter", true));
-            IDSachbearbeiterLabel1.Location = new Point(346, 29);
-            IDSachbearbeiterLabel1.Name = "IDSachbearbeiterLabel1";
-            IDSachbearbeiterLabel1.Size = new Size(52, 17);
-            IDSachbearbeiterLabel1.TabIndex = 26;
-            IDSachbearbeiterLabel1.Text = "ID";
+            this.IDSachbearbeiterLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this._SachbearbeiterBindingSource, "IDSachbearbeiter", true));
+            this.IDSachbearbeiterLabel1.Location = new System.Drawing.Point(346, 29);
+            this.IDSachbearbeiterLabel1.Name = "IDSachbearbeiterLabel1";
+            this.IDSachbearbeiterLabel1.Size = new System.Drawing.Size(52, 17);
+            this.IDSachbearbeiterLabel1.TabIndex = 26;
+            this.IDSachbearbeiterLabel1.Text = "ID";
             // 
             // EnglJobtitleTextBox
             // 
-            EnglJobtitleTextBox.DataBindings.Add(new Binding("Text", _SachbearbeiterBindingSource, "EnglJobtitle", true));
-            EnglJobtitleTextBox.Location = new Point(102, 182);
-            EnglJobtitleTextBox.Name = "EnglJobtitleTextBox";
-            EnglJobtitleTextBox.Size = new Size(238, 20);
-            EnglJobtitleTextBox.TabIndex = 8;
+            this.EnglJobtitleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this._SachbearbeiterBindingSource, "EnglJobtitle", true));
+            this.EnglJobtitleTextBox.Location = new System.Drawing.Point(102, 182);
+            this.EnglJobtitleTextBox.Name = "EnglJobtitleTextBox";
+            this.EnglJobtitleTextBox.Size = new System.Drawing.Size(238, 20);
+            this.EnglJobtitleTextBox.TabIndex = 8;
             // 
             // PNL_Admin
             // 
-            PNL_Admin.BackColor = Color.MistyRose;
-            PNL_Admin.Controls.Add(Label4);
-            PNL_Admin.Controls.Add(LockedCheckBox);
-            PNL_Admin.Controls.Add(AdminLabel);
-            PNL_Admin.Controls.Add(AdminCheckBox);
-            PNL_Admin.Enabled = false;
-            PNL_Admin.Location = new Point(102, 242);
-            PNL_Admin.Name = "PNL_Admin";
-            PNL_Admin.Size = new Size(159, 52);
-            PNL_Admin.TabIndex = 25;
+            this.PNL_Admin.BackColor = System.Drawing.Color.MistyRose;
+            this.PNL_Admin.Controls.Add(this.Label4);
+            this.PNL_Admin.Controls.Add(this.LockedCheckBox);
+            this.PNL_Admin.Controls.Add(AdminLabel);
+            this.PNL_Admin.Controls.Add(this.AdminCheckBox);
+            this.PNL_Admin.Enabled = false;
+            this.PNL_Admin.Location = new System.Drawing.Point(102, 242);
+            this.PNL_Admin.Name = "PNL_Admin";
+            this.PNL_Admin.Size = new System.Drawing.Size(159, 52);
+            this.PNL_Admin.TabIndex = 25;
             // 
             // Label4
             // 
-            Label4.AutoSize = true;
-            Label4.Location = new Point(78, 33);
-            Label4.Name = "Label4";
-            Label4.Size = new Size(50, 13);
-            Label4.TabIndex = 27;
-            Label4.Text = "blockiert:";
+            this.Label4.AutoSize = true;
+            this.Label4.Location = new System.Drawing.Point(78, 33);
+            this.Label4.Name = "Label4";
+            this.Label4.Size = new System.Drawing.Size(50, 13);
+            this.Label4.TabIndex = 27;
+            this.Label4.Text = "blockiert:";
             // 
             // LockedCheckBox
             // 
-            LockedCheckBox.DataBindings.Add(new Binding("CheckState", _SachbearbeiterBindingSource, "locked", true));
-            LockedCheckBox.Location = new Point(136, 31);
-            LockedCheckBox.Name = "LockedCheckBox";
-            LockedCheckBox.Size = new Size(17, 18);
-            LockedCheckBox.TabIndex = 26;
-            LockedCheckBox.UseVisualStyleBackColor = true;
+            this.LockedCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this._SachbearbeiterBindingSource, "locked", true));
+            this.LockedCheckBox.Location = new System.Drawing.Point(136, 31);
+            this.LockedCheckBox.Name = "LockedCheckBox";
+            this.LockedCheckBox.Size = new System.Drawing.Size(17, 18);
+            this.LockedCheckBox.TabIndex = 26;
+            this.LockedCheckBox.UseVisualStyleBackColor = true;
             // 
             // AdminCheckBox
             // 
-            AdminCheckBox.DataBindings.Add(new Binding("CheckState", _SachbearbeiterBindingSource, "Admin", true));
-            AdminCheckBox.Location = new Point(136, 4);
-            AdminCheckBox.Name = "AdminCheckBox";
-            AdminCheckBox.Size = new Size(17, 24);
-            AdminCheckBox.TabIndex = 20;
-            AdminCheckBox.UseVisualStyleBackColor = true;
+            this.AdminCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this._SachbearbeiterBindingSource, "Admin", true));
+            this.AdminCheckBox.Location = new System.Drawing.Point(136, 4);
+            this.AdminCheckBox.Name = "AdminCheckBox";
+            this.AdminCheckBox.Size = new System.Drawing.Size(17, 24);
+            this.AdminCheckBox.TabIndex = 20;
+            this.AdminCheckBox.UseVisualStyleBackColor = true;
             // 
             // SachbearbeiterTextBox
             // 
-            SachbearbeiterTextBox.DataBindings.Add(new Binding("Text", _SachbearbeiterBindingSource, "Sachbearbeiter", true));
-            SachbearbeiterTextBox.Location = new Point(102, 26);
-            SachbearbeiterTextBox.Name = "SachbearbeiterTextBox";
-            SachbearbeiterTextBox.Size = new Size(238, 20);
-            SachbearbeiterTextBox.TabIndex = 2;
+            this.SachbearbeiterTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this._SachbearbeiterBindingSource, "Sachbearbeiter", true));
+            this.SachbearbeiterTextBox.Location = new System.Drawing.Point(102, 26);
+            this.SachbearbeiterTextBox.Name = "SachbearbeiterTextBox";
+            this.SachbearbeiterTextBox.Size = new System.Drawing.Size(238, 20);
+            this.SachbearbeiterTextBox.TabIndex = 2;
             // 
             // Label3
             // 
-            Label3.AutoSize = true;
-            Label3.Location = new Point(346, 185);
-            Label3.Name = "Label3";
-            Label3.Size = new Size(52, 13);
-            Label3.TabIndex = 22;
-            Label3.Text = "(englisch)";
+            this.Label3.AutoSize = true;
+            this.Label3.Location = new System.Drawing.Point(346, 185);
+            this.Label3.Name = "Label3";
+            this.Label3.Size = new System.Drawing.Size(52, 13);
+            this.Label3.TabIndex = 22;
+            this.Label3.Text = "(englisch)";
             // 
             // Label2
             // 
-            Label2.AutoSize = true;
-            Label2.Location = new Point(346, 159);
-            Label2.Name = "Label2";
-            Label2.Size = new Size(51, 13);
-            Label2.TabIndex = 21;
-            Label2.Text = "(deutsch)";
+            this.Label2.AutoSize = true;
+            this.Label2.Location = new System.Drawing.Point(346, 159);
+            this.Label2.Name = "Label2";
+            this.Label2.Size = new System.Drawing.Size(51, 13);
+            this.Label2.TabIndex = 21;
+            this.Label2.Text = "(deutsch)";
             // 
             // KuerzelTextBox
             // 
-            KuerzelTextBox.DataBindings.Add(new Binding("Text", _SachbearbeiterBindingSource, "Kuerzel", true));
-            KuerzelTextBox.Location = new Point(102, 52);
-            KuerzelTextBox.Name = "KuerzelTextBox";
-            KuerzelTextBox.Size = new Size(238, 20);
-            KuerzelTextBox.TabIndex = 3;
+            this.KuerzelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this._SachbearbeiterBindingSource, "Kuerzel", true));
+            this.KuerzelTextBox.Location = new System.Drawing.Point(102, 52);
+            this.KuerzelTextBox.Name = "KuerzelTextBox";
+            this.KuerzelTextBox.Size = new System.Drawing.Size(238, 20);
+            this.KuerzelTextBox.TabIndex = 3;
             // 
             // LoginTextBox
             // 
-            LoginTextBox.DataBindings.Add(new Binding("Text", _SachbearbeiterBindingSource, "Login", true));
-            LoginTextBox.Location = new Point(102, 78);
-            LoginTextBox.Name = "LoginTextBox";
-            LoginTextBox.Size = new Size(238, 20);
-            LoginTextBox.TabIndex = 4;
+            this.LoginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this._SachbearbeiterBindingSource, "Login", true));
+            this.LoginTextBox.Location = new System.Drawing.Point(102, 78);
+            this.LoginTextBox.Name = "LoginTextBox";
+            this.LoginTextBox.Size = new System.Drawing.Size(238, 20);
+            this.LoginTextBox.TabIndex = 4;
             // 
             // DurchwahlTextBox
             // 
-            DurchwahlTextBox.DataBindings.Add(new Binding("Text", _SachbearbeiterBindingSource, "Durchwahl", true));
-            DurchwahlTextBox.Location = new Point(102, 104);
-            DurchwahlTextBox.Name = "DurchwahlTextBox";
-            DurchwahlTextBox.Size = new Size(238, 20);
-            DurchwahlTextBox.TabIndex = 5;
+            this.DurchwahlTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this._SachbearbeiterBindingSource, "Durchwahl", true));
+            this.DurchwahlTextBox.Location = new System.Drawing.Point(102, 104);
+            this.DurchwahlTextBox.Name = "DurchwahlTextBox";
+            this.DurchwahlTextBox.Size = new System.Drawing.Size(238, 20);
+            this.DurchwahlTextBox.TabIndex = 5;
             // 
             // AktivCheckBox
             // 
-            AktivCheckBox.DataBindings.Add(new Binding("CheckState", _SachbearbeiterBindingSource, "Aktiv", true));
-            AktivCheckBox.Location = new Point(231, 212);
-            AktivCheckBox.Name = "AktivCheckBox";
-            AktivCheckBox.Size = new Size(104, 24);
-            AktivCheckBox.TabIndex = 16;
-            AktivCheckBox.UseVisualStyleBackColor = true;
+            this.AktivCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this._SachbearbeiterBindingSource, "Aktiv", true));
+            this.AktivCheckBox.Location = new System.Drawing.Point(231, 212);
+            this.AktivCheckBox.Name = "AktivCheckBox";
+            this.AktivCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.AktivCheckBox.TabIndex = 16;
+            this.AktivCheckBox.UseVisualStyleBackColor = true;
             // 
             // EmailTextBox
             // 
-            EmailTextBox.DataBindings.Add(new Binding("Text", _SachbearbeiterBindingSource, "Email", true));
-            EmailTextBox.Location = new Point(102, 130);
-            EmailTextBox.Name = "EmailTextBox";
-            EmailTextBox.Size = new Size(238, 20);
-            EmailTextBox.TabIndex = 6;
+            this.EmailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this._SachbearbeiterBindingSource, "Email", true));
+            this.EmailTextBox.Location = new System.Drawing.Point(102, 130);
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(238, 20);
+            this.EmailTextBox.TabIndex = 6;
             // 
             // JobtitleTextBox
             // 
-            JobtitleTextBox.DataBindings.Add(new Binding("Text", _SachbearbeiterBindingSource, "Jobtitle", true));
-            JobtitleTextBox.Location = new Point(102, 156);
-            JobtitleTextBox.Name = "JobtitleTextBox";
-            JobtitleTextBox.Size = new Size(238, 20);
-            JobtitleTextBox.TabIndex = 7;
+            this.JobtitleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this._SachbearbeiterBindingSource, "Jobtitle", true));
+            this.JobtitleTextBox.Location = new System.Drawing.Point(102, 156);
+            this.JobtitleTextBox.Name = "JobtitleTextBox";
+            this.JobtitleTextBox.Size = new System.Drawing.Size(238, 20);
+            this.JobtitleTextBox.TabIndex = 7;
             // 
             // TableLayoutPanel1
             // 
-            TableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            TableLayoutPanel1.ColumnCount = 1;
-            TableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 38.0f));
-            TableLayoutPanel1.Controls.Add(Panel1, 0, 0);
-            TableLayoutPanel1.Controls.Add(Panel2, 0, 2);
-            TableLayoutPanel1.Controls.Add(TableLayoutPanel2, 0, 1);
-            TableLayoutPanel1.Location = new Point(1, 1);
-            TableLayoutPanel1.Name = "TableLayoutPanel1";
-            TableLayoutPanel1.RowCount = 3;
-            TableLayoutPanel1.RowStyles.Add(new RowStyle());
-            TableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 61.29032f));
-            TableLayoutPanel1.RowStyles.Add(new RowStyle());
-            TableLayoutPanel1.Size = new Size(641, 459);
-            TableLayoutPanel1.TabIndex = 27;
+            this.TableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TableLayoutPanel1.ColumnCount = 1;
+            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.TableLayoutPanel1.Controls.Add(this.Panel1, 0, 0);
+            this.TableLayoutPanel1.Controls.Add(this.Panel2, 0, 2);
+            this.TableLayoutPanel1.Controls.Add(this.TableLayoutPanel2, 0, 1);
+            this.TableLayoutPanel1.Location = new System.Drawing.Point(1, 1);
+            this.TableLayoutPanel1.Name = "TableLayoutPanel1";
+            this.TableLayoutPanel1.RowCount = 3;
+            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.29032F));
+            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.TableLayoutPanel1.Size = new System.Drawing.Size(641, 459);
+            this.TableLayoutPanel1.TabIndex = 27;
             // 
             // TableLayoutPanel2
             // 
-            TableLayoutPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            this.TableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TableLayoutPanel2.ColumnCount = 2;
+            this.TableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.13679F));
+            this.TableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.8632F));
+            this.TableLayoutPanel2.Controls.Add(this.PNL_Edit, 1, 0);
+            this.TableLayoutPanel2.Controls.Add(this.SachbearbeiterDataGridView, 0, 0);
+            this.TableLayoutPanel2.Location = new System.Drawing.Point(3, 47);
+            this.TableLayoutPanel2.Name = "TableLayoutPanel2";
+            this.TableLayoutPanel2.RowCount = 1;
+            this.TableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TableLayoutPanel2.Size = new System.Drawing.Size(635, 360);
+            this.TableLayoutPanel2.TabIndex = 25;
+            // 
+            // Sachbearbeiter
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(641, 459);
+            this.Controls.Add(this.TableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Sachbearbeiter";
+            this.Text = "Benutzerliste";
+            this.Load += new System.EventHandler(this.Form5_Load);
+            this.Panel1.ResumeLayout(false);
+            this.Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._WSL_AdressenDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._SachbearbeiterBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SachbearbeiterDataGridView)).EndInit();
+            this.Panel2.ResumeLayout(false);
+            this.PNL_Edit.ResumeLayout(false);
+            this.PNL_Edit.PerformLayout();
+            this.PNL_Admin.ResumeLayout(false);
+            this.PNL_Admin.PerformLayout();
+            this.TableLayoutPanel1.ResumeLayout(false);
+            this.TableLayoutPanel2.ResumeLayout(false);
+            this.ResumeLayout(false);
 
-            TableLayoutPanel2.ColumnCount = 2;
-            TableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.13679f));
-            TableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 66.8632f));
-            TableLayoutPanel2.Controls.Add(PNL_Edit, 1, 0);
-            TableLayoutPanel2.Controls.Add(SachbearbeiterDataGridView, 0, 0);
-            TableLayoutPanel2.Location = new Point(3, 47);
-            TableLayoutPanel2.Name = "TableLayoutPanel2";
-            TableLayoutPanel2.RowCount = 1;
-            TableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50.0f));
-            TableLayoutPanel2.Size = new Size(635, 360);
-            TableLayoutPanel2.TabIndex = 25;
-            // 
-            // Form5
-            // 
-            AutoScaleDimensions = new SizeF(6.0f, 13.0f);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(641, 459);
-            Controls.Add(TableLayoutPanel1);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form5";
-            Text = "Benutzerliste";
-            Panel1.ResumeLayout(false);
-            Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_WSL_AdressenDataSet).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_SachbearbeiterBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)SachbearbeiterDataGridView).EndInit();
-            Panel2.ResumeLayout(false);
-            PNL_Edit.ResumeLayout(false);
-            PNL_Edit.PerformLayout();
-            PNL_Admin.ResumeLayout(false);
-            PNL_Admin.PerformLayout();
-            TableLayoutPanel1.ResumeLayout(false);
-            TableLayoutPanel2.ResumeLayout(false);
-            Load += new EventHandler(Form5_Load);
-            ResumeLayout(false);
         }
 
         internal Panel Panel1;

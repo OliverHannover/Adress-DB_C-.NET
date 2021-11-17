@@ -38,303 +38,310 @@ namespace Adress_DB
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(KontoForm));
-            rdbKundenNr = new RadioButton();
-            Label1 = new Label();
-            lblKontoNummer = new Label();
-            rdbLieferantenNr = new RadioButton();
-            _btnKontoSave = new Button();
-            _btnKontoSave.Click += new EventHandler(btnKontoSave_Click);
-            _WSL_AdressenDataSet = new Adress_DB._WSL_AdressenDataSet();
-            KontoBindingSource = new BindingSource(components);
-            KontoTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.KontoTableAdapter();
-            TableAdapterManager = new Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager();
-            KontoDataGridView = new DataGridView();
-            DataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            FirmenNameBindingSource = new BindingSource(components);
-            FirmenNameTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.FirmenNameTableAdapter();
-            lblIDFirmenName = new Label();
-            lblFirmenName = new Label();
-            Label2 = new Label();
-            _Button1 = new Button();
-            _Button1.Click += new EventHandler(Button1_Click);
-            Panel1 = new Panel();
-            Panel2 = new Panel();
-            PropertiesBindingSource = new BindingSource(components);
-            PropertiesTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.propertiesTableAdapter();
-            Panel3 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)_WSL_AdressenDataSet).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)KontoBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)KontoDataGridView).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)FirmenNameBindingSource).BeginInit();
-            Panel1.SuspendLayout();
-            Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)PropertiesBindingSource).BeginInit();
-            Panel3.SuspendLayout();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KontoForm));
+            this.rdbKundenNr = new System.Windows.Forms.RadioButton();
+            this.Label1 = new System.Windows.Forms.Label();
+            this.lblKontoNummer = new System.Windows.Forms.Label();
+            this.rdbLieferantenNr = new System.Windows.Forms.RadioButton();
+            this._btnKontoSave = new System.Windows.Forms.Button();
+            this._WSL_AdressenDataSet = new Adress_DB._WSL_AdressenDataSet();
+            this.KontoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.KontoTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.KontoTableAdapter();
+            this.TableAdapterManager = new Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager();
+            this.KontoDataGridView = new System.Windows.Forms.DataGridView();
+            this.DataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirmenNameBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.FirmenNameTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.FirmenNameTableAdapter();
+            this.lblIDFirmenName = new System.Windows.Forms.Label();
+            this.lblFirmenName = new System.Windows.Forms.Label();
+            this.Label2 = new System.Windows.Forms.Label();
+            this._Button1 = new System.Windows.Forms.Button();
+            this.Panel1 = new System.Windows.Forms.Panel();
+            this.Panel2 = new System.Windows.Forms.Panel();
+            this.PropertiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PropertiesTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.propertiesTableAdapter();
+            this.Panel3 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this._WSL_AdressenDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KontoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KontoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FirmenNameBindingSource)).BeginInit();
+            this.Panel1.SuspendLayout();
+            this.Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PropertiesBindingSource)).BeginInit();
+            this.Panel3.SuspendLayout();
+            this.SuspendLayout();
             // 
             // rdbKundenNr
             // 
-            rdbKundenNr.AutoSize = true;
-            rdbKundenNr.Font = new Font("Microsoft Sans Serif", 10.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            rdbKundenNr.Location = new Point(27, 93);
-            rdbKundenNr.Name = "rdbKundenNr";
-            rdbKundenNr.Size = new Size(126, 21);
-            rdbKundenNr.TabIndex = 0;
-            rdbKundenNr.TabStop = true;
-            rdbKundenNr.Text = "Kundennummer";
-            rdbKundenNr.UseVisualStyleBackColor = true;
+            this.rdbKundenNr.AutoSize = true;
+            this.rdbKundenNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbKundenNr.Location = new System.Drawing.Point(27, 93);
+            this.rdbKundenNr.Name = "rdbKundenNr";
+            this.rdbKundenNr.Size = new System.Drawing.Size(126, 21);
+            this.rdbKundenNr.TabIndex = 0;
+            this.rdbKundenNr.TabStop = true;
+            this.rdbKundenNr.Text = "Kundennummer";
+            this.rdbKundenNr.UseVisualStyleBackColor = true;
             // 
             // Label1
             // 
-            Label1.AutoSize = true;
-            Label1.Font = new Font("Microsoft Sans Serif", 10.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label1.Location = new Point(13, 9);
-            Label1.Name = "Label1";
-            Label1.Size = new Size(166, 17);
-            Label1.TabIndex = 1;
-            Label1.Text = "Neue Konto-Nummer für:";
+            this.Label1.AutoSize = true;
+            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Location = new System.Drawing.Point(13, 9);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(166, 17);
+            this.Label1.TabIndex = 1;
+            this.Label1.Text = "Neue Konto-Nummer für:";
             // 
             // lblKontoNummer
             // 
-            lblKontoNummer.AutoSize = true;
-            lblKontoNummer.BackColor = Color.White;
-            lblKontoNummer.Font = new Font("Microsoft Sans Serif", 18.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblKontoNummer.Location = new Point(9, 0);
-            lblKontoNummer.Name = "lblKontoNummer";
-            lblKontoNummer.Size = new Size(91, 29);
-            lblKontoNummer.TabIndex = 2;
-            lblKontoNummer.Text = "123456";
-            lblKontoNummer.TextAlign = ContentAlignment.MiddleCenter;
+            this.lblKontoNummer.AutoSize = true;
+            this.lblKontoNummer.BackColor = System.Drawing.Color.White;
+            this.lblKontoNummer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKontoNummer.Location = new System.Drawing.Point(9, 0);
+            this.lblKontoNummer.Name = "lblKontoNummer";
+            this.lblKontoNummer.Size = new System.Drawing.Size(91, 29);
+            this.lblKontoNummer.TabIndex = 2;
+            this.lblKontoNummer.Text = "123456";
+            this.lblKontoNummer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rdbLieferantenNr
             // 
-            rdbLieferantenNr.AutoSize = true;
-            rdbLieferantenNr.Font = new Font("Microsoft Sans Serif", 10.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            rdbLieferantenNr.Location = new Point(27, 120);
-            rdbLieferantenNr.Name = "rdbLieferantenNr";
-            rdbLieferantenNr.Size = new Size(149, 21);
-            rdbLieferantenNr.TabIndex = 3;
-            rdbLieferantenNr.TabStop = true;
-            rdbLieferantenNr.Text = "Lieferantennummer";
-            rdbLieferantenNr.UseVisualStyleBackColor = true;
+            this.rdbLieferantenNr.AutoSize = true;
+            this.rdbLieferantenNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbLieferantenNr.Location = new System.Drawing.Point(27, 120);
+            this.rdbLieferantenNr.Name = "rdbLieferantenNr";
+            this.rdbLieferantenNr.Size = new System.Drawing.Size(149, 21);
+            this.rdbLieferantenNr.TabIndex = 3;
+            this.rdbLieferantenNr.TabStop = true;
+            this.rdbLieferantenNr.Text = "Lieferantennummer";
+            this.rdbLieferantenNr.UseVisualStyleBackColor = true;
             // 
-            // btnKontoSave
+            // _btnKontoSave
             // 
-            _btnKontoSave.Image = Adress_DB.My.Resources.Resources.Save_16x;
-            _btnKontoSave.ImageAlign = ContentAlignment.MiddleRight;
-            _btnKontoSave.Location = new Point(62, 8);
-            _btnKontoSave.Name = "_btnKontoSave";
-            _btnKontoSave.Size = new Size(151, 23);
-            _btnKontoSave.TabIndex = 6;
-            _btnKontoSave.Text = "Hinzufügen / Speichern";
-            _btnKontoSave.TextAlign = ContentAlignment.MiddleLeft;
-            _btnKontoSave.UseVisualStyleBackColor = true;
+            this._btnKontoSave.Image = global::Adress_DB.My.Resources.Resources.Save_16x;
+            this._btnKontoSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._btnKontoSave.Location = new System.Drawing.Point(62, 8);
+            this._btnKontoSave.Name = "_btnKontoSave";
+            this._btnKontoSave.Size = new System.Drawing.Size(151, 23);
+            this._btnKontoSave.TabIndex = 6;
+            this._btnKontoSave.Text = "Hinzufügen / Speichern";
+            this._btnKontoSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._btnKontoSave.UseVisualStyleBackColor = true;
+            this._btnKontoSave.Click += new System.EventHandler(this.btnKontoSave_Click);
             // 
             // _WSL_AdressenDataSet
             // 
-            _WSL_AdressenDataSet.DataSetName = "_WSL_AdressenDataSet";
-            _WSL_AdressenDataSet.SchemaSerializationMode = SchemaSerializationMode.IncludeSchema;
+            this._WSL_AdressenDataSet.DataSetName = "_WSL_AdressenDataSet";
+            this._WSL_AdressenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // KontoBindingSource
             // 
-            KontoBindingSource.DataMember = "Konto";
-            KontoBindingSource.DataSource = _WSL_AdressenDataSet;
+            this.KontoBindingSource.DataMember = "Konto";
+            this.KontoBindingSource.DataSource = this._WSL_AdressenDataSet;
             // 
             // KontoTableAdapter
             // 
-            KontoTableAdapter.ClearBeforeFill = true;
+            this.KontoTableAdapter.ClearBeforeFill = true;
             // 
             // TableAdapterManager
             // 
-            TableAdapterManager.AdressenTableAdapter = null;
-            TableAdapterManager.AT_PLZ_GeodatenTableAdapter = null;
-            TableAdapterManager.BackupDataSetBeforeUpdate = false;
-            TableAdapterManager.BelegeTableAdapter = null;
-            TableAdapterManager.CH_PLZ_GeodatenTableAdapter = null;
-            TableAdapterManager.DE_PLZ_GeodatenTableAdapter = null;
-            TableAdapterManager.FirmenNameTableAdapter = null;
-            TableAdapterManager.KontakteTableAdapter = null;
-            TableAdapterManager.KontoTableAdapter = KontoTableAdapter;
-            TableAdapterManager.LogTabelleTableAdapter = null;
-            TableAdapterManager.PLZ_GeodatenTableAdapter = null;
-            TableAdapterManager.propertiesTableAdapter = null;
-            TableAdapterManager.SachbearbeiterTableAdapter = null;
-            TableAdapterManager.StaatenTableAdapter = null;
-            TableAdapterManager.UpdateOrder = Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.TableAdapterManager.AdressenTableAdapter = null;
+            this.TableAdapterManager.AT_PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.TableAdapterManager.BelegeTableAdapter = null;
+            this.TableAdapterManager.CH_PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.DE_PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.FirmenNameTableAdapter = null;
+            this.TableAdapterManager.KontakteTableAdapter = null;
+            this.TableAdapterManager.KontoTableAdapter = this.KontoTableAdapter;
+            this.TableAdapterManager.LogTabelleTableAdapter = null;
+            this.TableAdapterManager.PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.propertiesTableAdapter = null;
+            this.TableAdapterManager.SachbearbeiterTableAdapter = null;
+            this.TableAdapterManager.StaatenTableAdapter = null;
+            this.TableAdapterManager.UpdateOrder = Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // KontoDataGridView
             // 
-            KontoDataGridView.AllowUserToAddRows = false;
-            KontoDataGridView.AllowUserToDeleteRows = false;
-            KontoDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            KontoDataGridView.AutoGenerateColumns = false;
-            KontoDataGridView.BackgroundColor = Color.White;
-            KontoDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            KontoDataGridView.Columns.AddRange(new DataGridViewColumn[] { DataGridViewTextBoxColumn3, DataGridViewTextBoxColumn5, DataGridViewTextBoxColumn4 });
-            KontoDataGridView.DataSource = KontoBindingSource;
-            KontoDataGridView.GridColor = SystemColors.AppWorkspace;
-            KontoDataGridView.Location = new Point(275, 71);
-            KontoDataGridView.MultiSelect = false;
-            KontoDataGridView.Name = "KontoDataGridView";
-            KontoDataGridView.ReadOnly = true;
-            KontoDataGridView.RowHeadersVisible = false;
-            KontoDataGridView.ScrollBars = ScrollBars.Vertical;
-            KontoDataGridView.Size = new Size(233, 160);
-            KontoDataGridView.TabIndex = 9;
+            this.KontoDataGridView.AllowUserToAddRows = false;
+            this.KontoDataGridView.AllowUserToDeleteRows = false;
+            this.KontoDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.KontoDataGridView.AutoGenerateColumns = false;
+            this.KontoDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.KontoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.KontoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridViewTextBoxColumn3,
+            this.DataGridViewTextBoxColumn5,
+            this.DataGridViewTextBoxColumn4});
+            this.KontoDataGridView.DataSource = this.KontoBindingSource;
+            this.KontoDataGridView.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.KontoDataGridView.Location = new System.Drawing.Point(275, 71);
+            this.KontoDataGridView.MultiSelect = false;
+            this.KontoDataGridView.Name = "KontoDataGridView";
+            this.KontoDataGridView.ReadOnly = true;
+            this.KontoDataGridView.RowHeadersVisible = false;
+            this.KontoDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.KontoDataGridView.Size = new System.Drawing.Size(233, 160);
+            this.KontoDataGridView.TabIndex = 9;
             // 
             // DataGridViewTextBoxColumn3
             // 
-            DataGridViewTextBoxColumn3.DataPropertyName = "IDKonto";
-            DataGridViewTextBoxColumn3.HeaderText = "IDKonto";
-            DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3";
-            DataGridViewTextBoxColumn3.ReadOnly = true;
-            DataGridViewTextBoxColumn3.Width = 80;
+            this.DataGridViewTextBoxColumn3.DataPropertyName = "IDKonto";
+            this.DataGridViewTextBoxColumn3.HeaderText = "IDKonto";
+            this.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3";
+            this.DataGridViewTextBoxColumn3.ReadOnly = true;
+            this.DataGridViewTextBoxColumn3.Width = 80;
             // 
             // DataGridViewTextBoxColumn5
             // 
-            DataGridViewTextBoxColumn5.DataPropertyName = "KontoName";
-            DataGridViewTextBoxColumn5.HeaderText = "KontoName";
-            DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5";
-            DataGridViewTextBoxColumn5.ReadOnly = true;
-            DataGridViewTextBoxColumn5.Width = 150;
+            this.DataGridViewTextBoxColumn5.DataPropertyName = "KontoName";
+            this.DataGridViewTextBoxColumn5.HeaderText = "KontoName";
+            this.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5";
+            this.DataGridViewTextBoxColumn5.ReadOnly = true;
+            this.DataGridViewTextBoxColumn5.Width = 150;
             // 
             // DataGridViewTextBoxColumn4
             // 
-            DataGridViewTextBoxColumn4.DataPropertyName = "IDFirmenName";
-            DataGridViewTextBoxColumn4.HeaderText = "IDFirmenName";
-            DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4";
-            DataGridViewTextBoxColumn4.ReadOnly = true;
-            DataGridViewTextBoxColumn4.Visible = false;
-            DataGridViewTextBoxColumn4.Width = 50;
+            this.DataGridViewTextBoxColumn4.DataPropertyName = "IDFirmenName";
+            this.DataGridViewTextBoxColumn4.HeaderText = "IDFirmenName";
+            this.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4";
+            this.DataGridViewTextBoxColumn4.ReadOnly = true;
+            this.DataGridViewTextBoxColumn4.Visible = false;
+            this.DataGridViewTextBoxColumn4.Width = 50;
             // 
             // FirmenNameBindingSource
             // 
-            FirmenNameBindingSource.DataMember = "FirmenName";
-            FirmenNameBindingSource.DataSource = _WSL_AdressenDataSet;
+            this.FirmenNameBindingSource.DataMember = "FirmenName";
+            this.FirmenNameBindingSource.DataSource = this._WSL_AdressenDataSet;
             // 
             // FirmenNameTableAdapter
             // 
-            FirmenNameTableAdapter.ClearBeforeFill = true;
+            this.FirmenNameTableAdapter.ClearBeforeFill = true;
             // 
             // lblIDFirmenName
             // 
-            lblIDFirmenName.AutoSize = true;
-            lblIDFirmenName.Font = new Font("Microsoft Sans Serif", 8.0f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblIDFirmenName.Location = new Point(391, 9);
-            lblIDFirmenName.Name = "lblIDFirmenName";
-            lblIDFirmenName.Size = new Size(102, 13);
-            lblIDFirmenName.TabIndex = 10;
-            lblIDFirmenName.Text = "lblIDFirmenName";
-            lblIDFirmenName.TextAlign = ContentAlignment.MiddleCenter;
+            this.lblIDFirmenName.AutoSize = true;
+            this.lblIDFirmenName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDFirmenName.Location = new System.Drawing.Point(391, 9);
+            this.lblIDFirmenName.Name = "lblIDFirmenName";
+            this.lblIDFirmenName.Size = new System.Drawing.Size(102, 13);
+            this.lblIDFirmenName.TabIndex = 10;
+            this.lblIDFirmenName.Text = "lblIDFirmenName";
+            this.lblIDFirmenName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblFirmenName
             // 
-            lblFirmenName.DataBindings.Add(new Binding("Text", FirmenNameBindingSource, "FirmenName", true));
-            lblFirmenName.Font = new Font("Microsoft Sans Serif", 12.0f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblFirmenName.Location = new Point(13, 35);
-            lblFirmenName.Name = "lblFirmenName";
-            lblFirmenName.Size = new Size(371, 24);
-            lblFirmenName.TabIndex = 11;
-            lblFirmenName.Text = "lblFirmenName";
-            lblFirmenName.TextAlign = ContentAlignment.MiddleLeft;
+            this.lblFirmenName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.FirmenNameBindingSource, "FirmenName", true));
+            this.lblFirmenName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirmenName.Location = new System.Drawing.Point(13, 35);
+            this.lblFirmenName.Name = "lblFirmenName";
+            this.lblFirmenName.Size = new System.Drawing.Size(371, 24);
+            this.lblFirmenName.TabIndex = 11;
+            this.lblFirmenName.Text = "lblFirmenName";
+            this.lblFirmenName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Label2
             // 
-            Label2.AutoSize = true;
-            Label2.Location = new Point(24, 77);
-            Label2.Name = "Label2";
-            Label2.Size = new Size(213, 13);
-            Label2.TabIndex = 12;
-            Label2.Text = "Bitte wählen, welche Nummer benötigt wird:";
+            this.Label2.AutoSize = true;
+            this.Label2.Location = new System.Drawing.Point(24, 77);
+            this.Label2.Name = "Label2";
+            this.Label2.Size = new System.Drawing.Size(213, 13);
+            this.Label2.TabIndex = 12;
+            this.Label2.Text = "Bitte wählen, welche Nummer benötigt wird:";
             // 
-            // Button1
+            // _Button1
             // 
-            _Button1.Image = Adress_DB.My.Resources.Resources.CloseSolution_16x;
-            _Button1.ImageAlign = ContentAlignment.MiddleRight;
-            _Button1.Location = new Point(426, 10);
-            _Button1.Name = "_Button1";
-            _Button1.Size = new Size(80, 23);
-            _Button1.TabIndex = 13;
-            _Button1.Text = "Schließen";
-            _Button1.TextAlign = ContentAlignment.MiddleLeft;
-            _Button1.UseVisualStyleBackColor = true;
+            this._Button1.Image = global::Adress_DB.My.Resources.Resources.Cancel_16x;
+            this._Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._Button1.Location = new System.Drawing.Point(426, 10);
+            this._Button1.Name = "_Button1";
+            this._Button1.Size = new System.Drawing.Size(80, 23);
+            this._Button1.TabIndex = 13;
+            this._Button1.Text = "Abbrechen";
+            this._Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._Button1.UseVisualStyleBackColor = true;
+            this._Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Panel1
             // 
-            Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Panel1.BackColor = Color.Silver;
-            Panel1.Controls.Add(Label1);
-            Panel1.Controls.Add(lblFirmenName);
-            Panel1.Controls.Add(lblIDFirmenName);
-            Panel1.Location = new Point(-1, 0);
-            Panel1.Name = "Panel1";
-            Panel1.Size = new Size(518, 65);
-            Panel1.TabIndex = 14;
+            this.Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Panel1.BackColor = System.Drawing.Color.Silver;
+            this.Panel1.Controls.Add(this.Label1);
+            this.Panel1.Controls.Add(this.lblFirmenName);
+            this.Panel1.Controls.Add(this.lblIDFirmenName);
+            this.Panel1.Location = new System.Drawing.Point(-1, 0);
+            this.Panel1.Name = "Panel1";
+            this.Panel1.Size = new System.Drawing.Size(518, 65);
+            this.Panel1.TabIndex = 14;
             // 
             // Panel2
             // 
-            Panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Panel2.BackColor = Color.Gray;
-            Panel2.Controls.Add(_btnKontoSave);
-            Panel2.Controls.Add(_Button1);
-            Panel2.Location = new Point(-1, 238);
-            Panel2.Name = "Panel2";
-            Panel2.Size = new Size(518, 42);
-            Panel2.TabIndex = 15;
+            this.Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Panel2.BackColor = System.Drawing.Color.Gray;
+            this.Panel2.Controls.Add(this._btnKontoSave);
+            this.Panel2.Controls.Add(this._Button1);
+            this.Panel2.Location = new System.Drawing.Point(-1, 238);
+            this.Panel2.Name = "Panel2";
+            this.Panel2.Size = new System.Drawing.Size(518, 42);
+            this.Panel2.TabIndex = 15;
             // 
             // PropertiesBindingSource
             // 
-            PropertiesBindingSource.DataMember = "properties";
-            PropertiesBindingSource.DataSource = _WSL_AdressenDataSet;
+            this.PropertiesBindingSource.DataMember = "properties";
+            this.PropertiesBindingSource.DataSource = this._WSL_AdressenDataSet;
             // 
             // PropertiesTableAdapter
             // 
-            PropertiesTableAdapter.ClearBeforeFill = true;
+            this.PropertiesTableAdapter.ClearBeforeFill = true;
             // 
             // Panel3
             // 
-            Panel3.BackColor = Color.White;
-            Panel3.BorderStyle = BorderStyle.FixedSingle;
-            Panel3.Controls.Add(lblKontoNummer);
-            Panel3.Location = new Point(85, 178);
-            Panel3.Name = "Panel3";
-            Panel3.Size = new Size(113, 31);
-            Panel3.TabIndex = 16;
+            this.Panel3.BackColor = System.Drawing.Color.White;
+            this.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panel3.Controls.Add(this.lblKontoNummer);
+            this.Panel3.Location = new System.Drawing.Point(85, 178);
+            this.Panel3.Name = "Panel3";
+            this.Panel3.Size = new System.Drawing.Size(113, 31);
+            this.Panel3.TabIndex = 16;
             // 
             // KontoForm
             // 
-            AutoScaleDimensions = new SizeF(6.0f, 13.0f);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(517, 281);
-            Controls.Add(Panel3);
-            Controls.Add(Panel2);
-            Controls.Add(Panel1);
-            Controls.Add(Label2);
-            Controls.Add(KontoDataGridView);
-            Controls.Add(rdbLieferantenNr);
-            Controls.Add(rdbKundenNr);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            MaximizeBox = false;
-            Name = "KontoForm";
-            Text = "Neues Konto anlegen";
-            ((System.ComponentModel.ISupportInitialize)_WSL_AdressenDataSet).EndInit();
-            ((System.ComponentModel.ISupportInitialize)KontoBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)KontoDataGridView).EndInit();
-            ((System.ComponentModel.ISupportInitialize)FirmenNameBindingSource).EndInit();
-            Panel1.ResumeLayout(false);
-            Panel1.PerformLayout();
-            Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)PropertiesBindingSource).EndInit();
-            Panel3.ResumeLayout(false);
-            Panel3.PerformLayout();
-            Load += new EventHandler(KontoForm_Load);
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(517, 281);
+            this.Controls.Add(this.Panel3);
+            this.Controls.Add(this.Panel2);
+            this.Controls.Add(this.Panel1);
+            this.Controls.Add(this.Label2);
+            this.Controls.Add(this.KontoDataGridView);
+            this.Controls.Add(this.rdbLieferantenNr);
+            this.Controls.Add(this.rdbKundenNr);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.Name = "KontoForm";
+            this.Text = "Neues Konto anlegen";
+            this.Load += new System.EventHandler(this.KontoForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this._WSL_AdressenDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KontoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KontoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FirmenNameBindingSource)).EndInit();
+            this.Panel1.ResumeLayout(false);
+            this.Panel1.PerformLayout();
+            this.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PropertiesBindingSource)).EndInit();
+            this.Panel3.ResumeLayout(false);
+            this.Panel3.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         internal RadioButton rdbKundenNr;

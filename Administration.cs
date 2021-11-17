@@ -8,15 +8,7 @@ namespace Adress_DB
         public Administration()
         {
             InitializeComponent();
-            _BTN_Alle.Name = "BTN_Alle";
-            _BTN_Aktuell.Name = "BTN_Aktuell";
-            _BTN_Schliessen.Name = "BTN_Schliessen";
 
-            _BNAV_FirmenNameSave.Name = "BNAV_FirmenNameSave";
-            _BNAV_KontoSave.Name = "BNAV_KontoSave";
-            _BNAV_AdressenSave.Name = "BNAV_AdressenSave";
-            _BNAV_KontakteSave.Name = "BNAV_KontakteSave";
-            _BNAV_BelegeSaveItem.Name = "BNAV_BelegeSaveItem";
         }
 
         private void Form4_Load(object sender, EventArgs e)

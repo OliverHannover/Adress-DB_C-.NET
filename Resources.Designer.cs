@@ -83,6 +83,16 @@ namespace Adress_DB.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_16x {
+            get {
+                object obj = ResourceManager.GetObject("Add_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AddressEditor_16x {
             get {
                 object obj = ResourceManager.GetObject("AddressEditor_16x", resourceCulture);
@@ -256,6 +266,16 @@ namespace Adress_DB.My.Resources {
         internal static System.Drawing.Bitmap PrintDocument_16x {
             get {
                 object obj = ResourceManager.GetObject("PrintDocument_16x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rename_cyan_7x_16x {
+            get {
+                object obj = ResourceManager.GetObject("Rename_cyan_7x_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

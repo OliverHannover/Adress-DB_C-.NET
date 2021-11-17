@@ -10,10 +10,6 @@ namespace Adress_DB
         public Form3()
         {
             InitializeComponent();
-            _BTN_aktualisieren.Name = "BTN_aktualisieren";
-            _BTN_olContDelete.Name = "BTN_olContDelete";
-            _Button1.Name = "Button1";
-            _BTN_hinzufügen.Name = "BTN_hinzufügen";
         }
 
         

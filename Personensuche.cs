@@ -7,7 +7,6 @@ namespace Adress_DB
         public Personensuche()
         {
             InitializeComponent();
-            _Button1.Name = "Button1";
         }
 
         private void Form7_Load(object sender, EventArgs e)

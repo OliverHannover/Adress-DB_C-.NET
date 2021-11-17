@@ -9,9 +9,7 @@ namespace Adress_DB
         public Loginformationen()
         {
             InitializeComponent();
-            _BTN_Alle.Name = "BTN_Alle";
-            _BTN_Aktuell.Name = "BTN_Aktuell";
-            _BTN_Schliessen.Name = "BTN_Schliessen";
+
         }
 
         private void Form6_Load(object sender, EventArgs e)

@@ -9,9 +9,7 @@ namespace Adress_DB
         public Sachbearbeiter()
         {
             InitializeComponent();
-            _BTN_Schliessen.Name = "BTN_Schliessen";
-            _BTN_NeuerSachbearbeiter.Name = "BTN_NeuerSachbearbeiter";
-            _BTN_Speichern.Name = "BTN_Speichern";
+
         }
 
         private void Form5_Load(object sender, EventArgs e)

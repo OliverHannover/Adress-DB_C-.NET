@@ -195,22 +195,19 @@ namespace Adress_DB
             {
                 if (File.Exists(Pfad))
                 {
-                    //DateTime today = DateTime.Now;
-
-                    object fileName = Pfad;
-                   
-                    //object saveFileName = textBoxSaveFilePath.Text;
-                    object readOnly = false;
+                    object fileName = Pfad;             
+                    //object readOnly = false;
                     object isVisible = true;
-
+                    object newTemplate = false;
+                    object docType = 0;
+                
                     wordApp.Visible = true;
 
-                    aDoc = wordApp.Documents.Open(ref fileName, ref missing, ref readOnly, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref missing, ref isVisible, ref missing, ref missing, ref missing, ref missing);
-
+                    aDoc = wordApp.Documents.Add(ref fileName, ref newTemplate, ref docType, ref isVisible);
+                   
                     aDoc.Activate();
 
-                    // string templateFilePath = Pfad;
-                    // string text = File.ReadAllText(templateFilePath);
+                    // nun alle Ersetzungen durchführen:
                     DateTime datum;
                     string dateWithFormat;
 

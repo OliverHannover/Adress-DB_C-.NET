@@ -13,14 +13,7 @@ namespace Adress_DB
         {
             pd_PrintDoc = new System.Drawing.Printing.PrintDocument();
             InitializeComponent();
-            _CB_Staat.Name = "CB_Staat";
-            _TB_PLZ.Name = "TB_PLZ";
-            _TB_Entfernung.Name = "TB_Entfernung";
-            _Button1.Name = "Button1";
-            _Button2.Name = "Button2";
-            _PrintPreviewDialog1.Name = "PrintPreviewDialog1";
-            _Button3.Name = "Button3";
-            _BTN_Schliessen.Name = "BTN_Schliessen";
+
         }
 
         private DataTable dt;
@@ -31,13 +24,11 @@ namespace Adress_DB
             // Me.AdresseMitGeodatenTableAdapter.Fill(Me._WSL_AdressenDataSet.AdresseMitGeodaten)
 
             // zuerst (wichtig) Combobox Anrede füllen
-            {
-                var withBlock = CB_Staat;
-                withBlock.Items.Add("Deutschland");
-                withBlock.Items.Add("Österreich");
-                withBlock.Items.Add("Schweiz");
-                withBlock.SelectedIndex = 0;
-            }
+
+                CB_Staat.Items.Add("Deutschland");
+                CB_Staat.Items.Add("Österreich");
+                CB_Staat.Items.Add("Schweiz");
+                CB_Staat.SelectedIndex = 0;
 
             BundeslandLabel1.Text = string.Empty;
             LandkreisLabel1.Text = string.Empty;
