@@ -199,22 +199,10 @@ namespace Adress_DB
             this.DataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.Panel3 = new System.Windows.Forms.Panel();
-            this._BTN_Schliessen = new System.Windows.Forms.Button();
+            this.BTN_Close = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.bindingNavigator5 = new System.Windows.Forms.BindingNavigator(this.components);
             this.klassenBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton38 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton39 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton40 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox7 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator20 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton41 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton42 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator21 = new System.Windows.Forms.ToolStripSeparator();
-            this.BTNAV_SaveKlassen = new System.Windows.Forms.ToolStripButton();
             this.klassenDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -228,6 +216,9 @@ namespace Adress_DB
             this.BelegeTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.BelegeTableAdapter();
             this.propertiesTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.propertiesTableAdapter();
             this.klassenTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.KlassenTableAdapter();
+            this.bindingNavigator5 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton20 = new System.Windows.Forms.ToolStripButton();
+            this.BTNKlassenSave = new System.Windows.Forms.ToolStripButton();
             SachbearbeiterLabel = new System.Windows.Forms.Label();
             AdminLabel = new System.Windows.Forms.Label();
             this.Panel2.SuspendLayout();
@@ -268,11 +259,11 @@ namespace Adress_DB
             this.Panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).BeginInit();
-            this.bindingNavigator5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.klassenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klassenDataGridView)).BeginInit();
             this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).BeginInit();
+            this.bindingNavigator5.SuspendLayout();
             this.SuspendLayout();
             // 
             // SachbearbeiterLabel
@@ -1725,26 +1716,27 @@ namespace Adress_DB
             // Panel3
             // 
             this.Panel3.BackColor = System.Drawing.Color.Gray;
-            this.Panel3.Controls.Add(this._BTN_Schliessen);
+            this.Panel3.Controls.Add(this.BTN_Close);
             this.Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel3.Location = new System.Drawing.Point(3, 464);
             this.Panel3.Name = "Panel3";
             this.Panel3.Size = new System.Drawing.Size(596, 43);
             this.Panel3.TabIndex = 27;
             // 
-            // _BTN_Schliessen
+            // BTN_Close
             // 
-            this._BTN_Schliessen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.BTN_Close.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this._BTN_Schliessen.Image = ((System.Drawing.Image)(resources.GetObject("_BTN_Schliessen.Image")));
-            this._BTN_Schliessen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this._BTN_Schliessen.Location = new System.Drawing.Point(512, 10);
-            this._BTN_Schliessen.Name = "_BTN_Schliessen";
-            this._BTN_Schliessen.Size = new System.Drawing.Size(80, 23);
-            this._BTN_Schliessen.TabIndex = 16;
-            this._BTN_Schliessen.Text = "Schließen";
-            this._BTN_Schliessen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this._BTN_Schliessen.UseVisualStyleBackColor = true;
+            this.BTN_Close.Image = global::Adress_DB.My.Resources.Resources.CloseSolution_16x;
+            this.BTN_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTN_Close.Location = new System.Drawing.Point(512, 10);
+            this.BTN_Close.Name = "BTN_Close";
+            this.BTN_Close.Size = new System.Drawing.Size(80, 23);
+            this.BTN_Close.TabIndex = 16;
+            this.BTN_Close.Text = "Schließen";
+            this.BTN_Close.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Close.UseVisualStyleBackColor = true;
+            this.BTN_Close.Click += new System.EventHandler(this.BTN_Close_Click);
             // 
             // tabControl1
             // 
@@ -1772,126 +1764,10 @@ namespace Adress_DB
             this.tabPage7.Text = "Einstellungen";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // bindingNavigator5
-            // 
-            this.bindingNavigator5.AddNewItem = null;
-            this.bindingNavigator5.BindingSource = this.klassenBindingSource;
-            this.bindingNavigator5.CountItem = this.toolStripLabel7;
-            this.bindingNavigator5.DeleteItem = this.toolStripButton38;
-            this.bindingNavigator5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton39,
-            this.toolStripButton40,
-            this.toolStripSeparator19,
-            this.toolStripTextBox7,
-            this.toolStripLabel7,
-            this.toolStripSeparator20,
-            this.toolStripButton41,
-            this.toolStripButton42,
-            this.toolStripSeparator21,
-            this.toolStripButton38,
-            this.BTNAV_SaveKlassen});
-            this.bindingNavigator5.Location = new System.Drawing.Point(3, 347);
-            this.bindingNavigator5.MoveFirstItem = this.toolStripButton39;
-            this.bindingNavigator5.MoveLastItem = this.toolStripButton42;
-            this.bindingNavigator5.MoveNextItem = this.toolStripButton41;
-            this.bindingNavigator5.MovePreviousItem = this.toolStripButton40;
-            this.bindingNavigator5.Name = "bindingNavigator5";
-            this.bindingNavigator5.PositionItem = this.toolStripTextBox7;
-            this.bindingNavigator5.Size = new System.Drawing.Size(582, 25);
-            this.bindingNavigator5.TabIndex = 12;
-            this.bindingNavigator5.Text = "bindingNavigator5";
-            // 
             // klassenBindingSource
             // 
             this.klassenBindingSource.DataMember = "Klassen";
             this.klassenBindingSource.DataSource = this._WSL_AdressenDataSet;
-            // 
-            // toolStripLabel7
-            // 
-            this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(44, 22);
-            this.toolStripLabel7.Text = "von {0}";
-            this.toolStripLabel7.ToolTipText = "Die Gesamtanzahl der Elemente.";
-            // 
-            // toolStripButton38
-            // 
-            this.toolStripButton38.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton38.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton38.Image")));
-            this.toolStripButton38.Name = "toolStripButton38";
-            this.toolStripButton38.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton38.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton38.Text = "Löschen";
-            // 
-            // toolStripButton39
-            // 
-            this.toolStripButton39.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton39.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton39.Image")));
-            this.toolStripButton39.Name = "toolStripButton39";
-            this.toolStripButton39.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton39.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton39.Text = "Erste verschieben";
-            // 
-            // toolStripButton40
-            // 
-            this.toolStripButton40.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton40.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton40.Image")));
-            this.toolStripButton40.Name = "toolStripButton40";
-            this.toolStripButton40.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton40.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton40.Text = "Vorherige verschieben";
-            // 
-            // toolStripSeparator19
-            // 
-            this.toolStripSeparator19.Name = "toolStripSeparator19";
-            this.toolStripSeparator19.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripTextBox7
-            // 
-            this.toolStripTextBox7.AccessibleName = "Position";
-            this.toolStripTextBox7.AutoSize = false;
-            this.toolStripTextBox7.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.toolStripTextBox7.Name = "toolStripTextBox7";
-            this.toolStripTextBox7.Size = new System.Drawing.Size(50, 25);
-            this.toolStripTextBox7.Text = "0";
-            this.toolStripTextBox7.ToolTipText = "Aktuelle Position";
-            // 
-            // toolStripSeparator20
-            // 
-            this.toolStripSeparator20.Name = "toolStripSeparator20";
-            this.toolStripSeparator20.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton41
-            // 
-            this.toolStripButton41.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton41.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton41.Image")));
-            this.toolStripButton41.Name = "toolStripButton41";
-            this.toolStripButton41.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton41.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton41.Text = "Nächste verschieben";
-            // 
-            // toolStripButton42
-            // 
-            this.toolStripButton42.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton42.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton42.Image")));
-            this.toolStripButton42.Name = "toolStripButton42";
-            this.toolStripButton42.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton42.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton42.Text = "Letzte verschieben";
-            // 
-            // toolStripSeparator21
-            // 
-            this.toolStripSeparator21.Name = "toolStripSeparator21";
-            this.toolStripSeparator21.Size = new System.Drawing.Size(6, 25);
-            // 
-            // BTNAV_SaveKlassen
-            // 
-            this.BTNAV_SaveKlassen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BTNAV_SaveKlassen.Image = ((System.Drawing.Image)(resources.GetObject("BTNAV_SaveKlassen.Image")));
-            this.BTNAV_SaveKlassen.Name = "BTNAV_SaveKlassen";
-            this.BTNAV_SaveKlassen.Size = new System.Drawing.Size(23, 22);
-            this.BTNAV_SaveKlassen.Text = "Daten speichern";
-            this.BTNAV_SaveKlassen.Click += new System.EventHandler(this.BTNAV_SaveKlassen_Click);
             // 
             // klassenDataGridView
             // 
@@ -1990,6 +1866,45 @@ namespace Adress_DB
             // 
             this.klassenTableAdapter.ClearBeforeFill = true;
             // 
+            // bindingNavigator5
+            // 
+            this.bindingNavigator5.AddNewItem = null;
+            this.bindingNavigator5.BindingSource = this.klassenBindingSource;
+            this.bindingNavigator5.CountItem = null;
+            this.bindingNavigator5.DeleteItem = this.toolStripButton20;
+            this.bindingNavigator5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigator5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton20,
+            this.BTNKlassenSave});
+            this.bindingNavigator5.Location = new System.Drawing.Point(3, 347);
+            this.bindingNavigator5.MoveFirstItem = null;
+            this.bindingNavigator5.MoveLastItem = null;
+            this.bindingNavigator5.MoveNextItem = null;
+            this.bindingNavigator5.MovePreviousItem = null;
+            this.bindingNavigator5.Name = "bindingNavigator5";
+            this.bindingNavigator5.PositionItem = null;
+            this.bindingNavigator5.Size = new System.Drawing.Size(582, 25);
+            this.bindingNavigator5.TabIndex = 26;
+            this.bindingNavigator5.Text = "BindingNavigator1";
+            // 
+            // toolStripButton20
+            // 
+            this.toolStripButton20.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton20.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton20.Image")));
+            this.toolStripButton20.Name = "toolStripButton20";
+            this.toolStripButton20.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton20.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton20.Text = "Löschen";
+            // 
+            // BTNKlassenSave
+            // 
+            this.BTNKlassenSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BTNKlassenSave.Image = ((System.Drawing.Image)(resources.GetObject("BTNKlassenSave.Image")));
+            this.BTNKlassenSave.Name = "BTNKlassenSave";
+            this.BTNKlassenSave.Size = new System.Drawing.Size(23, 22);
+            this.BTNKlassenSave.Text = "Daten speichern";
+            this.BTNKlassenSave.Click += new System.EventHandler(this.BTNKlassenSave_Click);
+            // 
             // Administration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2052,12 +1967,12 @@ namespace Adress_DB
             this.tabControl1.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).EndInit();
-            this.bindingNavigator5.ResumeLayout(false);
-            this.bindingNavigator5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.klassenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.klassenDataGridView)).EndInit();
             this.tabPage8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).EndInit();
+            this.bindingNavigator5.ResumeLayout(false);
+            this.bindingNavigator5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2068,22 +1983,7 @@ namespace Adress_DB
             [MethodImpl(MethodImplOptions.Synchronized)]
             get
             {
-                return _BTN_Schliessen;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_BTN_Schliessen != null)
-                {
-                    _BTN_Schliessen.Click -= BTN_Schliessen_Click;
-                }
-
-                _BTN_Schliessen = value;
-                if (_BTN_Schliessen != null)
-                {
-                    _BTN_Schliessen.Click += BTN_Schliessen_Click;
-                }
+                return BTN_Close;
             }
         }
 
@@ -2414,28 +2314,19 @@ namespace Adress_DB
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private TableLayoutPanel tableLayoutPanel2;
         internal Panel Panel3;
-        private Button _BTN_Schliessen;
+        private Button BTN_Close;
         private TabControl tabControl1;
         private TabPage tabPage7;
         private TabPage tabPage8;
         private BindingSource klassenBindingSource;
         private _WSL_AdressenDataSetTableAdapters.KlassenTableAdapter klassenTableAdapter;
-        internal BindingNavigator bindingNavigator5;
-        internal ToolStripLabel toolStripLabel7;
-        internal ToolStripButton toolStripButton38;
-        internal ToolStripButton toolStripButton39;
-        internal ToolStripButton toolStripButton40;
-        internal ToolStripSeparator toolStripSeparator19;
-        internal ToolStripTextBox toolStripTextBox7;
-        internal ToolStripSeparator toolStripSeparator20;
-        internal ToolStripButton toolStripButton41;
-        internal ToolStripButton toolStripButton42;
-        internal ToolStripSeparator toolStripSeparator21;
-        private ToolStripButton BTNAV_SaveKlassen;
         private DataGridView klassenDataGridView;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
         internal BindingNavigator bindingNavigator4;
         private ToolStripButton _BNAV_PropertiesSave;
+        internal BindingNavigator bindingNavigator5;
+        internal ToolStripButton toolStripButton20;
+        private ToolStripButton BTNKlassenSave;
     }
 }

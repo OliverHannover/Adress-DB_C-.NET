@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Adress_DB
@@ -40,14 +41,7 @@ namespace Adress_DB
                 tabControl1.TabPages.Remove(tabPage8);
             }
         }
-
-       
-        private void BTN_Schliessen_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        
+      
 
         private void BTN_Aktuell_Click(object sender, EventArgs e)
         {
@@ -130,11 +124,24 @@ namespace Adress_DB
 
         }
 
-        private void BTNAV_SaveKlassen_Click(object sender, EventArgs e)
+        private void BTN_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BTNKlassenSave_Click(object sender, EventArgs e)
         {
                 Validate();
                 klassenBindingSource.EndEdit();
                 klassenTableAdapter.Update(_WSL_AdressenDataSet.Klassen);
-         }
+
+            My.MyProject.Forms.Hauptform.CB_Klassifizierung.Items.Clear();
+            DataTable myDT;
+            myDT = klassenTableAdapter.GetData();
+            foreach (DataRow row in myDT.Rows)
+            {
+                My.MyProject.Forms.Hauptform.CB_Klassifizierung.Items.Add(row["KlassenName"]);
+            }
+        }
     }
 }

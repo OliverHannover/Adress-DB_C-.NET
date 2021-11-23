@@ -4423,10 +4423,10 @@ namespace Adress_DB
         internal Label label11;
         private PictureBox pictureBox1;
         private BindingSource klassifizierungBindingSource;
-        private ComboBox CB_Klassifizierung;
         internal _WSL_AdressenDataSetTableAdapters.KlassifizierungTableAdapter klassifizierungTableAdapter;
         private BindingSource klassenBindingSource;
         private _WSL_AdressenDataSetTableAdapters.KlassenTableAdapter klassenTableAdapter;
         private PictureBox pictureBox2;
+        internal ComboBox CB_Klassifizierung;
     }
 }
