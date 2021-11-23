@@ -264,7 +264,7 @@ namespace Adress_DB
             this._SchließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this._BenutzerlisteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._EinstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MI_Administration = new System.Windows.Forms.ToolStripMenuItem();
             this.InfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._AktivitätslogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._InfoÜberAdressenDBToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -297,11 +297,20 @@ namespace Adress_DB
             this.PropertiesTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.propertiesTableAdapter();
             this.Panel9 = new System.Windows.Forms.Panel();
             this.TLP_1 = new System.Windows.Forms.TableLayoutPanel();
+            this.PNL_Klasse = new System.Windows.Forms.Panel();
+            this.CB_Klassifizierung = new System.Windows.Forms.ComboBox();
+            this.klassifizierungBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.PNL_Konto = new System.Windows.Forms.Panel();
-            this.Panel10 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.StatusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ToolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.ToolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.klassifizierungTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.KlassifizierungTableAdapter();
+            this.klassenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.klassenTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.KlassenTableAdapter();
             AdresstypLabel = new System.Windows.Forms.Label();
             StraßeLabel = new System.Windows.Forms.Label();
             PLZLabel = new System.Windows.Forms.Label();
@@ -398,9 +407,14 @@ namespace Adress_DB
             ((System.ComponentModel.ISupportInitialize)(this.PropertiesBindingSource)).BeginInit();
             this.Panel9.SuspendLayout();
             this.TLP_1.SuspendLayout();
+            this.PNL_Klasse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.klassifizierungBindingSource)).BeginInit();
+            this.panel11.SuspendLayout();
             this.PNL_Konto.SuspendLayout();
-            this.Panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.StatusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.klassenBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // AdresstypLabel
@@ -931,9 +945,9 @@ namespace Adress_DB
             // 
             this.lblIDKonto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.KontoBindingSource, "IDKonto", true));
             this.lblIDKonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDKonto.Location = new System.Drawing.Point(21, 84);
+            this.lblIDKonto.Location = new System.Drawing.Point(6, 86);
             this.lblIDKonto.Name = "lblIDKonto";
-            this.lblIDKonto.Size = new System.Drawing.Size(117, 23);
+            this.lblIDKonto.Size = new System.Drawing.Size(109, 23);
             this.lblIDKonto.TabIndex = 10;
             this.lblIDKonto.Text = "IDKonto";
             this.lblIDKonto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -948,6 +962,7 @@ namespace Adress_DB
             this._CB_FirmenName.DataSource = this.FirmenNameBindingSource;
             this._CB_FirmenName.DisplayMember = "FirmenName";
             this._CB_FirmenName.Enabled = false;
+            this._CB_FirmenName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._CB_FirmenName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._CB_FirmenName.FormattingEnabled = true;
             this._CB_FirmenName.Location = new System.Drawing.Point(103, 36);
@@ -1012,7 +1027,7 @@ namespace Adress_DB
             // _Button1
             // 
             this._Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this._Button1.Location = new System.Drawing.Point(248, 20);
+            this._Button1.Location = new System.Drawing.Point(241, 20);
             this._Button1.Name = "_Button1";
             this._Button1.Size = new System.Drawing.Size(147, 23);
             this._Button1.TabIndex = 21;
@@ -1044,11 +1059,11 @@ namespace Adress_DB
             this.DataGridViewTextBoxColumn18,
             this.DataGridViewTextBoxColumn19});
             this.DocuwareCSVDataGridView.DataSource = this.DocuwareCSVBindingSource;
-            this.DocuwareCSVDataGridView.Location = new System.Drawing.Point(9, 4);
+            this.DocuwareCSVDataGridView.Location = new System.Drawing.Point(34, 11);
             this.DocuwareCSVDataGridView.Name = "DocuwareCSVDataGridView";
             this.DocuwareCSVDataGridView.RowHeadersVisible = false;
             this.DocuwareCSVDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DocuwareCSVDataGridView.Size = new System.Drawing.Size(137, 122);
+            this.DocuwareCSVDataGridView.Size = new System.Drawing.Size(43, 46);
             this.DocuwareCSVDataGridView.TabIndex = 23;
             this.DocuwareCSVDataGridView.Visible = false;
             // 
@@ -1153,7 +1168,7 @@ namespace Adress_DB
             this._BTN_MapsSuche.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._BTN_MapsSuche.Image = ((System.Drawing.Image)(resources.GetObject("_BTN_MapsSuche.Image")));
             this._BTN_MapsSuche.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this._BTN_MapsSuche.Location = new System.Drawing.Point(176, 281);
+            this._BTN_MapsSuche.Location = new System.Drawing.Point(189, 281);
             this._BTN_MapsSuche.Name = "_BTN_MapsSuche";
             this._BTN_MapsSuche.Size = new System.Drawing.Size(105, 28);
             this._BTN_MapsSuche.TabIndex = 1;
@@ -1187,7 +1202,7 @@ namespace Adress_DB
             // 
             this._btnNeuesKonto.Image = global::Adress_DB.My.Resources.Resources.AccountGroup_16x;
             this._btnNeuesKonto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this._btnNeuesKonto.Location = new System.Drawing.Point(31, 36);
+            this._btnNeuesKonto.Location = new System.Drawing.Point(6, 35);
             this._btnNeuesKonto.Name = "_btnNeuesKonto";
             this._btnNeuesKonto.Size = new System.Drawing.Size(100, 23);
             this._btnNeuesKonto.TabIndex = 4;
@@ -1215,7 +1230,7 @@ namespace Adress_DB
             this.KontoDataGridView.ReadOnly = true;
             this.KontoDataGridView.RowHeadersVisible = false;
             this.KontoDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.KontoDataGridView.Size = new System.Drawing.Size(161, 155);
+            this.KontoDataGridView.Size = new System.Drawing.Size(161, 199);
             this.KontoDataGridView.TabIndex = 5;
             // 
             // DataGridViewTextBoxColumn4
@@ -1236,11 +1251,11 @@ namespace Adress_DB
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(15, 64);
+            this.Label3.Location = new System.Drawing.Point(9, 63);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(123, 13);
+            this.Label3.Size = new System.Drawing.Size(89, 13);
             this.Label3.TabIndex = 12;
-            this.Label3.Text = "aktuell markiertes Konto:";
+            this.Label3.Text = "markiertes Konto:";
             // 
             // BTN_Speichern
             // 
@@ -1365,7 +1380,7 @@ namespace Adress_DB
             this.AdressenDataGridView.Name = "AdressenDataGridView";
             this.AdressenDataGridView.RowHeadersVisible = false;
             this.AdressenDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.AdressenDataGridView.Size = new System.Drawing.Size(274, 102);
+            this.AdressenDataGridView.Size = new System.Drawing.Size(287, 118);
             this.AdressenDataGridView.TabIndex = 6;
             // 
             // IDAdresse
@@ -1559,7 +1574,7 @@ namespace Adress_DB
             this.KontakteDataGridView.Name = "KontakteDataGridView";
             this.KontakteDataGridView.RowHeadersVisible = false;
             this.KontakteDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.KontakteDataGridView.Size = new System.Drawing.Size(274, 102);
+            this.KontakteDataGridView.Size = new System.Drawing.Size(274, 101);
             this.KontakteDataGridView.TabIndex = 1;
             // 
             // IDKontakt
@@ -1617,7 +1632,7 @@ namespace Adress_DB
             this.TC_Beleg.Name = "TC_Beleg";
             this.TLP_1.SetRowSpan(this.TC_Beleg, 2);
             this.TC_Beleg.SelectedIndex = 0;
-            this.TC_Beleg.Size = new System.Drawing.Size(408, 450);
+            this.TC_Beleg.Size = new System.Drawing.Size(401, 449);
             this.TC_Beleg.TabIndex = 19;
             // 
             // TabPage1
@@ -1648,7 +1663,7 @@ namespace Adress_DB
             this.TabPage1.Location = new System.Drawing.Point(4, 22);
             this.TabPage1.Name = "TabPage1";
             this.TabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage1.Size = new System.Drawing.Size(400, 424);
+            this.TabPage1.Size = new System.Drawing.Size(393, 423);
             this.TabPage1.TabIndex = 0;
             this.TabPage1.Text = "Besuchsbericht";
             // 
@@ -1680,7 +1695,7 @@ namespace Adress_DB
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TB_BBWeitereKontakte.Location = new System.Drawing.Point(6, 114);
             this.TB_BBWeitereKontakte.Name = "TB_BBWeitereKontakte";
-            this.TB_BBWeitereKontakte.Size = new System.Drawing.Size(385, 20);
+            this.TB_BBWeitereKontakte.Size = new System.Drawing.Size(378, 20);
             this.TB_BBWeitereKontakte.TabIndex = 31;
             // 
             // LBL_BBRegion
@@ -1756,7 +1771,7 @@ namespace Adress_DB
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TB_BBThema.Location = new System.Drawing.Point(6, 272);
             this.TB_BBThema.Name = "TB_BBThema";
-            this.TB_BBThema.Size = new System.Drawing.Size(385, 20);
+            this.TB_BBThema.Size = new System.Drawing.Size(378, 20);
             this.TB_BBThema.TabIndex = 18;
             // 
             // DTP_BBDatum
@@ -1776,7 +1791,7 @@ namespace Adress_DB
             this.Panel5.Controls.Add(this.Label7);
             this.Panel5.Location = new System.Drawing.Point(0, 0);
             this.Panel5.Name = "Panel5";
-            this.Panel5.Size = new System.Drawing.Size(408, 26);
+            this.Panel5.Size = new System.Drawing.Size(401, 26);
             this.Panel5.TabIndex = 1;
             // 
             // Label7
@@ -1818,7 +1833,7 @@ namespace Adress_DB
             this.TabPage2.Location = new System.Drawing.Point(4, 22);
             this.TabPage2.Name = "TabPage2";
             this.TabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage2.Size = new System.Drawing.Size(400, 424);
+            this.TabPage2.Size = new System.Drawing.Size(393, 423);
             this.TabPage2.TabIndex = 1;
             this.TabPage2.Text = "Brief / Fax / TN / diverse";
             this.TabPage2.UseVisualStyleBackColor = true;
@@ -2037,7 +2052,7 @@ namespace Adress_DB
             this.TabPage3.Location = new System.Drawing.Point(4, 22);
             this.TabPage3.Name = "TabPage3";
             this.TabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage3.Size = new System.Drawing.Size(400, 424);
+            this.TabPage3.Size = new System.Drawing.Size(393, 423);
             this.TabPage3.TabIndex = 2;
             this.TabPage3.Text = "Historie";
             this.TabPage3.UseVisualStyleBackColor = true;
@@ -2062,7 +2077,7 @@ namespace Adress_DB
             this.DataGridView1.Location = new System.Drawing.Point(3, 3);
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.RowHeadersVisible = false;
-            this.DataGridView1.Size = new System.Drawing.Size(394, 418);
+            this.DataGridView1.Size = new System.Drawing.Size(387, 417);
             this.DataGridView1.TabIndex = 0;
             // 
             // IDBelegDataGridViewTextBoxColumn
@@ -2122,9 +2137,9 @@ namespace Adress_DB
             this.Panel6.Controls.Add(this._btnAbbrechen);
             this.Panel6.Controls.Add(this.BTN_Speichern);
             this.Panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel6.Location = new System.Drawing.Point(3, 534);
+            this.Panel6.Location = new System.Drawing.Point(3, 533);
             this.Panel6.Name = "Panel6";
-            this.Panel6.Size = new System.Drawing.Size(764, 44);
+            this.Panel6.Size = new System.Drawing.Size(764, 45);
             this.Panel6.TabIndex = 20;
             // 
             // _LBL_FirmenName
@@ -2163,7 +2178,7 @@ namespace Adress_DB
             this.TC_Adresse.Name = "TC_Adresse";
             this.TLP_1.SetRowSpan(this.TC_Adresse, 2);
             this.TC_Adresse.SelectedIndex = 0;
-            this.TC_Adresse.Size = new System.Drawing.Size(294, 450);
+            this.TC_Adresse.Size = new System.Drawing.Size(294, 449);
             this.TC_Adresse.TabIndex = 21;
             // 
             // TabAdresseInfo
@@ -2199,7 +2214,7 @@ namespace Adress_DB
             this.TabAdresseInfo.Location = new System.Drawing.Point(4, 22);
             this.TabAdresseInfo.Name = "TabAdresseInfo";
             this.TabAdresseInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.TabAdresseInfo.Size = new System.Drawing.Size(286, 424);
+            this.TabAdresseInfo.Size = new System.Drawing.Size(286, 423);
             this.TabAdresseInfo.TabIndex = 0;
             this.TabAdresseInfo.Text = "Info";
             // 
@@ -2393,7 +2408,7 @@ namespace Adress_DB
             this.Panel7.Controls.Add(this._LBL_IDAdresse);
             this.Panel7.Location = new System.Drawing.Point(0, 0);
             this.Panel7.Name = "Panel7";
-            this.Panel7.Size = new System.Drawing.Size(289, 27);
+            this.Panel7.Size = new System.Drawing.Size(302, 27);
             this.Panel7.TabIndex = 1;
             // 
             // Label4
@@ -2438,7 +2453,7 @@ namespace Adress_DB
             this.TabAdresseBearbeiten.Location = new System.Drawing.Point(4, 22);
             this.TabAdresseBearbeiten.Name = "TabAdresseBearbeiten";
             this.TabAdresseBearbeiten.Padding = new System.Windows.Forms.Padding(3);
-            this.TabAdresseBearbeiten.Size = new System.Drawing.Size(286, 424);
+            this.TabAdresseBearbeiten.Size = new System.Drawing.Size(286, 423);
             this.TabAdresseBearbeiten.TabIndex = 1;
             this.TabAdresseBearbeiten.Text = "Bearbeiten / NEU";
             // 
@@ -2518,7 +2533,7 @@ namespace Adress_DB
             this.TC_Kontakt.Name = "TC_Kontakt";
             this.TLP_1.SetRowSpan(this.TC_Kontakt, 2);
             this.TC_Kontakt.SelectedIndex = 0;
-            this.TC_Kontakt.Size = new System.Drawing.Size(294, 450);
+            this.TC_Kontakt.Size = new System.Drawing.Size(294, 449);
             this.TC_Kontakt.TabIndex = 22;
             // 
             // TabPage5
@@ -2555,7 +2570,7 @@ namespace Adress_DB
             this.TabPage5.Location = new System.Drawing.Point(4, 22);
             this.TabPage5.Name = "TabPage5";
             this.TabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage5.Size = new System.Drawing.Size(286, 424);
+            this.TabPage5.Size = new System.Drawing.Size(286, 423);
             this.TabPage5.TabIndex = 0;
             this.TabPage5.Text = "Info";
             // 
@@ -2694,7 +2709,7 @@ namespace Adress_DB
             this.TabPage6.Location = new System.Drawing.Point(4, 22);
             this.TabPage6.Name = "TabPage6";
             this.TabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage6.Size = new System.Drawing.Size(286, 424);
+            this.TabPage6.Size = new System.Drawing.Size(286, 423);
             this.TabPage6.TabIndex = 1;
             this.TabPage6.Text = "Bearbeiten / NEU";
             // 
@@ -2737,7 +2752,7 @@ namespace Adress_DB
             this.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.MenuStrip1.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip1.Name = "MenuStrip1";
-            this.MenuStrip1.Size = new System.Drawing.Size(1186, 24);
+            this.MenuStrip1.Size = new System.Drawing.Size(1177, 24);
             this.MenuStrip1.TabIndex = 23;
             this.MenuStrip1.Text = "MenuStrip1";
             // 
@@ -2770,7 +2785,7 @@ namespace Adress_DB
             // 
             this.ToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._BenutzerlisteToolStripMenuItem,
-            this._EinstellungenToolStripMenuItem});
+            this.MI_Administration});
             this.ToolStripMenuItem1.Name = "ToolStripMenuItem1";
             this.ToolStripMenuItem1.Size = new System.Drawing.Size(90, 20);
             this.ToolStripMenuItem1.Text = "Einstellungen";
@@ -2779,17 +2794,17 @@ namespace Adress_DB
             // 
             this._BenutzerlisteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("_BenutzerlisteToolStripMenuItem.Image")));
             this._BenutzerlisteToolStripMenuItem.Name = "_BenutzerlisteToolStripMenuItem";
-            this._BenutzerlisteToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this._BenutzerlisteToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this._BenutzerlisteToolStripMenuItem.Text = "Benutzerliste";
             this._BenutzerlisteToolStripMenuItem.Click += new System.EventHandler(this.BenutzerlisteToolStripMenuItem_Click);
             // 
-            // _EinstellungenToolStripMenuItem
+            // MI_Administration
             // 
-            this._EinstellungenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("_EinstellungenToolStripMenuItem.Image")));
-            this._EinstellungenToolStripMenuItem.Name = "_EinstellungenToolStripMenuItem";
-            this._EinstellungenToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this._EinstellungenToolStripMenuItem.Text = "Administration";
-            this._EinstellungenToolStripMenuItem.Click += new System.EventHandler(this.EinstellungenToolStripMenuItem_Click);
+            this.MI_Administration.Image = ((System.Drawing.Image)(resources.GetObject("MI_Administration.Image")));
+            this.MI_Administration.Name = "MI_Administration";
+            this.MI_Administration.Size = new System.Drawing.Size(145, 22);
+            this.MI_Administration.Text = "Einstellungen";
+            this.MI_Administration.Click += new System.EventHandler(this.EinstellungenToolStripMenuItem_Click);
             // 
             // InfoToolStripMenuItem
             // 
@@ -2830,7 +2845,7 @@ namespace Adress_DB
             this.lblUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(794, 0);
+            this.lblUser.Location = new System.Drawing.Point(785, 0);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(392, 25);
             this.lblUser.TabIndex = 21;
@@ -2842,9 +2857,9 @@ namespace Adress_DB
             this.Panel8.BackColor = System.Drawing.Color.Silver;
             this.Panel8.Controls.Add(this.BTN_DocErzeugen);
             this.Panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel8.Location = new System.Drawing.Point(773, 534);
+            this.Panel8.Location = new System.Drawing.Point(773, 533);
             this.Panel8.Name = "Panel8";
-            this.Panel8.Size = new System.Drawing.Size(408, 44);
+            this.Panel8.Size = new System.Drawing.Size(401, 45);
             this.Panel8.TabIndex = 24;
             // 
             // BTN_DocErzeugen
@@ -2853,9 +2868,9 @@ namespace Adress_DB
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_DocErzeugen.Image = global::Adress_DB.My.Resources.Resources.Document_16x;
             this.BTN_DocErzeugen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_DocErzeugen.Location = new System.Drawing.Point(271, 10);
+            this.BTN_DocErzeugen.Location = new System.Drawing.Point(264, 10);
             this.BTN_DocErzeugen.Name = "BTN_DocErzeugen";
-            this.BTN_DocErzeugen.Size = new System.Drawing.Size(124, 23);
+            this.BTN_DocErzeugen.Size = new System.Drawing.Size(124, 24);
             this.BTN_DocErzeugen.TabIndex = 18;
             this.BTN_DocErzeugen.Text = "Document erzeugen";
             this.BTN_DocErzeugen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2888,6 +2903,8 @@ namespace Adress_DB
             this.TableAdapterManager.CH_PLZ_GeodatenTableAdapter = null;
             this.TableAdapterManager.DE_PLZ_GeodatenTableAdapter = null;
             this.TableAdapterManager.FirmenNameTableAdapter = this.FirmenNameTableAdapter;
+            this.TableAdapterManager.KlassenTableAdapter = null;
+            this.TableAdapterManager.KlassifizierungTableAdapter = null;
             this.TableAdapterManager.KontakteTableAdapter = null;
             this.TableAdapterManager.KontoTableAdapter = null;
             this.TableAdapterManager.LogTabelleTableAdapter = null;
@@ -2978,11 +2995,12 @@ namespace Adress_DB
             // Panel9
             // 
             this.Panel9.BackColor = System.Drawing.Color.Silver;
+            this.Panel9.Controls.Add(this.DocuwareCSVDataGridView);
             this.Panel9.Controls.Add(this._Button1);
             this.Panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel9.Location = new System.Drawing.Point(773, 3);
             this.Panel9.Name = "Panel9";
-            this.Panel9.Size = new System.Drawing.Size(408, 69);
+            this.Panel9.Size = new System.Drawing.Size(401, 69);
             this.Panel9.TabIndex = 26;
             // 
             // TLP_1
@@ -3000,42 +3018,104 @@ namespace Adress_DB
             this.TLP_1.Controls.Add(this.Panel1, 0, 0);
             this.TLP_1.Controls.Add(this.TC_Adresse, 1, 1);
             this.TLP_1.Controls.Add(this.Panel6, 0, 3);
+            this.TLP_1.Controls.Add(this.PNL_Klasse, 0, 1);
             this.TLP_1.Controls.Add(this.Panel8, 3, 3);
-            this.TLP_1.Controls.Add(this.PNL_Konto, 0, 1);
-            this.TLP_1.Controls.Add(this.Panel10, 0, 2);
             this.TLP_1.Controls.Add(this.TC_Kontakt, 2, 1);
+            this.TLP_1.Controls.Add(this.PNL_Konto, 0, 2);
             this.TLP_1.Location = new System.Drawing.Point(0, 25);
             this.TLP_1.Name = "TLP_1";
             this.TLP_1.RowCount = 4;
             this.TLP_1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
-            this.TLP_1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 275F));
-            this.TLP_1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TLP_1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.TLP_1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.TLP_1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.TLP_1.Size = new System.Drawing.Size(1184, 581);
+            this.TLP_1.Size = new System.Drawing.Size(1177, 581);
             this.TLP_1.TabIndex = 27;
+            // 
+            // PNL_Klasse
+            // 
+            this.PNL_Klasse.AutoScroll = true;
+            this.PNL_Klasse.BackColor = System.Drawing.Color.White;
+            this.PNL_Klasse.Controls.Add(this.CB_Klassifizierung);
+            this.PNL_Klasse.Controls.Add(this.panel11);
+            this.PNL_Klasse.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PNL_Klasse.Location = new System.Drawing.Point(3, 78);
+            this.PNL_Klasse.Name = "PNL_Klasse";
+            this.PNL_Klasse.Size = new System.Drawing.Size(164, 130);
+            this.PNL_Klasse.TabIndex = 29;
+            // 
+            // CB_Klassifizierung
+            // 
+            this.CB_Klassifizierung.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.klassifizierungBindingSource, "Klassifizierung", true));
+            this.CB_Klassifizierung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CB_Klassifizierung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CB_Klassifizierung.FormattingEnabled = true;
+            this.CB_Klassifizierung.Location = new System.Drawing.Point(3, 36);
+            this.CB_Klassifizierung.Name = "CB_Klassifizierung";
+            this.CB_Klassifizierung.Size = new System.Drawing.Size(158, 24);
+            this.CB_Klassifizierung.TabIndex = 20;
+            // 
+            // klassifizierungBindingSource
+            // 
+            this.klassifizierungBindingSource.DataMember = "Klassifizierung";
+            this.klassifizierungBindingSource.DataSource = this._WSL_AdressenDataSet;
+            // 
+            // panel11
+            // 
+            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel11.BackColor = System.Drawing.Color.Silver;
+            this.panel11.Controls.Add(this.label11);
+            this.panel11.Location = new System.Drawing.Point(3, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(158, 27);
+            this.panel11.TabIndex = 19;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(2, 2);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(129, 24);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Klassifizierung";
             // 
             // PNL_Konto
             // 
             this.PNL_Konto.BackColor = System.Drawing.Color.White;
+            this.PNL_Konto.Controls.Add(this.pictureBox2);
             this.PNL_Konto.Controls.Add(this.KontoDataGridView);
             this.PNL_Konto.Controls.Add(this._btnNeuesKonto);
+            this.PNL_Konto.Controls.Add(this.pictureBox1);
             this.PNL_Konto.Controls.Add(this.lblIDKonto);
             this.PNL_Konto.Controls.Add(this.Label3);
             this.PNL_Konto.Controls.Add(this.Panel4);
             this.PNL_Konto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PNL_Konto.Location = new System.Drawing.Point(3, 78);
+            this.PNL_Konto.Location = new System.Drawing.Point(3, 214);
             this.PNL_Konto.Name = "PNL_Konto";
-            this.PNL_Konto.Size = new System.Drawing.Size(164, 269);
+            this.PNL_Konto.Size = new System.Drawing.Size(164, 313);
             this.PNL_Konto.TabIndex = 28;
             // 
-            // Panel10
+            // pictureBox2
             // 
-            this.Panel10.Controls.Add(this.DocuwareCSVDataGridView);
-            this.Panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel10.Location = new System.Drawing.Point(3, 353);
-            this.Panel10.Name = "Panel10";
-            this.Panel10.Size = new System.Drawing.Size(164, 175);
-            this.Panel10.TabIndex = 29;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(133, 67);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(133, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
             // 
             // StatusStrip1
             // 
@@ -3044,7 +3124,7 @@ namespace Adress_DB
             this.ToolStripStatusLabel1});
             this.StatusStrip1.Location = new System.Drawing.Point(0, 608);
             this.StatusStrip1.Name = "StatusStrip1";
-            this.StatusStrip1.Size = new System.Drawing.Size(1186, 22);
+            this.StatusStrip1.Size = new System.Drawing.Size(1177, 22);
             this.StatusStrip1.TabIndex = 28;
             this.StatusStrip1.Text = "StatusStrip1";
             // 
@@ -3061,12 +3141,25 @@ namespace Adress_DB
             this.ToolStripStatusLabel1.Text = "DocuWare-Datei erfolgreich erstellt";
             this.ToolStripStatusLabel1.Visible = false;
             // 
+            // klassifizierungTableAdapter
+            // 
+            this.klassifizierungTableAdapter.ClearBeforeFill = true;
+            // 
+            // klassenBindingSource
+            // 
+            this.klassenBindingSource.DataMember = "Klassen";
+            this.klassenBindingSource.DataSource = this._WSL_AdressenDataSet;
+            // 
+            // klassenTableAdapter
+            // 
+            this.klassenTableAdapter.ClearBeforeFill = true;
+            // 
             // Hauptform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1186, 630);
+            this.ClientSize = new System.Drawing.Size(1177, 630);
             this.Controls.Add(this.lblHinweisKeinTreffer);
             this.Controls.Add(this.StatusStrip1);
             this.Controls.Add(this.TLP_1);
@@ -3140,11 +3233,17 @@ namespace Adress_DB
             ((System.ComponentModel.ISupportInitialize)(this.PropertiesBindingSource)).EndInit();
             this.Panel9.ResumeLayout(false);
             this.TLP_1.ResumeLayout(false);
+            this.PNL_Klasse.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.klassifizierungBindingSource)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.PNL_Konto.ResumeLayout(false);
             this.PNL_Konto.PerformLayout();
-            this.Panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.StatusStrip1.ResumeLayout(false);
             this.StatusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.klassenBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3863,28 +3962,28 @@ namespace Adress_DB
 
         internal MenuStrip MenuStrip1;
         internal ToolStripMenuItem ToolStripMenuItem1;
-        private ToolStripMenuItem _EinstellungenToolStripMenuItem;
+        private ToolStripMenuItem MI_Administration;
 
         internal ToolStripMenuItem EinstellungenToolStripMenuItem
         {
             [MethodImpl(MethodImplOptions.Synchronized)]
             get
             {
-                return _EinstellungenToolStripMenuItem;
+                return MI_Administration;
             }
 
             [MethodImpl(MethodImplOptions.Synchronized)]
             set
             {
-                if (_EinstellungenToolStripMenuItem != null)
+                if (MI_Administration != null)
                 {
-                    _EinstellungenToolStripMenuItem.Click -= EinstellungenToolStripMenuItem_Click;
+                    MI_Administration.Click -= EinstellungenToolStripMenuItem_Click;
                 }
 
-                _EinstellungenToolStripMenuItem = value;
-                if (_EinstellungenToolStripMenuItem != null)
+                MI_Administration = value;
+                if (MI_Administration != null)
                 {
-                    _EinstellungenToolStripMenuItem.Click += EinstellungenToolStripMenuItem_Click;
+                    MI_Administration.Click += EinstellungenToolStripMenuItem_Click;
                 }
             }
         }
@@ -4309,7 +4408,7 @@ namespace Adress_DB
         internal Panel Panel9;
         internal TableLayoutPanel TLP_1;
         internal Panel PNL_Konto;
-        internal Panel Panel10;
+        internal Panel PNL_Klasse;
         internal StatusStrip StatusStrip1;
         internal ToolStripProgressBar ToolStripProgressBar1;
         internal ToolStripStatusLabel ToolStripStatusLabel1;
@@ -4320,5 +4419,14 @@ namespace Adress_DB
         internal DataGridViewTextBoxColumn DataGridViewTextBoxColumn4;
         internal DataGridViewTextBoxColumn DataGridViewTextBoxColumn6;
         internal Button BTN_DocErzeugen;
+        internal Panel panel11;
+        internal Label label11;
+        private PictureBox pictureBox1;
+        private BindingSource klassifizierungBindingSource;
+        private ComboBox CB_Klassifizierung;
+        internal _WSL_AdressenDataSetTableAdapters.KlassifizierungTableAdapter klassifizierungTableAdapter;
+        private BindingSource klassenBindingSource;
+        private _WSL_AdressenDataSetTableAdapters.KlassenTableAdapter klassenTableAdapter;
+        private PictureBox pictureBox2;
     }
 }

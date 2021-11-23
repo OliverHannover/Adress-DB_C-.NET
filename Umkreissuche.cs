@@ -65,7 +65,7 @@ namespace Adress_DB
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if ((TB_PLZ.Text ?? "") == (string.Empty ?? "") | (CB_Ort.Text ?? "") == (string.Empty ?? "") | (TB_Entfernung.Text ?? "") == (string.Empty ?? ""))
+            if ((TB_PLZ.Text  == string.Empty ) || (CB_Ort.Text  == string.Empty ) || (TB_Entfernung.Text  == string.Empty))
             {
                 MessageBox.Show("Bitte alle Felder ausfüllen", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -90,30 +90,25 @@ namespace Adress_DB
                 dgv.DataSource = dt;
 
                 // dgv.Columns.RemoveAt(0)
+                dgv.Columns.RemoveAt(2);
                 dgv.Columns.RemoveAt(6);
                 dgv.Columns.RemoveAt(6);
                 dgv.Columns[6].DefaultCellStyle.Format = "N0";
                 dgv.Sort(dgv.Columns[6], System.ComponentModel.ListSortDirection.Ascending);
                 dgv.Columns[6].HeaderCell.SortGlyphDirection = SortOrder.Ascending;
-                // dgv.AutoResizeColumns()
+                dgv.AutoResizeColumns();
 
-                {
-                    var withBlock = dgv;
-                    withBlock.Columns[0].Width = 200;
-                    withBlock.Columns[0].HeaderText = "Firma";
-                    withBlock.Columns[1].HeaderText = "Art";
-                    withBlock.Columns[2].Width = 70;
-                    withBlock.Columns[2].HeaderText = "Land";
-                    withBlock.Columns[2].Width = 50;
-                    withBlock.Columns[6].HeaderText = "ca. km";
-                    withBlock.Columns[6].Width = 50;
-                }
+                dgv.Columns[0].Width = 200;
+                dgv.Columns[0].HeaderText = "Firma";
+                //dgv.Columns[1].HeaderText = "Art";
+                dgv.Columns[2].Width = 70;
+                dgv.Columns[2].HeaderText = "Land";
+                dgv.Columns[2].Width = 50;
+                dgv.Columns[6].HeaderText = "ca. km";
+                dgv.Columns[6].Width = 50;
 
-                {
-                    var withBlock1 = lbl_IDFirmenName;
-                    withBlock1.DataBindings.Clear();
-                    withBlock1.DataBindings.Add(new Binding("Text", dt, "FirmenName", true));
-                }
+                lbl_IDFirmenName.DataBindings.Clear();
+                    lbl_IDFirmenName.DataBindings.Add(new Binding("Text", dt, "FirmenName", true));
             }
         }
 

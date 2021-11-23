@@ -154,6 +154,7 @@ namespace Adress_DB
                 My.MyProject.Forms.Hauptform.KontoTableAdapter.SucheIDFirmenNameInKonto(My.MyProject.Forms.Hauptform._WSL_AdressenDataSet.Konto, IDFirmenName);
                 My.MyProject.Forms.Hauptform.AdressenTableAdapter.SucheIDFirmenNameInAdressen(My.MyProject.Forms.Hauptform._WSL_AdressenDataSet.Adressen, IDFirmenName);
                 My.MyProject.Forms.Hauptform.KontakteTableAdapter.SucheIDFirmenNameInKontakte(My.MyProject.Forms.Hauptform._WSL_AdressenDataSet.Kontakte, IDFirmenName);
+                My.MyProject.Forms.Hauptform.klassifizierungTableAdapter.SucheIDFirmenNameInKlassifizierung(My.MyProject.Forms.Hauptform._WSL_AdressenDataSet.Klassifizierung, IDFirmenName);
 
                 My.MyProject.Forms.Hauptform.BelegeMitAdresseTableAdapter.SucheIDFirmenNameInBelegeMitAdresse(My.MyProject.Forms.Hauptform._WSL_AdressenDataSet.BelegeMitAdresse, IDFirmenName);
                 My.MyProject.Forms.Hauptform.KontakteMitAdresseTableAdapter.SucheIDFirmenNameInKontakteMitAdresse(My.MyProject.Forms.Hauptform._WSL_AdressenDataSet.KontakteMitAdresse, IDFirmenName);

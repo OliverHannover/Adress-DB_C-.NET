@@ -13,6 +13,8 @@ namespace Adress_DB
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "_WSL_AdressenDataSet.Klassen". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.klassenTableAdapter.Fill(this._WSL_AdressenDataSet.Klassen);
             // TODO: Diese Codezeile lädt Daten in die Tabelle "_WSL_AdressenDataSet.properties". Sie können sie bei Bedarf verschieben oder entfernen.
             this.propertiesTableAdapter.Fill(this._WSL_AdressenDataSet.properties);
             BelegeTableAdapter.Fill(_WSL_AdressenDataSet.Belege);
@@ -20,6 +22,7 @@ namespace Adress_DB
             AdressenTableAdapter.Fill(_WSL_AdressenDataSet.Adressen);
             KontoTableAdapter.Fill(_WSL_AdressenDataSet.Konto);
             FirmenNameTableAdapter.Fill(_WSL_AdressenDataSet.FirmenName);
+
             SachbearbeiterTableAdapter.FillByAktive(_WSL_AdressenDataSet.Sachbearbeiter);
             int foundIndex = SachbearbeiterBindingSource.Find("Login", Environment.UserName);
             SachbearbeiterBindingSource.Position = foundIndex;
@@ -34,6 +37,7 @@ namespace Adress_DB
                 TC_Administration.Enabled = false;
                 BTN_Alle.Enabled = false;
                 BTN_Aktuell.Enabled = false;
+                tabControl1.TabPages.Remove(tabPage8);
             }
         }
 
@@ -125,5 +129,12 @@ namespace Adress_DB
             BTN_Aktuell.PerformClick();
 
         }
+
+        private void BTNAV_SaveKlassen_Click(object sender, EventArgs e)
+        {
+                Validate();
+                klassenBindingSource.EndEdit();
+                klassenTableAdapter.Update(_WSL_AdressenDataSet.Klassen);
+         }
     }
 }

@@ -21,11 +21,14 @@ namespace Adress_DB
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
+
+
             Width = 1190;
             Height = 680;
             lblTrefferAnzahl.Text = "Trefferanzahl"; // Starttext
             PNL_Konto.Visible = false; // Groupboxen Konto, Adresse, Kontakt ausblenden
+            PNL_Klasse.Visible = false;
             TC_Adresse.Visible = false;
             TC_Kontakt.Visible = false;
             TC_Beleg.Visible = false;
@@ -50,6 +53,15 @@ namespace Adress_DB
                 AnredeComboBox.Items.Add("Mrs.");
                 AnredeComboBox.SelectedIndex = 0;
             }
+
+            //Combobox mit Klassennamen aus der Tabelle füllen
+            DataTable myDT;
+            myDT = klassenTableAdapter.GetData();
+            foreach (DataRow row in myDT.Rows)
+            {
+                CB_Klassifizierung.Items.Add(row["KlassenName"]);
+            }
+
 
             DocuwareCSVDataGridView.Sort(DocuwareCSVDataGridView.Columns[0], System.ComponentModel.ListSortDirection.Ascending);
         }
@@ -166,6 +178,7 @@ namespace Adress_DB
                     // Es wurden Treffer gefunden ----------------------------------------------------
                     //MessageBox.Show("Treffer gefunden");
                     PNL_Konto.Visible = true; // Groupboxen Konto, Adresse, Kontakt einblenden
+                    PNL_Klasse.Visible = true;
                     TC_Adresse.Visible = true;
                     TC_Kontakt.Visible = true;
                     TC_Beleg.Visible = true;
@@ -181,7 +194,8 @@ namespace Adress_DB
                     // keine Treffer -----------------------------------------------------------------
                     //MessageBox.Show("keine Treffer gefunden");
                     PNL_Konto.Visible = false; // Groupboxen Konto, Adresse, Kontakt ausblenden
-                    TC_Adresse.Visible = false;
+                PNL_Klasse.Visible = false;
+                TC_Adresse.Visible = false;
                     TC_Kontakt.Visible = false;
                     TC_Beleg.Visible = false;
                     CB_FirmenName.Enabled = false;
@@ -203,6 +217,7 @@ namespace Adress_DB
             // 4) Kontakt neu anlegen
             // 5) TableUpdate Adressen bei Änderung
             // 6) TableUpdate Kontakte bei Änderung
+            // 7) Sonstiges
 
 
             // 1) #####################################################################################################################
@@ -435,7 +450,11 @@ namespace Adress_DB
             }
 
 
-            // Schluss ############################################################################################################### 
+            // 7) Sonstigen / Schluss ############################################################################################################### 
+
+            // Update KLassifizierung
+            klassifizierungTableAdapter.UpdateKlassifizierung(CB_Klassifizierung.Text, IDFirmenName);
+
             // TableAdapter aktualisieren und aktuellen Satz markieren
             Module1.AlleTableAdapterAktualisieren(IDFirmenName);
             Module1.IDFirmenNameInAdresseSatzMarkieren(IDFirmenName, IDAdresse);

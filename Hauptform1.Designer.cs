@@ -91,17 +91,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _EinstellungenToolStripMenuItem_Image {
-            get {
-                object obj = ResourceManager.GetObject("_EinstellungenToolStripMenuItem.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=578,Y=17}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=13,Y=12}.
         /// </summary>
         internal static System.Drawing.Point _WSL_AdressenDataSet_TrayLocation {
             get {
@@ -111,7 +101,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=184,Y=57}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=342,Y=65}.
         /// </summary>
         internal static System.Drawing.Point AdressenBindingSource_TrayLocation {
             get {
@@ -121,7 +111,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=375,Y=57}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=537,Y=64}.
         /// </summary>
         internal static System.Drawing.Point AdressenTableAdapter_TrayLocation {
             get {
@@ -171,7 +161,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=1257,Y=139}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=777,Y=149}.
         /// </summary>
         internal static System.Drawing.Point AT_PLZ_GeodatenBindingSource_TrayLocation {
             get {
@@ -181,7 +171,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=17,Y=178}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=996,Y=146}.
         /// </summary>
         internal static System.Drawing.Point AT_PLZ_GeodatenTableAdapter_TrayLocation {
             get {
@@ -191,7 +181,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=430,Y=142}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=342,Y=115}.
         /// </summary>
         internal static System.Drawing.Point BelegeBindingSource_TrayLocation {
             get {
@@ -201,7 +191,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=785,Y=144}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=346,Y=189}.
         /// </summary>
         internal static System.Drawing.Point BelegeMitAdresseBindingSource_TrayLocation {
             get {
@@ -211,7 +201,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=1034,Y=139}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=561,Y=191}.
         /// </summary>
         internal static System.Drawing.Point BelegeMitAdresseTableAdapter_TrayLocation {
             get {
@@ -221,7 +211,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=613,Y=142}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=525,Y=116}.
         /// </summary>
         internal static System.Drawing.Point BelegeTableAdapter_TrayLocation {
             get {
@@ -251,7 +241,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=240,Y=178}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=757,Y=119}.
         /// </summary>
         internal static System.Drawing.Point CH_PLZ_GeodatenBindingSource_TrayLocation {
             get {
@@ -261,7 +251,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=470,Y=178}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=987,Y=119}.
         /// </summary>
         internal static System.Drawing.Point CH_PLZ_GeodatenTableAdapter_TrayLocation {
             get {
@@ -281,7 +271,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=695,Y=178}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=773,Y=98}.
         /// </summary>
         internal static System.Drawing.Point DE_PLZ_GeodatenBindingSource_TrayLocation {
             get {
@@ -291,7 +281,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=924,Y=178}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=988,Y=96}.
         /// </summary>
         internal static System.Drawing.Point DE_PLZ_GeodatenTableAdapter_TrayLocation {
             get {
@@ -311,7 +301,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=610,Y=97}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=341,Y=161}.
         /// </summary>
         internal static System.Drawing.Point DocuwareCSVBindingSource_TrayLocation {
             get {
@@ -321,7 +311,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=878,Y=96}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=534,Y=163}.
         /// </summary>
         internal static System.Drawing.Point DocuwareCSVTableAdapter_TrayLocation {
             get {
@@ -401,7 +391,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=767,Y=17}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=339,Y=14}.
         /// </summary>
         internal static System.Drawing.Point FirmenNameBindingSource_TrayLocation {
             get {
@@ -411,7 +401,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=980,Y=17}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=525,Y=14}.
         /// </summary>
         internal static System.Drawing.Point FirmenNameTableAdapter_TrayLocation {
             get {
@@ -491,7 +481,47 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=550,Y=57}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=29,Y=151}.
+        /// </summary>
+        internal static System.Drawing.Point klassenBindingSource_TrayLocation {
+            get {
+                object obj = ResourceManager.GetObject("klassenBindingSource.TrayLocation", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=36,Y=176}.
+        /// </summary>
+        internal static System.Drawing.Point klassenTableAdapter_TrayLocation {
+            get {
+                object obj = ResourceManager.GetObject("klassenTableAdapter.TrayLocation", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=19,Y=98}.
+        /// </summary>
+        internal static System.Drawing.Point klassifizierungBindingSource_TrayLocation {
+            get {
+                object obj = ResourceManager.GetObject("klassifizierungBindingSource.TrayLocation", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=19,Y=123}.
+        /// </summary>
+        internal static System.Drawing.Point klassifizierungTableAdapter_TrayLocation {
+            get {
+                object obj = ResourceManager.GetObject("klassifizierungTableAdapter.TrayLocation", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=340,Y=91}.
         /// </summary>
         internal static System.Drawing.Point KontakteBindingSource_TrayLocation {
             get {
@@ -501,7 +531,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=27,Y=16}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=348,Y=213}.
         /// </summary>
         internal static System.Drawing.Point KontakteMitAdresseBindingSource_TrayLocation {
             get {
@@ -511,7 +541,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=271,Y=17}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=578,Y=219}.
         /// </summary>
         internal static System.Drawing.Point KontakteMitAdresseTableAdapter_TrayLocation {
             get {
@@ -521,7 +551,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=729,Y=57}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=539,Y=92}.
         /// </summary>
         internal static System.Drawing.Point KontakteTableAdapter_TrayLocation {
             get {
@@ -531,7 +561,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=1371,Y=17}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=339,Y=40}.
         /// </summary>
         internal static System.Drawing.Point KontoBindingSource_TrayLocation {
             get {
@@ -541,7 +571,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=17,Y=57}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=532,Y=38}.
         /// </summary>
         internal static System.Drawing.Point KontoTableAdapter_TrayLocation {
             get {
@@ -561,7 +591,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=0,Y=143}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=776,Y=36}.
         /// </summary>
         internal static System.Drawing.Point LogTabelleBindingSource_TrayLocation {
             get {
@@ -571,7 +601,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=184,Y=148}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=986,Y=41}.
         /// </summary>
         internal static System.Drawing.Point LogTabelleTableAdapter_TrayLocation {
             get {
@@ -581,12 +611,22 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=17,Y=97}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=15,Y=44}.
         /// </summary>
         internal static System.Drawing.Point MenuStrip1_TrayLocation {
             get {
                 object obj = ResourceManager.GetObject("MenuStrip1.TrayLocation", resourceCulture);
                 return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MI_Administration_Image {
+            get {
+                object obj = ResourceManager.GetObject("MI_Administration.Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -647,6 +687,26 @@ namespace Adress_DB.My.Resources {
             get {
                 object obj = ResourceManager.GetObject("OrtLabel1.GenerateMember", resourceCulture);
                 return ((bool)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pictureBox1_Image {
+            get {
+                object obj = ResourceManager.GetObject("pictureBox1.Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pictureBox2_Image {
+            get {
+                object obj = ResourceManager.GetObject("pictureBox2.Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -721,7 +781,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=17,Y=218}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=773,Y=62}.
         /// </summary>
         internal static System.Drawing.Point PropertiesBindingSource_TrayLocation {
             get {
@@ -731,7 +791,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=214,Y=218}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=987,Y=67}.
         /// </summary>
         internal static System.Drawing.Point PropertiesTableAdapter_TrayLocation {
             get {
@@ -741,7 +801,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=983,Y=55}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=772,Y=11}.
         /// </summary>
         internal static System.Drawing.Point SachbearbeiterBindingSource_TrayLocation {
             get {
@@ -761,7 +821,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=1188,Y=58}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=978,Y=14}.
         /// </summary>
         internal static System.Drawing.Point SachbearbeiterTableAdapter_TrayLocation {
             get {
@@ -771,7 +831,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=1074,Y=100}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=787,Y=179}.
         /// </summary>
         internal static System.Drawing.Point StaatenBindingSource_TrayLocation {
             get {
@@ -781,7 +841,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=1238,Y=96}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=1001,Y=179}.
         /// </summary>
         internal static System.Drawing.Point StaatenTableAdapter_TrayLocation {
             get {
@@ -791,7 +851,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=405,Y=218}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=21,Y=70}.
         /// </summary>
         internal static System.Drawing.Point StatusStrip1_TrayLocation {
             get {
@@ -821,7 +881,7 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=1187,Y=17}.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=178,Y=14}.
         /// </summary>
         internal static System.Drawing.Point TableAdapterManager_TrayLocation {
             get {

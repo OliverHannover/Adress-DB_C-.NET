@@ -2,9 +2,10 @@
 <xs:schema id="_WSL_AdressenDataSet" targetNamespace="http://tempuri.org/_WSL_AdressenDataSet.xsd" xmlns:mstns="http://tempuri.org/_WSL_AdressenDataSet.xsd" xmlns="http://tempuri.org/_WSL_AdressenDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="_WSL_AdressenDataSet" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="_WSL_AdressenDataSet (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Adress_DB.Properties.Settings.GlobalReference.Default.wsladressenConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="wsladressenConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="wsladressenConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Adress_DB.Properties.Settings.GlobalReference.Default.wsladressenConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AdressenTableAdapter" GeneratorDataComponentClassName="AdressenTableAdapter" Name="Adressen" UserDataComponentName="AdressenTableAdapter">
@@ -769,45 +770,6 @@ SELECT ID, Staat, AmtlicheVollform, ISO2, ISO3, ISOnumerisch FROM Staaten WHERE 
               <Mapping SourceColumn="ISOnumerisch" DataSetColumn="ISOnumerisch" />
             </Mappings>
             <Sources />
-          </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AdresseMitGeodatenTableAdapter" GeneratorDataComponentClassName="AdresseMitGeodatenTableAdapter" Name="AdresseMitGeodaten" UserDataComponentName="AdresseMitGeodatenTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="_WSL_AdressenDataSet (Settings)" DbObjectName="wsladressen.dbo.AdresseMitGeodaten" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT FirmenName, KontoName, countrycode, Straße, PLZ, Ort, latitude, longitude FROM dbo.AdresseMitGeodaten</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="FirmenName" DataSetColumn="FirmenName" />
-              <Mapping SourceColumn="KontoName" DataSetColumn="KontoName" />
-              <Mapping SourceColumn="countrycode" DataSetColumn="countrycode" />
-              <Mapping SourceColumn="Straße" DataSetColumn="Straße" />
-              <Mapping SourceColumn="PLZ" DataSetColumn="PLZ" />
-              <Mapping SourceColumn="Ort" DataSetColumn="Ort" />
-              <Mapping SourceColumn="latitude" DataSetColumn="latitude" />
-              <Mapping SourceColumn="longitude" DataSetColumn="longitude" />
-            </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="_WSL_AdressenDataSet (Settings)" DbObjectName="wsladressen.dbo.AdresseMitGeodaten" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataUmkreis" GetMethodModifier="Public" GetMethodName="GetDataUmkreis" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataUmkreis" UserSourceName="GetDataUmkreis">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT   FirmenName, KontoName, countrycode, Straße, PLZ, Ort, latitude, longitude, ACOS(SIN(RADIANS(latitude)) * SIN(RADIANS(@Param1)) + COS(RADIANS(latitude)) * COS(RADIANS(@Param1)) * COS(RADIANS(longitude) - RADIANS(@Param2))) 
-                * 6371 AS Entfernung
-FROM      AdresseMitGeodaten
-WHERE   (ACOS(SIN(RADIANS(latitude)) * SIN(RADIANS(@Param1)) + COS(RADIANS(latitude)) * COS(RADIANS(@Param1)) * COS(RADIANS(longitude) - RADIANS(@Param2))) * 6371 &lt;= @Param3)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Decimal" Direction="Input" ParameterName="@Param1" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Decimal" Direction="Input" ParameterName="@Param2" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param3" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Decimal" Direction="Input" ParameterName="@Param3" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BelegeMitAdresseTableAdapter" GeneratorDataComponentClassName="BelegeMitAdresseTableAdapter" Name="BelegeMitAdresse" UserDataComponentName="BelegeMitAdresseTableAdapter">
             <MainSource>
@@ -1577,6 +1539,172 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KlassenTableAdapter" GeneratorDataComponentClassName="KlassenTableAdapter" Name="Klassen" UserDataComponentName="KlassenTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="_WSL_AdressenDataSet (Settings)" DbObjectName="wsladressen.dbo.Klassen" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Klassen] WHERE (([ID] = @Original_ID) AND ((@IsNull_KlassenName = 1 AND [KlassenName] IS NULL) OR ([KlassenName] = @Original_KlassenName)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_KlassenName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="KlassenName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_KlassenName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="KlassenName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Klassen] ([KlassenName]) VALUES (@KlassenName);
+SELECT ID, KlassenName FROM Klassen WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@KlassenName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="KlassenName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, KlassenName FROM dbo.Klassen</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Klassen] SET [KlassenName] = @KlassenName WHERE (([ID] = @Original_ID) AND ((@IsNull_KlassenName = 1 AND [KlassenName] IS NULL) OR ([KlassenName] = @Original_KlassenName)));
+SELECT ID, KlassenName FROM Klassen WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@KlassenName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="KlassenName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_KlassenName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="KlassenName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_KlassenName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="KlassenName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="wsladressen.dbo.Klassen" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="KlassenName" DataSetColumn="KlassenName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KlassifizierungTableAdapter" GeneratorDataComponentClassName="KlassifizierungTableAdapter" Name="Klassifizierung" UserDataComponentName="KlassifizierungTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="_WSL_AdressenDataSet (Settings)" DbObjectName="wsladressen.dbo.Klassifizierung" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Klassifizierung] WHERE (([IDFirmenName] = @Original_IDFirmenName) AND ((@IsNull_Klassifizierung = 1 AND [Klassifizierung] IS NULL) OR ([Klassifizierung] = @Original_Klassifizierung)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IDFirmenName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDFirmenName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Klassifizierung" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Klassifizierung" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Klassifizierung" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Klassifizierung" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Klassifizierung] ([IDFirmenName], [Klassifizierung]) VALUES (@IDFirmenName, @Klassifizierung);
+SELECT IDFirmenName, Klassifizierung FROM Klassifizierung WHERE (IDFirmenName = @IDFirmenName)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IDFirmenName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDFirmenName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Klassifizierung" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Klassifizierung" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IDFirmenName, Klassifizierung FROM dbo.Klassifizierung</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Klassifizierung] SET [IDFirmenName] = @IDFirmenName, [Klassifizierung] = @Klassifizierung WHERE (([IDFirmenName] = @Original_IDFirmenName) AND ((@IsNull_Klassifizierung = 1 AND [Klassifizierung] IS NULL) OR ([Klassifizierung] = @Original_Klassifizierung)));
+SELECT IDFirmenName, Klassifizierung FROM Klassifizierung WHERE (IDFirmenName = @IDFirmenName)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IDFirmenName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDFirmenName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Klassifizierung" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Klassifizierung" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IDFirmenName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDFirmenName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Klassifizierung" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Klassifizierung" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Klassifizierung" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Klassifizierung" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDFirmenName" DataSetColumn="IDFirmenName" />
+              <Mapping SourceColumn="Klassifizierung" DataSetColumn="Klassifizierung" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="_WSL_AdressenDataSet (Settings)" DbObjectName="wsladressen.dbo.Klassifizierung" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SucheIDFirmenNameInKlassifizierung" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SucheIDFirmenNameInKlassifizierung" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SucheIDFirmenNameInKlassifizierung">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IDFirmenName, Klassifizierung
+FROM            Klassifizierung
+WHERE        (IDFirmenName = @Param1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="IDFirmenName" DataSourceName="wsladressen.dbo.Klassifizierung" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDFirmenName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_WSL_AdressenDataSet (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateKlassifizierung" Modifier="Public" Name="UpdateKlassifizierung" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="UpdateKlassifizierung">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE  Klassifizierung
+SET         Klassifizierung = @Klassifizierung
+WHERE   (IDFirmenName = @Original_IDFirmenName)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Klassifizierung" ColumnName="Klassifizierung" DataSourceName="wsladressen.dbo.Klassifizierung" DataTypeServer="nvarchar(255)" DbType="String" Direction="Input" ParameterName="@Klassifizierung" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumn="Klassifizierung" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_IDFirmenName" ColumnName="IDFirmenName" DataSourceName="wsladressen.dbo.Klassifizierung" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_IDFirmenName" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDFirmenName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AdresseMitGeodatenTableAdapter" GeneratorDataComponentClassName="AdresseMitGeodatenTableAdapter" Name="AdresseMitGeodaten" UserDataComponentName="AdresseMitGeodatenTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="wsladressenConnectionString (Settings)" DbObjectName="wsladressen.dbo.AdresseMitGeodaten" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FirmenName, Klassifizierung, KontoName, countrycode, Straße, PLZ, Ort, latitude, longitude FROM dbo.AdresseMitGeodaten</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FirmenName" DataSetColumn="FirmenName" />
+              <Mapping SourceColumn="Klassifizierung" DataSetColumn="Klassifizierung" />
+              <Mapping SourceColumn="KontoName" DataSetColumn="KontoName" />
+              <Mapping SourceColumn="countrycode" DataSetColumn="countrycode" />
+              <Mapping SourceColumn="Straße" DataSetColumn="Straße" />
+              <Mapping SourceColumn="PLZ" DataSetColumn="PLZ" />
+              <Mapping SourceColumn="Ort" DataSetColumn="Ort" />
+              <Mapping SourceColumn="latitude" DataSetColumn="latitude" />
+              <Mapping SourceColumn="longitude" DataSetColumn="longitude" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="wsladressenConnectionString (Settings)" DbObjectName="wsladressen.dbo.AdresseMitGeodaten" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataUmkreis" GetMethodModifier="Public" GetMethodName="GetDataUmkreis" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataUmkreis" UserSourceName="GetDataUmkreis">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+						SELECT FirmenName, Klassifizierung, KontoName, countrycode, Straße, PLZ, Ort, latitude, longitude, (GEOGRAPHY::Point((@Param1), (@Param2), 4326).STDistance(GEOGRAPHY::Point(latitude, longitude, 4326))) / 1000 AS Entfernung
+						FROM   AdresseMitGeodaten
+						WHERE (GEOGRAPHY::Point((@Param1), (@Param2), 4326).STDistance(GEOGRAPHY::Point(latitude, longitude, 4326))) / 1000 &lt;= @Param3
+					</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Decimal" Direction="Input" ParameterName="@Param1" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Decimal" Direction="Input" ParameterName="@Param2" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param3" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Decimal" Direction="Input" ParameterName="@Param3" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1585,7 +1713,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
   <xs:element name="_WSL_AdressenDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_WSL_AdressenDataSet" msprop:Generator_UserDSName="_WSL_AdressenDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Adressen" msprop:Generator_TableClassName="AdressenDataTable" msprop:Generator_TableVarName="tableAdressen" msprop:Generator_TablePropName="Adressen" msprop:Generator_RowDeletingName="AdressenRowDeleting" msprop:Generator_RowChangingName="AdressenRowChanging" msprop:Generator_RowEvHandlerName="AdressenRowChangeEventHandler" msprop:Generator_RowDeletedName="AdressenRowDeleted" msprop:Generator_UserTableName="Adressen" msprop:Generator_RowChangedName="AdressenRowChanged" msprop:Generator_RowEvArgName="AdressenRowChangeEvent" msprop:Generator_RowClassName="AdressenRow">
+        <xs:element name="Adressen" msprop:Generator_TableClassName="AdressenDataTable" msprop:Generator_TableVarName="tableAdressen" msprop:Generator_RowChangedName="AdressenRowChanged" msprop:Generator_TablePropName="Adressen" msprop:Generator_RowDeletingName="AdressenRowDeleting" msprop:Generator_RowChangingName="AdressenRowChanging" msprop:Generator_RowEvHandlerName="AdressenRowChangeEventHandler" msprop:Generator_RowDeletedName="AdressenRowDeleted" msprop:Generator_RowClassName="AdressenRow" msprop:Generator_UserTableName="Adressen" msprop:Generator_RowEvArgName="AdressenRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDAdresse" msprop:Generator_ColumnVarNameInTable="columnIDAdresse" msprop:Generator_ColumnPropNameInRow="IDAdresse" msprop:Generator_ColumnPropNameInTable="IDAdresseColumn" msprop:Generator_UserColumnName="IDAdresse" type="xs:int" />
@@ -1664,7 +1792,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Kontakte" msprop:Generator_TableClassName="KontakteDataTable" msprop:Generator_TableVarName="tableKontakte" msprop:Generator_TablePropName="Kontakte" msprop:Generator_RowDeletingName="KontakteRowDeleting" msprop:Generator_RowChangingName="KontakteRowChanging" msprop:Generator_RowEvHandlerName="KontakteRowChangeEventHandler" msprop:Generator_RowDeletedName="KontakteRowDeleted" msprop:Generator_UserTableName="Kontakte" msprop:Generator_RowChangedName="KontakteRowChanged" msprop:Generator_RowEvArgName="KontakteRowChangeEvent" msprop:Generator_RowClassName="KontakteRow">
+        <xs:element name="Kontakte" msprop:Generator_TableClassName="KontakteDataTable" msprop:Generator_TableVarName="tableKontakte" msprop:Generator_RowChangedName="KontakteRowChanged" msprop:Generator_TablePropName="Kontakte" msprop:Generator_RowDeletingName="KontakteRowDeleting" msprop:Generator_RowChangingName="KontakteRowChanging" msprop:Generator_RowEvHandlerName="KontakteRowChangeEventHandler" msprop:Generator_RowDeletedName="KontakteRowDeleted" msprop:Generator_RowClassName="KontakteRow" msprop:Generator_UserTableName="Kontakte" msprop:Generator_RowEvArgName="KontakteRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDKontakt" msprop:Generator_ColumnVarNameInTable="columnIDKontakt" msprop:Generator_ColumnPropNameInRow="IDKontakt" msprop:Generator_ColumnPropNameInTable="IDKontaktColumn" msprop:Generator_UserColumnName="IDKontakt" type="xs:int" />
@@ -1736,7 +1864,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LogTabelle" msprop:Generator_TableClassName="LogTabelleDataTable" msprop:Generator_TableVarName="tableLogTabelle" msprop:Generator_TablePropName="LogTabelle" msprop:Generator_RowDeletingName="LogTabelleRowDeleting" msprop:Generator_RowChangingName="LogTabelleRowChanging" msprop:Generator_RowEvHandlerName="LogTabelleRowChangeEventHandler" msprop:Generator_RowDeletedName="LogTabelleRowDeleted" msprop:Generator_UserTableName="LogTabelle" msprop:Generator_RowChangedName="LogTabelleRowChanged" msprop:Generator_RowEvArgName="LogTabelleRowChangeEvent" msprop:Generator_RowClassName="LogTabelleRow">
+        <xs:element name="LogTabelle" msprop:Generator_TableClassName="LogTabelleDataTable" msprop:Generator_TableVarName="tableLogTabelle" msprop:Generator_RowChangedName="LogTabelleRowChanged" msprop:Generator_TablePropName="LogTabelle" msprop:Generator_RowDeletingName="LogTabelleRowDeleting" msprop:Generator_RowChangingName="LogTabelleRowChanging" msprop:Generator_RowEvHandlerName="LogTabelleRowChangeEventHandler" msprop:Generator_RowDeletedName="LogTabelleRowDeleted" msprop:Generator_RowClassName="LogTabelleRow" msprop:Generator_UserTableName="LogTabelle" msprop:Generator_RowEvArgName="LogTabelleRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1781,7 +1909,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="properties" msprop:Generator_TableClassName="propertiesDataTable" msprop:Generator_TableVarName="tableproperties" msprop:Generator_TablePropName="properties" msprop:Generator_RowDeletingName="propertiesRowDeleting" msprop:Generator_RowChangingName="propertiesRowChanging" msprop:Generator_RowEvHandlerName="propertiesRowChangeEventHandler" msprop:Generator_RowDeletedName="propertiesRowDeleted" msprop:Generator_UserTableName="properties" msprop:Generator_RowChangedName="propertiesRowChanged" msprop:Generator_RowEvArgName="propertiesRowChangeEvent" msprop:Generator_RowClassName="propertiesRow">
+        <xs:element name="properties" msprop:Generator_TableClassName="propertiesDataTable" msprop:Generator_TableVarName="tableproperties" msprop:Generator_RowChangedName="propertiesRowChanged" msprop:Generator_TablePropName="properties" msprop:Generator_RowDeletingName="propertiesRowDeleting" msprop:Generator_RowChangingName="propertiesRowChanging" msprop:Generator_RowEvHandlerName="propertiesRowChangeEventHandler" msprop:Generator_RowDeletedName="propertiesRowDeleted" msprop:Generator_RowClassName="propertiesRow" msprop:Generator_UserTableName="properties" msprop:Generator_RowEvArgName="propertiesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1809,7 +1937,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Sachbearbeiter" msprop:Generator_TableClassName="SachbearbeiterDataTable" msprop:Generator_TableVarName="tableSachbearbeiter" msprop:Generator_TablePropName="Sachbearbeiter" msprop:Generator_RowDeletingName="SachbearbeiterRowDeleting" msprop:Generator_RowChangingName="SachbearbeiterRowChanging" msprop:Generator_RowEvHandlerName="SachbearbeiterRowChangeEventHandler" msprop:Generator_RowDeletedName="SachbearbeiterRowDeleted" msprop:Generator_UserTableName="Sachbearbeiter" msprop:Generator_RowChangedName="SachbearbeiterRowChanged" msprop:Generator_RowEvArgName="SachbearbeiterRowChangeEvent" msprop:Generator_RowClassName="SachbearbeiterRow">
+        <xs:element name="Sachbearbeiter" msprop:Generator_TableClassName="SachbearbeiterDataTable" msprop:Generator_TableVarName="tableSachbearbeiter" msprop:Generator_RowChangedName="SachbearbeiterRowChanged" msprop:Generator_TablePropName="Sachbearbeiter" msprop:Generator_RowDeletingName="SachbearbeiterRowDeleting" msprop:Generator_RowChangingName="SachbearbeiterRowChanging" msprop:Generator_RowEvHandlerName="SachbearbeiterRowChangeEventHandler" msprop:Generator_RowDeletedName="SachbearbeiterRowDeleted" msprop:Generator_RowClassName="SachbearbeiterRow" msprop:Generator_UserTableName="Sachbearbeiter" msprop:Generator_RowEvArgName="SachbearbeiterRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDSachbearbeiter" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIDSachbearbeiter" msprop:Generator_ColumnPropNameInRow="IDSachbearbeiter" msprop:Generator_ColumnPropNameInTable="IDSachbearbeiterColumn" msprop:Generator_UserColumnName="IDSachbearbeiter" type="xs:int" />
@@ -1862,7 +1990,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Staaten" msprop:Generator_TableClassName="StaatenDataTable" msprop:Generator_TableVarName="tableStaaten" msprop:Generator_TablePropName="Staaten" msprop:Generator_RowDeletingName="StaatenRowDeleting" msprop:Generator_RowChangingName="StaatenRowChanging" msprop:Generator_RowEvHandlerName="StaatenRowChangeEventHandler" msprop:Generator_RowDeletedName="StaatenRowDeleted" msprop:Generator_UserTableName="Staaten" msprop:Generator_RowChangedName="StaatenRowChanged" msprop:Generator_RowEvArgName="StaatenRowChangeEvent" msprop:Generator_RowClassName="StaatenRow">
+        <xs:element name="Staaten" msprop:Generator_TableClassName="StaatenDataTable" msprop:Generator_TableVarName="tableStaaten" msprop:Generator_RowChangedName="StaatenRowChanged" msprop:Generator_TablePropName="Staaten" msprop:Generator_RowDeletingName="StaatenRowDeleting" msprop:Generator_RowChangingName="StaatenRowChanging" msprop:Generator_RowEvHandlerName="StaatenRowChangeEventHandler" msprop:Generator_RowDeletedName="StaatenRowDeleted" msprop:Generator_RowClassName="StaatenRow" msprop:Generator_UserTableName="Staaten" msprop:Generator_RowEvArgName="StaatenRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1898,57 +2026,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AdresseMitGeodaten" msprop:Generator_TableClassName="AdresseMitGeodatenDataTable" msprop:Generator_TableVarName="tableAdresseMitGeodaten" msprop:Generator_TablePropName="AdresseMitGeodaten" msprop:Generator_RowDeletingName="AdresseMitGeodatenRowDeleting" msprop:Generator_RowChangingName="AdresseMitGeodatenRowChanging" msprop:Generator_RowEvHandlerName="AdresseMitGeodatenRowChangeEventHandler" msprop:Generator_RowDeletedName="AdresseMitGeodatenRowDeleted" msprop:Generator_UserTableName="AdresseMitGeodaten" msprop:Generator_RowChangedName="AdresseMitGeodatenRowChanged" msprop:Generator_RowEvArgName="AdresseMitGeodatenRowChangeEvent" msprop:Generator_RowClassName="AdresseMitGeodatenRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="FirmenName" msprop:Generator_ColumnVarNameInTable="columnFirmenName" msprop:Generator_ColumnPropNameInRow="FirmenName" msprop:Generator_ColumnPropNameInTable="FirmenNameColumn" msprop:Generator_UserColumnName="FirmenName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="KontoName" msprop:Generator_ColumnVarNameInTable="columnKontoName" msprop:Generator_ColumnPropNameInRow="KontoName" msprop:Generator_ColumnPropNameInTable="KontoNameColumn" msprop:Generator_UserColumnName="KontoName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="countrycode" msprop:Generator_ColumnVarNameInTable="columncountrycode" msprop:Generator_ColumnPropNameInRow="countrycode" msprop:Generator_ColumnPropNameInTable="countrycodeColumn" msprop:Generator_UserColumnName="countrycode" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Straße" msprop:Generator_ColumnVarNameInTable="columnStraße" msprop:Generator_ColumnPropNameInRow="Straße" msprop:Generator_ColumnPropNameInTable="StraßeColumn" msprop:Generator_UserColumnName="Straße" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="PLZ" msprop:Generator_ColumnVarNameInTable="columnPLZ" msprop:Generator_ColumnPropNameInRow="PLZ" msprop:Generator_ColumnPropNameInTable="PLZColumn" msprop:Generator_UserColumnName="PLZ" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Ort" msprop:Generator_ColumnVarNameInTable="columnOrt" msprop:Generator_ColumnPropNameInRow="Ort" msprop:Generator_ColumnPropNameInTable="OrtColumn" msprop:Generator_UserColumnName="Ort" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="latitude" msprop:Generator_ColumnVarNameInTable="columnlatitude" msprop:Generator_ColumnPropNameInRow="latitude" msprop:Generator_ColumnPropNameInTable="latitudeColumn" msprop:Generator_UserColumnName="latitude" type="xs:double" minOccurs="0" />
-              <xs:element name="longitude" msprop:Generator_ColumnVarNameInTable="columnlongitude" msprop:Generator_ColumnPropNameInRow="longitude" msprop:Generator_ColumnPropNameInTable="longitudeColumn" msprop:Generator_UserColumnName="longitude" type="xs:double" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="BelegeMitAdresse" msprop:Generator_TableClassName="BelegeMitAdresseDataTable" msprop:Generator_TableVarName="tableBelegeMitAdresse" msprop:Generator_TablePropName="BelegeMitAdresse" msprop:Generator_RowDeletingName="BelegeMitAdresseRowDeleting" msprop:Generator_RowChangingName="BelegeMitAdresseRowChanging" msprop:Generator_RowEvHandlerName="BelegeMitAdresseRowChangeEventHandler" msprop:Generator_RowDeletedName="BelegeMitAdresseRowDeleted" msprop:Generator_UserTableName="BelegeMitAdresse" msprop:Generator_RowChangedName="BelegeMitAdresseRowChanged" msprop:Generator_RowEvArgName="BelegeMitAdresseRowChangeEvent" msprop:Generator_RowClassName="BelegeMitAdresseRow">
+        <xs:element name="BelegeMitAdresse" msprop:Generator_TableClassName="BelegeMitAdresseDataTable" msprop:Generator_TableVarName="tableBelegeMitAdresse" msprop:Generator_RowChangedName="BelegeMitAdresseRowChanged" msprop:Generator_TablePropName="BelegeMitAdresse" msprop:Generator_RowDeletingName="BelegeMitAdresseRowDeleting" msprop:Generator_RowChangingName="BelegeMitAdresseRowChanging" msprop:Generator_RowEvHandlerName="BelegeMitAdresseRowChangeEventHandler" msprop:Generator_RowDeletedName="BelegeMitAdresseRowDeleted" msprop:Generator_RowClassName="BelegeMitAdresseRow" msprop:Generator_UserTableName="BelegeMitAdresse" msprop:Generator_RowEvArgName="BelegeMitAdresseRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDBeleg" msprop:Generator_ColumnVarNameInTable="columnIDBeleg" msprop:Generator_ColumnPropNameInRow="IDBeleg" msprop:Generator_ColumnPropNameInTable="IDBelegColumn" msprop:Generator_UserColumnName="IDBeleg" type="xs:int" />
@@ -2027,7 +2105,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DocuwareCSV" msprop:Generator_TableClassName="DocuwareCSVDataTable" msprop:Generator_TableVarName="tableDocuwareCSV" msprop:Generator_TablePropName="DocuwareCSV" msprop:Generator_RowDeletingName="DocuwareCSVRowDeleting" msprop:Generator_RowChangingName="DocuwareCSVRowChanging" msprop:Generator_RowEvHandlerName="DocuwareCSVRowChangeEventHandler" msprop:Generator_RowDeletedName="DocuwareCSVRowDeleted" msprop:Generator_UserTableName="DocuwareCSV" msprop:Generator_RowChangedName="DocuwareCSVRowChanged" msprop:Generator_RowEvArgName="DocuwareCSVRowChangeEvent" msprop:Generator_RowClassName="DocuwareCSVRow">
+        <xs:element name="DocuwareCSV" msprop:Generator_TableClassName="DocuwareCSVDataTable" msprop:Generator_TableVarName="tableDocuwareCSV" msprop:Generator_RowChangedName="DocuwareCSVRowChanged" msprop:Generator_TablePropName="DocuwareCSV" msprop:Generator_RowDeletingName="DocuwareCSVRowDeleting" msprop:Generator_RowChangingName="DocuwareCSVRowChanging" msprop:Generator_RowEvHandlerName="DocuwareCSVRowChangeEventHandler" msprop:Generator_RowDeletedName="DocuwareCSVRowDeleted" msprop:Generator_RowClassName="DocuwareCSVRow" msprop:Generator_UserTableName="DocuwareCSV" msprop:Generator_RowEvArgName="DocuwareCSVRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDFirmenName" msprop:Generator_ColumnVarNameInTable="columnIDFirmenName" msprop:Generator_ColumnPropNameInRow="IDFirmenName" msprop:Generator_ColumnPropNameInTable="IDFirmenNameColumn" msprop:Generator_UserColumnName="IDFirmenName" type="xs:int" />
@@ -2049,7 +2127,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="KontakteMitAdresse" msprop:Generator_TableClassName="KontakteMitAdresseDataTable" msprop:Generator_TableVarName="tableKontakteMitAdresse" msprop:Generator_TablePropName="KontakteMitAdresse" msprop:Generator_RowDeletingName="KontakteMitAdresseRowDeleting" msprop:Generator_RowChangingName="KontakteMitAdresseRowChanging" msprop:Generator_RowEvHandlerName="KontakteMitAdresseRowChangeEventHandler" msprop:Generator_RowDeletedName="KontakteMitAdresseRowDeleted" msprop:Generator_UserTableName="KontakteMitAdresse" msprop:Generator_RowChangedName="KontakteMitAdresseRowChanged" msprop:Generator_RowEvArgName="KontakteMitAdresseRowChangeEvent" msprop:Generator_RowClassName="KontakteMitAdresseRow">
+        <xs:element name="KontakteMitAdresse" msprop:Generator_TableClassName="KontakteMitAdresseDataTable" msprop:Generator_TableVarName="tableKontakteMitAdresse" msprop:Generator_RowChangedName="KontakteMitAdresseRowChanged" msprop:Generator_TablePropName="KontakteMitAdresse" msprop:Generator_RowDeletingName="KontakteMitAdresseRowDeleting" msprop:Generator_RowChangingName="KontakteMitAdresseRowChanging" msprop:Generator_RowEvHandlerName="KontakteMitAdresseRowChangeEventHandler" msprop:Generator_RowDeletedName="KontakteMitAdresseRowDeleted" msprop:Generator_RowClassName="KontakteMitAdresseRow" msprop:Generator_UserTableName="KontakteMitAdresse" msprop:Generator_RowEvArgName="KontakteMitAdresseRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDKontakt" msprop:Generator_ColumnVarNameInTable="columnIDKontakt" msprop:Generator_ColumnPropNameInRow="IDKontakt" msprop:Generator_ColumnPropNameInTable="IDKontaktColumn" msprop:Generator_UserColumnName="IDKontakt" type="xs:int" />
@@ -2177,7 +2255,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Belege" msprop:Generator_TableClassName="BelegeDataTable" msprop:Generator_TableVarName="tableBelege" msprop:Generator_TablePropName="Belege" msprop:Generator_RowDeletingName="BelegeRowDeleting" msprop:Generator_RowChangingName="BelegeRowChanging" msprop:Generator_RowEvHandlerName="BelegeRowChangeEventHandler" msprop:Generator_RowDeletedName="BelegeRowDeleted" msprop:Generator_UserTableName="Belege" msprop:Generator_RowChangedName="BelegeRowChanged" msprop:Generator_RowEvArgName="BelegeRowChangeEvent" msprop:Generator_RowClassName="BelegeRow">
+        <xs:element name="Belege" msprop:Generator_TableClassName="BelegeDataTable" msprop:Generator_TableVarName="tableBelege" msprop:Generator_RowChangedName="BelegeRowChanged" msprop:Generator_TablePropName="Belege" msprop:Generator_RowDeletingName="BelegeRowDeleting" msprop:Generator_RowChangingName="BelegeRowChanging" msprop:Generator_RowEvHandlerName="BelegeRowChangeEventHandler" msprop:Generator_RowDeletedName="BelegeRowDeleted" msprop:Generator_RowClassName="BelegeRow" msprop:Generator_UserTableName="Belege" msprop:Generator_RowEvArgName="BelegeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDBeleg" msprop:Generator_ColumnVarNameInTable="columnIDBeleg" msprop:Generator_ColumnPropNameInRow="IDBeleg" msprop:Generator_ColumnPropNameInTable="IDBelegColumn" msprop:Generator_UserColumnName="IDBeleg" type="xs:int" />
@@ -2244,7 +2322,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FirmenName" msprop:Generator_TableClassName="FirmenNameDataTable" msprop:Generator_TableVarName="tableFirmenName" msprop:Generator_TablePropName="FirmenName" msprop:Generator_RowDeletingName="FirmenNameRowDeleting" msprop:Generator_RowChangingName="FirmenNameRowChanging" msprop:Generator_RowEvHandlerName="FirmenNameRowChangeEventHandler" msprop:Generator_RowDeletedName="FirmenNameRowDeleted" msprop:Generator_UserTableName="FirmenName" msprop:Generator_RowChangedName="FirmenNameRowChanged" msprop:Generator_RowEvArgName="FirmenNameRowChangeEvent" msprop:Generator_RowClassName="FirmenNameRow">
+        <xs:element name="FirmenName" msprop:Generator_TableClassName="FirmenNameDataTable" msprop:Generator_TableVarName="tableFirmenName" msprop:Generator_RowChangedName="FirmenNameRowChanged" msprop:Generator_TablePropName="FirmenName" msprop:Generator_RowDeletingName="FirmenNameRowDeleting" msprop:Generator_RowChangingName="FirmenNameRowChanging" msprop:Generator_RowEvHandlerName="FirmenNameRowChangeEventHandler" msprop:Generator_RowDeletedName="FirmenNameRowDeleted" msprop:Generator_RowClassName="FirmenNameRow" msprop:Generator_UserTableName="FirmenName" msprop:Generator_RowEvArgName="FirmenNameRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDFirmenName" msprop:Generator_ColumnVarNameInTable="columnIDFirmenName" msprop:Generator_ColumnPropNameInRow="IDFirmenName" msprop:Generator_ColumnPropNameInTable="IDFirmenNameColumn" msprop:Generator_UserColumnName="IDFirmenName" type="xs:int" />
@@ -2267,7 +2345,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Konto" msprop:Generator_TableClassName="KontoDataTable" msprop:Generator_TableVarName="tableKonto" msprop:Generator_TablePropName="Konto" msprop:Generator_RowDeletingName="KontoRowDeleting" msprop:Generator_RowChangingName="KontoRowChanging" msprop:Generator_RowEvHandlerName="KontoRowChangeEventHandler" msprop:Generator_RowDeletedName="KontoRowDeleted" msprop:Generator_UserTableName="Konto" msprop:Generator_RowChangedName="KontoRowChanged" msprop:Generator_RowEvArgName="KontoRowChangeEvent" msprop:Generator_RowClassName="KontoRow">
+        <xs:element name="Konto" msprop:Generator_TableClassName="KontoDataTable" msprop:Generator_TableVarName="tableKonto" msprop:Generator_RowChangedName="KontoRowChanged" msprop:Generator_TablePropName="Konto" msprop:Generator_RowDeletingName="KontoRowDeleting" msprop:Generator_RowChangingName="KontoRowChanging" msprop:Generator_RowEvHandlerName="KontoRowChangeEventHandler" msprop:Generator_RowDeletedName="KontoRowDeleted" msprop:Generator_RowClassName="KontoRow" msprop:Generator_UserTableName="Konto" msprop:Generator_RowEvArgName="KontoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDKonto" msprop:Generator_ColumnVarNameInTable="columnIDKonto" msprop:Generator_ColumnPropNameInRow="IDKonto" msprop:Generator_ColumnPropNameInTable="IDKontoColumn" msprop:Generator_UserColumnName="IDKonto" type="xs:int" />
@@ -2283,7 +2361,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AT_PLZ_Geodaten" msprop:Generator_TableClassName="AT_PLZ_GeodatenDataTable" msprop:Generator_TableVarName="tableAT_PLZ_Geodaten" msprop:Generator_RowChangedName="AT_PLZ_GeodatenRowChanged" msprop:Generator_TablePropName="AT_PLZ_Geodaten" msprop:Generator_RowDeletingName="AT_PLZ_GeodatenRowDeleting" msprop:Generator_RowChangingName="AT_PLZ_GeodatenRowChanging" msprop:Generator_RowEvHandlerName="AT_PLZ_GeodatenRowChangeEventHandler" msprop:Generator_RowDeletedName="AT_PLZ_GeodatenRowDeleted" msprop:Generator_RowClassName="AT_PLZ_GeodatenRow" msprop:Generator_UserTableName="AT_PLZ_Geodaten" msprop:Generator_RowEvArgName="AT_PLZ_GeodatenRowChangeEvent">
+        <xs:element name="AT_PLZ_Geodaten" msprop:Generator_TableClassName="AT_PLZ_GeodatenDataTable" msprop:Generator_TableVarName="tableAT_PLZ_Geodaten" msprop:Generator_TablePropName="AT_PLZ_Geodaten" msprop:Generator_RowDeletingName="AT_PLZ_GeodatenRowDeleting" msprop:Generator_RowChangingName="AT_PLZ_GeodatenRowChanging" msprop:Generator_RowEvHandlerName="AT_PLZ_GeodatenRowChangeEventHandler" msprop:Generator_RowDeletedName="AT_PLZ_GeodatenRowDeleted" msprop:Generator_UserTableName="AT_PLZ_Geodaten" msprop:Generator_RowChangedName="AT_PLZ_GeodatenRowChanged" msprop:Generator_RowEvArgName="AT_PLZ_GeodatenRowChangeEvent" msprop:Generator_RowClassName="AT_PLZ_GeodatenRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="countrycode" msprop:Generator_ColumnVarNameInTable="columncountrycode" msprop:Generator_ColumnPropNameInRow="countrycode" msprop:Generator_ColumnPropNameInTable="countrycodeColumn" msprop:Generator_UserColumnName="countrycode" minOccurs="0">
@@ -2343,7 +2421,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CH_PLZ_Geodaten" msprop:Generator_TableClassName="CH_PLZ_GeodatenDataTable" msprop:Generator_TableVarName="tableCH_PLZ_Geodaten" msprop:Generator_RowChangedName="CH_PLZ_GeodatenRowChanged" msprop:Generator_TablePropName="CH_PLZ_Geodaten" msprop:Generator_RowDeletingName="CH_PLZ_GeodatenRowDeleting" msprop:Generator_RowChangingName="CH_PLZ_GeodatenRowChanging" msprop:Generator_RowEvHandlerName="CH_PLZ_GeodatenRowChangeEventHandler" msprop:Generator_RowDeletedName="CH_PLZ_GeodatenRowDeleted" msprop:Generator_RowClassName="CH_PLZ_GeodatenRow" msprop:Generator_UserTableName="CH_PLZ_Geodaten" msprop:Generator_RowEvArgName="CH_PLZ_GeodatenRowChangeEvent">
+        <xs:element name="CH_PLZ_Geodaten" msprop:Generator_TableClassName="CH_PLZ_GeodatenDataTable" msprop:Generator_TableVarName="tableCH_PLZ_Geodaten" msprop:Generator_TablePropName="CH_PLZ_Geodaten" msprop:Generator_RowDeletingName="CH_PLZ_GeodatenRowDeleting" msprop:Generator_RowChangingName="CH_PLZ_GeodatenRowChanging" msprop:Generator_RowEvHandlerName="CH_PLZ_GeodatenRowChangeEventHandler" msprop:Generator_RowDeletedName="CH_PLZ_GeodatenRowDeleted" msprop:Generator_UserTableName="CH_PLZ_Geodaten" msprop:Generator_RowChangedName="CH_PLZ_GeodatenRowChanged" msprop:Generator_RowEvArgName="CH_PLZ_GeodatenRowChangeEvent" msprop:Generator_RowClassName="CH_PLZ_GeodatenRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="countrycode" msprop:Generator_ColumnVarNameInTable="columncountrycode" msprop:Generator_ColumnPropNameInRow="countrycode" msprop:Generator_ColumnPropNameInTable="countrycodeColumn" msprop:Generator_UserColumnName="countrycode" minOccurs="0">
@@ -2403,7 +2481,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DE_PLZ_Geodaten" msprop:Generator_TableClassName="DE_PLZ_GeodatenDataTable" msprop:Generator_TableVarName="tableDE_PLZ_Geodaten" msprop:Generator_RowChangedName="DE_PLZ_GeodatenRowChanged" msprop:Generator_TablePropName="DE_PLZ_Geodaten" msprop:Generator_RowDeletingName="DE_PLZ_GeodatenRowDeleting" msprop:Generator_RowChangingName="DE_PLZ_GeodatenRowChanging" msprop:Generator_RowEvHandlerName="DE_PLZ_GeodatenRowChangeEventHandler" msprop:Generator_RowDeletedName="DE_PLZ_GeodatenRowDeleted" msprop:Generator_RowClassName="DE_PLZ_GeodatenRow" msprop:Generator_UserTableName="DE_PLZ_Geodaten" msprop:Generator_RowEvArgName="DE_PLZ_GeodatenRowChangeEvent">
+        <xs:element name="DE_PLZ_Geodaten" msprop:Generator_TableClassName="DE_PLZ_GeodatenDataTable" msprop:Generator_TableVarName="tableDE_PLZ_Geodaten" msprop:Generator_TablePropName="DE_PLZ_Geodaten" msprop:Generator_RowDeletingName="DE_PLZ_GeodatenRowDeleting" msprop:Generator_RowChangingName="DE_PLZ_GeodatenRowChanging" msprop:Generator_RowEvHandlerName="DE_PLZ_GeodatenRowChangeEventHandler" msprop:Generator_RowDeletedName="DE_PLZ_GeodatenRowDeleted" msprop:Generator_UserTableName="DE_PLZ_Geodaten" msprop:Generator_RowChangedName="DE_PLZ_GeodatenRowChanged" msprop:Generator_RowEvArgName="DE_PLZ_GeodatenRowChangeEvent" msprop:Generator_RowClassName="DE_PLZ_GeodatenRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="countrycode" msprop:Generator_ColumnVarNameInTable="columncountrycode" msprop:Generator_ColumnPropNameInRow="countrycode" msprop:Generator_ColumnPropNameInTable="countrycodeColumn" msprop:Generator_UserColumnName="countrycode" minOccurs="0">
@@ -2463,7 +2541,7 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PLZ_Geodaten" msprop:Generator_TableClassName="PLZ_GeodatenDataTable" msprop:Generator_TableVarName="tablePLZ_Geodaten" msprop:Generator_RowChangedName="PLZ_GeodatenRowChanged" msprop:Generator_TablePropName="PLZ_Geodaten" msprop:Generator_RowDeletingName="PLZ_GeodatenRowDeleting" msprop:Generator_RowChangingName="PLZ_GeodatenRowChanging" msprop:Generator_RowEvHandlerName="PLZ_GeodatenRowChangeEventHandler" msprop:Generator_RowDeletedName="PLZ_GeodatenRowDeleted" msprop:Generator_RowClassName="PLZ_GeodatenRow" msprop:Generator_UserTableName="PLZ_Geodaten" msprop:Generator_RowEvArgName="PLZ_GeodatenRowChangeEvent">
+        <xs:element name="PLZ_Geodaten" msprop:Generator_TableClassName="PLZ_GeodatenDataTable" msprop:Generator_TableVarName="tablePLZ_Geodaten" msprop:Generator_TablePropName="PLZ_Geodaten" msprop:Generator_RowDeletingName="PLZ_GeodatenRowDeleting" msprop:Generator_RowChangingName="PLZ_GeodatenRowChanging" msprop:Generator_RowEvHandlerName="PLZ_GeodatenRowChangeEventHandler" msprop:Generator_RowDeletedName="PLZ_GeodatenRowDeleted" msprop:Generator_UserTableName="PLZ_Geodaten" msprop:Generator_RowChangedName="PLZ_GeodatenRowChanged" msprop:Generator_RowEvArgName="PLZ_GeodatenRowChangeEvent" msprop:Generator_RowClassName="PLZ_GeodatenRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="countrycode" msprop:Generator_ColumnVarNameInTable="columncountrycode" msprop:Generator_ColumnPropNameInRow="countrycode" msprop:Generator_ColumnPropNameInTable="countrycodeColumn" msprop:Generator_UserColumnName="countrycode" minOccurs="0">
@@ -2520,6 +2598,91 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
               <xs:element name="latitude" msprop:Generator_ColumnVarNameInTable="columnlatitude" msprop:Generator_ColumnPropNameInRow="latitude" msprop:Generator_ColumnPropNameInTable="latitudeColumn" msprop:Generator_UserColumnName="latitude" type="xs:double" minOccurs="0" />
               <xs:element name="longitude" msprop:Generator_ColumnVarNameInTable="columnlongitude" msprop:Generator_ColumnPropNameInRow="longitude" msprop:Generator_ColumnPropNameInTable="longitudeColumn" msprop:Generator_UserColumnName="longitude" type="xs:double" minOccurs="0" />
               <xs:element name="accuracy" msprop:Generator_ColumnVarNameInTable="columnaccuracy" msprop:Generator_ColumnPropNameInRow="accuracy" msprop:Generator_ColumnPropNameInTable="accuracyColumn" msprop:Generator_UserColumnName="accuracy" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Klassen" msprop:Generator_TableClassName="KlassenDataTable" msprop:Generator_TableVarName="tableKlassen" msprop:Generator_TablePropName="Klassen" msprop:Generator_RowDeletingName="KlassenRowDeleting" msprop:Generator_RowChangingName="KlassenRowChanging" msprop:Generator_RowEvHandlerName="KlassenRowChangeEventHandler" msprop:Generator_RowDeletedName="KlassenRowDeleted" msprop:Generator_UserTableName="Klassen" msprop:Generator_RowChangedName="KlassenRowChanged" msprop:Generator_RowEvArgName="KlassenRowChangeEvent" msprop:Generator_RowClassName="KlassenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="KlassenName" msprop:Generator_ColumnVarNameInTable="columnKlassenName" msprop:Generator_ColumnPropNameInRow="KlassenName" msprop:Generator_ColumnPropNameInTable="KlassenNameColumn" msprop:Generator_UserColumnName="KlassenName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Klassifizierung" msprop:Generator_TableClassName="KlassifizierungDataTable" msprop:Generator_TableVarName="tableKlassifizierung" msprop:Generator_TablePropName="Klassifizierung" msprop:Generator_RowDeletingName="KlassifizierungRowDeleting" msprop:Generator_RowChangingName="KlassifizierungRowChanging" msprop:Generator_RowEvHandlerName="KlassifizierungRowChangeEventHandler" msprop:Generator_RowDeletedName="KlassifizierungRowDeleted" msprop:Generator_UserTableName="Klassifizierung" msprop:Generator_RowChangedName="KlassifizierungRowChanged" msprop:Generator_RowEvArgName="KlassifizierungRowChangeEvent" msprop:Generator_RowClassName="KlassifizierungRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFirmenName" msprop:Generator_ColumnVarNameInTable="columnIDFirmenName" msprop:Generator_ColumnPropNameInRow="IDFirmenName" msprop:Generator_ColumnPropNameInTable="IDFirmenNameColumn" msprop:Generator_UserColumnName="IDFirmenName" type="xs:int" />
+              <xs:element name="Klassifizierung" msprop:Generator_ColumnVarNameInTable="columnKlassifizierung" msprop:Generator_ColumnPropNameInRow="Klassifizierung" msprop:Generator_ColumnPropNameInTable="KlassifizierungColumn" msprop:Generator_UserColumnName="Klassifizierung" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AdresseMitGeodaten" msprop:Generator_TableClassName="AdresseMitGeodatenDataTable" msprop:Generator_TableVarName="tableAdresseMitGeodaten" msprop:Generator_TablePropName="AdresseMitGeodaten" msprop:Generator_RowDeletingName="AdresseMitGeodatenRowDeleting" msprop:Generator_RowChangingName="AdresseMitGeodatenRowChanging" msprop:Generator_RowEvHandlerName="AdresseMitGeodatenRowChangeEventHandler" msprop:Generator_RowDeletedName="AdresseMitGeodatenRowDeleted" msprop:Generator_UserTableName="AdresseMitGeodaten" msprop:Generator_RowChangedName="AdresseMitGeodatenRowChanged" msprop:Generator_RowEvArgName="AdresseMitGeodatenRowChangeEvent" msprop:Generator_RowClassName="AdresseMitGeodatenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FirmenName" msprop:Generator_ColumnVarNameInTable="columnFirmenName" msprop:Generator_ColumnPropNameInRow="FirmenName" msprop:Generator_ColumnPropNameInTable="FirmenNameColumn" msprop:Generator_UserColumnName="FirmenName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Klassifizierung" msprop:Generator_ColumnVarNameInTable="columnKlassifizierung" msprop:Generator_ColumnPropNameInRow="Klassifizierung" msprop:Generator_ColumnPropNameInTable="KlassifizierungColumn" msprop:Generator_UserColumnName="Klassifizierung" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KontoName" msprop:Generator_ColumnVarNameInTable="columnKontoName" msprop:Generator_ColumnPropNameInRow="KontoName" msprop:Generator_ColumnPropNameInTable="KontoNameColumn" msprop:Generator_UserColumnName="KontoName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="countrycode" msprop:Generator_ColumnVarNameInTable="columncountrycode" msprop:Generator_ColumnPropNameInRow="countrycode" msprop:Generator_ColumnPropNameInTable="countrycodeColumn" msprop:Generator_UserColumnName="countrycode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Straße" msprop:Generator_ColumnVarNameInTable="columnStraße" msprop:Generator_ColumnPropNameInRow="Straße" msprop:Generator_ColumnPropNameInTable="StraßeColumn" msprop:Generator_UserColumnName="Straße" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PLZ" msprop:Generator_ColumnVarNameInTable="columnPLZ" msprop:Generator_ColumnPropNameInRow="PLZ" msprop:Generator_ColumnPropNameInTable="PLZColumn" msprop:Generator_UserColumnName="PLZ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ort" msprop:Generator_ColumnVarNameInTable="columnOrt" msprop:Generator_ColumnPropNameInRow="Ort" msprop:Generator_ColumnPropNameInTable="OrtColumn" msprop:Generator_UserColumnName="Ort" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="latitude" msprop:Generator_ColumnVarNameInTable="columnlatitude" msprop:Generator_ColumnPropNameInRow="latitude" msprop:Generator_ColumnPropNameInTable="latitudeColumn" msprop:Generator_UserColumnName="latitude" type="xs:double" minOccurs="0" />
+              <xs:element name="longitude" msprop:Generator_ColumnVarNameInTable="columnlongitude" msprop:Generator_ColumnPropNameInRow="longitude" msprop:Generator_ColumnPropNameInTable="longitudeColumn" msprop:Generator_UserColumnName="longitude" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -2574,17 +2737,26 @@ WHERE     (countrycode = @Param1) AND (PLZ = @Param2)</CommandText>
       <xs:selector xpath=".//mstns:Konto" />
       <xs:field xpath="mstns:IDKonto" />
     </xs:unique>
+    <xs:unique name="Klassen_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Klassen" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Klassifizierung_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Klassifizierung" />
+      <xs:field xpath="mstns:IDFirmenName" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="Adressen_Kontakte" msdata:parent="Adressen" msdata:child="Kontakte" msdata:parentkey="IDAdresse" msdata:childkey="IDAdresse" msprop:Generator_UserChildTable="Kontakte" msprop:Generator_ChildPropName="GetKontakteRows" msprop:Generator_UserRelationName="Adressen_Kontakte" msprop:Generator_ParentPropName="AdressenRow" msprop:Generator_RelationVarName="relationAdressen_Kontakte" msprop:Generator_UserParentTable="Adressen" />
-      <msdata:Relationship name="Kontakte_KontakteMitAdresse" msdata:parent="Kontakte" msdata:child="KontakteMitAdresse" msdata:parentkey="IDKontakt" msdata:childkey="IDKontakt" msprop:Generator_UserChildTable="KontakteMitAdresse" msprop:Generator_ChildPropName="GetKontakteMitAdresseRows" msprop:Generator_UserRelationName="Kontakte_KontakteMitAdresse" msprop:Generator_ParentPropName="KontakteRow" msprop:Generator_RelationVarName="relationKontakte_KontakteMitAdresse" msprop:Generator_UserParentTable="Kontakte" />
-      <msdata:Relationship name="Belege_x0024_AdressenBelege" msdata:parent="Adressen" msdata:child="Belege" msdata:parentkey="IDAdresse" msdata:childkey="IDAdresse" msprop:Generator_UserChildTable="Belege" msprop:Generator_ChildPropName="GetBelegeRows" msprop:Generator_UserRelationName="Belege$AdressenBelege" msprop:Generator_ParentPropName="AdressenRow" msprop:Generator_RelationVarName="_relationBelege_AdressenBelege" msprop:Generator_UserParentTable="Adressen" />
-      <msdata:Relationship name="Belege_BelegeMitAdresse" msdata:parent="Belege" msdata:child="BelegeMitAdresse" msdata:parentkey="IDBeleg" msdata:childkey="IDBeleg" msprop:Generator_UserChildTable="BelegeMitAdresse" msprop:Generator_ChildPropName="GetBelegeMitAdresseRows" msprop:Generator_UserRelationName="Belege_BelegeMitAdresse" msprop:Generator_RelationVarName="relationBelege_BelegeMitAdresse" msprop:Generator_UserParentTable="Belege" msprop:Generator_ParentPropName="BelegeRow" />
-      <msdata:Relationship name="Belege_x0024_FirmenNameBelege" msdata:parent="FirmenName" msdata:child="Belege" msdata:parentkey="IDFirmenName" msdata:childkey="IDFirmenName" msprop:Generator_UserChildTable="Belege" msprop:Generator_ChildPropName="GetBelegeRows" msprop:Generator_UserRelationName="Belege$FirmenNameBelege" msprop:Generator_RelationVarName="_relationBelege_FirmenNameBelege" msprop:Generator_UserParentTable="FirmenName" msprop:Generator_ParentPropName="FirmenNameRow" />
-      <msdata:Relationship name="Konto_x0024_FirmenNameKonto" msdata:parent="FirmenName" msdata:child="Konto" msdata:parentkey="IDFirmenName" msdata:childkey="IDFirmenName" msprop:Generator_UserChildTable="Konto" msprop:Generator_ChildPropName="GetKontoRows" msprop:Generator_UserRelationName="Konto$FirmenNameKonto" msprop:Generator_ParentPropName="FirmenNameRow" msprop:Generator_RelationVarName="_relationKonto_FirmenNameKonto" msprop:Generator_UserParentTable="FirmenName" />
-      <msdata:Relationship name="Kontakte_FirmenName" msdata:parent="Kontakte" msdata:child="FirmenName" msdata:parentkey="IDFirmenName" msdata:childkey="IDFirmenName" msprop:Generator_UserChildTable="FirmenName" msprop:Generator_ChildPropName="GetFirmenNameRows" msprop:Generator_UserRelationName="Kontakte_FirmenName" msprop:Generator_ParentPropName="KontakteRow" msprop:Generator_RelationVarName="relationKontakte_FirmenName" msprop:Generator_UserParentTable="Kontakte" />
-      <msdata:Relationship name="FirmenName_Adressen" msdata:parent="FirmenName" msdata:child="Adressen" msdata:parentkey="IDFirmenName" msdata:childkey="IDFirmenName" msprop:Generator_UserChildTable="Adressen" msprop:Generator_ChildPropName="GetAdressenRows" msprop:Generator_UserRelationName="FirmenName_Adressen" msprop:Generator_RelationVarName="relationFirmenName_Adressen" msprop:Generator_UserParentTable="FirmenName" msprop:Generator_ParentPropName="FirmenNameRow" />
+      <msdata:Relationship name="Adressen_Kontakte" msdata:parent="Adressen" msdata:child="Kontakte" msdata:parentkey="IDAdresse" msdata:childkey="IDAdresse" msprop:Generator_UserChildTable="Kontakte" msprop:Generator_ChildPropName="GetKontakteRows" msprop:Generator_UserRelationName="Adressen_Kontakte" msprop:Generator_RelationVarName="relationAdressen_Kontakte" msprop:Generator_UserParentTable="Adressen" msprop:Generator_ParentPropName="AdressenRow" />
+      <msdata:Relationship name="Kontakte_KontakteMitAdresse" msdata:parent="Kontakte" msdata:child="KontakteMitAdresse" msdata:parentkey="IDKontakt" msdata:childkey="IDKontakt" msprop:Generator_UserChildTable="KontakteMitAdresse" msprop:Generator_ChildPropName="GetKontakteMitAdresseRows" msprop:Generator_UserRelationName="Kontakte_KontakteMitAdresse" msprop:Generator_RelationVarName="relationKontakte_KontakteMitAdresse" msprop:Generator_UserParentTable="Kontakte" msprop:Generator_ParentPropName="KontakteRow" />
+      <msdata:Relationship name="Belege_x0024_AdressenBelege" msdata:parent="Adressen" msdata:child="Belege" msdata:parentkey="IDAdresse" msdata:childkey="IDAdresse" msprop:Generator_UserChildTable="Belege" msprop:Generator_ChildPropName="GetBelegeRows" msprop:Generator_UserRelationName="Belege$AdressenBelege" msprop:Generator_RelationVarName="_relationBelege_AdressenBelege" msprop:Generator_UserParentTable="Adressen" msprop:Generator_ParentPropName="AdressenRow" />
+      <msdata:Relationship name="Belege_BelegeMitAdresse" msdata:parent="Belege" msdata:child="BelegeMitAdresse" msdata:parentkey="IDBeleg" msdata:childkey="IDBeleg" msprop:Generator_UserChildTable="BelegeMitAdresse" msprop:Generator_ChildPropName="GetBelegeMitAdresseRows" msprop:Generator_UserRelationName="Belege_BelegeMitAdresse" msprop:Generator_ParentPropName="BelegeRow" msprop:Generator_RelationVarName="relationBelege_BelegeMitAdresse" msprop:Generator_UserParentTable="Belege" />
+      <msdata:Relationship name="Belege_x0024_FirmenNameBelege" msdata:parent="FirmenName" msdata:child="Belege" msdata:parentkey="IDFirmenName" msdata:childkey="IDFirmenName" msprop:Generator_UserChildTable="Belege" msprop:Generator_ChildPropName="GetBelegeRows" msprop:Generator_UserRelationName="Belege$FirmenNameBelege" msprop:Generator_ParentPropName="FirmenNameRow" msprop:Generator_RelationVarName="_relationBelege_FirmenNameBelege" msprop:Generator_UserParentTable="FirmenName" />
+      <msdata:Relationship name="Konto_x0024_FirmenNameKonto" msdata:parent="FirmenName" msdata:child="Konto" msdata:parentkey="IDFirmenName" msdata:childkey="IDFirmenName" msprop:Generator_UserChildTable="Konto" msprop:Generator_ChildPropName="GetKontoRows" msprop:Generator_UserRelationName="Konto$FirmenNameKonto" msprop:Generator_RelationVarName="_relationKonto_FirmenNameKonto" msprop:Generator_UserParentTable="FirmenName" msprop:Generator_ParentPropName="FirmenNameRow" />
+      <msdata:Relationship name="Kontakte_FirmenName" msdata:parent="Kontakte" msdata:child="FirmenName" msdata:parentkey="IDFirmenName" msdata:childkey="IDFirmenName" msprop:Generator_UserChildTable="FirmenName" msprop:Generator_ChildPropName="GetFirmenNameRows" msprop:Generator_UserRelationName="Kontakte_FirmenName" msprop:Generator_RelationVarName="relationKontakte_FirmenName" msprop:Generator_UserParentTable="Kontakte" msprop:Generator_ParentPropName="KontakteRow" />
+      <msdata:Relationship name="FirmenName_Adressen" msdata:parent="FirmenName" msdata:child="Adressen" msdata:parentkey="IDFirmenName" msdata:childkey="IDFirmenName" msprop:Generator_UserChildTable="Adressen" msprop:Generator_ChildPropName="GetAdressenRows" msprop:Generator_UserRelationName="FirmenName_Adressen" msprop:Generator_ParentPropName="FirmenNameRow" msprop:Generator_RelationVarName="relationFirmenName_Adressen" msprop:Generator_UserParentTable="FirmenName" />
+      <msdata:Relationship name="FirmenName_Klassifizierung" msdata:parent="FirmenName" msdata:child="Klassifizierung" msdata:parentkey="IDFirmenName" msdata:childkey="IDFirmenName" msprop:Generator_UserChildTable="Klassifizierung" msprop:Generator_ChildPropName="GetKlassifizierungRows" msprop:Generator_UserRelationName="FirmenName_Klassifizierung" msprop:Generator_RelationVarName="relationFirmenName_Klassifizierung" msprop:Generator_UserParentTable="FirmenName" msprop:Generator_ParentPropName="FirmenNameRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

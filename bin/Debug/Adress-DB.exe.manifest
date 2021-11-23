@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Adress-DB.exe" size="1850848">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Adress-DB.exe" size="1877984">
       <assemblyIdentity name="Adress-DB" version="2.0.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>znmL5nREjeJB1wSvJmvu6/NG5p2kYk9LAIxKzFJJ2UY=</dsig:DigestValue>
+        <dsig:DigestValue>Vu66kS40KSL6Mo5pHmGQqqcSh6z+4xbl+n9kJNiDMio=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
