@@ -311,6 +311,7 @@ namespace Adress_DB
             this.klassifizierungTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.KlassifizierungTableAdapter();
             this.klassenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.klassenTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.KlassenTableAdapter();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             AdresstypLabel = new System.Windows.Forms.Label();
             StraßeLabel = new System.Windows.Forms.Label();
             PLZLabel = new System.Windows.Forms.Label();
@@ -4428,5 +4429,6 @@ namespace Adress_DB
         private _WSL_AdressenDataSetTableAdapters.KlassenTableAdapter klassenTableAdapter;
         private PictureBox pictureBox2;
         internal ComboBox CB_Klassifizierung;
+        private ToolTip toolTip1;
     }
 }

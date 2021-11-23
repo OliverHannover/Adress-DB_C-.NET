@@ -42,18 +42,18 @@ namespace Adress_DB
             System.Windows.Forms.Label SachbearbeiterLabel;
             System.Windows.Forms.Label AdminLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administration));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.AdminCheckBox = new System.Windows.Forms.CheckBox();
             this.SachbearbeiterBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -202,7 +202,10 @@ namespace Adress_DB
             this.BTN_Close = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.bindingNavigator5 = new System.Windows.Forms.BindingNavigator(this.components);
             this.klassenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStripButton20 = new System.Windows.Forms.ToolStripButton();
+            this.BTNKlassenSave = new System.Windows.Forms.ToolStripButton();
             this.klassenDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -216,9 +219,6 @@ namespace Adress_DB
             this.BelegeTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.BelegeTableAdapter();
             this.propertiesTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.propertiesTableAdapter();
             this.klassenTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.KlassenTableAdapter();
-            this.bindingNavigator5 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.toolStripButton20 = new System.Windows.Forms.ToolStripButton();
-            this.BTNKlassenSave = new System.Windows.Forms.ToolStripButton();
             SachbearbeiterLabel = new System.Windows.Forms.Label();
             AdminLabel = new System.Windows.Forms.Label();
             this.Panel2.SuspendLayout();
@@ -259,11 +259,11 @@ namespace Adress_DB
             this.Panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).BeginInit();
+            this.bindingNavigator5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.klassenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klassenDataGridView)).BeginInit();
             this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).BeginInit();
-            this.bindingNavigator5.SuspendLayout();
             this.SuspendLayout();
             // 
             // SachbearbeiterLabel
@@ -279,7 +279,7 @@ namespace Adress_DB
             // AdminLabel
             // 
             AdminLabel.AutoSize = true;
-            AdminLabel.Location = new System.Drawing.Point(191, 19);
+            AdminLabel.Location = new System.Drawing.Point(191, 24);
             AdminLabel.Name = "AdminLabel";
             AdminLabel.Size = new System.Drawing.Size(70, 13);
             AdminLabel.TabIndex = 27;
@@ -296,16 +296,16 @@ namespace Adress_DB
             this.Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel2.Location = new System.Drawing.Point(3, 3);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(596, 48);
+            this.Panel2.Size = new System.Drawing.Size(438, 48);
             this.Panel2.TabIndex = 25;
             // 
             // AdminCheckBox
             // 
             this.AdminCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.SachbearbeiterBindingSource, "Admin", true));
             this.AdminCheckBox.Enabled = false;
-            this.AdminCheckBox.Location = new System.Drawing.Point(267, 13);
+            this.AdminCheckBox.Location = new System.Drawing.Point(267, 24);
             this.AdminCheckBox.Name = "AdminCheckBox";
-            this.AdminCheckBox.Size = new System.Drawing.Size(16, 24);
+            this.AdminCheckBox.Size = new System.Drawing.Size(17, 18);
             this.AdminCheckBox.TabIndex = 28;
             this.AdminCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -322,7 +322,7 @@ namespace Adress_DB
             // SachbearbeiterLabel1
             // 
             this.SachbearbeiterLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.SachbearbeiterBindingSource, "Sachbearbeiter", true));
-            this.SachbearbeiterLabel1.Location = new System.Drawing.Point(279, 5);
+            this.SachbearbeiterLabel1.Location = new System.Drawing.Point(279, 6);
             this.SachbearbeiterLabel1.Name = "SachbearbeiterLabel1";
             this.SachbearbeiterLabel1.Size = new System.Drawing.Size(139, 14);
             this.SachbearbeiterLabel1.TabIndex = 26;
@@ -344,7 +344,7 @@ namespace Adress_DB
             // 
             this._BTN_Alle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._BTN_Alle.Enabled = false;
-            this._BTN_Alle.Location = new System.Drawing.Point(345, 6);
+            this._BTN_Alle.Location = new System.Drawing.Point(308, 6);
             this._BTN_Alle.Name = "_BTN_Alle";
             this._BTN_Alle.Size = new System.Drawing.Size(75, 23);
             this._BTN_Alle.TabIndex = 2;
@@ -356,7 +356,7 @@ namespace Adress_DB
             // 
             this._BTN_Aktuell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._BTN_Aktuell.Enabled = false;
-            this._BTN_Aktuell.Location = new System.Drawing.Point(426, 6);
+            this._BTN_Aktuell.Location = new System.Drawing.Point(389, 6);
             this._BTN_Aktuell.Name = "_BTN_Aktuell";
             this._BTN_Aktuell.Size = new System.Drawing.Size(156, 23);
             this._BTN_Aktuell.TabIndex = 1;
@@ -380,7 +380,7 @@ namespace Adress_DB
             this.TC_Administration.Multiline = true;
             this.TC_Administration.Name = "TC_Administration";
             this.TC_Administration.SelectedIndex = 0;
-            this.TC_Administration.Size = new System.Drawing.Size(585, 340);
+            this.TC_Administration.Size = new System.Drawing.Size(548, 280);
             this.TC_Administration.TabIndex = 30;
             // 
             // TabPage1
@@ -391,7 +391,7 @@ namespace Adress_DB
             this.TabPage1.Location = new System.Drawing.Point(4, 22);
             this.TabPage1.Name = "TabPage1";
             this.TabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage1.Size = new System.Drawing.Size(577, 314);
+            this.TabPage1.Size = new System.Drawing.Size(540, 254);
             this.TabPage1.TabIndex = 0;
             this.TabPage1.Text = "Konfiguration";
             this.TabPage1.UseVisualStyleBackColor = true;
@@ -405,14 +405,14 @@ namespace Adress_DB
             this.bindingNavigator4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bindingNavigator4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._BNAV_PropertiesSave});
-            this.bindingNavigator4.Location = new System.Drawing.Point(3, 286);
+            this.bindingNavigator4.Location = new System.Drawing.Point(3, 226);
             this.bindingNavigator4.MoveFirstItem = null;
             this.bindingNavigator4.MoveLastItem = null;
             this.bindingNavigator4.MoveNextItem = null;
             this.bindingNavigator4.MovePreviousItem = null;
             this.bindingNavigator4.Name = "bindingNavigator4";
             this.bindingNavigator4.PositionItem = null;
-            this.bindingNavigator4.Size = new System.Drawing.Size(571, 25);
+            this.bindingNavigator4.Size = new System.Drawing.Size(534, 25);
             this.bindingNavigator4.TabIndex = 11;
             this.bindingNavigator4.Text = "bindingNavigator4";
             // 
@@ -433,14 +433,14 @@ namespace Adress_DB
             // propertiesDataGridView
             // 
             this.propertiesDataGridView.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.propertiesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.propertiesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.propertiesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.propertiesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn20,
@@ -448,18 +448,18 @@ namespace Adress_DB
             this.dataGridViewTextBoxColumn22,
             this.dataGridViewTextBoxColumn23});
             this.propertiesDataGridView.DataSource = this.propertiesBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.propertiesDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.propertiesDataGridView.DefaultCellStyle = dataGridViewCellStyle14;
             this.propertiesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propertiesDataGridView.Location = new System.Drawing.Point(3, 3);
             this.propertiesDataGridView.Name = "propertiesDataGridView";
-            this.propertiesDataGridView.Size = new System.Drawing.Size(571, 308);
+            this.propertiesDataGridView.Size = new System.Drawing.Size(534, 248);
             this.propertiesDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn20
@@ -496,7 +496,7 @@ namespace Adress_DB
             this.TabPage2.Location = new System.Drawing.Point(4, 22);
             this.TabPage2.Name = "TabPage2";
             this.TabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage2.Size = new System.Drawing.Size(577, 314);
+            this.TabPage2.Size = new System.Drawing.Size(1363, 335);
             this.TabPage2.TabIndex = 1;
             this.TabPage2.Text = "FirmenName";
             this.TabPage2.UseVisualStyleBackColor = true;
@@ -520,14 +520,14 @@ namespace Adress_DB
             this.ToolStripSeparator12,
             this.ToolStripButton21,
             this._BNAV_FirmenNameSave});
-            this.BindingNavigator1.Location = new System.Drawing.Point(3, 286);
+            this.BindingNavigator1.Location = new System.Drawing.Point(3, 307);
             this.BindingNavigator1.MoveFirstItem = this.ToolStripButton23;
             this.BindingNavigator1.MoveLastItem = this.ToolStripButton26;
             this.BindingNavigator1.MoveNextItem = this.ToolStripButton25;
             this.BindingNavigator1.MovePreviousItem = this.ToolStripButton24;
             this.BindingNavigator1.Name = "BindingNavigator1";
             this.BindingNavigator1.PositionItem = this.ToolStripTextBox4;
-            this.BindingNavigator1.Size = new System.Drawing.Size(571, 25);
+            this.BindingNavigator1.Size = new System.Drawing.Size(1357, 25);
             this.BindingNavigator1.TabIndex = 10;
             this.BindingNavigator1.Text = "BindingNavigator1";
             // 
@@ -548,7 +548,7 @@ namespace Adress_DB
             // ToolStripLabel4
             // 
             this.ToolStripLabel4.Name = "ToolStripLabel4";
-            this.ToolStripLabel4.Size = new System.Drawing.Size(44, 22);
+            this.ToolStripLabel4.Size = new System.Drawing.Size(48, 22);
             this.ToolStripLabel4.Text = "von {0}";
             this.ToolStripLabel4.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
@@ -626,14 +626,14 @@ namespace Adress_DB
             // 
             this.FirmenNameDataGridView.AutoGenerateColumns = false;
             this.FirmenNameDataGridView.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.FirmenNameDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.FirmenNameDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.FirmenNameDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FirmenNameDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DataGridViewTextBoxColumn1,
@@ -642,20 +642,20 @@ namespace Adress_DB
             this.changed,
             this.inaktiv});
             this.FirmenNameDataGridView.DataSource = this.FirmenNameBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.FirmenNameDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.FirmenNameDataGridView.DefaultCellStyle = dataGridViewCellStyle16;
             this.FirmenNameDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FirmenNameDataGridView.Location = new System.Drawing.Point(3, 3);
             this.FirmenNameDataGridView.Name = "FirmenNameDataGridView";
             this.FirmenNameDataGridView.RowHeadersVisible = false;
             this.FirmenNameDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.FirmenNameDataGridView.Size = new System.Drawing.Size(571, 308);
+            this.FirmenNameDataGridView.Size = new System.Drawing.Size(1357, 329);
             this.FirmenNameDataGridView.TabIndex = 0;
             // 
             // DataGridViewTextBoxColumn1
@@ -701,7 +701,7 @@ namespace Adress_DB
             this.TabPage3.Location = new System.Drawing.Point(4, 22);
             this.TabPage3.Name = "TabPage3";
             this.TabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage3.Size = new System.Drawing.Size(577, 314);
+            this.TabPage3.Size = new System.Drawing.Size(1363, 335);
             this.TabPage3.TabIndex = 2;
             this.TabPage3.Text = "Konto";
             this.TabPage3.UseVisualStyleBackColor = true;
@@ -726,14 +726,14 @@ namespace Adress_DB
             this.ToolStripButton14,
             this.ToolStripButton15,
             this._BNAV_KontoSave});
-            this.BindingNavigator2.Location = new System.Drawing.Point(3, 286);
+            this.BindingNavigator2.Location = new System.Drawing.Point(3, 307);
             this.BindingNavigator2.MoveFirstItem = this.ToolStripButton16;
             this.BindingNavigator2.MoveLastItem = this.ToolStripButton19;
             this.BindingNavigator2.MoveNextItem = this.ToolStripButton18;
             this.BindingNavigator2.MovePreviousItem = this.ToolStripButton17;
             this.BindingNavigator2.Name = "BindingNavigator2";
             this.BindingNavigator2.PositionItem = this.ToolStripTextBox3;
-            this.BindingNavigator2.Size = new System.Drawing.Size(571, 25);
+            this.BindingNavigator2.Size = new System.Drawing.Size(1357, 25);
             this.BindingNavigator2.TabIndex = 9;
             this.BindingNavigator2.Text = "BindingNavigator1";
             // 
@@ -754,7 +754,7 @@ namespace Adress_DB
             // ToolStripLabel3
             // 
             this.ToolStripLabel3.Name = "ToolStripLabel3";
-            this.ToolStripLabel3.Size = new System.Drawing.Size(44, 22);
+            this.ToolStripLabel3.Size = new System.Drawing.Size(48, 22);
             this.ToolStripLabel3.Text = "von {0}";
             this.ToolStripLabel3.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
@@ -841,14 +841,14 @@ namespace Adress_DB
             // 
             this.KontoDataGridView.AutoGenerateColumns = false;
             this.KontoDataGridView.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.KontoDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.KontoDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.KontoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KontoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DataGridViewTextBoxColumn3,
@@ -856,21 +856,21 @@ namespace Adress_DB
             this.DataGridViewTextBoxColumn5,
             this.Datum});
             this.KontoDataGridView.DataSource = this.KontoBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.KontoDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.KontoDataGridView.DefaultCellStyle = dataGridViewCellStyle18;
             this.KontoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.KontoDataGridView.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.KontoDataGridView.Location = new System.Drawing.Point(3, 3);
             this.KontoDataGridView.Name = "KontoDataGridView";
             this.KontoDataGridView.RowHeadersVisible = false;
             this.KontoDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.KontoDataGridView.Size = new System.Drawing.Size(571, 308);
+            this.KontoDataGridView.Size = new System.Drawing.Size(1357, 329);
             this.KontoDataGridView.TabIndex = 0;
             // 
             // DataGridViewTextBoxColumn3
@@ -906,7 +906,7 @@ namespace Adress_DB
             this.TabPage4.Location = new System.Drawing.Point(4, 22);
             this.TabPage4.Name = "TabPage4";
             this.TabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage4.Size = new System.Drawing.Size(577, 314);
+            this.TabPage4.Size = new System.Drawing.Size(1363, 335);
             this.TabPage4.TabIndex = 3;
             this.TabPage4.Text = "Adressen";
             this.TabPage4.UseVisualStyleBackColor = true;
@@ -931,14 +931,14 @@ namespace Adress_DB
             this.ToolStripButton7,
             this.ToolStripButton8,
             this._BNAV_AdressenSave});
-            this.BindingNavigator3.Location = new System.Drawing.Point(3, 286);
+            this.BindingNavigator3.Location = new System.Drawing.Point(3, 307);
             this.BindingNavigator3.MoveFirstItem = this.ToolStripButton9;
             this.BindingNavigator3.MoveLastItem = this.ToolStripButton12;
             this.BindingNavigator3.MoveNextItem = this.ToolStripButton11;
             this.BindingNavigator3.MovePreviousItem = this.ToolStripButton10;
             this.BindingNavigator3.Name = "BindingNavigator3";
             this.BindingNavigator3.PositionItem = this.ToolStripTextBox2;
-            this.BindingNavigator3.Size = new System.Drawing.Size(571, 25);
+            this.BindingNavigator3.Size = new System.Drawing.Size(1357, 25);
             this.BindingNavigator3.TabIndex = 25;
             this.BindingNavigator3.Text = "BindingNavigator1";
             // 
@@ -959,7 +959,7 @@ namespace Adress_DB
             // ToolStripLabel2
             // 
             this.ToolStripLabel2.Name = "ToolStripLabel2";
-            this.ToolStripLabel2.Size = new System.Drawing.Size(44, 22);
+            this.ToolStripLabel2.Size = new System.Drawing.Size(48, 22);
             this.ToolStripLabel2.Text = "von {0}";
             this.ToolStripLabel2.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
@@ -1046,14 +1046,14 @@ namespace Adress_DB
             // 
             this.DataGridView1.AutoGenerateColumns = false;
             this.DataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDAdresse,
@@ -1069,21 +1069,21 @@ namespace Adress_DB
             this.UStIdNr,
             this.Webseite});
             this.DataGridView1.DataSource = this.AdressenBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle20;
             this.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.DataGridView1.Location = new System.Drawing.Point(3, 3);
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.RowHeadersVisible = false;
             this.DataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DataGridView1.Size = new System.Drawing.Size(571, 308);
+            this.DataGridView1.Size = new System.Drawing.Size(1357, 329);
             this.DataGridView1.TabIndex = 1;
             // 
             // IDAdresse
@@ -1170,7 +1170,7 @@ namespace Adress_DB
             this.TabPage5.Location = new System.Drawing.Point(4, 22);
             this.TabPage5.Name = "TabPage5";
             this.TabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage5.Size = new System.Drawing.Size(577, 314);
+            this.TabPage5.Size = new System.Drawing.Size(1363, 335);
             this.TabPage5.TabIndex = 4;
             this.TabPage5.Text = "Kontakte";
             this.TabPage5.UseVisualStyleBackColor = true;
@@ -1195,14 +1195,14 @@ namespace Adress_DB
             this.ToolStripButton1,
             this.ToolStripButton2,
             this._BNAV_KontakteSave});
-            this.SachbearbeiterBindingNavigator.Location = new System.Drawing.Point(3, 286);
+            this.SachbearbeiterBindingNavigator.Location = new System.Drawing.Point(3, 307);
             this.SachbearbeiterBindingNavigator.MoveFirstItem = this.ToolStripButton3;
             this.SachbearbeiterBindingNavigator.MoveLastItem = this.ToolStripButton6;
             this.SachbearbeiterBindingNavigator.MoveNextItem = this.ToolStripButton5;
             this.SachbearbeiterBindingNavigator.MovePreviousItem = this.ToolStripButton4;
             this.SachbearbeiterBindingNavigator.Name = "SachbearbeiterBindingNavigator";
             this.SachbearbeiterBindingNavigator.PositionItem = this.ToolStripTextBox1;
-            this.SachbearbeiterBindingNavigator.Size = new System.Drawing.Size(571, 25);
+            this.SachbearbeiterBindingNavigator.Size = new System.Drawing.Size(1357, 25);
             this.SachbearbeiterBindingNavigator.TabIndex = 25;
             this.SachbearbeiterBindingNavigator.Text = "BindingNavigator1";
             // 
@@ -1223,7 +1223,7 @@ namespace Adress_DB
             // ToolStripLabel1
             // 
             this.ToolStripLabel1.Name = "ToolStripLabel1";
-            this.ToolStripLabel1.Size = new System.Drawing.Size(44, 22);
+            this.ToolStripLabel1.Size = new System.Drawing.Size(48, 22);
             this.ToolStripLabel1.Text = "von {0}";
             this.ToolStripLabel1.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
@@ -1310,14 +1310,14 @@ namespace Adress_DB
             // 
             this.DataGridView2.AutoGenerateColumns = false;
             this.DataGridView2.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDKontakt,
@@ -1333,21 +1333,21 @@ namespace Adress_DB
             this.IDAdresseDataGridViewTextBoxColumn,
             this.AnredeDataGridViewTextBoxColumn});
             this.DataGridView2.DataSource = this.KontakteBindingSource;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView2.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridView2.DefaultCellStyle = dataGridViewCellStyle22;
             this.DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DataGridView2.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.DataGridView2.Location = new System.Drawing.Point(3, 3);
             this.DataGridView2.Name = "DataGridView2";
             this.DataGridView2.RowHeadersVisible = false;
             this.DataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DataGridView2.Size = new System.Drawing.Size(571, 308);
+            this.DataGridView2.Size = new System.Drawing.Size(1357, 329);
             this.DataGridView2.TabIndex = 2;
             // 
             // IDKontakt
@@ -1437,7 +1437,7 @@ namespace Adress_DB
             this.TabPage6.Location = new System.Drawing.Point(4, 22);
             this.TabPage6.Name = "TabPage6";
             this.TabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage6.Size = new System.Drawing.Size(577, 314);
+            this.TabPage6.Size = new System.Drawing.Size(1363, 335);
             this.TabPage6.TabIndex = 5;
             this.TabPage6.Text = "Belege";
             this.TabPage6.UseVisualStyleBackColor = true;
@@ -1462,14 +1462,14 @@ namespace Adress_DB
             this.ToolStripButton28,
             this.ToolStripButton29,
             this._BNAV_BelegeSaveItem});
-            this.BNAV_Belege.Location = new System.Drawing.Point(3, 286);
+            this.BNAV_Belege.Location = new System.Drawing.Point(3, 307);
             this.BNAV_Belege.MoveFirstItem = this.ToolStripButton30;
             this.BNAV_Belege.MoveLastItem = this.ToolStripButton33;
             this.BNAV_Belege.MoveNextItem = this.ToolStripButton32;
             this.BNAV_Belege.MovePreviousItem = this.ToolStripButton31;
             this.BNAV_Belege.Name = "BNAV_Belege";
             this.BNAV_Belege.PositionItem = this.ToolStripTextBox5;
-            this.BNAV_Belege.Size = new System.Drawing.Size(571, 25);
+            this.BNAV_Belege.Size = new System.Drawing.Size(1357, 25);
             this.BNAV_Belege.TabIndex = 26;
             this.BNAV_Belege.Text = "BindingNavigator1";
             // 
@@ -1490,7 +1490,7 @@ namespace Adress_DB
             // ToolStripLabel5
             // 
             this.ToolStripLabel5.Name = "ToolStripLabel5";
-            this.ToolStripLabel5.Size = new System.Drawing.Size(44, 22);
+            this.ToolStripLabel5.Size = new System.Drawing.Size(48, 22);
             this.ToolStripLabel5.Text = "von {0}";
             this.ToolStripLabel5.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
@@ -1579,14 +1579,14 @@ namespace Adress_DB
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BelegeDataGridView.AutoGenerateColumns = false;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BelegeDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.BelegeDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.BelegeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BelegeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DataGridViewTextBoxColumn6,
@@ -1603,17 +1603,17 @@ namespace Adress_DB
             this.DataGridViewTextBoxColumn18,
             this.DataGridViewTextBoxColumn19});
             this.BelegeDataGridView.DataSource = this.BelegeBindingSource;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BelegeDataGridView.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BelegeDataGridView.DefaultCellStyle = dataGridViewCellStyle24;
             this.BelegeDataGridView.Location = new System.Drawing.Point(0, 0);
             this.BelegeDataGridView.Name = "BelegeDataGridView";
-            this.BelegeDataGridView.Size = new System.Drawing.Size(574, 283);
+            this.BelegeDataGridView.Size = new System.Drawing.Size(1360, 304);
             this.BelegeDataGridView.TabIndex = 0;
             // 
             // DataGridViewTextBoxColumn6
@@ -1710,7 +1710,7 @@ namespace Adress_DB
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(602, 510);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(444, 450);
             this.tableLayoutPanel2.TabIndex = 32;
             // 
             // Panel3
@@ -1718,9 +1718,9 @@ namespace Adress_DB
             this.Panel3.BackColor = System.Drawing.Color.Gray;
             this.Panel3.Controls.Add(this.BTN_Close);
             this.Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel3.Location = new System.Drawing.Point(3, 464);
+            this.Panel3.Location = new System.Drawing.Point(3, 404);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(596, 43);
+            this.Panel3.Size = new System.Drawing.Size(438, 43);
             this.Panel3.TabIndex = 27;
             // 
             // BTN_Close
@@ -1729,7 +1729,7 @@ namespace Adress_DB
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_Close.Image = global::Adress_DB.My.Resources.Resources.CloseSolution_16x;
             this.BTN_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Close.Location = new System.Drawing.Point(512, 10);
+            this.BTN_Close.Location = new System.Drawing.Point(354, 10);
             this.BTN_Close.Name = "BTN_Close";
             this.BTN_Close.Size = new System.Drawing.Size(80, 23);
             this.BTN_Close.TabIndex = 16;
@@ -1748,7 +1748,7 @@ namespace Adress_DB
             this.tabControl1.Location = new System.Drawing.Point(3, 57);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(596, 401);
+            this.tabControl1.Size = new System.Drawing.Size(438, 341);
             this.tabControl1.TabIndex = 28;
             // 
             // tabPage7
@@ -1759,15 +1759,54 @@ namespace Adress_DB
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(588, 375);
+            this.tabPage7.Size = new System.Drawing.Size(430, 315);
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "Einstellungen";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // bindingNavigator5
+            // 
+            this.bindingNavigator5.AddNewItem = null;
+            this.bindingNavigator5.BindingSource = this.klassenBindingSource;
+            this.bindingNavigator5.CountItem = null;
+            this.bindingNavigator5.DeleteItem = this.toolStripButton20;
+            this.bindingNavigator5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigator5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton20,
+            this.BTNKlassenSave});
+            this.bindingNavigator5.Location = new System.Drawing.Point(3, 287);
+            this.bindingNavigator5.MoveFirstItem = null;
+            this.bindingNavigator5.MoveLastItem = null;
+            this.bindingNavigator5.MoveNextItem = null;
+            this.bindingNavigator5.MovePreviousItem = null;
+            this.bindingNavigator5.Name = "bindingNavigator5";
+            this.bindingNavigator5.PositionItem = null;
+            this.bindingNavigator5.Size = new System.Drawing.Size(424, 25);
+            this.bindingNavigator5.TabIndex = 26;
+            this.bindingNavigator5.Text = "BindingNavigator1";
             // 
             // klassenBindingSource
             // 
             this.klassenBindingSource.DataMember = "Klassen";
             this.klassenBindingSource.DataSource = this._WSL_AdressenDataSet;
+            // 
+            // toolStripButton20
+            // 
+            this.toolStripButton20.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton20.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton20.Image")));
+            this.toolStripButton20.Name = "toolStripButton20";
+            this.toolStripButton20.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton20.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton20.Text = "Löschen";
+            // 
+            // BTNKlassenSave
+            // 
+            this.BTNKlassenSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BTNKlassenSave.Image = ((System.Drawing.Image)(resources.GetObject("BTNKlassenSave.Image")));
+            this.BTNKlassenSave.Name = "BTNKlassenSave";
+            this.BTNKlassenSave.Size = new System.Drawing.Size(23, 22);
+            this.BTNKlassenSave.Text = "Daten speichern";
+            this.BTNKlassenSave.Click += new System.EventHandler(this.BTNKlassenSave_Click);
             // 
             // klassenDataGridView
             // 
@@ -1782,7 +1821,7 @@ namespace Adress_DB
             this.klassenDataGridView.Location = new System.Drawing.Point(3, 3);
             this.klassenDataGridView.Name = "klassenDataGridView";
             this.klassenDataGridView.RowHeadersVisible = false;
-            this.klassenDataGridView.Size = new System.Drawing.Size(582, 369);
+            this.klassenDataGridView.Size = new System.Drawing.Size(424, 309);
             this.klassenDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn24
@@ -1808,7 +1847,7 @@ namespace Adress_DB
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(588, 375);
+            this.tabPage8.Size = new System.Drawing.Size(551, 315);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "Administration";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1866,50 +1905,11 @@ namespace Adress_DB
             // 
             this.klassenTableAdapter.ClearBeforeFill = true;
             // 
-            // bindingNavigator5
-            // 
-            this.bindingNavigator5.AddNewItem = null;
-            this.bindingNavigator5.BindingSource = this.klassenBindingSource;
-            this.bindingNavigator5.CountItem = null;
-            this.bindingNavigator5.DeleteItem = this.toolStripButton20;
-            this.bindingNavigator5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton20,
-            this.BTNKlassenSave});
-            this.bindingNavigator5.Location = new System.Drawing.Point(3, 347);
-            this.bindingNavigator5.MoveFirstItem = null;
-            this.bindingNavigator5.MoveLastItem = null;
-            this.bindingNavigator5.MoveNextItem = null;
-            this.bindingNavigator5.MovePreviousItem = null;
-            this.bindingNavigator5.Name = "bindingNavigator5";
-            this.bindingNavigator5.PositionItem = null;
-            this.bindingNavigator5.Size = new System.Drawing.Size(582, 25);
-            this.bindingNavigator5.TabIndex = 26;
-            this.bindingNavigator5.Text = "BindingNavigator1";
-            // 
-            // toolStripButton20
-            // 
-            this.toolStripButton20.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton20.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton20.Image")));
-            this.toolStripButton20.Name = "toolStripButton20";
-            this.toolStripButton20.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton20.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton20.Text = "Löschen";
-            // 
-            // BTNKlassenSave
-            // 
-            this.BTNKlassenSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BTNKlassenSave.Image = ((System.Drawing.Image)(resources.GetObject("BTNKlassenSave.Image")));
-            this.BTNKlassenSave.Name = "BTNKlassenSave";
-            this.BTNKlassenSave.Size = new System.Drawing.Size(23, 22);
-            this.BTNKlassenSave.Text = "Daten speichern";
-            this.BTNKlassenSave.Click += new System.EventHandler(this.BTNKlassenSave_Click);
-            // 
             // Administration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 514);
+            this.ClientSize = new System.Drawing.Size(446, 454);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Administration";
@@ -1967,12 +1967,12 @@ namespace Adress_DB
             this.tabControl1.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.klassenBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.klassenDataGridView)).EndInit();
-            this.tabPage8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).EndInit();
             this.bindingNavigator5.ResumeLayout(false);
             this.bindingNavigator5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.klassenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klassenDataGridView)).EndInit();
+            this.tabPage8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

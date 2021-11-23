@@ -941,6 +941,16 @@ namespace Adress_DB.My.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=138,Y=42}.
+        /// </summary>
+        internal static System.Drawing.Point toolTip1_TrayLocation {
+            get {
+                object obj = ResourceManager.GetObject("toolTip1.TrayLocation", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Boolean ähnlich wie False.
         /// </summary>
         internal static bool UStIdNrLabel_GenerateMember {

@@ -41,6 +41,9 @@ namespace Adress_DB
             DTP_BBDatum.Value = DateTime.Now;
             DTP_Diverse.Value = DateTime.Now;
 
+            toolTip1.SetToolTip(this.CB_Klassifizierung, "Hier können die Geschäftspartner genauer klassifiziert werden." + Environment.NewLine +  
+                "Die Klassifizierung wird zB. bei der Umkreissuche angezeigt." + Environment.NewLine + "Änderungen und Ergänzungen über das Einstellungsmenü!");
+
 
 
             // zuerst (wichtig) Combobox Anrede füllen

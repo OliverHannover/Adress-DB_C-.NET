@@ -22,7 +22,7 @@ namespace Adress_DB
 
             // hole die nächste freie Leadnummer
             int Leadnummer = Convert.ToInt32(My.MyProject.Forms.Hauptform.PropertiesTableAdapter.ScalarWert("Leadnummer"));
-            string KontoName = "Lead-" + Convert.ToString(DateTime.Now.Year);
+            string KontoName = "Lead-" + Convert.ToString(DateTime.Now.Year).Substring(2, 2);
 
             // Datensatz in Tabelle 'FirmenName' schreiben
             // MsgBox(IDFirmenName.ToString)
@@ -32,6 +32,10 @@ namespace Adress_DB
             // Datensatz Konto schreiben - zunächst mit der Leadnummer!
             My.MyProject.Forms.Hauptform.KontoTableAdapter.Insert(Leadnummer, IDFirmenName, KontoName, System.DateTime.Now);
             Logging(2,Leadnummer,IDFirmenName, KontoName);
+
+            // Datensatz KLassifizierung schreiben - auch zunächst mit der Leadnummer!
+            My.MyProject.Forms.Hauptform.klassifizierungTableAdapter.Insert(IDFirmenName, KontoName);
+
 
             // DatensatzSuche wiederholen
             try

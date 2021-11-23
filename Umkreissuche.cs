@@ -2,8 +2,7 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
+
 
 namespace Adress_DB
 {
@@ -74,7 +73,7 @@ namespace Adress_DB
             try
             {
                 // Me.AdresseMitGeodatenTableAdapter.SucheUmkreis(_WSL_AdressenDataSet.AdresseMitGeodaten, CDec(LatitudeLabel1.Text), CDec(LongitudeLabel1.Text), CDec(TB_Entfernung.Text))
-                dt = AdresseMitGeodatenTableAdapter.GetDataUmkreis(Conversions.ToDecimal(LatitudeLabel1.Text), Conversions.ToDecimal(LongitudeLabel1.Text), Conversions.ToDecimal(TB_Entfernung.Text));
+                dt = AdresseMitGeodatenTableAdapter.GetDataUmkreis(Convert.ToDecimal(LatitudeLabel1.Text), Convert.ToDecimal(LongitudeLabel1.Text), Convert.ToDecimal(TB_Entfernung.Text));
             }
             catch (Exception ex)
             {
@@ -124,7 +123,7 @@ namespace Adress_DB
             // überprüfen, ob Inhalt rein numerisch
             if (int.TryParse(s, out value))
             {
-                // auf Werte von 1 bis 100 begrenzen
+                // auf Werte von 1 bis 200 begrenzen
                 if (value > 200)
                     value = 200;
                 // If value < 10 Then value = 10

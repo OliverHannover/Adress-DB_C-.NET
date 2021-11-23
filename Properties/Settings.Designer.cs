@@ -33,16 +33,5 @@ namespace Adress_DB.Properties {
                 return ((string)(this["wsladressenConnectionString"]));
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\sqlexpress;Initial Catalog=wsladressen;Persist Security Inf" +
-            "o=True;User ID=wsladressen;Password=Start21!")]
-        public string _WSL_AdressenDataSet {
-            get {
-                return ((string)(this["_WSL_AdressenDataSet"]));
-            }
-        }
     }
 }
