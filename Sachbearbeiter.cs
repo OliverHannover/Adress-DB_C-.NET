@@ -127,7 +127,7 @@ namespace Adress_DB
             // Prüfen, ob alle Felder ausgefüllt wurden
             foreach (Control ctrl in PNL_Edit.Controls)
             {
-                if (ctrl is TextBox & (ctrl.Text ?? "") == (string.Empty ?? ""))
+                if (ctrl is TextBox & (ctrl.Text  == string.Empty ))
                 {
                     MessageBox.Show("Bitte alle Felder ausfüllen!");
                     return;
