@@ -456,7 +456,17 @@ namespace Adress_DB
             // 7) Sonstigen / Schluss ############################################################################################################### 
 
             // Update KLassifizierung
-            klassifizierungTableAdapter.UpdateKlassifizierung(CB_Klassifizierung.Text, IDFirmenName);
+
+            try
+            {
+                klassifizierungTableAdapter.UpdateKlassifizierung(CB_Klassifizierung.Text, IDFirmenName);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Fehler bei 'Klassifizierung ändern' in der Klassifizierung-Tabelle!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(ex.Message);
+            }
+            
 
             // TableAdapter aktualisieren und aktuellen Satz markieren
             Module1.AlleTableAdapterAktualisieren(IDFirmenName);

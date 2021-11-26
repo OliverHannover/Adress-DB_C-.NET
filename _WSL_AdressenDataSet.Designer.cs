@@ -14207,7 +14207,7 @@ SELECT IDAdresse, IDFirmenName, IDKonto, Adresstyp, Straße, Postfach, PLZ, Ort,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15123,7 +15123,7 @@ SELECT IDKontakt, IDFirmenName, Nachname, Vorname, EmailAddresse, Jobtitle, Tele
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15988,7 +15988,7 @@ SELECT ID, Meldung, Tabelle, IDInTabelle, Hinweis, Login, Datum, IDFirmenName, F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16582,7 +16582,7 @@ SELECT ID, Bezeichner, Wert, Beschreibung FROM properties WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17104,7 +17104,7 @@ SELECT IDSachbearbeiter, Sachbearbeiter, Login, Kuerzel, Durchwahl, Email, Jobti
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17904,7 +17904,7 @@ SELECT ID, Staat, AmtlicheVollform, ISO2, ISO3, ISOnumerisch FROM Staaten WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18326,7 +18326,7 @@ SELECT ID, Staat, AmtlicheVollform, ISO2, ISO3, ISOnumerisch FROM Staaten WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18519,7 +18519,7 @@ SELECT ID, Staat, AmtlicheVollform, ISO2, ISO3, ISOnumerisch FROM Staaten WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18705,7 +18705,7 @@ SELECT ID, Staat, AmtlicheVollform, ISO2, ISO3, ISOnumerisch FROM Staaten WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19147,7 +19147,7 @@ SELECT IDBeleg, IDFirmenName, FirmenName, Datum, IDAdresse, IDKonto, Kuerzel, Ko
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19878,7 +19878,7 @@ SELECT IDFirmenName, FirmenName, Login, changed, inaktiv FROM FirmenName WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20398,7 +20398,7 @@ SELECT IDKonto, IDFirmenName, KontoName, Datum FROM Konto WHERE (IDKonto = @IDKo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20805,7 +20805,7 @@ SELECT IDKonto, IDFirmenName, KontoName, Datum FROM Konto WHERE (IDKonto = @IDKo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -21204,7 +21204,7 @@ SELECT IDKonto, IDFirmenName, KontoName, Datum FROM Konto WHERE (IDKonto = @IDKo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -21603,7 +21603,7 @@ SELECT IDKonto, IDFirmenName, KontoName, Datum FROM Konto WHERE (IDKonto = @IDKo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22002,7 +22002,7 @@ SELECT IDKonto, IDFirmenName, KontoName, Datum FROM Konto WHERE (IDKonto = @IDKo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22369,39 +22369,19 @@ SELECT IDKonto, IDFirmenName, KontoName, Datum FROM Konto WHERE (IDKonto = @IDKo
             tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("KlassenName", "KlassenName");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Klassen] WHERE (([ID] = @Original_ID) AND ((@IsNull_KlassenNam" +
-                "e = 1 AND [KlassenName] IS NULL) OR ([KlassenName] = @Original_KlassenName)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_KlassenName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KlassenName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KlassenName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KlassenName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Klassen] ([KlassenName]) VALUES (@KlassenName);\r\nSELECT ID, Kl" +
-                "assenName FROM Klassen WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Klassen] ([ID], [KlassenName]) VALUES (@ID, @KlassenName)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KlassenName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KlassenName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Klassen] SET [KlassenName] = @KlassenName WHERE (([ID] = @Original_" +
-                "ID) AND ((@IsNull_KlassenName = 1 AND [KlassenName] IS NULL) OR ([KlassenName] =" +
-                " @Original_KlassenName)));\r\nSELECT ID, KlassenName FROM Klassen WHERE (ID = @ID)" +
-                "";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KlassenName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KlassenName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_KlassenName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KlassenName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KlassenName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KlassenName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -22470,43 +22450,14 @@ SELECT IDKonto, IDFirmenName, KontoName, Datum FROM Konto WHERE (IDKonto = @IDKo
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_KlassenName) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_KlassenName == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_KlassenName));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string KlassenName) {
+        public virtual int Insert(int ID, string KlassenName) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
             if ((KlassenName == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(KlassenName));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(KlassenName));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -22522,51 +22473,6 @@ SELECT IDKonto, IDFirmenName, KontoName, Datum FROM Konto WHERE (IDKonto = @IDKo
                     this.Adapter.InsertCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string KlassenName, int Original_ID, string Original_KlassenName, int ID) {
-            if ((KlassenName == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(KlassenName));
-            }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_ID));
-            if ((Original_KlassenName == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_KlassenName));
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string KlassenName, int Original_ID, string Original_KlassenName) {
-            return this.Update(KlassenName, Original_ID, Original_KlassenName, Original_ID);
         }
     }
     
@@ -22727,7 +22633,7 @@ SELECT IDFirmenName, Klassifizierung FROM Klassifizierung WHERE (IDFirmenName = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -23091,7 +22997,7 @@ SELECT IDFirmenName, Klassifizierung FROM Klassifizierung WHERE (IDFirmenName = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default.wsladressenConnectionString;
+            this._connection.ConnectionString = global::Adress_DB.Properties.Settings.Default._WSL_AdressenDataSet;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

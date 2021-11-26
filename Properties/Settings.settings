@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Adress_DB.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="wsladressenConnectionString" Type="(Connection string)" Scope="Application">
+    <Setting Name="_WSL_AdressenDataSet" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
   &lt;ConnectionString&gt;Data Source=localhost\sqlexpress;Initial Catalog=wsladressen;Persist Security Info=True;User ID=wsladressen;Password=Start21!&lt;/ConnectionString&gt;

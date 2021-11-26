@@ -152,6 +152,7 @@ namespace Adress_DB
         {
             My.MyProject.Forms.Hauptform.TB_FirmenName.Text = lbl_IDFirmenName.Text;
             My.MyProject.Forms.Hauptform.BTN_Suche.PerformClick();
+            this.Close();
         }
 
         private int mRow = 0;

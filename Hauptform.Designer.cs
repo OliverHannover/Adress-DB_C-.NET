@@ -120,6 +120,7 @@ namespace Adress_DB
             this._BTN_ZuOutlook = new System.Windows.Forms.Button();
             this._BTN_MapsSuche = new System.Windows.Forms.Button();
             this.Panel4 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
             this._btnNeuesKonto = new System.Windows.Forms.Button();
             this.KontoDataGridView = new System.Windows.Forms.DataGridView();
@@ -1169,7 +1170,7 @@ namespace Adress_DB
             this._BTN_MapsSuche.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._BTN_MapsSuche.Image = ((System.Drawing.Image)(resources.GetObject("_BTN_MapsSuche.Image")));
             this._BTN_MapsSuche.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this._BTN_MapsSuche.Location = new System.Drawing.Point(189, 281);
+            this._BTN_MapsSuche.Location = new System.Drawing.Point(175, 281);
             this._BTN_MapsSuche.Name = "_BTN_MapsSuche";
             this._BTN_MapsSuche.Size = new System.Drawing.Size(105, 28);
             this._BTN_MapsSuche.TabIndex = 1;
@@ -1183,11 +1184,22 @@ namespace Adress_DB
             this.Panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Panel4.BackColor = System.Drawing.Color.Silver;
+            this.Panel4.Controls.Add(this.label12);
             this.Panel4.Controls.Add(this.Label6);
             this.Panel4.Location = new System.Drawing.Point(3, 3);
             this.Panel4.Name = "Panel4";
             this.Panel4.Size = new System.Drawing.Size(158, 27);
             this.Panel4.TabIndex = 18;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(98, 4);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 18);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "nur für\r\nGUS / DATEV";
             // 
             // Label6
             // 
@@ -1381,7 +1393,7 @@ namespace Adress_DB
             this.AdressenDataGridView.Name = "AdressenDataGridView";
             this.AdressenDataGridView.RowHeadersVisible = false;
             this.AdressenDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.AdressenDataGridView.Size = new System.Drawing.Size(287, 118);
+            this.AdressenDataGridView.Size = new System.Drawing.Size(274, 101);
             this.AdressenDataGridView.TabIndex = 6;
             // 
             // IDAdresse
@@ -1704,7 +1716,7 @@ namespace Adress_DB
             this.LBL_BBRegion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "Bundesland", true));
             this.LBL_BBRegion.Location = new System.Drawing.Point(226, 207);
             this.LBL_BBRegion.Name = "LBL_BBRegion";
-            this.LBL_BBRegion.Size = new System.Drawing.Size(160, 14);
+            this.LBL_BBRegion.Size = new System.Drawing.Size(158, 16);
             this.LBL_BBRegion.TabIndex = 30;
             this.LBL_BBRegion.Text = "Bundesland";
             // 
@@ -1735,7 +1747,7 @@ namespace Adress_DB
             this.LBL_BBLand.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "Land", true));
             this.LBL_BBLand.Location = new System.Drawing.Point(226, 222);
             this.LBL_BBLand.Name = "LBL_BBLand";
-            this.LBL_BBLand.Size = new System.Drawing.Size(160, 12);
+            this.LBL_BBLand.Size = new System.Drawing.Size(158, 13);
             this.LBL_BBLand.TabIndex = 24;
             this.LBL_BBLand.Text = "Deutschland";
             // 
@@ -1744,7 +1756,7 @@ namespace Adress_DB
             this.LBL_BBOrt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "Ort", true));
             this.LBL_BBOrt.Location = new System.Drawing.Point(271, 192);
             this.LBL_BBOrt.Name = "LBL_BBOrt";
-            this.LBL_BBOrt.Size = new System.Drawing.Size(115, 14);
+            this.LBL_BBOrt.Size = new System.Drawing.Size(113, 15);
             this.LBL_BBOrt.TabIndex = 23;
             this.LBL_BBOrt.Text = "Hannover";
             // 
@@ -1762,7 +1774,7 @@ namespace Adress_DB
             this.LBL_BBStrasse.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AdressenBindingSource, "Straße", true));
             this.LBL_BBStrasse.Location = new System.Drawing.Point(226, 177);
             this.LBL_BBStrasse.Name = "LBL_BBStrasse";
-            this.LBL_BBStrasse.Size = new System.Drawing.Size(160, 14);
+            this.LBL_BBStrasse.Size = new System.Drawing.Size(158, 15);
             this.LBL_BBStrasse.TabIndex = 20;
             this.LBL_BBStrasse.Text = "Strasse 24";
             // 
@@ -4430,5 +4442,6 @@ namespace Adress_DB
         private PictureBox pictureBox2;
         internal ComboBox CB_Klassifizierung;
         private ToolTip toolTip1;
+        private Label label12;
     }
 }

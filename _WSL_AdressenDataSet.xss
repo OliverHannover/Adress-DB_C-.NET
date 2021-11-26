@@ -22,7 +22,7 @@
     <Shape ID="DesignTable:CH_PLZ_Geodaten" ZOrder="6" X="1588" Y="47" Height="54" Width="213" AdapterExpanded="false" DataTableExpanded="false" OldAdapterHeight="102" OldDataTableHeight="254" SplitterPosition="24" />
     <Shape ID="DesignTable:DE_PLZ_Geodaten" ZOrder="9" X="1590" Y="118" Height="134" Width="207" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="0" OldDataTableHeight="254" SplitterPosition="26" />
     <Shape ID="DesignTable:PLZ_Geodaten" ZOrder="8" X="1589" Y="265" Height="113" Width="213" AdapterExpanded="true" DataTableExpanded="false" OldAdapterHeight="24" OldDataTableHeight="254" SplitterPosition="24" />
-    <Shape ID="DesignTable:Klassen" ZOrder="4" X="1300" Y="264" Height="176" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="86" />
+    <Shape ID="DesignTable:Klassen" ZOrder="4" X="1300" Y="264" Height="115" Width="188" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:Klassifizierung" ZOrder="3" X="14" Y="-34" Height="272" Width="189" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="112" />
     <Shape ID="DesignTable:AdresseMitGeodaten" ZOrder="1" X="1265" Y="-28" Height="266" Width="289" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="25" SplitterPosition="178" />
   </Shapes>
