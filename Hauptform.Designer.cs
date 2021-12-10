@@ -124,8 +124,6 @@ namespace Adress_DB
             this.Label6 = new System.Windows.Forms.Label();
             this._btnNeuesKonto = new System.Windows.Forms.Button();
             this.KontoDataGridView = new System.Windows.Forms.DataGridView();
-            this.DataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Label3 = new System.Windows.Forms.Label();
             this.BTN_Speichern = new System.Windows.Forms.Button();
             this._btnKontoZuAdresse = new System.Windows.Forms.Button();
@@ -138,10 +136,6 @@ namespace Adress_DB
             this.StraßeTextBox = new System.Windows.Forms.TextBox();
             this.AdresstypTextBox = new System.Windows.Forms.TextBox();
             this.AdressenDataGridView = new System.Windows.Forms.DataGridView();
-            this.IDAdresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDKonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._EmailAddresseLinkLabel = new System.Windows.Forms.LinkLabel();
             this.KontakteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._btnAdresseZuKontakt = new System.Windows.Forms.Button();
@@ -313,6 +307,12 @@ namespace Adress_DB
             this.klassenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.klassenTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.KlassenTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.DataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDAdresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDKonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             AdresstypLabel = new System.Windows.Forms.Label();
             StraßeLabel = new System.Windows.Forms.Label();
             PLZLabel = new System.Windows.Forms.Label();
@@ -1238,28 +1238,13 @@ namespace Adress_DB
             this.DataGridViewTextBoxColumn4,
             this.DataGridViewTextBoxColumn6});
             this.KontoDataGridView.DataSource = this.KontoBindingSource;
-            this.KontoDataGridView.Location = new System.Drawing.Point(0, 112);
+            this.KontoDataGridView.Location = new System.Drawing.Point(3, 112);
             this.KontoDataGridView.Name = "KontoDataGridView";
             this.KontoDataGridView.ReadOnly = true;
             this.KontoDataGridView.RowHeadersVisible = false;
             this.KontoDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.KontoDataGridView.Size = new System.Drawing.Size(161, 199);
+            this.KontoDataGridView.Size = new System.Drawing.Size(158, 194);
             this.KontoDataGridView.TabIndex = 5;
-            // 
-            // DataGridViewTextBoxColumn4
-            // 
-            this.DataGridViewTextBoxColumn4.DataPropertyName = "IDKonto";
-            this.DataGridViewTextBoxColumn4.HeaderText = "Konto";
-            this.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4";
-            this.DataGridViewTextBoxColumn4.ReadOnly = true;
-            this.DataGridViewTextBoxColumn4.Width = 60;
-            // 
-            // DataGridViewTextBoxColumn6
-            // 
-            this.DataGridViewTextBoxColumn6.DataPropertyName = "KontoName";
-            this.DataGridViewTextBoxColumn6.HeaderText = "Konto-Name";
-            this.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6";
-            this.DataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // Label3
             // 
@@ -1389,40 +1374,12 @@ namespace Adress_DB
             this.DataGridViewTextBoxColumn7,
             this.DataGridViewTextBoxColumn10});
             this.AdressenDataGridView.DataSource = this.AdressenBindingSource;
-            this.AdressenDataGridView.Location = new System.Drawing.Point(6, 316);
+            this.AdressenDataGridView.Location = new System.Drawing.Point(3, 316);
             this.AdressenDataGridView.Name = "AdressenDataGridView";
             this.AdressenDataGridView.RowHeadersVisible = false;
             this.AdressenDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.AdressenDataGridView.Size = new System.Drawing.Size(274, 101);
+            this.AdressenDataGridView.Size = new System.Drawing.Size(280, 104);
             this.AdressenDataGridView.TabIndex = 6;
-            // 
-            // IDAdresse
-            // 
-            this.IDAdresse.DataPropertyName = "IDAdresse";
-            this.IDAdresse.HeaderText = "IDAdresse";
-            this.IDAdresse.Name = "IDAdresse";
-            this.IDAdresse.Visible = false;
-            // 
-            // IDKonto
-            // 
-            this.IDKonto.DataPropertyName = "IDKonto";
-            this.IDKonto.HeaderText = "Konto";
-            this.IDKonto.Name = "IDKonto";
-            this.IDKonto.Width = 47;
-            // 
-            // DataGridViewTextBoxColumn7
-            // 
-            this.DataGridViewTextBoxColumn7.DataPropertyName = "Straße";
-            this.DataGridViewTextBoxColumn7.HeaderText = "Straße";
-            this.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7";
-            this.DataGridViewTextBoxColumn7.Width = 110;
-            // 
-            // DataGridViewTextBoxColumn10
-            // 
-            this.DataGridViewTextBoxColumn10.DataPropertyName = "Ort";
-            this.DataGridViewTextBoxColumn10.HeaderText = "Ort";
-            this.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10";
-            this.DataGridViewTextBoxColumn10.Width = 115;
             // 
             // _EmailAddresseLinkLabel
             // 
@@ -1583,11 +1540,11 @@ namespace Adress_DB
             this.DataGridViewTextBoxColumn11,
             this.DataGridViewTextBoxColumn9});
             this.KontakteDataGridView.DataSource = this.KontakteBindingSource;
-            this.KontakteDataGridView.Location = new System.Drawing.Point(6, 316);
+            this.KontakteDataGridView.Location = new System.Drawing.Point(3, 316);
             this.KontakteDataGridView.Name = "KontakteDataGridView";
             this.KontakteDataGridView.RowHeadersVisible = false;
             this.KontakteDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.KontakteDataGridView.Size = new System.Drawing.Size(274, 101);
+            this.KontakteDataGridView.Size = new System.Drawing.Size(280, 104);
             this.KontakteDataGridView.TabIndex = 1;
             // 
             // IDKontakt
@@ -1911,11 +1868,11 @@ namespace Adress_DB
             // Label9
             // 
             this.Label9.AutoSize = true;
-            this.Label9.Location = new System.Drawing.Point(28, 286);
+            this.Label9.Location = new System.Drawing.Point(2, 286);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(92, 13);
+            this.Label9.Size = new System.Drawing.Size(121, 13);
             this.Label9.TabIndex = 12;
-            this.Label9.Text = "Betreff / Thema *:";
+            this.Label9.Text = "Betreff / Thema / Info *:";
             // 
             // TB_DIVThema
             // 
@@ -3167,6 +3124,49 @@ namespace Adress_DB
             // 
             this.klassenTableAdapter.ClearBeforeFill = true;
             // 
+            // DataGridViewTextBoxColumn4
+            // 
+            this.DataGridViewTextBoxColumn4.DataPropertyName = "IDKonto";
+            this.DataGridViewTextBoxColumn4.HeaderText = "Konto";
+            this.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4";
+            this.DataGridViewTextBoxColumn4.ReadOnly = true;
+            this.DataGridViewTextBoxColumn4.Width = 58;
+            // 
+            // DataGridViewTextBoxColumn6
+            // 
+            this.DataGridViewTextBoxColumn6.DataPropertyName = "KontoName";
+            this.DataGridViewTextBoxColumn6.HeaderText = "Konto-Name";
+            this.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6";
+            this.DataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // IDAdresse
+            // 
+            this.IDAdresse.DataPropertyName = "IDAdresse";
+            this.IDAdresse.HeaderText = "IDAdresse";
+            this.IDAdresse.Name = "IDAdresse";
+            this.IDAdresse.Visible = false;
+            // 
+            // IDKonto
+            // 
+            this.IDKonto.DataPropertyName = "IDKonto";
+            this.IDKonto.HeaderText = "Konto";
+            this.IDKonto.Name = "IDKonto";
+            this.IDKonto.Width = 47;
+            // 
+            // DataGridViewTextBoxColumn7
+            // 
+            this.DataGridViewTextBoxColumn7.DataPropertyName = "Straße";
+            this.DataGridViewTextBoxColumn7.HeaderText = "Straße";
+            this.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7";
+            this.DataGridViewTextBoxColumn7.Width = 110;
+            // 
+            // DataGridViewTextBoxColumn10
+            // 
+            this.DataGridViewTextBoxColumn10.DataPropertyName = "Ort";
+            this.DataGridViewTextBoxColumn10.HeaderText = "Ort";
+            this.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10";
+            this.DataGridViewTextBoxColumn10.Width = 120;
+            // 
             // Hauptform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3179,7 +3179,6 @@ namespace Adress_DB
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.MenuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "Hauptform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adress-Datenbank";
@@ -4425,12 +4424,6 @@ namespace Adress_DB
         internal StatusStrip StatusStrip1;
         internal ToolStripProgressBar ToolStripProgressBar1;
         internal ToolStripStatusLabel ToolStripStatusLabel1;
-        internal DataGridViewTextBoxColumn IDAdresse;
-        internal DataGridViewTextBoxColumn IDKonto;
-        internal DataGridViewTextBoxColumn DataGridViewTextBoxColumn7;
-        internal DataGridViewTextBoxColumn DataGridViewTextBoxColumn10;
-        internal DataGridViewTextBoxColumn DataGridViewTextBoxColumn4;
-        internal DataGridViewTextBoxColumn DataGridViewTextBoxColumn6;
         internal Button BTN_DocErzeugen;
         internal Panel panel11;
         internal Label label11;
@@ -4443,5 +4436,11 @@ namespace Adress_DB
         internal ComboBox CB_Klassifizierung;
         private ToolTip toolTip1;
         private Label label12;
+        private DataGridViewTextBoxColumn IDAdresse;
+        private DataGridViewTextBoxColumn IDKonto;
+        private DataGridViewTextBoxColumn DataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn DataGridViewTextBoxColumn10;
+        private DataGridViewTextBoxColumn DataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn DataGridViewTextBoxColumn6;
     }
 }

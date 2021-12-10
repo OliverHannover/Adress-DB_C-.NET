@@ -101,18 +101,13 @@ namespace Adress_DB
         {
 
             // KontakteTableAdapter aktualisieren, geänderten Satz auswählen
-            // Try
-            // Hauptform.KontakteTableAdapter.SucheIDFirmenNameInKontakte(Hauptform._WSL_AdressenDataSet.Kontakte, IDFirmenName)
-            // Catch ex As System.Exception
-            // MsgBox("lblIDFirmenName in Kontakte suchen - Fehler")
-            // System.Windows.Forms.MessageBox.Show(ex.Message)
-            // End Try
+
 
             // geänderten Datensatz selektieren
             int foundIndex = My.MyProject.Forms.Hauptform.KontakteBindingSource.Find("IDKontakt", IDKontakt);
             My.MyProject.Forms.Hauptform.KontakteBindingSource.Position = foundIndex;
 
-            if ((My.MyProject.Forms.Hauptform.LBL_IDAdresseZuKontakt.Text ?? "") == (string.Empty ?? "") & (My.MyProject.Forms.Hauptform.LBL_IDKontakt.Text ?? "") != (string.Empty ?? "") | My.MyProject.Forms.Hauptform.LBL_IDAdresseZuKontakt.Text == "0" & (My.MyProject.Forms.Hauptform.LBL_IDKontakt.Text ?? "") != (string.Empty ?? ""))
+            if ((My.MyProject.Forms.Hauptform.LBL_IDAdresseZuKontakt.Text  == string.Empty ) && (My.MyProject.Forms.Hauptform.LBL_IDKontakt.Text != string.Empty) || (My.MyProject.Forms.Hauptform.LBL_IDAdresseZuKontakt.Text == "0") && (My.MyProject.Forms.Hauptform.LBL_IDKontakt.Text  != string.Empty ))
             {
                 My.MyProject.Forms.Hauptform.LBL_IDAdresseZuKontakt.Text = "Kontakt hat keine Adresse!";
                 My.MyProject.Forms.Hauptform.LBL_IDAdresseZuKontakt.ForeColor = Color.Red;
@@ -468,6 +463,13 @@ namespace Adress_DB
                     {
                         Meldung = "Kontakt gelöscht";
                         Tabelle = "Kontakte";
+                        break;
+                    }
+
+                case 11:
+                    {
+                        Meldung = "Klassifizierung geändert";
+                        Tabelle = "Klassifizierung";
                         break;
                     }
             }

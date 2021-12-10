@@ -15919,7 +15919,7 @@ WHERE        (IDKontakt = @Original_IDKontakt)";
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[LogTabelle] WHERE (([ID] = @Original_ID) AND ((@IsNull_Meldung = 1 AND [Meldung] IS NULL) OR ([Meldung] = @Original_Meldung)) AND ((@IsNull_Tabelle = 1 AND [Tabelle] IS NULL) OR ([Tabelle] = @Original_Tabelle)) AND ((@IsNull_IDInTabelle = 1 AND [IDInTabelle] IS NULL) OR ([IDInTabelle] = @Original_IDInTabelle)) AND ((@IsNull_Hinweis = 1 AND [Hinweis] IS NULL) OR ([Hinweis] = @Original_Hinweis)) AND ((@IsNull_Login = 1 AND [Login] IS NULL) OR ([Login] = @Original_Login)) AND ((@IsNull_Datum = 1 AND [Datum] IS NULL) OR ([Datum] = @Original_Datum)) AND ((@IsNull_IDFirmenName = 1 AND [IDFirmenName] IS NULL) OR ([IDFirmenName] = @Original_IDFirmenName)) AND ((@IsNull_FirmenName = 1 AND [FirmenName] IS NULL) OR ([FirmenName] = @Original_FirmenName)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [LogTabelle] WHERE (([ID] = @Original_ID) AND ((@IsNull_Meldung = 1 AND [Meldung] IS NULL) OR ([Meldung] = @Original_Meldung)) AND ((@IsNull_Tabelle = 1 AND [Tabelle] IS NULL) OR ([Tabelle] = @Original_Tabelle)) AND ((@IsNull_IDInTabelle = 1 AND [IDInTabelle] IS NULL) OR ([IDInTabelle] = @Original_IDInTabelle)) AND ((@IsNull_Hinweis = 1 AND [Hinweis] IS NULL) OR ([Hinweis] = @Original_Hinweis)) AND ((@IsNull_Login = 1 AND [Login] IS NULL) OR ([Login] = @Original_Login)) AND ((@IsNull_Datum = 1 AND [Datum] IS NULL) OR ([Datum] = @Original_Datum)) AND ((@IsNull_IDFirmenName = 1 AND [IDFirmenName] IS NULL) OR ([IDFirmenName] = @Original_IDFirmenName)) AND ((@IsNull_FirmenName = 1 AND [FirmenName] IS NULL) OR ([FirmenName] = @Original_FirmenName)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Meldung", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Meldung", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -15940,8 +15940,8 @@ WHERE        (IDKontakt = @Original_IDKontakt)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FirmenName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirmenName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[LogTabelle] ([Meldung], [Tabelle], [IDInTabelle], [Hinweis], [Login], [Datum], [IDFirmenName], [FirmenName]) VALUES (@Meldung, @Tabelle, @IDInTabelle, @Hinweis, @Login, @Datum, @IDFirmenName, @FirmenName);
-SELECT ID, Meldung, Tabelle, IDInTabelle, Hinweis, Login, Datum, IDFirmenName, FirmenName FROM LogTabelle WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [LogTabelle] ([Meldung], [Tabelle], [IDInTabelle], [Hinweis], [Login], [Datum], [IDFirmenName], [FirmenName]) VALUES (@Meldung, @Tabelle, @IDInTabelle, @Hinweis, @Login, @Datum, @IDFirmenName, @FirmenName);
+SELECT ID, Meldung, Tabelle, IDInTabelle, Hinweis, Login, Datum, IDFirmenName, FirmenName FROM LogTabelle WHERE (ID = SCOPE_IDENTITY()) ORDER BY ID DESC";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Meldung", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Meldung", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tabelle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tabelle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15953,8 +15953,8 @@ SELECT ID, Meldung, Tabelle, IDInTabelle, Hinweis, Login, Datum, IDFirmenName, F
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirmenName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirmenName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[LogTabelle] SET [Meldung] = @Meldung, [Tabelle] = @Tabelle, [IDInTabelle] = @IDInTabelle, [Hinweis] = @Hinweis, [Login] = @Login, [Datum] = @Datum, [IDFirmenName] = @IDFirmenName, [FirmenName] = @FirmenName WHERE (([ID] = @Original_ID) AND ((@IsNull_Meldung = 1 AND [Meldung] IS NULL) OR ([Meldung] = @Original_Meldung)) AND ((@IsNull_Tabelle = 1 AND [Tabelle] IS NULL) OR ([Tabelle] = @Original_Tabelle)) AND ((@IsNull_IDInTabelle = 1 AND [IDInTabelle] IS NULL) OR ([IDInTabelle] = @Original_IDInTabelle)) AND ((@IsNull_Hinweis = 1 AND [Hinweis] IS NULL) OR ([Hinweis] = @Original_Hinweis)) AND ((@IsNull_Login = 1 AND [Login] IS NULL) OR ([Login] = @Original_Login)) AND ((@IsNull_Datum = 1 AND [Datum] IS NULL) OR ([Datum] = @Original_Datum)) AND ((@IsNull_IDFirmenName = 1 AND [IDFirmenName] IS NULL) OR ([IDFirmenName] = @Original_IDFirmenName)) AND ((@IsNull_FirmenName = 1 AND [FirmenName] IS NULL) OR ([FirmenName] = @Original_FirmenName)));
-SELECT ID, Meldung, Tabelle, IDInTabelle, Hinweis, Login, Datum, IDFirmenName, FirmenName FROM LogTabelle WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [LogTabelle] SET [Meldung] = @Meldung, [Tabelle] = @Tabelle, [IDInTabelle] = @IDInTabelle, [Hinweis] = @Hinweis, [Login] = @Login, [Datum] = @Datum, [IDFirmenName] = @IDFirmenName, [FirmenName] = @FirmenName WHERE (([ID] = @Original_ID) AND ((@IsNull_Meldung = 1 AND [Meldung] IS NULL) OR ([Meldung] = @Original_Meldung)) AND ((@IsNull_Tabelle = 1 AND [Tabelle] IS NULL) OR ([Tabelle] = @Original_Tabelle)) AND ((@IsNull_IDInTabelle = 1 AND [IDInTabelle] IS NULL) OR ([IDInTabelle] = @Original_IDInTabelle)) AND ((@IsNull_Hinweis = 1 AND [Hinweis] IS NULL) OR ([Hinweis] = @Original_Hinweis)) AND ((@IsNull_Login = 1 AND [Login] IS NULL) OR ([Login] = @Original_Login)) AND ((@IsNull_Datum = 1 AND [Datum] IS NULL) OR ([Datum] = @Original_Datum)) AND ((@IsNull_IDFirmenName = 1 AND [IDFirmenName] IS NULL) OR ([IDFirmenName] = @Original_IDFirmenName)) AND ((@IsNull_FirmenName = 1 AND [FirmenName] IS NULL) OR ([FirmenName] = @Original_FirmenName)));
+SELECT ID, Meldung, Tabelle, IDInTabelle, Hinweis, Login, Datum, IDFirmenName, FirmenName FROM LogTabelle WHERE (ID = @ID) ORDER BY ID DESC";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Meldung", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Meldung", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tabelle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tabelle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15997,8 +15997,8 @@ SELECT ID, Meldung, Tabelle, IDInTabelle, Hinweis, Login, Datum, IDFirmenName, F
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, Meldung, Tabelle, IDInTabelle, Hinweis, Login, Datum, IDFirmenName, Fi" +
-                "rmenName FROM dbo.LogTabelle";
+            this._commandCollection[0].CommandText = "SELECT        ID, Meldung, Tabelle, IDInTabelle, Hinweis, Login, Datum, IDFirmenN" +
+                "ame, FirmenName\r\nFROM            LogTabelle\r\nORDER BY ID DESC";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -22371,23 +22371,24 @@ SELECT IDKonto, IDFirmenName, KontoName, Datum FROM Konto WHERE (IDKonto = @IDKo
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Klassen] WHERE (([ID] = @Original_ID) AND ((@IsNull_KlassenName = 1 " +
-                "AND [KlassenName] IS NULL) OR ([KlassenName] = @Original_KlassenName)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Klassen] WHERE (([ID] = @Original_ID) AND ((@IsNull_KlassenNam" +
+                "e = 1 AND [KlassenName] IS NULL) OR ([KlassenName] = @Original_KlassenName)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_KlassenName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KlassenName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KlassenName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KlassenName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Klassen] ([KlassenName]) VALUES (@KlassenName);\r\nSELECT ID, KlassenN" +
-                "ame FROM Klassen WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Klassen] ([KlassenName]) VALUES (@KlassenName);\r\nSELECT ID, Kl" +
+                "assenName FROM Klassen WHERE (ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KlassenName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KlassenName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [Klassen] SET [KlassenName] = @KlassenName WHERE (([ID] = @Original_ID) AN" +
-                "D ((@IsNull_KlassenName = 1 AND [KlassenName] IS NULL) OR ([KlassenName] = @Orig" +
-                "inal_KlassenName)));\r\nSELECT ID, KlassenName FROM Klassen WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Klassen] SET [KlassenName] = @KlassenName WHERE (([ID] = @Original_" +
+                "ID) AND ((@IsNull_KlassenName = 1 AND [KlassenName] IS NULL) OR ([KlassenName] =" +
+                " @Original_KlassenName)));\r\nSELECT ID, KlassenName FROM Klassen WHERE (ID = @ID)" +
+                "";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KlassenName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KlassenName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -22409,7 +22410,7 @@ SELECT IDKonto, IDFirmenName, KontoName, Datum FROM Konto WHERE (IDKonto = @IDKo
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        ID, KlassenName\r\nFROM            Klassen";
+            this._commandCollection[0].CommandText = "SELECT ID, KlassenName FROM dbo.Klassen";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

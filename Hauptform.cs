@@ -453,20 +453,19 @@ namespace Adress_DB
             }
 
 
-            // 7) Sonstigen / Schluss ############################################################################################################### 
+            // 7) Sonstigen / Schluss ###############################################################################################################  
 
             // Update KLassifizierung
-
             try
             {
                 klassifizierungTableAdapter.UpdateKlassifizierung(CB_Klassifizierung.Text, IDFirmenName);
+                Module1.Logging(11, IDFirmenName, IDFirmenName, CB_Klassifizierung.Text);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Fehler bei 'Klassifizierung ändern' in der Klassifizierung-Tabelle!", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 MessageBox.Show(ex.Message);
             }
-            
 
             // TableAdapter aktualisieren und aktuellen Satz markieren
             Module1.AlleTableAdapterAktualisieren(IDFirmenName);

@@ -130,32 +130,14 @@ namespace Adress_DB
         }
 
 
-        private void _BTN_NeuerSachbearbeiter_Click(object sender, EventArgs e)
+        private void TSBTN_SpeichernKlasse_Click(object sender, EventArgs e)
         {
-            klassenNameTextBox.DataBindings.Clear();
-            klassenNameTextBox.Text = string.Empty;
-        }
-
-        private void BTN_Klasse_Speichern_Click(object sender, EventArgs e)
-        {
-            if (klassenNameTextBox.Text == string.Empty)
-            {
-                MessageBox.Show("Bitte die etwas in das Textfeld schreiben!");
-                return;
-            }
-
-            try
-            {
-                klassenTableAdapter.Insert(klassenNameTextBox.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Insert der neuen Klasse fehlgeschlagen", "Hinweis", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                MessageBox.Show(ex.Message);
-            }
+            Validate();
+            klassenBindingSource.EndEdit();
+            klassenTableAdapter.Update(_WSL_AdressenDataSet.Klassen);
 
             this.klassenTableAdapter.Fill(this._WSL_AdressenDataSet.Klassen);
-            klassenNameTextBox.DataBindings.Add(new Binding("Text", klassenBindingSource, "KlassenName", true));
+            //klassenNameTextBox.DataBindings.Add(new Binding("Text", klassenBindingSource, "KlassenName", true));
             My.MyProject.Forms.Hauptform.CB_Klassifizierung.Items.Clear();
             DataTable myDT;
             myDT = klassenTableAdapter.GetData();

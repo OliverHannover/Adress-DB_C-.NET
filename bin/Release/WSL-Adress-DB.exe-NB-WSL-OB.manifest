@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WSL-Adress-DB.exe" size="1879520">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WSL-Adress-DB.exe" size="1493472">
       <assemblyIdentity name="WSL-Adress-DB" version="3.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Q5iNsu0cmuod5D89JruXC3xweACNaQZaP02vyd8x/To=</dsig:DigestValue>
+        <dsig:DigestValue>G6T1/TQ5RwEF+ccHG9eyH24DzirHT8ikYvsEL8kC9yM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,13 +63,13 @@
       <dsig:DigestValue>Avgf6vNpOVHWwCJ3hMocRTOqA5Tzs5u5vihVR3mdOAo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="WSL-Adress-DB.exe.config" size="567">
+  <file name="WSL-Adress-DB.exe.config" size="561">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>fYj3Ssv/zXK9FeWM5syL5E/jIbeNUoaFK41/64Ge1mU=</dsig:DigestValue>
+      <dsig:DigestValue>ZeijrShxyWO7zPyH4cBnUisoKgzzvbnpEHg+3Wrs7do=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

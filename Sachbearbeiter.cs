@@ -78,47 +78,31 @@ namespace Adress_DB
         private void BTN_NeuerSachbearbeiter_Click(object sender, EventArgs e)
         {
             lblBenutzerNeu.Visible = true;
-            {
-                var withBlock = SachbearbeiterTextBox;
-                withBlock.DataBindings.Clear();
-                withBlock.Text = string.Empty;
-            }
+            PNL_Edit.Enabled = Enabled;
+            LockedCheckBox.Checked = false;
 
-            {
-                var withBlock1 = KuerzelTextBox;
-                withBlock1.DataBindings.Clear();
-                withBlock1.Text = string.Empty;
-            }
+            SachbearbeiterTextBox.DataBindings.Clear();
+            SachbearbeiterTextBox.Text = string.Empty;
 
-            {
-                var withBlock2 = LoginTextBox;
-                withBlock2.DataBindings.Clear();
-                withBlock2.Text = Environment.UserName;
-            }
+            KuerzelTextBox.DataBindings.Clear();
+            KuerzelTextBox.Text = string.Empty;
+           
+            LoginTextBox.DataBindings.Clear();
+            LoginTextBox.Text = Environment.UserName;
+           
+            DurchwahlTextBox.DataBindings.Clear();
+            DurchwahlTextBox.Text = string.Empty;   
 
-            {
-                var withBlock3 = DurchwahlTextBox;
-                withBlock3.DataBindings.Clear();
-                withBlock3.Text = string.Empty;
-            }
+            EmailTextBox.DataBindings.Clear();
+            EmailTextBox.Text = string.Empty;
+           
+            JobtitleTextBox.DataBindings.Clear();
+            JobtitleTextBox.Text = string.Empty;
+            
+            EnglJobtitleTextBox.DataBindings.Clear();
+            EnglJobtitleTextBox.Text = string.Empty;
+   
 
-            {
-                var withBlock4 = EmailTextBox;
-                withBlock4.DataBindings.Clear();
-                withBlock4.Text = string.Empty;
-            }
-
-            {
-                var withBlock5 = JobtitleTextBox;
-                withBlock5.DataBindings.Clear();
-                withBlock5.Text = string.Empty;
-            }
-
-            {
-                var withBlock6 = EnglJobtitleTextBox;
-                withBlock6.DataBindings.Clear();
-                withBlock6.Text = string.Empty;
-            }
         }
 
         private void BTN_Speichern_Click(object sender, EventArgs e)
@@ -127,7 +111,7 @@ namespace Adress_DB
             // Prüfen, ob alle Felder ausgefüllt wurden
             foreach (Control ctrl in PNL_Edit.Controls)
             {
-                if (ctrl is TextBox & (ctrl.Text  == string.Empty ))
+                if (ctrl is TextBox & (ctrl.Text ?? "") == (string.Empty ?? ""))
                 {
                     MessageBox.Show("Bitte alle Felder ausfüllen!");
                     return;

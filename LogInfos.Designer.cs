@@ -38,246 +38,264 @@ namespace Adress_DB
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(Loginformationen));
-            Panel2 = new Panel();
-            _BTN_Alle = new Button();
-            _BTN_Alle.Click += new EventHandler(BTN_Alle_Click);
-            _BTN_Aktuell = new Button();
-            _BTN_Aktuell.Click += new EventHandler(BTN_Aktuell_Click);
-            Label1 = new Label();
-            _WSL_AdressenDataSet = new _WSL_AdressenDataSet();
-            TableAdapterManager = new _WSL_AdressenDataSetTableAdapters.TableAdapterManager();
-            Panel3 = new Panel();
-            _BTN_Schliessen = new Button();
-            _BTN_Schliessen.Click += new EventHandler(BTN_Schliessen_Click);
-            LogTabelleBindingSource = new BindingSource(components);
-            LogTabelleTableAdapter = new _WSL_AdressenDataSetTableAdapters.LogTabelleTableAdapter();
-            LogTabelleDataGridView = new DataGridView();
-            TableLayoutPanel1 = new TableLayoutPanel();
-            DataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            FirmenName = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
-            DataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
-            Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_WSL_AdressenDataSet).BeginInit();
-            Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)LogTabelleBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)LogTabelleDataGridView).BeginInit();
-            TableLayoutPanel1.SuspendLayout();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loginformationen));
+            this.Panel2 = new System.Windows.Forms.Panel();
+            this._BTN_Alle = new System.Windows.Forms.Button();
+            this._BTN_Aktuell = new System.Windows.Forms.Button();
+            this.Label1 = new System.Windows.Forms.Label();
+            this._WSL_AdressenDataSet = new Adress_DB._WSL_AdressenDataSet();
+            this.TableAdapterManager = new Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager();
+            this.Panel3 = new System.Windows.Forms.Panel();
+            this._BTN_Schliessen = new System.Windows.Forms.Button();
+            this.LogTabelleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.LogTabelleTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.LogTabelleTableAdapter();
+            this.LogTabelleDataGridView = new System.Windows.Forms.DataGridView();
+            this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirmenName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._WSL_AdressenDataSet)).BeginInit();
+            this.Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogTabelleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogTabelleDataGridView)).BeginInit();
+            this.TableLayoutPanel1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // Panel2
             // 
-            Panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            Panel2.BackColor = Color.Silver;
-            Panel2.Controls.Add(_BTN_Alle);
-            Panel2.Controls.Add(_BTN_Aktuell);
-            Panel2.Controls.Add(Label1);
-            Panel2.Location = new Point(3, 3);
-            Panel2.Name = "Panel2";
-            Panel2.Size = new Size(935, 33);
-            Panel2.TabIndex = 26;
+            this.Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Panel2.BackColor = System.Drawing.Color.Silver;
+            this.Panel2.Controls.Add(this._BTN_Alle);
+            this.Panel2.Controls.Add(this._BTN_Aktuell);
+            this.Panel2.Controls.Add(this.Label1);
+            this.Panel2.Location = new System.Drawing.Point(3, 3);
+            this.Panel2.Name = "Panel2";
+            this.Panel2.Size = new System.Drawing.Size(935, 33);
+            this.Panel2.TabIndex = 26;
             // 
-            // BTN_Alle
+            // _BTN_Alle
             // 
-            _BTN_Alle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _BTN_Alle.Location = new Point(681, 6);
-            _BTN_Alle.Name = "_BTN_Alle";
-            _BTN_Alle.Size = new Size(75, 23);
-            _BTN_Alle.TabIndex = 2;
-            _BTN_Alle.Text = "alle";
-            _BTN_Alle.UseVisualStyleBackColor = true;
+            this._BTN_Alle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._BTN_Alle.Location = new System.Drawing.Point(681, 6);
+            this._BTN_Alle.Name = "_BTN_Alle";
+            this._BTN_Alle.Size = new System.Drawing.Size(75, 23);
+            this._BTN_Alle.TabIndex = 2;
+            this._BTN_Alle.Text = "alle";
+            this._BTN_Alle.UseVisualStyleBackColor = true;
+            this._BTN_Alle.Click += new System.EventHandler(this.BTN_Alle_Click);
             // 
-            // BTN_Aktuell
+            // _BTN_Aktuell
             // 
-            _BTN_Aktuell.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _BTN_Aktuell.Location = new Point(768, 6);
-            _BTN_Aktuell.Name = "_BTN_Aktuell";
-            _BTN_Aktuell.Size = new Size(156, 23);
-            _BTN_Aktuell.TabIndex = 1;
-            _BTN_Aktuell.Text = "aktuellen Geschäftspartner";
-            _BTN_Aktuell.UseVisualStyleBackColor = true;
+            this._BTN_Aktuell.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._BTN_Aktuell.Location = new System.Drawing.Point(768, 6);
+            this._BTN_Aktuell.Name = "_BTN_Aktuell";
+            this._BTN_Aktuell.Size = new System.Drawing.Size(156, 23);
+            this._BTN_Aktuell.TabIndex = 1;
+            this._BTN_Aktuell.Text = "aktuellen Geschäftspartner";
+            this._BTN_Aktuell.UseVisualStyleBackColor = true;
+            this._BTN_Aktuell.Click += new System.EventHandler(this.BTN_Aktuell_Click);
             // 
             // Label1
             // 
-            Label1.AutoSize = true;
-            Label1.Font = new Font("Microsoft Sans Serif", 12.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label1.ForeColor = Color.Black;
-            Label1.Location = new Point(12, 9);
-            Label1.Name = "Label1";
-            Label1.Size = new Size(133, 20);
-            Label1.TabIndex = 0;
-            Label1.Text = "Loginformationen";
+            this.Label1.AutoSize = true;
+            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.ForeColor = System.Drawing.Color.Black;
+            this.Label1.Location = new System.Drawing.Point(12, 9);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(133, 20);
+            this.Label1.TabIndex = 0;
+            this.Label1.Text = "Loginformationen";
             // 
             // _WSL_AdressenDataSet
             // 
-            _WSL_AdressenDataSet.DataSetName = "_WSL_AdressenDataSet";
-            _WSL_AdressenDataSet.SchemaSerializationMode = SchemaSerializationMode.IncludeSchema;
+            this._WSL_AdressenDataSet.DataSetName = "_WSL_AdressenDataSet";
+            this._WSL_AdressenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // TableAdapterManager
             // 
-            TableAdapterManager.AdressenTableAdapter = null;
-            TableAdapterManager.AT_PLZ_GeodatenTableAdapter = null;
-            TableAdapterManager.BackupDataSetBeforeUpdate = false;
-            TableAdapterManager.BelegeTableAdapter = null;
-            TableAdapterManager.CH_PLZ_GeodatenTableAdapter = null;
-            TableAdapterManager.Connection = null;
-            TableAdapterManager.DE_PLZ_GeodatenTableAdapter = null;
-            TableAdapterManager.FirmenNameTableAdapter = null;
-            TableAdapterManager.KontakteTableAdapter = null;
-            TableAdapterManager.KontoTableAdapter = null;
-            TableAdapterManager.LogTabelleTableAdapter = null;
-            TableAdapterManager.PLZ_GeodatenTableAdapter = null;
-            TableAdapterManager.SachbearbeiterTableAdapter = null;
-            TableAdapterManager.StaatenTableAdapter = null;
-            TableAdapterManager.UpdateOrder = _WSL_AdressenDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.TableAdapterManager.AdressenTableAdapter = null;
+            this.TableAdapterManager.AT_PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.TableAdapterManager.BelegeTableAdapter = null;
+            this.TableAdapterManager.CH_PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.Connection = null;
+            this.TableAdapterManager.DE_PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.FirmenNameTableAdapter = null;
+            this.TableAdapterManager.KlassenTableAdapter = null;
+            this.TableAdapterManager.KlassifizierungTableAdapter = null;
+            this.TableAdapterManager.KontakteTableAdapter = null;
+            this.TableAdapterManager.KontoTableAdapter = null;
+            this.TableAdapterManager.LogTabelleTableAdapter = null;
+            this.TableAdapterManager.PLZ_GeodatenTableAdapter = null;
+            this.TableAdapterManager.propertiesTableAdapter = null;
+            this.TableAdapterManager.SachbearbeiterTableAdapter = null;
+            this.TableAdapterManager.StaatenTableAdapter = null;
+            this.TableAdapterManager.UpdateOrder = Adress_DB._WSL_AdressenDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Panel3
             // 
-            Panel3.BackColor = Color.Gray;
-            Panel3.Controls.Add(_BTN_Schliessen);
-            Panel3.Dock = DockStyle.Fill;
-            Panel3.Location = new Point(3, 343);
-            Panel3.Name = "Panel3";
-            Panel3.Size = new Size(935, 40);
-            Panel3.TabIndex = 28;
+            this.Panel3.BackColor = System.Drawing.Color.Gray;
+            this.Panel3.Controls.Add(this._BTN_Schliessen);
+            this.Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel3.Location = new System.Drawing.Point(3, 343);
+            this.Panel3.Name = "Panel3";
+            this.Panel3.Size = new System.Drawing.Size(935, 40);
+            this.Panel3.TabIndex = 28;
             // 
-            // BTN_Schliessen
+            // _BTN_Schliessen
             // 
-            _BTN_Schliessen.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            _BTN_Schliessen.Image = My.Resources.Resources.CloseSolution_16x;
-            _BTN_Schliessen.ImageAlign = ContentAlignment.MiddleRight;
-            _BTN_Schliessen.Location = new Point(844, 10);
-            _BTN_Schliessen.Name = "_BTN_Schliessen";
-            _BTN_Schliessen.Size = new Size(80, 22);
-            _BTN_Schliessen.TabIndex = 16;
-            _BTN_Schliessen.Text = "Schließen";
-            _BTN_Schliessen.TextAlign = ContentAlignment.MiddleLeft;
-            _BTN_Schliessen.UseVisualStyleBackColor = true;
+            this._BTN_Schliessen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._BTN_Schliessen.Image = global::Adress_DB.My.Resources.Resources.CloseSolution_16x;
+            this._BTN_Schliessen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._BTN_Schliessen.Location = new System.Drawing.Point(844, 10);
+            this._BTN_Schliessen.Name = "_BTN_Schliessen";
+            this._BTN_Schliessen.Size = new System.Drawing.Size(80, 22);
+            this._BTN_Schliessen.TabIndex = 16;
+            this._BTN_Schliessen.Text = "Schließen";
+            this._BTN_Schliessen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._BTN_Schliessen.UseVisualStyleBackColor = true;
+            this._BTN_Schliessen.Click += new System.EventHandler(this.BTN_Schliessen_Click);
             // 
             // LogTabelleBindingSource
             // 
-            LogTabelleBindingSource.DataMember = "LogTabelle";
-            LogTabelleBindingSource.DataSource = _WSL_AdressenDataSet;
+            this.LogTabelleBindingSource.DataMember = "LogTabelle";
+            this.LogTabelleBindingSource.DataSource = this._WSL_AdressenDataSet;
             // 
             // LogTabelleTableAdapter
             // 
-            LogTabelleTableAdapter.ClearBeforeFill = true;
+            this.LogTabelleTableAdapter.ClearBeforeFill = true;
             // 
             // LogTabelleDataGridView
             // 
-            LogTabelleDataGridView.AutoGenerateColumns = false;
-            LogTabelleDataGridView.BackgroundColor = Color.White;
-            LogTabelleDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            LogTabelleDataGridView.Columns.AddRange(new DataGridViewColumn[] { DataGridViewTextBoxColumn1, FirmenName, DataGridViewTextBoxColumn2, DataGridViewTextBoxColumn3, DataGridViewTextBoxColumn4, DataGridViewTextBoxColumn5, DataGridViewTextBoxColumn6, DataGridViewTextBoxColumn7, DataGridViewTextBoxColumn8 });
-            LogTabelleDataGridView.DataSource = LogTabelleBindingSource;
-            LogTabelleDataGridView.Dock = DockStyle.Fill;
-            LogTabelleDataGridView.Location = new Point(3, 42);
-            LogTabelleDataGridView.Name = "LogTabelleDataGridView";
-            LogTabelleDataGridView.RowHeadersVisible = false;
-            LogTabelleDataGridView.Size = new Size(935, 295);
-            LogTabelleDataGridView.TabIndex = 29;
+            this.LogTabelleDataGridView.AutoGenerateColumns = false;
+            this.LogTabelleDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.LogTabelleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LogTabelleDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridViewTextBoxColumn1,
+            this.FirmenName,
+            this.DataGridViewTextBoxColumn2,
+            this.DataGridViewTextBoxColumn3,
+            this.DataGridViewTextBoxColumn4,
+            this.DataGridViewTextBoxColumn5,
+            this.DataGridViewTextBoxColumn6,
+            this.DataGridViewTextBoxColumn7,
+            this.DataGridViewTextBoxColumn8});
+            this.LogTabelleDataGridView.DataSource = this.LogTabelleBindingSource;
+            this.LogTabelleDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LogTabelleDataGridView.Location = new System.Drawing.Point(3, 42);
+            this.LogTabelleDataGridView.Name = "LogTabelleDataGridView";
+            this.LogTabelleDataGridView.RowHeadersVisible = false;
+            this.LogTabelleDataGridView.Size = new System.Drawing.Size(935, 295);
+            this.LogTabelleDataGridView.TabIndex = 29;
             // 
             // TableLayoutPanel1
             // 
-            TableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            TableLayoutPanel1.ColumnCount = 1;
-            TableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50.0f));
-            TableLayoutPanel1.Controls.Add(Panel2, 0, 0);
-            TableLayoutPanel1.Controls.Add(LogTabelleDataGridView, 0, 1);
-            TableLayoutPanel1.Controls.Add(Panel3, 0, 2);
-            TableLayoutPanel1.Location = new Point(1, 0);
-            TableLayoutPanel1.Name = "TableLayoutPanel1";
-            TableLayoutPanel1.RowCount = 3;
-            TableLayoutPanel1.RowStyles.Add(new RowStyle());
-            TableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 90.7489f));
-            TableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 46.0f));
-            TableLayoutPanel1.Size = new Size(941, 386);
-            TableLayoutPanel1.TabIndex = 30;
+            this.TableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TableLayoutPanel1.ColumnCount = 1;
+            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TableLayoutPanel1.Controls.Add(this.Panel2, 0, 0);
+            this.TableLayoutPanel1.Controls.Add(this.LogTabelleDataGridView, 0, 1);
+            this.TableLayoutPanel1.Controls.Add(this.Panel3, 0, 2);
+            this.TableLayoutPanel1.Location = new System.Drawing.Point(1, 0);
+            this.TableLayoutPanel1.Name = "TableLayoutPanel1";
+            this.TableLayoutPanel1.RowCount = 3;
+            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.7489F));
+            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.TableLayoutPanel1.Size = new System.Drawing.Size(941, 386);
+            this.TableLayoutPanel1.TabIndex = 30;
             // 
             // DataGridViewTextBoxColumn1
             // 
-            DataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            DataGridViewTextBoxColumn1.HeaderText = "ID";
-            DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1";
-            DataGridViewTextBoxColumn1.ReadOnly = true;
-            DataGridViewTextBoxColumn1.Width = 30;
+            this.DataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.DataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1";
+            this.DataGridViewTextBoxColumn1.ReadOnly = true;
+            this.DataGridViewTextBoxColumn1.Width = 30;
             // 
             // FirmenName
             // 
-            FirmenName.DataPropertyName = "FirmenName";
-            FirmenName.HeaderText = "FirmenName";
-            FirmenName.Name = "FirmenName";
-            FirmenName.Width = 200;
+            this.FirmenName.DataPropertyName = "FirmenName";
+            this.FirmenName.HeaderText = "FirmenName";
+            this.FirmenName.Name = "FirmenName";
+            this.FirmenName.Width = 200;
             // 
             // DataGridViewTextBoxColumn2
             // 
-            DataGridViewTextBoxColumn2.DataPropertyName = "Meldung";
-            DataGridViewTextBoxColumn2.HeaderText = "Meldung";
-            DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2";
+            this.DataGridViewTextBoxColumn2.DataPropertyName = "Meldung";
+            this.DataGridViewTextBoxColumn2.HeaderText = "Meldung";
+            this.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2";
             // 
             // DataGridViewTextBoxColumn3
             // 
-            DataGridViewTextBoxColumn3.DataPropertyName = "Tabelle";
-            DataGridViewTextBoxColumn3.HeaderText = "Tabelle";
-            DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3";
+            this.DataGridViewTextBoxColumn3.DataPropertyName = "Tabelle";
+            this.DataGridViewTextBoxColumn3.HeaderText = "Tabelle";
+            this.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3";
             // 
             // DataGridViewTextBoxColumn4
             // 
-            DataGridViewTextBoxColumn4.DataPropertyName = "IDInTabelle";
-            DataGridViewTextBoxColumn4.HeaderText = "IDInTabelle";
-            DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4";
+            this.DataGridViewTextBoxColumn4.DataPropertyName = "IDInTabelle";
+            this.DataGridViewTextBoxColumn4.HeaderText = "IDInTabelle";
+            this.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4";
             // 
             // DataGridViewTextBoxColumn5
             // 
-            DataGridViewTextBoxColumn5.DataPropertyName = "Hinweis";
-            DataGridViewTextBoxColumn5.HeaderText = "Hinweis";
-            DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5";
+            this.DataGridViewTextBoxColumn5.DataPropertyName = "Hinweis";
+            this.DataGridViewTextBoxColumn5.HeaderText = "Hinweis";
+            this.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5";
             // 
             // DataGridViewTextBoxColumn6
             // 
-            DataGridViewTextBoxColumn6.DataPropertyName = "Login";
-            DataGridViewTextBoxColumn6.HeaderText = "Login";
-            DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6";
+            this.DataGridViewTextBoxColumn6.DataPropertyName = "Login";
+            this.DataGridViewTextBoxColumn6.HeaderText = "Login";
+            this.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6";
             // 
             // DataGridViewTextBoxColumn7
             // 
-            DataGridViewTextBoxColumn7.DataPropertyName = "Datum";
-            DataGridViewTextBoxColumn7.HeaderText = "Datum";
-            DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7";
+            this.DataGridViewTextBoxColumn7.DataPropertyName = "Datum";
+            this.DataGridViewTextBoxColumn7.HeaderText = "Datum";
+            this.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7";
             // 
             // DataGridViewTextBoxColumn8
             // 
-            DataGridViewTextBoxColumn8.DataPropertyName = "IDFirmenName";
-            DataGridViewTextBoxColumn8.HeaderText = "IDFirmenName";
-            DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8";
+            this.DataGridViewTextBoxColumn8.DataPropertyName = "IDFirmenName";
+            this.DataGridViewTextBoxColumn8.HeaderText = "IDFirmenName";
+            this.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8";
             // 
             // Loginformationen
             // 
-            AutoScaleDimensions = new SizeF(6.0f, 13.0f);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(942, 386);
-            Controls.Add(TableLayoutPanel1);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Loginformationen";
-            Text = "Log-Informationen";
-            Panel2.ResumeLayout(false);
-            Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)_WSL_AdressenDataSet).EndInit();
-            Panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)LogTabelleBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)LogTabelleDataGridView).EndInit();
-            TableLayoutPanel1.ResumeLayout(false);
-            Load += new EventHandler(Form6_Load);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(942, 386);
+            this.Controls.Add(this.TableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Loginformationen";
+            this.Text = "Log-Informationen";
+            this.Load += new System.EventHandler(this.Form6_Load);
+            this.Panel2.ResumeLayout(false);
+            this.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._WSL_AdressenDataSet)).EndInit();
+            this.Panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogTabelleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LogTabelleDataGridView)).EndInit();
+            this.TableLayoutPanel1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         internal Panel Panel2;
@@ -367,14 +385,14 @@ namespace Adress_DB
         internal _WSL_AdressenDataSetTableAdapters.LogTabelleTableAdapter LogTabelleTableAdapter;
         internal DataGridView LogTabelleDataGridView;
         internal TableLayoutPanel TableLayoutPanel1;
-        internal DataGridViewTextBoxColumn DataGridViewTextBoxColumn1;
-        internal DataGridViewTextBoxColumn FirmenName;
-        internal DataGridViewTextBoxColumn DataGridViewTextBoxColumn2;
-        internal DataGridViewTextBoxColumn DataGridViewTextBoxColumn3;
-        internal DataGridViewTextBoxColumn DataGridViewTextBoxColumn4;
-        internal DataGridViewTextBoxColumn DataGridViewTextBoxColumn5;
-        internal DataGridViewTextBoxColumn DataGridViewTextBoxColumn6;
-        internal DataGridViewTextBoxColumn DataGridViewTextBoxColumn7;
-        internal DataGridViewTextBoxColumn DataGridViewTextBoxColumn8;
+        private DataGridViewTextBoxColumn DataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn FirmenName;
+        private DataGridViewTextBoxColumn DataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn DataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn DataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn DataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn DataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn DataGridViewTextBoxColumn7;
+        private DataGridViewTextBoxColumn DataGridViewTextBoxColumn8;
     }
 }

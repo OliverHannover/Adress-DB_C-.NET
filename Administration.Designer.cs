@@ -41,7 +41,6 @@ namespace Adress_DB
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label SachbearbeiterLabel;
             System.Windows.Forms.Label AdminLabel;
-            System.Windows.Forms.Label klassenNameLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administration));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -203,10 +202,20 @@ namespace Adress_DB
             this.BTN_Close = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this._BTN_NeuerSachbearbeiter = new System.Windows.Forms.Button();
-            this.BTN_Klasse_Speichern = new System.Windows.Forms.Button();
-            this.klassenNameTextBox = new System.Windows.Forms.TextBox();
+            this.bindingNavigator5 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.klassenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton20 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton22 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton27 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox6 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton34 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton35 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
+            this.TSBTN_SpeichernKlasse = new System.Windows.Forms.ToolStripButton();
             this.klassenDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -222,7 +231,6 @@ namespace Adress_DB
             this.klassenTableAdapter = new Adress_DB._WSL_AdressenDataSetTableAdapters.KlassenTableAdapter();
             SachbearbeiterLabel = new System.Windows.Forms.Label();
             AdminLabel = new System.Windows.Forms.Label();
-            klassenNameLabel = new System.Windows.Forms.Label();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SachbearbeiterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._WSL_AdressenDataSet)).BeginInit();
@@ -261,6 +269,8 @@ namespace Adress_DB
             this.Panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).BeginInit();
+            this.bindingNavigator5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.klassenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klassenDataGridView)).BeginInit();
             this.tabPage8.SuspendLayout();
@@ -285,15 +295,6 @@ namespace Adress_DB
             AdminLabel.TabIndex = 27;
             AdminLabel.Text = "Administrator:";
             // 
-            // klassenNameLabel
-            // 
-            klassenNameLabel.AutoSize = true;
-            klassenNameLabel.Location = new System.Drawing.Point(263, 25);
-            klassenNameLabel.Name = "klassenNameLabel";
-            klassenNameLabel.Size = new System.Drawing.Size(78, 13);
-            klassenNameLabel.TabIndex = 1;
-            klassenNameLabel.Text = "Klassen Name:";
-            // 
             // Panel2
             // 
             this.Panel2.BackColor = System.Drawing.Color.Silver;
@@ -305,7 +306,7 @@ namespace Adress_DB
             this.Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel2.Location = new System.Drawing.Point(3, 3);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(498, 48);
+            this.Panel2.Size = new System.Drawing.Size(391, 48);
             this.Panel2.TabIndex = 25;
             // 
             // AdminCheckBox
@@ -559,7 +560,7 @@ namespace Adress_DB
             // ToolStripLabel4
             // 
             this.ToolStripLabel4.Name = "ToolStripLabel4";
-            this.ToolStripLabel4.Size = new System.Drawing.Size(44, 22);
+            this.ToolStripLabel4.Size = new System.Drawing.Size(48, 22);
             this.ToolStripLabel4.Text = "von {0}";
             this.ToolStripLabel4.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
@@ -766,7 +767,7 @@ namespace Adress_DB
             // ToolStripLabel3
             // 
             this.ToolStripLabel3.Name = "ToolStripLabel3";
-            this.ToolStripLabel3.Size = new System.Drawing.Size(44, 22);
+            this.ToolStripLabel3.Size = new System.Drawing.Size(48, 22);
             this.ToolStripLabel3.Text = "von {0}";
             this.ToolStripLabel3.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
@@ -972,7 +973,7 @@ namespace Adress_DB
             // ToolStripLabel2
             // 
             this.ToolStripLabel2.Name = "ToolStripLabel2";
-            this.ToolStripLabel2.Size = new System.Drawing.Size(44, 22);
+            this.ToolStripLabel2.Size = new System.Drawing.Size(48, 22);
             this.ToolStripLabel2.Text = "von {0}";
             this.ToolStripLabel2.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
@@ -1237,7 +1238,7 @@ namespace Adress_DB
             // ToolStripLabel1
             // 
             this.ToolStripLabel1.Name = "ToolStripLabel1";
-            this.ToolStripLabel1.Size = new System.Drawing.Size(44, 22);
+            this.ToolStripLabel1.Size = new System.Drawing.Size(48, 22);
             this.ToolStripLabel1.Text = "von {0}";
             this.ToolStripLabel1.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
@@ -1505,7 +1506,7 @@ namespace Adress_DB
             // ToolStripLabel5
             // 
             this.ToolStripLabel5.Name = "ToolStripLabel5";
-            this.ToolStripLabel5.Size = new System.Drawing.Size(44, 22);
+            this.ToolStripLabel5.Size = new System.Drawing.Size(48, 22);
             this.ToolStripLabel5.Text = "von {0}";
             this.ToolStripLabel5.ToolTipText = "Die Gesamtanzahl der Elemente.";
             // 
@@ -1725,7 +1726,7 @@ namespace Adress_DB
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(504, 475);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(397, 468);
             this.tableLayoutPanel2.TabIndex = 32;
             // 
             // Panel3
@@ -1733,9 +1734,9 @@ namespace Adress_DB
             this.Panel3.BackColor = System.Drawing.Color.Gray;
             this.Panel3.Controls.Add(this.BTN_Close);
             this.Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel3.Location = new System.Drawing.Point(3, 429);
+            this.Panel3.Location = new System.Drawing.Point(3, 422);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(498, 43);
+            this.Panel3.Size = new System.Drawing.Size(391, 43);
             this.Panel3.TabIndex = 27;
             // 
             // BTN_Close
@@ -1744,7 +1745,7 @@ namespace Adress_DB
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_Close.Image = global::Adress_DB.My.Resources.Resources.CloseSolution_16x;
             this.BTN_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Close.Location = new System.Drawing.Point(414, 10);
+            this.BTN_Close.Location = new System.Drawing.Point(307, 10);
             this.BTN_Close.Name = "BTN_Close";
             this.BTN_Close.Size = new System.Drawing.Size(80, 23);
             this.BTN_Close.TabIndex = 16;
@@ -1763,69 +1764,159 @@ namespace Adress_DB
             this.tabControl1.Location = new System.Drawing.Point(3, 57);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(498, 366);
+            this.tabControl1.Size = new System.Drawing.Size(391, 359);
             this.tabControl1.TabIndex = 28;
             // 
             // tabPage7
             // 
             this.tabPage7.AutoScroll = true;
-            this.tabPage7.Controls.Add(this._BTN_NeuerSachbearbeiter);
-            this.tabPage7.Controls.Add(this.BTN_Klasse_Speichern);
-            this.tabPage7.Controls.Add(klassenNameLabel);
-            this.tabPage7.Controls.Add(this.klassenNameTextBox);
+            this.tabPage7.Controls.Add(this.bindingNavigator5);
             this.tabPage7.Controls.Add(this.klassenDataGridView);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(496, 302);
+            this.tabPage7.Size = new System.Drawing.Size(383, 333);
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "Einstellungen";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // _BTN_NeuerSachbearbeiter
+            // bindingNavigator5
             // 
-            this._BTN_NeuerSachbearbeiter.Image = global::Adress_DB.My.Resources.Resources.Add_16x;
-            this._BTN_NeuerSachbearbeiter.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this._BTN_NeuerSachbearbeiter.Location = new System.Drawing.Point(264, 105);
-            this._BTN_NeuerSachbearbeiter.Name = "_BTN_NeuerSachbearbeiter";
-            this._BTN_NeuerSachbearbeiter.Size = new System.Drawing.Size(94, 23);
-            this._BTN_NeuerSachbearbeiter.TabIndex = 29;
-            this._BTN_NeuerSachbearbeiter.Text = "Neue Klasse";
-            this._BTN_NeuerSachbearbeiter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this._BTN_NeuerSachbearbeiter.UseVisualStyleBackColor = true;
-            this._BTN_NeuerSachbearbeiter.Click += new System.EventHandler(this._BTN_NeuerSachbearbeiter_Click);
+            this.bindingNavigator5.AddNewItem = this.toolStripButton13;
+            this.bindingNavigator5.BindingSource = this.klassenBindingSource;
+            this.bindingNavigator5.CountItem = this.toolStripLabel6;
+            this.bindingNavigator5.DeleteItem = this.toolStripButton20;
+            this.bindingNavigator5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigator5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton22,
+            this.toolStripButton27,
+            this.toolStripSeparator16,
+            this.toolStripTextBox6,
+            this.toolStripLabel6,
+            this.toolStripSeparator17,
+            this.toolStripButton34,
+            this.toolStripButton35,
+            this.toolStripSeparator18,
+            this.toolStripButton13,
+            this.toolStripButton20,
+            this.TSBTN_SpeichernKlasse});
+            this.bindingNavigator5.Location = new System.Drawing.Point(3, 305);
+            this.bindingNavigator5.MoveFirstItem = this.toolStripButton22;
+            this.bindingNavigator5.MoveLastItem = this.toolStripButton35;
+            this.bindingNavigator5.MoveNextItem = this.toolStripButton34;
+            this.bindingNavigator5.MovePreviousItem = this.toolStripButton27;
+            this.bindingNavigator5.Name = "bindingNavigator5";
+            this.bindingNavigator5.PositionItem = this.toolStripTextBox6;
+            this.bindingNavigator5.Size = new System.Drawing.Size(377, 25);
+            this.bindingNavigator5.TabIndex = 31;
+            this.bindingNavigator5.Text = "BindingNavigator1";
             // 
-            // BTN_Klasse_Speichern
+            // toolStripButton13
             // 
-            this.BTN_Klasse_Speichern.Image = global::Adress_DB.My.Resources.Resources.Save_16x;
-            this.BTN_Klasse_Speichern.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Klasse_Speichern.Location = new System.Drawing.Point(386, 105);
-            this.BTN_Klasse_Speichern.Name = "BTN_Klasse_Speichern";
-            this.BTN_Klasse_Speichern.Size = new System.Drawing.Size(94, 23);
-            this.BTN_Klasse_Speichern.TabIndex = 30;
-            this.BTN_Klasse_Speichern.Text = "speichern";
-            this.BTN_Klasse_Speichern.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Klasse_Speichern.UseVisualStyleBackColor = true;
-            this.BTN_Klasse_Speichern.Click += new System.EventHandler(this.BTN_Klasse_Speichern_Click);
-            // 
-            // klassenNameTextBox
-            // 
-            this.klassenNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.klassenBindingSource, "KlassenName", true));
-            this.klassenNameTextBox.Location = new System.Drawing.Point(265, 50);
-            this.klassenNameTextBox.Name = "klassenNameTextBox";
-            this.klassenNameTextBox.Size = new System.Drawing.Size(214, 20);
-            this.klassenNameTextBox.TabIndex = 2;
+            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
+            this.toolStripButton13.Name = "toolStripButton13";
+            this.toolStripButton13.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton13.Text = "Neu hinzufügen";
             // 
             // klassenBindingSource
             // 
             this.klassenBindingSource.DataMember = "Klassen";
             this.klassenBindingSource.DataSource = this._WSL_AdressenDataSet;
             // 
+            // toolStripLabel6
+            // 
+            this.toolStripLabel6.Name = "toolStripLabel6";
+            this.toolStripLabel6.Size = new System.Drawing.Size(48, 22);
+            this.toolStripLabel6.Text = "von {0}";
+            this.toolStripLabel6.ToolTipText = "Die Gesamtanzahl der Elemente.";
+            // 
+            // toolStripButton20
+            // 
+            this.toolStripButton20.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton20.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton20.Image")));
+            this.toolStripButton20.Name = "toolStripButton20";
+            this.toolStripButton20.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton20.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton20.Text = "Löschen";
+            // 
+            // toolStripButton22
+            // 
+            this.toolStripButton22.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton22.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton22.Image")));
+            this.toolStripButton22.Name = "toolStripButton22";
+            this.toolStripButton22.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton22.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton22.Text = "Erste verschieben";
+            // 
+            // toolStripButton27
+            // 
+            this.toolStripButton27.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton27.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton27.Image")));
+            this.toolStripButton27.Name = "toolStripButton27";
+            this.toolStripButton27.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton27.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton27.Text = "Vorherige verschieben";
+            // 
+            // toolStripSeparator16
+            // 
+            this.toolStripSeparator16.Name = "toolStripSeparator16";
+            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripTextBox6
+            // 
+            this.toolStripTextBox6.AccessibleName = "Position";
+            this.toolStripTextBox6.AutoSize = false;
+            this.toolStripTextBox6.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.toolStripTextBox6.Name = "toolStripTextBox6";
+            this.toolStripTextBox6.Size = new System.Drawing.Size(50, 25);
+            this.toolStripTextBox6.Text = "0";
+            this.toolStripTextBox6.ToolTipText = "Aktuelle Position";
+            // 
+            // toolStripSeparator17
+            // 
+            this.toolStripSeparator17.Name = "toolStripSeparator17";
+            this.toolStripSeparator17.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton34
+            // 
+            this.toolStripButton34.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton34.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton34.Image")));
+            this.toolStripButton34.Name = "toolStripButton34";
+            this.toolStripButton34.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton34.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton34.Text = "Nächste verschieben";
+            // 
+            // toolStripButton35
+            // 
+            this.toolStripButton35.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton35.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton35.Image")));
+            this.toolStripButton35.Name = "toolStripButton35";
+            this.toolStripButton35.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton35.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton35.Text = "Letzte verschieben";
+            // 
+            // toolStripSeparator18
+            // 
+            this.toolStripSeparator18.Name = "toolStripSeparator18";
+            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 25);
+            // 
+            // TSBTN_SpeichernKlasse
+            // 
+            this.TSBTN_SpeichernKlasse.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TSBTN_SpeichernKlasse.Image = ((System.Drawing.Image)(resources.GetObject("TSBTN_SpeichernKlasse.Image")));
+            this.TSBTN_SpeichernKlasse.Name = "TSBTN_SpeichernKlasse";
+            this.TSBTN_SpeichernKlasse.Size = new System.Drawing.Size(23, 22);
+            this.TSBTN_SpeichernKlasse.Text = "Daten speichern";
+            this.TSBTN_SpeichernKlasse.Click += new System.EventHandler(this.TSBTN_SpeichernKlasse_Click);
+            // 
             // klassenDataGridView
             // 
             this.klassenDataGridView.AllowUserToAddRows = false;
-            this.klassenDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.klassenDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.klassenDataGridView.AutoGenerateColumns = false;
             this.klassenDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.klassenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1836,7 +1927,7 @@ namespace Adress_DB
             this.klassenDataGridView.Location = new System.Drawing.Point(3, 3);
             this.klassenDataGridView.Name = "klassenDataGridView";
             this.klassenDataGridView.RowHeadersVisible = false;
-            this.klassenDataGridView.Size = new System.Drawing.Size(254, 293);
+            this.klassenDataGridView.Size = new System.Drawing.Size(377, 299);
             this.klassenDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn24
@@ -1924,7 +2015,7 @@ namespace Adress_DB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 479);
+            this.ClientSize = new System.Drawing.Size(399, 472);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Administration";
@@ -1982,6 +2073,9 @@ namespace Adress_DB
             this.tabControl1.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).EndInit();
+            this.bindingNavigator5.ResumeLayout(false);
+            this.bindingNavigator5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.klassenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.klassenDataGridView)).EndInit();
             this.tabPage8.ResumeLayout(false);
@@ -2337,8 +2431,18 @@ namespace Adress_DB
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
         internal BindingNavigator bindingNavigator4;
         private ToolStripButton _BNAV_PropertiesSave;
-        private TextBox klassenNameTextBox;
-        private Button _BTN_NeuerSachbearbeiter;
-        private Button BTN_Klasse_Speichern;
+        internal BindingNavigator bindingNavigator5;
+        internal ToolStripButton toolStripButton13;
+        internal ToolStripLabel toolStripLabel6;
+        internal ToolStripButton toolStripButton20;
+        internal ToolStripButton toolStripButton22;
+        internal ToolStripButton toolStripButton27;
+        internal ToolStripSeparator toolStripSeparator16;
+        internal ToolStripTextBox toolStripTextBox6;
+        internal ToolStripSeparator toolStripSeparator17;
+        internal ToolStripButton toolStripButton34;
+        internal ToolStripButton toolStripButton35;
+        internal ToolStripSeparator toolStripSeparator18;
+        private ToolStripButton TSBTN_SpeichernKlasse;
     }
 }

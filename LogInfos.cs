@@ -18,19 +18,26 @@ namespace Adress_DB
             LogTabelleTableAdapter.Fill(_WSL_AdressenDataSet.LogTabelle);
             // TODO: Diese Codezeile lädt Daten in die Tabelle "_WSL_AdressenDataSet.LogTabelle". Sie können sie bei Bedarf verschieben oder entfernen.
             LogTabelleTableAdapter.Fill(_WSL_AdressenDataSet.LogTabelle);
+
         }
 
         private void BTN_Aktuell_Click(object sender, EventArgs e)
         {
-            int IDFirmenName = Convert.ToInt32(My.MyProject.Forms.Hauptform.LBL_IDFirmenName.Text);
-            try
+            //Wenn sich der Textwert vom Label IDFirmenName in int convertieren lässt.... 
+            int number1 = 0;
+            bool canConvert = int.TryParse(My.MyProject.Forms.Hauptform.LBL_IDFirmenName.Text, out number1);
+            if (canConvert == true)
             {
-                LogTabelleTableAdapter.SucheIDFirmenNameInLogtabelle(_WSL_AdressenDataSet.LogTabelle, IDFirmenName);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("lblIDFirmenName ohne Inhalt - Fehler");
-                MessageBox.Show(ex.Message);
+                int IDFirmenName = Convert.ToInt32(My.MyProject.Forms.Hauptform.LBL_IDFirmenName.Text);
+                try
+                {
+                    LogTabelleTableAdapter.SucheIDFirmenNameInLogtabelle(_WSL_AdressenDataSet.LogTabelle, IDFirmenName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("lblIDFirmenName ohne Inhalt - Fehler");
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 

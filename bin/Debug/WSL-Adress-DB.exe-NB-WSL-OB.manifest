@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WSL-Adress-DB.exe" size="1879520">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WSL-Adress-DB.exe" size="1877472">
       <assemblyIdentity name="WSL-Adress-DB" version="3.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Q5iNsu0cmuod5D89JruXC3xweACNaQZaP02vyd8x/To=</dsig:DigestValue>
+        <dsig:DigestValue>fafs7N9KlQEG5yC2F2I7t448ea26ylPtyeydjjjKZxQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

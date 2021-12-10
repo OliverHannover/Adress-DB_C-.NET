@@ -91,6 +91,7 @@ C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\obj\Debug\Adress_D
 C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\obj\Debug\Adress-DB.csproj.GenerateResource.cache
 C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\obj\Debug\Adress-DB.csproj.CoreCompileInputs.cache
 C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\obj\Debug\Adress_DB.Hinweisfenster.resources
+C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\obj\Debug\Interop.Redemption.dll
 C:\Users\baero\OneDrive\Dokumente\VS_source\Adress-DB_CSharp.NET\obj\Debug\Adress-DB.csproj.AssemblyReference.cache
 C:\Users\baero\OneDrive\Dokumente\VS_source\Adress-DB_CSharp.NET\obj\Debug\Interop.Redemption.dll
 C:\Users\baero\OneDrive\Dokumente\VS_source\Adress-DB_CSharp.NET\obj\Debug\Adress-DB.csproj.ResolveComReference.cache
@@ -128,4 +129,3 @@ C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\obj\Debug\WSL-Adre
 C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\obj\Debug\WSL-Adress-DB.application
 C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\obj\Debug\WSL-Adress-DB.exe
 C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\obj\Debug\WSL-Adress-DB.pdb
-C:\Users\baero\OneDrive\Dokumente\GitHub\Adress-DB_CSharp.NET\obj\Debug\Interop.Redemption.dll
