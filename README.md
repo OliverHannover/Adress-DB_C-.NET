@@ -11,6 +11,7 @@ Die Adress-DB wurde aus verschiedenen Gründen entwickelt und bietet folgende Fu
 - Über eine Historie ist auf die Schnelle zu sehen, welche Dokumente bereits für den Geschäftspartner erstellt wurden.
 - Alle Kontakte werden zudem zentral erfasst und jeder kann die benötigten Kontakte in sein persönliches Outlook übertragen.
   Telefonanrufe können per Link (zB. per BusinessCTI) direkt aus der Datenbank gestartet werden, Email werden direkt erzeugt.
+- Die Datenbank bietet eine Umkreissuche bis zu 200km um den gesuchten Geschäftspartner.
 
 Die Adress-DB speichert die Daten auf einem SQL-Server. 
 
