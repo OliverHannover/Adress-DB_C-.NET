@@ -11,11 +11,18 @@ Die Adress-DB wurde aus verschiedenen Gründen entwickelt und bietet folgende Fu
 - Über eine Historie ist auf die Schnelle zu sehen, welche Dokumente bereits für den Geschäftspartner erstellt wurden.
 - Alle Kontakte werden zudem zentral erfasst und jeder kann die benötigten Kontakte in sein persönliches Outlook übertragen.
   Telefonanrufe können per Link (zB. per BusinessCTI) direkt aus der Datenbank gestartet werden, Email werden direkt erzeugt.
+- Die Datenbank bietet eine Umkreissuche bis zu 200km um den gesuchten Geschäftspartner.
 
 Die Adress-DB speichert die Daten auf einem SQL-Server. 
 
+Hauptansicht:
 <img src="https://github.com/OliverHannover/Adress-DB/blob/master/Screenshots/Adress-DB.PNG" alt="0" style="max-width:100%;">
 
+Outlookexport:
 <img src="https://github.com/OliverHannover/Adress-DB/blob/master/Screenshots/outlook.PNG" alt="0" style="max-width:100%;">
 
+Vorlagenauswahl:
 <img src="https://github.com/OliverHannover/Adress-DB/blob/master/Screenshots/fax.PNG" alt="0" style="max-width:100%;">
+
+Umkreissuche:
+<img src="https://github.com/OliverHannover/Adress-DB/blob/master/Screenshots/Umkreissuche1.PNG" alt="0" style="max-width:100%;">
