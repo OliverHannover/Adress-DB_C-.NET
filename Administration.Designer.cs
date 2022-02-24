@@ -306,7 +306,7 @@ namespace Adress_DB
             this.Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel2.Location = new System.Drawing.Point(3, 3);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(391, 48);
+            this.Panel2.Size = new System.Drawing.Size(456, 48);
             this.Panel2.TabIndex = 25;
             // 
             // AdminCheckBox
@@ -354,7 +354,7 @@ namespace Adress_DB
             // 
             this._BTN_Alle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._BTN_Alle.Enabled = false;
-            this._BTN_Alle.Location = new System.Drawing.Point(357, 6);
+            this._BTN_Alle.Location = new System.Drawing.Point(201, 3);
             this._BTN_Alle.Name = "_BTN_Alle";
             this._BTN_Alle.Size = new System.Drawing.Size(75, 23);
             this._BTN_Alle.TabIndex = 2;
@@ -366,7 +366,7 @@ namespace Adress_DB
             // 
             this._BTN_Aktuell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._BTN_Aktuell.Enabled = false;
-            this._BTN_Aktuell.Location = new System.Drawing.Point(438, 6);
+            this._BTN_Aktuell.Location = new System.Drawing.Point(282, 3);
             this._BTN_Aktuell.Name = "_BTN_Aktuell";
             this._BTN_Aktuell.Size = new System.Drawing.Size(156, 23);
             this._BTN_Aktuell.TabIndex = 1;
@@ -390,7 +390,7 @@ namespace Adress_DB
             this.TC_Administration.Multiline = true;
             this.TC_Administration.Name = "TC_Administration";
             this.TC_Administration.SelectedIndex = 0;
-            this.TC_Administration.Size = new System.Drawing.Size(481, 288);
+            this.TC_Administration.Size = new System.Drawing.Size(442, 321);
             this.TC_Administration.TabIndex = 30;
             // 
             // TabPage1
@@ -401,7 +401,7 @@ namespace Adress_DB
             this.TabPage1.Location = new System.Drawing.Point(4, 22);
             this.TabPage1.Name = "TabPage1";
             this.TabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage1.Size = new System.Drawing.Size(473, 262);
+            this.TabPage1.Size = new System.Drawing.Size(692, 368);
             this.TabPage1.TabIndex = 0;
             this.TabPage1.Text = "Konfiguration";
             this.TabPage1.UseVisualStyleBackColor = true;
@@ -415,14 +415,14 @@ namespace Adress_DB
             this.bindingNavigator4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bindingNavigator4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._BNAV_PropertiesSave});
-            this.bindingNavigator4.Location = new System.Drawing.Point(3, 234);
+            this.bindingNavigator4.Location = new System.Drawing.Point(3, 340);
             this.bindingNavigator4.MoveFirstItem = null;
             this.bindingNavigator4.MoveLastItem = null;
             this.bindingNavigator4.MoveNextItem = null;
             this.bindingNavigator4.MovePreviousItem = null;
             this.bindingNavigator4.Name = "bindingNavigator4";
             this.bindingNavigator4.PositionItem = null;
-            this.bindingNavigator4.Size = new System.Drawing.Size(467, 25);
+            this.bindingNavigator4.Size = new System.Drawing.Size(686, 25);
             this.bindingNavigator4.TabIndex = 11;
             this.bindingNavigator4.Text = "bindingNavigator4";
             // 
@@ -471,7 +471,7 @@ namespace Adress_DB
             this.propertiesDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.propertiesDataGridView.Location = new System.Drawing.Point(3, 3);
             this.propertiesDataGridView.Name = "propertiesDataGridView";
-            this.propertiesDataGridView.Size = new System.Drawing.Size(464, 228);
+            this.propertiesDataGridView.Size = new System.Drawing.Size(683, 334);
             this.propertiesDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn20
@@ -714,7 +714,7 @@ namespace Adress_DB
             this.TabPage3.Location = new System.Drawing.Point(4, 22);
             this.TabPage3.Name = "TabPage3";
             this.TabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage3.Size = new System.Drawing.Size(473, 262);
+            this.TabPage3.Size = new System.Drawing.Size(692, 368);
             this.TabPage3.TabIndex = 2;
             this.TabPage3.Text = "Konto";
             this.TabPage3.UseVisualStyleBackColor = true;
@@ -739,14 +739,14 @@ namespace Adress_DB
             this.ToolStripButton14,
             this.ToolStripButton15,
             this._BNAV_KontoSave});
-            this.BindingNavigator2.Location = new System.Drawing.Point(3, 234);
+            this.BindingNavigator2.Location = new System.Drawing.Point(3, 340);
             this.BindingNavigator2.MoveFirstItem = this.ToolStripButton16;
             this.BindingNavigator2.MoveLastItem = this.ToolStripButton19;
             this.BindingNavigator2.MoveNextItem = this.ToolStripButton18;
             this.BindingNavigator2.MovePreviousItem = this.ToolStripButton17;
             this.BindingNavigator2.Name = "BindingNavigator2";
             this.BindingNavigator2.PositionItem = this.ToolStripTextBox3;
-            this.BindingNavigator2.Size = new System.Drawing.Size(467, 25);
+            this.BindingNavigator2.Size = new System.Drawing.Size(686, 25);
             this.BindingNavigator2.TabIndex = 9;
             this.BindingNavigator2.Text = "BindingNavigator1";
             // 
@@ -884,7 +884,7 @@ namespace Adress_DB
             this.KontoDataGridView.Location = new System.Drawing.Point(3, 3);
             this.KontoDataGridView.Name = "KontoDataGridView";
             this.KontoDataGridView.RowHeadersVisible = false;
-            this.KontoDataGridView.Size = new System.Drawing.Size(467, 231);
+            this.KontoDataGridView.Size = new System.Drawing.Size(686, 337);
             this.KontoDataGridView.TabIndex = 0;
             // 
             // DataGridViewTextBoxColumn3
@@ -920,7 +920,7 @@ namespace Adress_DB
             this.TabPage4.Location = new System.Drawing.Point(4, 22);
             this.TabPage4.Name = "TabPage4";
             this.TabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage4.Size = new System.Drawing.Size(473, 262);
+            this.TabPage4.Size = new System.Drawing.Size(692, 368);
             this.TabPage4.TabIndex = 3;
             this.TabPage4.Text = "Adressen";
             this.TabPage4.UseVisualStyleBackColor = true;
@@ -945,14 +945,14 @@ namespace Adress_DB
             this.ToolStripButton7,
             this.ToolStripButton8,
             this._BNAV_AdressenSave});
-            this.BindingNavigator3.Location = new System.Drawing.Point(3, 234);
+            this.BindingNavigator3.Location = new System.Drawing.Point(3, 340);
             this.BindingNavigator3.MoveFirstItem = this.ToolStripButton9;
             this.BindingNavigator3.MoveLastItem = this.ToolStripButton12;
             this.BindingNavigator3.MoveNextItem = this.ToolStripButton11;
             this.BindingNavigator3.MovePreviousItem = this.ToolStripButton10;
             this.BindingNavigator3.Name = "BindingNavigator3";
             this.BindingNavigator3.PositionItem = this.ToolStripTextBox2;
-            this.BindingNavigator3.Size = new System.Drawing.Size(467, 25);
+            this.BindingNavigator3.Size = new System.Drawing.Size(686, 25);
             this.BindingNavigator3.TabIndex = 25;
             this.BindingNavigator3.Text = "BindingNavigator1";
             // 
@@ -1098,7 +1098,7 @@ namespace Adress_DB
             this.DataGridView1.Location = new System.Drawing.Point(3, 3);
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.RowHeadersVisible = false;
-            this.DataGridView1.Size = new System.Drawing.Size(467, 230);
+            this.DataGridView1.Size = new System.Drawing.Size(686, 336);
             this.DataGridView1.TabIndex = 1;
             // 
             // IDAdresse
@@ -1185,7 +1185,7 @@ namespace Adress_DB
             this.TabPage5.Location = new System.Drawing.Point(4, 22);
             this.TabPage5.Name = "TabPage5";
             this.TabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage5.Size = new System.Drawing.Size(473, 262);
+            this.TabPage5.Size = new System.Drawing.Size(434, 295);
             this.TabPage5.TabIndex = 4;
             this.TabPage5.Text = "Kontakte";
             this.TabPage5.UseVisualStyleBackColor = true;
@@ -1210,14 +1210,14 @@ namespace Adress_DB
             this.ToolStripButton1,
             this.ToolStripButton2,
             this._BNAV_KontakteSave});
-            this.SachbearbeiterBindingNavigator.Location = new System.Drawing.Point(3, 234);
+            this.SachbearbeiterBindingNavigator.Location = new System.Drawing.Point(3, 267);
             this.SachbearbeiterBindingNavigator.MoveFirstItem = this.ToolStripButton3;
             this.SachbearbeiterBindingNavigator.MoveLastItem = this.ToolStripButton6;
             this.SachbearbeiterBindingNavigator.MoveNextItem = this.ToolStripButton5;
             this.SachbearbeiterBindingNavigator.MovePreviousItem = this.ToolStripButton4;
             this.SachbearbeiterBindingNavigator.Name = "SachbearbeiterBindingNavigator";
             this.SachbearbeiterBindingNavigator.PositionItem = this.ToolStripTextBox1;
-            this.SachbearbeiterBindingNavigator.Size = new System.Drawing.Size(467, 25);
+            this.SachbearbeiterBindingNavigator.Size = new System.Drawing.Size(428, 25);
             this.SachbearbeiterBindingNavigator.TabIndex = 25;
             this.SachbearbeiterBindingNavigator.Text = "BindingNavigator1";
             // 
@@ -1363,7 +1363,7 @@ namespace Adress_DB
             this.DataGridView2.Location = new System.Drawing.Point(3, 3);
             this.DataGridView2.Name = "DataGridView2";
             this.DataGridView2.RowHeadersVisible = false;
-            this.DataGridView2.Size = new System.Drawing.Size(467, 231);
+            this.DataGridView2.Size = new System.Drawing.Size(428, 264);
             this.DataGridView2.TabIndex = 2;
             // 
             // IDKontakt
@@ -1726,7 +1726,7 @@ namespace Adress_DB
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(397, 468);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(462, 501);
             this.tableLayoutPanel2.TabIndex = 32;
             // 
             // Panel3
@@ -1734,9 +1734,9 @@ namespace Adress_DB
             this.Panel3.BackColor = System.Drawing.Color.Gray;
             this.Panel3.Controls.Add(this.BTN_Close);
             this.Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel3.Location = new System.Drawing.Point(3, 422);
+            this.Panel3.Location = new System.Drawing.Point(3, 455);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(391, 43);
+            this.Panel3.Size = new System.Drawing.Size(456, 43);
             this.Panel3.TabIndex = 27;
             // 
             // BTN_Close
@@ -1745,7 +1745,7 @@ namespace Adress_DB
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_Close.Image = global::Adress_DB.My.Resources.Resources.CloseSolution_16x;
             this.BTN_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTN_Close.Location = new System.Drawing.Point(307, 10);
+            this.BTN_Close.Location = new System.Drawing.Point(372, 10);
             this.BTN_Close.Name = "BTN_Close";
             this.BTN_Close.Size = new System.Drawing.Size(80, 23);
             this.BTN_Close.TabIndex = 16;
@@ -1764,7 +1764,7 @@ namespace Adress_DB
             this.tabControl1.Location = new System.Drawing.Point(3, 57);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(391, 359);
+            this.tabControl1.Size = new System.Drawing.Size(456, 392);
             this.tabControl1.TabIndex = 28;
             // 
             // tabPage7
@@ -1953,7 +1953,7 @@ namespace Adress_DB
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(490, 340);
+            this.tabPage8.Size = new System.Drawing.Size(448, 366);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "Administration";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -2015,7 +2015,7 @@ namespace Adress_DB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 472);
+            this.ClientSize = new System.Drawing.Size(464, 505);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Administration";

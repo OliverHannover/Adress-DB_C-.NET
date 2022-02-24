@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="WSL-Adress-DB.exe" version="3.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="WSL-Adress-DB.exe" version="3.0.0.0" publicKeyToken="b8dc1f03238f5935" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="addressbook.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WSL-Adress-DB.exe" size="1879520">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WSL-Adress-DB.exe" size="1493472">
       <assemblyIdentity name="WSL-Adress-DB" version="3.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uFZVJX3TD+Z0xAFKN0Rwk2Vz41MEyFvUiaebr4Gae18=</dsig:DigestValue>
+        <dsig:DigestValue>G6T1/TQ5RwEF+ccHG9eyH24DzirHT8ikYvsEL8kC9yM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,13 +63,13 @@
       <dsig:DigestValue>Avgf6vNpOVHWwCJ3hMocRTOqA5Tzs5u5vihVR3mdOAo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="WSL-Adress-DB.exe.config" size="514">
+  <file name="WSL-Adress-DB.exe.config" size="561">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>XAervbk+R0YAxt9TCN8V1JhDiAWve4cKnNsAMwZBxG0=</dsig:DigestValue>
+      <dsig:DigestValue>ZeijrShxyWO7zPyH4cBnUisoKgzzvbnpEHg+3Wrs7do=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
@@ -89,4 +89,4 @@
       <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
     </application>
   </compatibility>
-</asmv1:assembly>
+<publisherIdentity name="CN=NB-OLLI-SAMSUNG\baero" issuerKeyHash="d5e5b0b26f3254dbe216c7fa9eeeca9e07f15b4a" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>rSbt1BXuckAQPOoaB34GWQiXcGOnpnBoRxYvipLgUaE=</DigestValue></Reference></SignedInfo><SignatureValue>pyHgrIgvSE+Ut1JNe6ZBtt/UrtAzgoxHWZgMRZu1vbiu1Lj0rhNW6ig7Dq/Z7HfacQBSUDI7JCwvg8YZyAZpVnIieKStrS70FqNBtRynTVDnDxs9dVVzX7yvFcXvHA4A3+b0K6rAjbjuf/28yT7hGX+YSkACme04dvdBcMTdbbQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>0Bp18qPrbx5QBZnvrqHE8PJshaFVzmB/Aq9Heji0s8to/BMHM/SitlBesCa04EPcMFmnjjU18YBWQrpW56gOJ8irO8m+CXCNqTdoHUAk3j2h+mVL2Wex4tSG0DFABEBHfbA0T1BsPFjcBRWMMXsuRZDIy0/KTuaw9P4Wn2bTIAk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="a151e0928a2f16476870a6a76370970859067e071aea3c104072ee15d4ed26ad" Description="" Url=""><as:assemblyIdentity name="WSL-Adress-DB.exe" version="3.0.0.0" publicKeyToken="b8dc1f03238f5935" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=NB-OLLI-SAMSUNG\baero</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>+T5ry8JY+TpPKLq4ywvB8n7goThmL3sGwnbDRsBDGyg=</DigestValue></Reference></SignedInfo><SignatureValue>mR0mnQTs6U5VTzVV4gcjmvceKrjsy2Fks4fpX62U81JotVagWmk74Sh5bRWE7tayom7+cShEoghz21OhfezMkeLWiATWGqONQ5MFjVWpRcK5SvbWJjJxFNT9gX/UyJ+9UlAc9ttWHaNXiLjE675arpZFd5oiqBB5ncl969Ytjdc=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>0Bp18qPrbx5QBZnvrqHE8PJshaFVzmB/Aq9Heji0s8to/BMHM/SitlBesCa04EPcMFmnjjU18YBWQrpW56gOJ8irO8m+CXCNqTdoHUAk3j2h+mVL2Wex4tSG0DFABEBHfbA0T1BsPFjcBRWMMXsuRZDIy0/KTuaw9P4Wn2bTIAk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQRv5Yrz6mXZ1Ougk0t1KV3zANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioATgBCAC0ATwBMAEwASQAtAFMAQQBNAFMAVQBOAEcAXABiAGEAZQByAG8wHhcNMjExMDE4MTcyMDE0WhcNMjIxMDE4MjMyMDE0WjA1MTMwMQYDVQQDHioATgBCAC0ATwBMAEwASQAtAFMAQQBNAFMAVQBOAEcAXABiAGEAZQByAG8wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBANAadfKj628eUAWZ766hxPDybIWhVc5gfwKvR3o4tLPLaPwTBzP0orZQXrAmtOBD3DBZp441NfGAVkK6VueoDifIqzvJvglwjak3aB1AJN49ofplS9lnseLUhtAxQARAR32wNE9QbDxY3AUVjDF7LkWQyMtPyk7msPT+Fp9m0yAJAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAOFNV0g8o4Ca4VVLJwc3qWLxzo3fLhY8eFz7Wf0GmZ26hgxu9eTcQjIb8z9PWdF7KA9wXCzQLM99Iaf9QdDnZdU2VS9x/2HkeDiJ95G3ACSXGGJbp2q2FdcfnTfhl9sZUsUCoWkL6zNS/6uCZRJaWPCiJ1mJR1kHZL4lErkYJu1o=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -26,8 +26,8 @@ namespace Adress_DB.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\sqlexpress;Initial Catalog=wsladressen;Persist Security Inf" +
-            "o=True;User ID=wsladressen;Password=Start21!")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.110.200;Initial Catalog=wsladressen;Persist Security Info=Tru" +
+            "e;User ID=wsladressen;Password=Start21!")]
         public string _WSL_AdressenDataSet {
             get {
                 return ((string)(this["_WSL_AdressenDataSet"]));

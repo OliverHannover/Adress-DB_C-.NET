@@ -32,7 +32,16 @@ namespace Adress_DB
 
         private void btnKontoSave_Click(object sender, EventArgs e)
         {
+            if (this.lblKontoNummer.Text != string.Empty)
+            {
+                DialogResult result = MessageBox.Show("Soll noch eine weitere Kontonummer erzeugt werden?", "Hinweis", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                if (result == DialogResult.Cancel)
+                {                 
+                    return;
+                }
+            }
             string KontoName = "";
+
             if (this.rdbKundenNr.Checked == true)
             {
                 KontoName = "Kunde";
